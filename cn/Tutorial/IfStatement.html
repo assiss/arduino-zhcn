@@ -187,89 +187,85 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p>''Examples &gt; Control Structures"
 </p>
-<p class='vspace'></p><h3>If Statement (Conditional Statement)</h3>
-<p class='vspace'></p><p>The <a class='wikilink' href='../Reference/If.html'><strong>if()</strong></a> statement is the most basic of all programming control structures.  It allows you to make something happen or not depending on whether a given condition is true or not.  It looks like this:
+<p class='vspace'></p><h3>If语句(条件控制语句)</h3>
+<p class='vspace'></p><p><a class='wikilink' href='../Reference/If.html'><strong>if()</strong></a>语句是编程中最基础的一种流程控制。if语句可以根据指定条件的真与假来执行对应的程序，如下所示
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock2'>
   <div class='sourceblocktext'><div class="arduino"><br />
 <span class="kw1">if</span> <span class="br0">&#40;</span>someCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; &nbsp;<span class="co1">// do stuff if the condition is true</span><br />
+&nbsp; &nbsp;<span class="co1">//若条件为真，则执行下面的语句</span><br />
 <span class="br0">&#125;</span></div></div>
-  <div class='sourceblocklink'><a href='IfStatement668d.html?action=sourceblock&amp;num=2' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='IfStatement668d.html?action=sourceblock&amp;num=2' type='text/plain'>[下载代码]</a></div>
 </div>
 
 </p>
-<p class='vspace'></p><p>There is a common variation called if-else that looks like this:
+<p class='vspace'></p><p>if-else是if语句的一种比较常用的变化形式，其结构如下所示：
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock3'>
   <div class='sourceblocktext'><div class="arduino"><br />
 <span class="kw1">if</span> <span class="br0">&#40;</span>someCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; &nbsp;<span class="co1">// do stuff if the condition is true</span><br />
+&nbsp; &nbsp;<span class="co1">// 条件为真则执行此处语句</span><br />
 <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span><br />
-&nbsp; &nbsp;<span class="co1">// do stuff if the condition is false</span><br />
+&nbsp; &nbsp;<span class="co1">// 条件为假则执行此处语句</span><br />
 <span class="br0">&#125;</span></div></div>
-  <div class='sourceblocklink'><a href='IfStatement2992.html?action=sourceblock&amp;num=3' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='IfStatement2992.html?action=sourceblock&amp;num=3' type='text/plain'>[获取代码]</a></div>
 </div>
 
 </p>
-<p class='vspace'></p><p>There's also the else-if, where you can check a second condition if the first is false:
+<p class='vspace'></p><p>另外还有else-if的形式，用于在if检验条件为假时进行其它条件检测：
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock4'>
   <div class='sourceblocktext'><div class="arduino"><br />
 <span class="kw1">if</span> <span class="br0">&#40;</span>someCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; &nbsp;<span class="co1">// do stuff if the condition is true</span><br />
+&nbsp; &nbsp;<span class="co1">// 条件为真则执行此处语句</span><br />
 <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">&#40;</span>anotherCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; &nbsp;<span class="co1">// do stuff only if the first condition is false</span><br />
-&nbsp; &nbsp;<span class="co1">// and the second condition is true</span><br />
+&nbsp; &nbsp;<span class="co1">// 仅在somecondition为假</span><br />
+&nbsp; &nbsp;<span class="co1">// 且anotherCondition为真时执行</span><br />
 <span class="br0">&#125;</span></div></div>
-  <div class='sourceblocklink'><a href='IfStatement0c37.html?action=sourceblock&amp;num=4' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='IfStatement0c37.html?action=sourceblock&amp;num=4' type='text/plain'>[获取代码]</a></div>
 </div>
 
 </p>
-<p class='vspace'></p><p>You'll use if statements all the time.  The example below turns on an LED on pin 13 (the built-in LED on many Arduino boards) if the value read on an analog input goes above a certain threshold.
+<p class='vspace'></p><p>if语句使用频率非常高。下例展示了如何判断analog读取的值高于某阈值时点亮板上的13脚LED（大多数Arduino板上自带）：
 </p>
-<p class='vspace'></p><h3>Hardware Required</h3>
-<ul><li>Arduino Board
-</li><li>(1) Potentiometer or variable resistor
-</li><li>(1) 220 ohm resistor 
+<p class='vspace'></p><h3>所需硬件</h3>
+<ul><li>Arduino板
+</li><li>(1) 电位器或可调电阻
+</li><li>(1) 220欧姆电阻
 </li><li>(1) LED
-</li><li>hook-up wire
-</li></ul><p class='vspace'></p><h3>Circuit</h3>
-<p><span style='font-size:83%'>click the image to enlarge</span>
+</li><li>连接导线
+</li></ul><p class='vspace'></p><h3>电路图</h3>
+<p><span style='font-size:83%'>点击图片放大浏览</span>
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/if.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/if.png' alt='' title='' /></a></div>
-<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+<p class='vspace'></p><p><span style='font-size:83%'>使用Fritzing<a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>设计此图。 请前往<a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing项目主页</a> 寻找更多电路图样例。</span>
 </p>
-<p class='vspace'></p><p><strong>Schematic:</strong>
+<p class='vspace'></p><p><strong>示意图</strong>
 </p>
-<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大浏览</span>
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/ifStatement_sch.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/ifStatement_sch.png' alt='' title='' /></a></div>
-<p class='vspace'></p><h3>Code</h3>
-<p>In the code below, a variable called <code>analogValue</code> is used to store the data collected from a potentiometer connected to the Arduino on <code>analogPin 0</code>. This data is then compared to a threshold value. If the analog value is found to be above the set threshold the LED connected to digital pin 13 is turned on. If analogValue is found to be <code>&lt;</code> threshold, the LED remains off. 
+<p class='vspace'></p><h3>源代码</h3>
+<p>下例所示的代码中，名为<code>analogValue</code>的变量用于保存从电位器读取到的值，该电位器连接于Arduino的<code>analogPin 0</code>（模拟IO口0脚）。该值与一个基准值作比较，若此值在基准值之上，则点亮13脚上的LED；在基准值<code>之下</code>则LED熄灭。
 </p>
 <p class='vspace'></p><div  class='code' >
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock1'>
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
-&nbsp; Conditionals - If statement<br />
+&nbsp; 条件判断 -- If语句<br />
 &nbsp;<br />
-&nbsp;This example demonstrates the use of if() statements.<br />
-&nbsp;It reads the state of a potentiometer (an analog input) and turns on an LED<br />
-&nbsp;only if the LED goes above a certain threshold level. It prints the analog value<br />
-&nbsp;regardless of the level.<br />
+&nbsp;此例演示了if()语句的用法。<br />
+&nbsp;该程序读取并打印电位器的值（从模拟输入口），若该值在设定的基准值之上则点亮LED。<br />
 &nbsp;<br />
-&nbsp;The circuit:<br />
-&nbsp;* potentiometer connected to analog pin 0.<br />
-&nbsp;Center pin of the potentiometer goes to the analog pin.<br />
-&nbsp;side pins of the potentiometer go to +5V and ground<br />
-&nbsp;* LED connected from digital pin 13 to ground<br />
+&nbsp;电路：<br />
+&nbsp;* 电位器连在模拟0脚。<br />
+&nbsp;电位器中间的脚连在模拟引脚上，两边的脚分别连+5V和接地。<br />
+&nbsp;* LED连在13脚上。<br />
 &nbsp;<br />
-&nbsp;* Note: On most Arduino boards, there is already an LED on the board<br />
-&nbsp;connected to pin 13, so you don't need any extra components for this example.<br />
+&nbsp;* 注意：绝大多数的Arduino板上已经在13脚上连了一个LED，所以在此例无须多连。<br />
 &nbsp;<br />
 &nbsp;created 17 Jan 2009<br />
 &nbsp;modified 30 Aug 2011<br />
@@ -281,23 +277,23 @@ http://arduino.cc/en/Tutorial/IfStatement<br />
 &nbsp;<br />
 &nbsp;*/</span><br />
 &nbsp;<br />
-<span class="co1">// These constants won't change:</span><br />
-const <span class="kw1">int</span> analogPin <span class="sy0">=</span> A0<span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// pin that the sensor is attached to</span><br />
-const <span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">13</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; <span class="co1">// pin that the LED is attached to</span><br />
-const <span class="kw1">int</span> threshold <span class="sy0">=</span> <span class="nu0">400</span><span class="sy0">;</span> &nbsp; <span class="co1">// an arbitrary threshold level that's in the range of the analog input</span><br />
+<span class="co1">// 这些是常量，值不会变动</span><br />
+const <span class="kw1">int</span> analogPin <span class="sy0">=</span> A0<span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// 电位器连的脚</span><br />
+const <span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">13</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; <span class="co1">// LED连的脚</span><br />
+const <span class="kw1">int</span> threshold <span class="sy0">=</span> <span class="nu0">400</span><span class="sy0">;</span> &nbsp; <span class="co1">// 指定电位器读数的基准值</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// initialize the LED pin as an output:</span><br />
+&nbsp; <span class="co1">// 将LED连的脚初始化为OUTPUT状态</span><br />
 &nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
-&nbsp; <span class="co1">// initialize serial communications:</span><br />
+&nbsp; <span class="co1">// 初始化串口通讯</span><br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 <span class="br0">&#125;</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// read the value of the potentiometer:</span><br />
+&nbsp; <span class="co1">// 读取电位器的值</span><br />
 &nbsp; <span class="kw1">int</span> analogValue <span class="sy0">=</span> <span class="kw1">analogRead</span><span class="br0">&#40;</span>analogPin<span class="br0">&#41;</span><span class="sy0">;</span><br />
 <br />
-&nbsp; <span class="co1">// if the analog value is high enough, turn on the LED:</span><br />
+&nbsp; <span class="co1">// 若电位器读数高于设定的基准值，点亮LED</span><br />
 &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>analogValue <span class="sy0">&gt;</span> threshold<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <span class="br0">&#125;</span> <br />
@@ -305,26 +301,26 @@ const <span class="kw1">int</span> threshold <span class="sy0">=</span> <span cl
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span><span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
 &nbsp; <span class="br0">&#125;</span><br />
 <br />
-&nbsp; <span class="co1">// print the analog value:</span><br />
+&nbsp; <span class="co1">// 输出该值到串口</span><br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>analogValue<span class="br0">&#41;</span><span class="sy0">;</span><br />
 <br />
 <span class="br0">&#125;</span></div></div>
-  <div class='sourceblocklink'><a href='IfStatementf687html.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='IfStatementf687html.html?action=sourceblock&amp;num=1' type='text/plain'>[获取代码]</a></div>
 </div>
 
 </p>
 <p class='vspace'></p></div>
-<p class='vspace'></p><h3>See Also:</h3>
+<p class='vspace'></p><h3>参见：</h3>
 <ul><li><a class='wikilink' href='../Reference/If.html'>if()</a>
 </li><li><a class='wikilink' href='../Reference/Else.html'>if...else</a>
 </li><li><a class='wikilink' href='../Reference/AnalogRead.html'>analogRead()</a>
 </li><li><a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite()</a>
 </li><li><a class='wikilink' href='../Serial/Begin.html'>serial.begin()</a>
 </li><li><a class='wikilink' href='../Serial/Printhtml.html'>serial.print()</a>
-<p class='vspace'></p></li><li><a class='wikilink' href='ForLoop.html'>For Loop</a> - Control multiple <span class='wikiword'>LEDs</span> with a For Loop.
-</li><li><a class='wikilink' href='WhileLoop.html'>While Loop</a> - Use a While Loop to calibrate a sensor while a button is being pressed.
-</li><li><a class='wikilink' href='SwitchCasehtml.html'>Switch Case</a> - Choose between a number of discrete values in a manner that is the equivalent of using multiples If  statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
-</li><li><a class='wikilink' href='Arrayhtml.html'>Array</a>: a variation on the For Loop example that demonstrates how to use an array.
+<p class='vspace'></p></li><li><a class='wikilink' href='ForLoop.html'>For Loop</a> - 在一个for循环里控制多个<span class='wikiword'>LED</span>。
+</li><li><a class='wikilink' href='WhileLoop.html'>While Loop</a> - 当按钮按下时，使用While循环校准传感器。
+</li><li><a class='wikilink' href='SwitchCasehtml.html'>Switch Case</a> - 在多个离散值中选择执行，类似执行多个if语句。此例演示了如何把传感器的值分成四类，根据不同的类别执行对应的操作。
+</li><li><a class='wikilink' href='Arrayhtml.html'>Array</a>: For循环的另一种实现，演示如何使用数组。
 </li></ul>
 </div>
 
