@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - SPIEEPROM </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><h1>Interfacing a Serial EEPROM Using SPI</h1>
+<p>In this tutorial you will learn how to interface with an <span class='wikiword'>AT25HP512</span> Atmel serial EEPROM using the Serial Peripheral Interface (SPI) protocol. EEPROM chips such as this are very useful for data storage, and the steps we will cover for implementing SPI communication can be modified for use with most other SPI devices.  Note that the chip on the Arduino board contains an internal EEPROM, so follow this tutorial only if you need more space than it provides.
+</p>
+<p class='vspace'></p><p>Materials Needed:
+</p>
+<p class='vspace'></p><ul><li><span class='wikiword'>AT25HP512</span> Serial EEPROM chip (or similar)
+</li><li>Hookup wire
+</li><li>Arduino Microcontroller Module 
+</li></ul><p class='vspace'></p><h2>Introduction to the Serial Peripheral Interface</h2>
+<p>Serial Peripheral Interface (SPI) is a synchronous serial data protocol used by Microcontrollers for communicating with one or more peripheral devices quickly over short distances. It can also be used for communication between two microcontrollers. 
+</p>
+<p class='vspace'></p><p>With an SPI connection there is always one master device (usually a microcontroller) which controls the peripheral devices. Typically there are three lines common to all the devices, 
+</p><ul><li>Master In Slave Out (MISO) - The Slave line for sending data to the master, 
+</li><li>Master Out Slave In (MOSI) - The Master line for sending data to the peripherals, 
+</li><li>Serial Clock (SCK) - The clock pulses which synchronize data transmission generated by the master, and 
+</li><li>Slave Select pin  - allocated on each device which the master can use to enable and disable specific devices and avoid false transmissions due to line noise.
+</li></ul><p class='vspace'></p><p>The difficult part about SPI is that the standard is loose and each device implements it a little differently. This means you have to pay special attention to the datasheet when writing your interface code. Generally speaking there are three modes of transmission numbered 0 - 3. These modes control whether data is shifted in and out on the rising or falling edge of the data clock signal, and whether the clock is idle when high or low. 
+</p>
+<p class='vspace'></p><p>All SPI settings are determined by the Arduino SPI Control Register (SPCR). A register is just a byte of microcontroller memory that can be read from or written to. Registers generally serve three purposes, control, data and  status. 
+</p>
+<p class='vspace'></p><p>Control registers code control settings for various microcontroller functionalities. Usually each bit in a control register effects a particular setting, such as speed or polarity.
+</p>
+<p class='vspace'></p><p>Data registers simply hold bytes. For example, the SPI data register (SPDR) holds the byte which is about to be shifted out the MOSI line, and the data which has just been shifted in the MISO line. 
+</p>
+<p class='vspace'></p><p>Status registers change their state based on various microcontroller conditions. For example, the seventh bit of the SPI status register (SPSR) gets set to 1 when a value is shifted in or out of the SPI. 
+</p>
+<p class='vspace'></p><p>The SPI control register (SPCR) has 8 bits, each of which control a particular SPI setting. 
+</p><pre>
+SPCR
+| 7    | 6    | 5    | 4    | 3    | 2    | 1    | 0    |
+| SPIE | SPE  | DORD | MSTR | CPOL | CPHA | SPR1 | SPR0 |
+
+SPIE - Enables the SPI interrupt when 1
+SPE - Enables the SPI when 1
+DORD - Sends data least Significant Bit First when 1, most Significant Bit first when 0
+MSTR - Sets the Arduino in master mode when 1, slave mode when 0
+CPOL - Sets the data clock to be idle when high if set to 1, idle when low if set to 0
+CPHA - Samples data on the falling edge of the data clock when 1, rising edge when 0
+SPR1 and SPR0 - Sets the SPI speed, 00 is fastest (4MHz) 11 is slowest (250KHz)
+
+</pre>
+<p class='vspace'></p><p>This means that to write code for a new SPI device you need to note several things and set the SPCR accordingly:
+</p><ul><li>Is data shifted in MSB or LSB first?
+</li><li>Is the data clock idle when high or low?
+</li><li>Are samples on the rising or falling edge of clock pulses?
+</li><li>What speed is the SPI running at? 
+</li></ul><p class='vspace'></p><p>Once you have your SPI Control Register set correctly you just need to figure out how long you need to pause between instructions and you are ready to go. Now that you have a feel for how SPI works, let's take a look at the details of the EEPROM chip.
+</p>
+<p class='vspace'></p><h2>Introduction to Serial EEPROM</h2>
+<div><img src='../uploads/Tutorial/at25hp512_pins.jpg' alt='' title='' /></div>
+<div><img src='../uploads/Tutorial/at25hp512_pins2.jpg' alt='' title='' /></div>
+<p class='vspace'></p><p>The <span class='wikiword'>AT25HP512</span> is a 65,536 byte serial EEPROM. It supports SPI modes 0 and 3, runs at up to 10MHz at 5v and can run at slower speeds down to 1.8v. It's memory is organized as 512 pages of 128 bytes each. It can only be written 128 bytes at a time, but it can be read 1-128 bytes at a time. The device also offers various degerees of write protection and a hold pin, but we won't be covering those in this tutorial.
+</p>
+<p class='vspace'></p><p>The device is enabled by pulling the Chip Select (CS) pin low. Instructions are sent as 8 bit operational codes (opcodes) and are shifted in on the rising edge of the data clock. It takes the EEPROM about 10 milliseconds to write a page (128 bytes) of data, so a 10ms pause should follow each EEPROM write routine.
+</p>
+<p class='vspace'></p><h2>Prepare the Breadboard</h2>
+<p>Insert the <span class='wikiword'>AT25HP512</span> chip into the breadboard. Connect 5V power and ground from the breadboard to 5V power and ground from the microcontroller. Connect EEPROM pins 3, 7 and 8 to 5v and pin 4 to ground. 
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/eeprom_pwr.jpg' alt='' title='' /></div>
+<p><em>+5v wires are red, GND wires are black</em>
+</p>
+<p class='vspace'></p><p>Connect EEPROM pin 1 to Arduino pin 10 (Slave Select - SS), EEPROM pin 2 to Arduino pin 12 (Master In Slave Out - MISO), EEPROM pin 5 to Arduino pin 11 (Master Out Slave In - MOSI), and EEPROM pin 6 to Arduino pin 13 (Serial Clock - SCK).
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/eeprom_signal.jpg' alt='' title='' /></div>
+<p><em>SS wire is white, MISO wire is yellow, MOSI wire is blue, SCK wire is green</em>
+</p>
+<p class='vspace'></p><h2>Program the Arduino</h2>
+<p>Now we will write the code to enable SPI communication between the EEPROM and the Arduino. In the setup routine this program fills 128 bytes, or one page of the EEPROM with data. In the main loop it reads that data back out, one byte at a time and prints that byte out the built in serial port. We will walk through the code in small sections.
+</p>
+<p class='vspace'></p><p>The first step is setting up our pre-processor directives. Pre-processor directives are processed before the actual compilation begins. They start with a "#" and do not end with semi-colons.
+</p>
+<p class='vspace'></p><p>We define the pins we will be using for our SPI connection, DATAOUT, DATAIN, SPICLOCK and SLAVESELECT. Then we define our opcodes for the EEPROM. Opcodes are control commands:
+</p>
+<p class='vspace'></p><pre>
+#define DATAOUT 11//MOSI
+#define DATAIN  12//MISO 
+#define SPICLOCK  13//sck
+#define SLAVESELECT 10//ss
+
+//opcodes
+#define WREN  6
+#define WRDI  4
+#define RDSR  5
+#define WRSR  1
+#define READ  3
+#define WRITE 2 
+</pre>
+<p class='vspace'></p><p>Here we allocate the global variables we will be using later in the program. Note <code>char buffer [128];</code>. this is a 128 byte array we will be using to store the data for the EEPROM write:
+</p>
+<p class='vspace'></p><pre>
+byte eeprom_output_data;
+byte eeprom_input_data=0;
+byte clr;
+int address=0;
+//data buffer
+char buffer [128]; 
+</pre>
+<p class='vspace'></p><p>First we initialize our serial connection, set our input and output pin modes and set the SLAVESELECT line high to start. This deselects the device and avoids any false transmission messages due to line noise:
+</p>
+<p class='vspace'></p><pre>
+void setup()
+{
+  Serial.begin(9600);
+
+  pinMode(DATAOUT, OUTPUT);
+  pinMode(DATAIN, INPUT);
+  pinMode(SPICLOCK,OUTPUT);
+  pinMode(SLAVESELECT,OUTPUT);
+  digitalWrite(SLAVESELECT,HIGH); //disable device 
+</pre>
+<p class='vspace'></p><p>Now we set the SPI Control register (SPCR) to the binary value 01010000. In the control register each bit sets a different functionality. The eighth bit disables the SPI interrupt, the seventh bit enables the SPI, the sixth bit chooses transmission with the most significant bit going first, the fifth bit puts the Arduino in Master mode, the fourth bit sets the data clock idle when it is low, the third bit sets the SPI to sample data on the rising edge of the data clock, and the second and first bits set the speed of the SPI to system speed / 4 (the fastest). 
+After setting our control register up we read the SPI status register (SPSR) and data register (SPDR) in to the junk clr variable to clear out any spurious data from past runs:
+</p>
+<p class='vspace'></p><pre> 
+  // SPCR = 01010000
+  //interrupt disabled,spi enabled,msb 1st,master,clk low when idle,
+  //sample on leading edge of clk,system clock/4 rate (fastest)
+  SPCR = (1&lt;&lt;SPE)|(1&lt;&lt;MSTR);
+  clr=SPSR;
+  clr=SPDR;
+  delay(10); 
+</pre>
+<p class='vspace'></p><p>Here we fill our data array with numbers and send a write enable instruction to the EEPROM. The EEPROM MUST be write enabled before every write instruction. To send the instruction we pull the SLAVESELECT line low, enabling the device, and then send the instruction using the spi_transfer function. Note that we use the WREN opcode we defined at the beginning of the program. Finally we pull the SLAVESELECT line high again to release it:
+</p>
+<p class='vspace'></p><pre>
+  //fill buffer with data
+  fill_buffer();
+  //fill eeprom w/ buffer
+  digitalWrite(SLAVESELECT,LOW);
+  spi_transfer(WREN); //write enable
+  digitalWrite(SLAVESELECT,HIGH);
+</pre>
+<p class='vspace'></p><p>Now we pull the SLAVESELECT line low to select the device again after a brief delay. We send a WRITE instruction to tell the EEPROM we will be sending data to record into memory. We send the 16 bit address to begin writing at in two bytes, Most Significant Bit first. Next we send our 128 bytes of data from our buffer array, one byte after another without pause. Finally we set the SLAVESELECT pin high to release the device and pause to allow the EEPROM to write the data:
+</p>
+<p class='vspace'></p><pre>
+  delay(10);
+  digitalWrite(SLAVESELECT,LOW);
+  spi_transfer(WRITE); //write instruction
+  address=0;
+  spi_transfer((char)(address&gt;&gt;8));   //send MSByte address first
+  spi_transfer((char)(address));      //send LSByte address
+  //write 128 bytes
+  for (int I=0;I&lt;128;I++)
+  {
+    spi_transfer(buffer[I]); //write data byte
+  }
+  digitalWrite(SLAVESELECT,HIGH); //release chip
+  //wait for eeprom to finish writing
+  delay(3000); 
+</pre>
+<p class='vspace'></p><p>We end the setup function by sending the word "hi" plus a line feed out the built in serial port for debugging purposes. This way if our data comes out looking funny later on we can tell it isn't just the serial port acting up:
+</p>
+<p class='vspace'></p><pre>
+  Serial.print('h',BYTE);
+  Serial.print('i',BYTE);
+  Serial.print('\n',BYTE);//debug
+  delay(1000);
+}
+</pre>
+<p class='vspace'></p><p>In our main loop we just read one byte at a time from the EEPROM and print it out the serial port. We add a line feed and a pause for readability. Each time through the loop we increment the eeprom address to read. When the address increments to 128 we turn it back to 0 because we have only filled 128 addresses in the EEPROM with data:
+</p>
+<p class='vspace'></p><pre>
+void loop()
+{
+  eeprom_output_data = read_eeprom(address);
+  Serial.print(eeprom_output_data,DEC);
+  Serial.print('\n',BYTE);
+  address++;
+  delay(500); //pause for readability
+} 
+</pre><p>The fill_buffer function simply fills our data array with numbers 0 - 127 for each index in the array. This function could easily be changed to fill the array with data relevant to your application:
+</p>
+<p class='vspace'></p><pre>
+void fill_buffer()
+{
+  for (int I=0;I&lt;128;I++)
+  {
+    buffer[I]=I;
+  }
+} 
+</pre>
+<p class='vspace'></p><p>The spi_transfer function loads the output data into the data transmission register, thus starting the SPI transmission. It polls a bit to the SPI Status register (SPSR) to detect when the transmission is complete using a bit mask, SPIF. An explanation of bit masks can be found <a class='urllink' href='http://www.arduino.cc/en/Tutorial/BitMask' rel='nofollow'>here</a>. It then returns any data that has been shifted in to the data register by the EEPROM:
+</p>
+<p class='vspace'></p><pre>
+char spi_transfer(volatile char data)
+{
+  SPDR = data;                    // Start the transmission
+  while (!(SPSR &amp; (1&lt;&lt;SPIF)))     // Wait for the end of the transmission
+  {
+  };
+  return SPDR;                    // return the received byte
+}
+</pre>
+<p class='vspace'></p><p>The read_eeprom function allows us to read data back out of the EEPROM. First we set the SLAVESELECT line low to enable the device. Then we transmit a READ instruction, followed by the 16-bit address we wish to read from, Most Significant Bit first. Next we send a dummy byte to the EEPROM for the purpose of shifting the data out. Finally we pull the SLAVESELECT line high again to release the device after reading one byte, and return the data. If we wanted to read multiple bytes at a time we could hold the SLAVESELECT line low while we repeated the <code>data = spi_transfer(0xFF);</code> up to 128 times for a full page of data:
+</p>
+<p class='vspace'></p><pre>
+byte read_eeprom(int EEPROM_address)
+{
+  //READ EEPROM
+  int data;
+  digitalWrite(SLAVESELECT,LOW);
+  spi_transfer(READ); //transmit read opcode
+  spi_transfer((char)(EEPROM_address&gt;&gt;8));   //send MSByte address first
+  spi_transfer((char)(EEPROM_address));      //send LSByte address
+  data = spi_transfer(0xFF); //get data byte
+  digitalWrite(SLAVESELECT,HIGH); //release chip, signal end transfer
+  return data;
+} 
+</pre>
+<p class='vspace'></p><p>For easy copy and pasting the full program text of this tutorial is below:
+</p>
+<p class='vspace'></p><pre>
+#define DATAOUT 11//MOSI
+#define DATAIN  12//MISO 
+#define SPICLOCK  13//sck
+#define SLAVESELECT 10//ss
+
+//opcodes
+#define WREN  6
+#define WRDI  4
+#define RDSR  5
+#define WRSR  1
+#define READ  3
+#define WRITE 2
+
+byte eeprom_output_data;
+byte eeprom_input_data=0;
+byte clr;
+int address=0;
+//data buffer
+char buffer [128];
+
+void fill_buffer()
+{
+  for (int I=0;I&lt;128;I++)
+  {
+    buffer[I]=I;
+  }
+}
+
+char spi_transfer(volatile char data)
+{
+  SPDR = data;                    // Start the transmission
+  while (!(SPSR &amp; (1&lt;&lt;SPIF)))     // Wait the end of the transmission
+  {
+  };
+  return SPDR;                    // return the received byte
+}
+
+void setup()
+{
+  Serial.begin(9600);
+
+  pinMode(DATAOUT, OUTPUT);
+  pinMode(DATAIN, INPUT);
+  pinMode(SPICLOCK,OUTPUT);
+  pinMode(SLAVESELECT,OUTPUT);
+  digitalWrite(SLAVESELECT,HIGH); //disable device
+  // SPCR = 01010000
+  //interrupt disabled,spi enabled,msb 1st,master,clk low when idle,
+  //sample on leading edge of clk,system clock/4 rate (fastest)
+  SPCR = (1&lt;&lt;SPE)|(1&lt;&lt;MSTR);
+  clr=SPSR;
+  clr=SPDR;
+  delay(10);
+  //fill buffer with data
+  fill_buffer();
+  //fill eeprom w/ buffer
+  digitalWrite(SLAVESELECT,LOW);
+  spi_transfer(WREN); //write enable
+  digitalWrite(SLAVESELECT,HIGH);
+  delay(10);
+  digitalWrite(SLAVESELECT,LOW);
+  spi_transfer(WRITE); //write instruction
+  address=0;
+  spi_transfer((char)(address&gt;&gt;8));   //send MSByte address first
+  spi_transfer((char)(address));      //send LSByte address
+  //write 128 bytes
+  for (int I=0;I&lt;128;I++)
+  {
+    spi_transfer(buffer[I]); //write data byte
+  }
+  digitalWrite(SLAVESELECT,HIGH); //release chip
+  //wait for eeprom to finish writing
+  delay(3000);
+  Serial.print('h',BYTE);
+  Serial.print('i',BYTE);
+  Serial.print('\n',BYTE);//debug
+  delay(1000);
+}
+
+byte read_eeprom(int EEPROM_address)
+{
+  //READ EEPROM
+  int data;
+  digitalWrite(SLAVESELECT,LOW);
+  spi_transfer(READ); //transmit read opcode
+  spi_transfer((char)(EEPROM_address&gt;&gt;8));   //send MSByte address first
+  spi_transfer((char)(EEPROM_address));      //send LSByte address
+  data = spi_transfer(0xFF); //get data byte
+  digitalWrite(SLAVESELECT,HIGH); //release chip, signal end transfer
+  return data;
+}
+
+void loop()
+{
+  eeprom_output_data = read_eeprom(address);
+  Serial.print(eeprom_output_data,DEC);
+  Serial.print('\n',BYTE);
+  address++;
+  if (address == 128)
+    address = 0;
+  delay(500); //pause for readability
+}
+
+</pre>
+<p class='vspace'></p><pre>
+
+</pre>
+<p class='vspace'></p><p><em>code and tutorial by Heather Dewey-Hagborg, photos by Thomas Dexter</em>
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/SPIEEPROM" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='SPIEEPROM264b.html?action=edit'>Edit Page</a> | <a href='SPIEEPROMad68.html?action=diff'>Page History</a> | <a href='SPIEEPROM60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

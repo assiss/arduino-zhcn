@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Dimmer </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Communication</em>
+</p>
+<p class='vspace'></p><h3>Dimmer</h3>
+<p>This example shows how to send data from a personal computer to an Arduino board to control the brightness of an LED.  The data is sent in individual bytes, each of which ranges in value from 0 to 255.  Arduino reads these bytes and uses them to set the brightness of the LED.
+</p>
+<p class='vspace'></p><p>You can send bytes to the Arduino from any software that can access the computer serial port. Examples for <a class='urllink' href='http://www.processing.org/' rel='nofollow'>Processing</a> and <a class='urllink' href='http://www.cycling74.com/products/max5' rel='nofollow'>Max/MSP version 5</a> are shown below.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li>LED
+</li><li>220 ohm resistor
+</li></ul><p class='vspace'></p><p><strong>Software Required</strong>
+</p><ul><li><a class='urllink' href='http://www.processing.org/' rel='nofollow'>Processing</a> or
+</li><li><a class='urllink' href='http://www.cycling74.com/products/max5' rel='nofollow'>Max/MSP version 5</a>
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<p>An LED connected to pin 9. Use an appropriate resistor as needed. For most common <span class='wikiword'>LEDs</span>, you can usually do without the resistor, as the current output of the digital I/O pins is limited.
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/dimmer-circuit3.png' rel='nofollow'><img width='300px' src='../uploads/Tutorial/dimmer-circuit3.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><h3>Schematic</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><p>%<a class='urllink' href='../uploads/Tutorial/simplefade_pin9_schem.png' rel='nofollow'><img width='250px' src='../uploads/Tutorial/simplefade_pin9_schem.png' alt='' title='' /></a>
+</p>
+<p class='vspace'></p><h3>Code</h3>
+<div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; Dimmer<br />
+&nbsp;<br />
+&nbsp;Demonstrates the sending data from the computer to the Arduino board,<br />
+&nbsp;in this case to control the brightness of an LED. &nbsp;The data is sent<br />
+&nbsp;in individual bytes, each of which ranges from 0 to 255. &nbsp;Arduino<br />
+&nbsp;reads these bytes and uses them to set the brightness of the LED.<br />
+&nbsp;<br />
+&nbsp;The circuit:<br />
+&nbsp;LED attached from digital pin 9 to ground.<br />
+&nbsp;Serial connection to Processing, Max/MSP, or another serial application<br />
+&nbsp;<br />
+&nbsp;created 2006<br />
+&nbsp;by David A. Mellis<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Tom Igoe and Scott Fitzgerald<br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;http://www.arduino.cc/en/Tutorial/Dimmer<br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+<br />
+const <span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">9</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<span class="co1">// the pin that the LED is attached to</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// initialize the serial communication:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// initialize the ledPin as an output:</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">byte</span> brightness<span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// check if data has been sent from the computer:</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">Serial</span>.<span class="kw1">available</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// read the most recent byte (which will be from 0 to 255):</span><br />
+&nbsp; &nbsp; brightness <span class="sy0">=</span> <span class="kw1">Serial</span>.<span class="kw1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// set the brightness of the LED:</span><br />
+&nbsp; &nbsp; <span class="kw1">analogWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> brightness<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="coMULTI">/* Processing code for this example<br />
+&nbsp;// Dimmer - sends bytes over a serial port<br />
+&nbsp;// by David A. Mellis<br />
+&nbsp;//This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;import processing.serial.*;<br />
+&nbsp;Serial port;<br />
+&nbsp;<br />
+&nbsp;void setup() {<br />
+&nbsp;size(256, 150);<br />
+&nbsp;<br />
+&nbsp;println(&quot;Available serial ports:&quot;);<br />
+&nbsp;println(Serial.list());<br />
+&nbsp;<br />
+&nbsp;// Uses the first port in this list (number 0). &nbsp;Change this to<br />
+&nbsp;// select the port corresponding to your Arduino board. &nbsp;The last<br />
+&nbsp;// parameter (e.g. 9600) is the speed of the communication. &nbsp;It<br />
+&nbsp;// has to correspond to the value passed to Serial.begin() in your<br />
+&nbsp;// Arduino sketch.<br />
+&nbsp;port = new Serial(this, Serial.list()[0], 9600); &nbsp;<br />
+&nbsp;<br />
+&nbsp;// If you know the name of the port used by the Arduino board, you<br />
+&nbsp;// can specify it directly like this.<br />
+&nbsp;//port = new Serial(this, &quot;COM1&quot;, 9600);<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;void draw() {<br />
+&nbsp;// draw a gradient from black to white<br />
+&nbsp;for (int i = 0; i &lt; 256; i++) {<br />
+&nbsp;stroke(i);<br />
+&nbsp;line(i, 0, i, 150);<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;// write the current X-position of the mouse to the serial port as<br />
+&nbsp;// a single byte<br />
+&nbsp;port.write(mouseX);<br />
+&nbsp;}<br />
+&nbsp;*/</span><br />
+<br />
+<span class="coMULTI">/* Max/MSP v5 patch for this example<br />
+&nbsp;<br />
+----------begin_max5_patcher----------<br />
+1008.3ocuXszaiaCD9r8uhA5rqAeHIa0aAMaAVf1S6hdoYQAsDiL6JQZHQ2M<br />
+YWr+2KeX4vjnjXKKkKhhiGQ9MeyCNz+X9rnMp63sQvuB+MLa1OlOalSjUvrC<br />
+ymEUytKuh05TKJWUWyk5nE9eSyuS6jesvHu4F4MxOuUzB6X57sPKWVzBLXiP<br />
+xZtGj6q2vafaaT0.BzJfjj.p8ZPukazsQvpfcpFs8mXR3plh8BoBxURIOWyK<br />
+rxspZ0YI.eTCEh5Vqp+wGtFXZMKe6CZc3yWZwTdCmYW.BBkdiby8v0r+ST.W<br />
+sD9SdUkn8FYspPbqvnBNFtZWiUyLmleJWo0vuKzeuj2vpJLaWA7YiE7wREui<br />
+FpDFDp1KcbAFcP5sJoVxp4NB5Jq40ougIDxJt1wo3GDZHiNocKhiIExx+owv<br />
+AdOEAksDs.RRrOoww1Arc.9RvN2J9tamwjkcqknvAE0l+8WnjHqreNet8whK<br />
+z6mukIK4d+Xknv3jstvJs8EirMMhxsZIusET25jXbX8xczIl5xPVxhPcTGFu<br />
+xNDu9rXtUCg37g9Q8Yc+EuofIYmg8QdkPCrOnXsaHwYs3rWx9PGsO+pqueG2<br />
+uNQBqWFh1X7qQG+3.VHcHrfO1nyR2TlqpTM9MDsLKNCQVz6KO.+Sfc5j1Ykj<br />
+jzkn2jwNDRP7LVb3d9LtoWBAOnvB92Le6yRmZ4UF7YpQhiFi7A5Ka8zXhKdA<br />
+4r9TRGG7V4COiSbAJKdXrWNhhF0hNUh7uBa4Mba0l7JUK+omjDMwkSn95Izr<br />
+TOwkdp7W.oPRmNRQsiKeu4j3CkfVgt.NYPEYqMGvvJ48vIlPiyzrIuZskWIS<br />
+xGJPcmPiWOfLodybH3wjPbMYwlbFIMNHPHFOtLBNaLSa9sGk1TxMzCX5KTa6<br />
+WIH2ocxSdngM0QPqFRxyPHFsprrhGc9Gy9xoBjz0NWdR2yW9DUa2F85jG2v9<br />
+FgTO4Q8qiC7fzzQNpmNpsY3BrYPVJBMJQ1uVmoItRhw9NrVGO3NMNzYZ+zS7<br />
+3WTvTOnUydG5kHMKLqAOjTe7fN2bGSxOZDkMrBrGQ9J1gONBEy0k4gVo8qHc<br />
+cxmfxVihWz6a3yqY9NazzUYkua9UnynadOtogW.JfsVGRVNEbWF8I+eHtcwJ<br />
++wLXqZeSdWLo+FQF6731Tva0BISKTx.cLwmgJsUTTvkg1YsnXmxDge.CDR7x<br />
+D6YmX6fMznaF7kdczmJXwm.XSOOrdoHhNA7GMiZYLZZR.+4lconMaJP6JOZ8<br />
+ftCs1YWHZI3o.sIXezX5ihMSuXzZtk3ai1mXRSczoCS32hAydeyXNEu5SHyS<br />
+xqZqbd3ZLdera1iPqYxOm++v7SUSz<br />
+-----------end_max5_patcher-----------<br />
+&nbsp;*/</span></div></div>
+  <div class='sourceblocklink'><a href='Dimmerf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>Processing Code</h3>
+<p>The Processing sketch in the code sample above will send bytes out the serial port to the Arduino to dim the LED.
+</p>
+<p class='vspace'></p><h3>Max code</h3>
+<p>The Max/MSP patch in the code sample above looks like the image below.  Copy it and paste it into a new patch window.
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/maxDimmer.png' rel='nofollow'><img width='600px' src='../uploads/Tutorial/maxDimmer.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/Serial.html'>serial</a>()
+</li><li><a class='wikilink' href='../Serial/Read.html'>serial.read()</a>
+</li><li><a class='wikilink' href='../Reference/AnalogRead.html'>analogRead</a>()
+</li><li><a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite</a>()
+<p class='vspace'></p></li><li><a class='wikilink' href='Graph.html'>Graph</a> - send data to the computer and graph it in Processing.
+</li><li><a class='wikilink' href='PhysicalPixel.html'>Physical Pixel</a> - turn an LED on and off by sending data from Processing.
+</li><li><a class='wikilink' href='VirtualColorMixerhtml.html'>Virtual Color Mixer</a> - send multiple variables from an Arduino to the computer and read them in Processing. 
+</li><li><a class='wikilink' href='SerialCallResponse.html'>Serial Call Response</a> - send multiple variables using a call and response (handshaking) method.
+</li><li><a class='wikilink' href='SerialCallResponseASCIIhtml.html'>Serial Call and Response ASCII</a> - send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+</li><li><a class='wikilink' href='SwitchCase2html.html'>Serial Input (Switch (case) Statement)</a> - How to take different actions based 0n characters received by the serial port. 
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/Dimmer" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Dimmer264bhtml.html?action=edit'>Edit Page</a> | <a href='Dimmerad68.html?action=diff'>Page History</a> | <a href='Dimmer60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Howto </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<h2>Arduino Howto</h2>
+<p>These are the steps you need to follow in order to be up and running:
+</p>
+<p class='vspace'></p><ol><li>Get an Arduino board
+</li><li>Download the Arduino environment
+</li><li>Install the USB drivers
+</li><li>Connect the board
+</li><li>Upload a program
+</li></ol><p class='vspace'></p><h3>1 | Get an Arduino board</h3>
+<p>The Arduino i/o board is a simple circuit featuring the <span class='wikiword'>ATmega8</span> processor from Atmel. The board is composed of a printed circuit board (PCB) and electronic parts.  
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/ArduinoNG.jpg' alt='' title='' /></div>
+<p class='vspace'></p><p>There are a few ways to get an Arduino board:
+</p>
+<p class='vspace'></p><ul><li><strong>buy a ready made board</strong>. See how you can <a class='wikilink' href='../Main/Buy.html'>buy</a> a board or just the PCB.
+<ul><li><a class='urllink' href='http://pcb-europe.net/catalog/index.php?cPath=29' rel='nofollow'>European distributor</a> 
+</li><li><a class='urllink' href='http://www.sparkfun.com/commerce/product_info.php?products_id=666' rel='nofollow'>US distributor</a>
+</li></ul></li><li><strong>build your own board</strong>. If you want you can build your own PCB just by downloading the CAD files from the <a class='wikilink' href='../Main/Hardware.html'>Hardware</a> page. Extract the .brd file and send it to a PCB manufacturer. Be aware that manufacturing a single pcb will be very expensive. It's better to get together with other people and make 20 or 30 at a time. Since you get the full CAD files you can make your own customised version of Arduino. if you make modifications or fix bugs please send us your changes!
+<ul><li><strong>purchase parts</strong>. purchase the parts from any electronics store. The Serial version in particular has been designed to use the most basic parts that can be found anywhere in the world. The USB version on the other hand requires some advanced soldering skills because of the FTDI chip that is an smd part. Here is a <a class='createlinktext' rel='nofollow' 
+    href='PartsSerial264bhtml.html?action=edit'>list</a><a rel='nofollow' 
+    class='createlink' href='PartsSerial264bhtml.html?action=edit'>?</a> of parts for the serial board.
+</li><li><strong>assemble the board</strong>. We put together a step by step <a class='wikilink' href='../Main/BuildSerial.html'>guide</a> on how to build an arduino board.  <em>Newbies: never soldered before? afraid of trashing thousands of boards before getting one properly soldered? fear not :) learn to master the art of <a class='urllink' href='http://www.potemkin.org/cms/Pid/Soldering' rel='nofollow'>soldering</a>.</em>
+</li><li><strong>program the bootloader</strong>. In order for the development environment to be able to program the chip, this has to be programmed with a piece of code called <em>bootloader</em>.   See  the <a class='wikilink' href='../Hacking/Bootloader5ecd.html'>bootloader</a> page on how to program it on your chip.
+</li></ul></li></ul><p class='vspace'></p><h3>2 | Download the Arduino environment</h3>
+<p>To program the Arduino board you need the Arduino environment.
+</p>
+<p class='vspace'></p><p><strong>Download Arduino</strong>:  
+From the <a class='wikilink' href='../Main/Software.html'>software page</a>.
+</p>
+<p class='vspace'></p><p><em>Linux note</em>: For help getting the Arduino IDE running on Debian, please see the <a class='wikilink' href='../Main/FAQ.html#linux'>FAQ#linux</a> ("How can I run the Arduino IDE under Linux?").
+</p>
+<p class='vspace'></p><p><em>Mac OS X note:</em> After downloading the IDE, run the <code>macosx_setup.command</code>.  It corrects permission on a few files for use with the serial port and will prompt you for your password.  You may need to reboot after running this script.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/MacSetupCommand.png' alt='' title='' /></div>
+<p class='vspace'></p><p>For more information, see the <a class='wikilink' href='Environmenthtml.html'>guide to the Arduino environment</a>.
+</p>
+<p class='vspace'></p><h3>3 | Install the USB drivers</h3>
+<p>If you are using a USB Arduino, you will need to install the drivers for the FTDI chip on the board.  These can be found in the <code>drivers</code> directory of the Arduino distribution.
+</p>
+<p class='vspace'></p><p>On Windows, you will need to unzip <code>FTDI USB Drivers.zip</code>.  Then, when you plug in the Arduino board, point the Windows <em>Add Hardware</em> wizard to the <code>FTDI USB Drivers</code> directory.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/windows-extract-drivers.png' alt='' title='' /></div>
+<p class='vspace'></p><p>On the Mac, mount the <code><span class='wikiword'>FTDIUSBSerialDriver</span>_v2_1_6.dmg</code> (on PPC machines) or the <code><span class='wikiword'>FTDIUSBSerialDriver</span>_v2_2_6_Intel.dmg</code> (on Intel machines) disk image and run the included <code><span class='wikiword'>FTDIUSBSerialDriver</span>.pkg</code>.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/USBDriversMac.png' alt='' title='' /></div>
+<p class='vspace'></p><p>The latest version of the drivers can be found on the <a class='urllink' href='http://www.ftdichip.com/Drivers/VCP.htm' rel='nofollow'>FTDI website</a>.
+</p>
+<p class='vspace'></p><h3>4 | Connect the board</h3>
+<p>If you're using a serial board, power the board with an external power supply (6 to 25 volts DC, with the core of the connector positive).  Connect the board to a serial port on your computer.
+</p>
+<p class='vspace'></p><p>On the USB boards, the power source is selected by the jumper between the USB and power plugs.  To power the board from the USB port (good for controlling low power devices like <span class='wikiword'>LEDs</span>), place the jumper on the two pins closest to the USB plug.  To power the board from an external power supply (needed for motors and other high current devices), place the jumper on the two pins closest to the power plug.  Either way, connect the board to a USB port on your computer. 
+</p>
+<p class='vspace'></p><p>The power LED should go on.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/PluggedIn.jpg' alt='' title='' /></div>
+<p class='vspace'></p><p>On Windows, the Add New Hardware wizard will open.  Tell it not to connect to Windows update and click next.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/wizard1-step1.png' alt='' title='' /></div>
+<p class='vspace'></p><p>Then select "Install from  a list or specified location (Advanced)" and click next. 
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/wizard1-step2.png' alt='' title='' /></div>
+<p class='vspace'></p><p>Make sure that "Search for the best driver in these locations is checked"; uncheck "Search removable media"; check "Include this location in the search" and browse to the location you unzipped the USB drivers to in the previous step.  Click next.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/wizard1-step3.png' alt='' title='' /></div>
+<p class='vspace'></p><p>The wizard will search for the driver and then tell you that a "USB Serial Converter" was found.  Click finish.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/wizard1-step4.png' alt='' title='' /></div>
+<p class='vspace'></p><p>The new hardware wizard will appear again.  Go through the same steps.  This time, a "USB Serial Port" will be found.
+</p>
+<p class='vspace'></p><h3>5 | Upload a program</h3>
+<p>Open the LED blink example sketch: File &gt; Sketchbook &gt; Examples &gt; led_blink.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/LedBlinkExample.png' alt='' title='' /></div>
+<p class='vspace'></p><p>Here's what the code for the LED blink example looks like.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/ArduinoEnvironment.png' alt='' title='' /></div>
+<p class='vspace'></p><p>Select the serial device of the Arduino board from the Tools | Serial Port menu.  On Windows, this should be <code><span class='wikiword'>COM1</span></code> or <code><span class='wikiword'>COM2</span></code> for a serial Arduino board, or <code><span class='wikiword'>COM3</span></code>, <code><span class='wikiword'>COM4</span></code>, or <code><span class='wikiword'>COM5</span></code> for a USB board.  On the Mac, this should be something like <code>/dev/cu.usbserial-1B1</code> for a USB board, or something like <code>/dev/<span class='wikiword'>cu.USA19QW1b1P1</span>.1</code> if using a Keyspan adapter with a serial board (other USB-to-serial adapters use different names).
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/SerialPortSelection.png' alt='' title='' /></div>
+<p class='vspace'></p><p>Push the reset button on the board then click the <em>Upload</em> button in the IDE.  Wait a few seconds.  If successful, the message "Done uploading." will appear in the status bar.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Guide/ResetBoard.jpg' alt='' title='' /></div>
+<p class='vspace'></p><div><img src='../uploads/Guide/UploadToBoard.png' alt='' title='' /></div>
+<p class='vspace'></p><p>If the Arduino board doesn't show up in the Tools | Serial Port menu, or you get an error while uploading, please see the <a class='wikilink' href='Troubleshooting.html'>troubleshooting suggestions</a>.
+</p>
+<p class='vspace'></p><p>A few seconds after the upload finishes, you should see the amber (yellow) LED on the board start to blink.
+</p>
+<p class='vspace'></p><h3>Learn More</h3>
+<ul><li>Read about the <a class='wikilink' href='Environmenthtml.html'>Arduino Environment</a>
+</li><li>Learn about the parts of the <a class='wikilink' href='../Reference/Boardc898.html'>Arduino board</a>
+</li><li>See the <a class='wikilink' href='../Tutorial/HomePage.html'>tutorials</a> for some example programs.  (There are also some examples available in the <code>examples</code> directory inside the arduino directory.)
+</li><li>Look up specific Arduino functions and syntax in the <a class='wikilink' href='../Reference/HomePage.html'>reference</a>
+</li><li>The Arduino programming language is compatible with the <a class='urllink' href='http://www.wiring.org.co/' rel='nofollow'>Wiring</a> language allowing porting applications from the Wiring board to Arduino.  Please note the <a class='wikilink' href='../Reference/Comparison7ef4.html'>differences between the Wiring and Processing languages</a>.
+</li><li>If you're having problems, check the <a class='wikilink' href='../Main/FAQ.html'>FAQ</a>.
+</li><li>If you don't find a solution there, try posting in the <a class='urllink' href='http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl' rel='nofollow'>forums</a>.
+</li></ul><p class='vspace'></p><p>The text of the Arduino getting started guide is licensed under a
+<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the guide are released into the public domain.
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Guide/Howto" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Howto264b.html?action=edit'>Edit Page</a> | <a href='Howtoad68.html?action=diff'>Page History</a> | <a href='Howto60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - AnalogInput </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Analog I/O</em>
+</p>
+<p class='vspace'></p><h3>Analog Input</h3>
+<p>A potentiometer is a simple knob that provides a variable resistance, which you can read into the Arduino board as an analog value.  In this example, you'll connect a poterntiometer to one of the Arduino's analog inputs to control the rate at which the built-in LED on pin 13 blinks.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li>Potentiometer
+</li><li>built-in LED on pin 13
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p><div><a class='urllink' href='../uploads/Tutorial/graph-circuit3.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/graph-circuit3.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><p>Connect three wires to the Arduino board.  The first goes to ground from one of the outer pins of the potentiometer.  The second goes from 5 volts to the other outer pin of the potentiometer.  The third goes from analog input 0 to the middle pin of the potentiometer.  
+</p>
+<p class='vspace'></p><p>For this example, it is possible to use the Arduino board's built in LED attached to pin 13. To use an additional LED, attach its longer leg (the positive leg, or anode), to digital pin 13, and it's shorter leg (the negative leg, or cathode) to the ground (gnd) pin next to pin 13. Because of the low amount of current coming from digital pin 13, it is not necessary to use a current limiting resistor in this particular case. 
+</p>
+<p class='vspace'></p><h3>Schematic</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/AnalogReadSerial_sch.png' rel='nofollow'><img height='400px' src='../uploads/Tutorial/AnalogReadSerial_sch.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>Code</h3>
+<p>In the beginning of this program, the variable <code>sensorPin</code> is set to to analog pin 0, where your potentiometer is attached, and <code>ledPin</code> is set to digital pin 13. You'll also create another variable, <code>sensorValue</code> i to store the values read from your sensor. 
+</p>
+<p class='vspace'></p><p>The <code>analogRead()</code> command converts the input voltage range, 0 to 5 volts, to a digital value between 0 and 1023.  This is done by a circuit inside the Arduino called an <strong>analog-to-digital converter</strong> or <strong>ADC</strong>. 
+</p>
+<p class='vspace'></p><p>By turning the shaft of the potentiometer, you change the amount of resistance on either side of the center pin (or wiper) of the potentiometer.  This changes the relative resistances between the center pin and the two outside pins, giving you a different voltage at the analog input.  When the shaft is turned all the way in one direction, there is no resistance between the center pin and the pin connected to ground. The voltage at the center pin then is 0 volts, and <code>analogRead()</code> returns 0.  When the shaft is turned all the way in the other direction, there is no resistance between the center pin and the pin connected to +5 volts. The voltage at the center pin then is 5 volts, and <code>analogRead()</code> returns 1023.  In between, <a class='wikilink' href='../Reference/AnalogRead.html'><code>analogRead()</code></a> returns a number between 0 and 1023 that is proportional to the amount of voltage being applied to the pin.
+</p>
+<p class='vspace'></p><p>That value, stored in <code>sensorValue</code>, is used to set a <code>delay()</code> for your blink cycle. The higher the value, the longer the cycle, the smaller the value, the shorter the cycle. 
+</p>
+<p class='vspace'></p><div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; Analog Input<br />
+&nbsp;Demonstrates analog input by reading an analog sensor on analog pin 0 and<br />
+&nbsp;turning on and off a light emitting diode(LED) &nbsp;connected to digital pin 13. <br />
+&nbsp;The amount of time the LED will be on and off depends on<br />
+&nbsp;the value obtained by analogRead(). <br />
+&nbsp;<br />
+&nbsp;The circuit:<br />
+&nbsp;* Potentiometer attached to analog input 0<br />
+&nbsp;* center pin of the potentiometer to the analog pin<br />
+&nbsp;* one side pin (either one) to ground<br />
+&nbsp;* the other side pin to +5V<br />
+&nbsp;* LED anode (long leg) attached to digital output 13<br />
+&nbsp;* LED cathode (short leg) attached to ground<br />
+&nbsp;<br />
+&nbsp;* Note: because most Arduinos have a built-in LED attached <br />
+&nbsp;to pin 13 on the board, the LED is optional.<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;Created by David Cuartielles<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;By Tom Igoe<br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;http://arduino.cc/en/Tutorial/AnalogInput<br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+<br />
+<span class="kw1">int</span> sensorPin <span class="sy0">=</span> A0<span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// select the input pin for the potentiometer</span><br />
+<span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">13</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<span class="co1">// select the pin for the LED</span><br />
+<span class="kw1">int</span> sensorValue <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp;<span class="co1">// variable to store the value coming from the sensor</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// declare the ledPin as an OUTPUT:</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// read the value from the sensor:</span><br />
+&nbsp; sensorValue <span class="sy0">=</span> <span class="kw1">analogRead</span><span class="br0">&#40;</span>sensorPin<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
+&nbsp; <span class="co1">// turn the ledPin on</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<br />
+&nbsp; <span class="co1">// stop the program for &lt;sensorValue&gt; milliseconds:</span><br />
+&nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span>sensorValue<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; <span class="co1">// turn the ledPin off: &nbsp; &nbsp; &nbsp; &nbsp;</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; <br />
+&nbsp; <span class="co1">// stop the program for for &lt;sensorValue&gt; milliseconds:</span><br />
+&nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span>sensorValue<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='AnalogInputf687html.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/PinMode.html'>pinMode</a>()
+</li><li><a class='wikilink' href='../Reference/AnalogRead.html'>analogRead</a>()
+</li><li><a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite</a>()
+</li><li><a class='wikilink' href='../Reference/Delay.html'>delay</a>()
+<p class='vspace'></p></li><li><a class='wikilink' href='AnalogReadSerial.html'>AnalogReadSerial</a> - read a potentiometer, print it's state to the serial monitor
+</li><li><a class='wikilink' href='AnalogInOutSerialhtml.html'>AnalogInOutSerial</a> - read an analog input, map its values, and then use that information to dim or brighten an LED. 
+</li><li><a class='wikilink' href='Fade.html'>Fade</a> - use an analog input to fade an LED
+</li><li><a class='wikilink' href='Calibration.html'>Calibration</a> - calibrating analog sensor readings
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/AnalogInput" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='AnalogInput264b.html?action=edit'>Edit Page</a> | <a href='AnalogInputad68.html?action=diff'>Page History</a> | <a href='AnalogInput60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

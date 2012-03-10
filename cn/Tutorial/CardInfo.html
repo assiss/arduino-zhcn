@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - CardInfo </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; SD <span class='wikiword'>CardInfo</span></em>
+</p>
+<p class='vspace'></p><h3>Using the SD library to retrieve information over a serial port</h3>
+<p>This example shows how to read information about a SD card. The example reports volume type, free space and other information using the SD library, sending it over the serial port. Please <a class='wikilink' href='../Reference/SD.html'>click here</a> for more information on the SD library. 
+</p>
+<p class='vspace'></p><div  class='BOM' >
+<h3>Hardware Required</h3>
+<ul><li>Arduino board
+</li><li>Ethernet Shield (or other board with an SD slot)
+</li><li>Formatted SD card
+</li></ul></div>
+<p class='vspace'></p><h3>Circuit</h3>
+<div  class='circuit' >
+<div> <a class='urllink' href='../uploads/Tutorial/EthernetShield_bb.png' rel='nofollow'><img height='250px' src='../uploads/Tutorial/EthernetShield_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><p>None, but the Arduino has to have the Ethernet Shield and a USB cable connected to the computer.
+</p></div> 
+<p class='vspace'></p><h3>Code</h3>
+<p>The code below is configured for use with an Ethernet shield, which has an onboard SD slot. In the <code>setup()</code>, call <code>SD.begin()</code>, naming pin 4 as the CS pin. This pin varies depending on the make of shield or board you are using.
+</p>
+<p class='vspace'></p><p>The code uses some undocumented utility libraries to report information about the SD card. This information includes formatting (<span class='wikiword'>FAT16</span> or <span class='wikiword'>FAT32</span>) and file structure, as well as the amount of free space and space used on the card.
+</p>
+<p class='vspace'></p><div  class='code' >
+<p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; SD card test <br />
+&nbsp; &nbsp;<br />
+&nbsp;This example shows how use the utility libraries on which the'<br />
+&nbsp;SD library is based in order to get info about your SD card.<br />
+&nbsp;Very useful for testing a card when you're not sure whether its working or not.<br />
+&nbsp; &nbsp; <br />
+&nbsp;The circuit:<br />
+&nbsp; * SD card attached to SPI bus as follows:<br />
+&nbsp;** MOSI - pin 11 on Arduino Uno/Duemilanove/Diecimila<br />
+&nbsp;** MISO - pin 12 on Arduino Uno/Duemilanove/Diecimila<br />
+&nbsp;** CLK - pin 13 on Arduino Uno/Duemilanove/Diecimila<br />
+&nbsp;** CS - depends on your SD card shield or module. <br />
+&nbsp; &nbsp; &nbsp; &nbsp; Pin 4 used here for consistency with other Arduino examples<br />
+<br />
+&nbsp;<br />
+&nbsp;created &nbsp;28 Mar 2011<br />
+&nbsp;by Limor Fried <br />
+&nbsp;modified 16 Mar 2011<br />
+&nbsp;by Tom Igoe<br />
+&nbsp;*/</span><br />
+&nbsp;<span class="co1">// include the SD library:</span><br />
+<span class="co2">#include &lt;SD.h&gt;</span><br />
+<br />
+<span class="co1">// set up variables using the SD utility library functions:</span><br />
+Sd2Card card<span class="sy0">;</span><br />
+SdVolume volume<span class="sy0">;</span><br />
+SdFile root<span class="sy0">;</span><br />
+<br />
+<span class="co1">// change this to match your SD shield or module;</span><br />
+<span class="co1">// Arduino Ethernet shield: pin 4</span><br />
+<span class="co1">// Adafruit SD shields and modules: pin 10</span><br />
+<span class="co1">// Sparkfun SD shield: pin 8</span><br />
+const <span class="kw1">int</span> chipSelect <span class="sy0">=</span> <span class="nu0">4</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\n</span>Initializing SD card...&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// On the Ethernet Shield, CS is pin 4. It's set as an output by default.</span><br />
+&nbsp; <span class="co1">// Note that even if it's not used as the CS pin, the hardware SS pin </span><br />
+&nbsp; <span class="co1">// (10 on most Arduino boards, 53 on the Mega) must be left as an output </span><br />
+&nbsp; <span class="co1">// or the SD library functions will not work. </span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span><span class="nu0">10</span><span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; <span class="co1">// change this to 53 on a mega</span><br />
+<br />
+<br />
+&nbsp; <span class="co1">// we'll use the initialization code from the utility libraries</span><br />
+&nbsp; <span class="co1">// since we're just testing if the card is working!</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>card.<span class="me1">init</span><span class="br0">&#40;</span>SPI_HALF_SPEED<span class="sy0">,</span> chipSelect<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;initialization failed. Things to check:&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;* is a card is inserted?&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;* Is your wiring correct?&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;* did you change the chipSelect pin to match your shield or module?&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">return</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;<span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;Wiring is correct and a card is present.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; <span class="br0">&#125;</span><br />
+<br />
+&nbsp; <span class="co1">// print the type of card</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\n</span>Card type: &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">switch</span><span class="br0">&#40;</span>card.<span class="me1">type</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">case</span> SD_CARD_TYPE_SD1<span class="sy0">:</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;SD1&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">break</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">case</span> SD_CARD_TYPE_SD2<span class="sy0">:</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;SD2&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">break</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">case</span> SD_CARD_TYPE_SDHC<span class="sy0">:</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;SDHC&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">break</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">default</span><span class="sy0">:</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;Unknown&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<br />
+&nbsp; <span class="co1">// Now we will try to open the 'volume'/'partition' - it should be FAT16 or FAT32</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>volume.<span class="me1">init</span><span class="br0">&#40;</span>card<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;Could not find FAT16/FAT32 partition.<span class="es1">\n</span>Make sure you've formatted the card&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">return</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<br />
+<br />
+&nbsp; <span class="co1">// print the type and size of the first FAT-type volume</span><br />
+&nbsp; uint32_t volumesize<span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\n</span>Volume type is FAT&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>volume.<span class="me1">fatType</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw2">DEC</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <br />
+&nbsp; volumesize <span class="sy0">=</span> volume.<span class="me1">blocksPerCluster</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// clusters are collections of blocks</span><br />
+&nbsp; volumesize <span class="sy0">*=</span> volume.<span class="me1">clusterCount</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; <span class="co1">// we'll have a lot of clusters</span><br />
+&nbsp; volumesize <span class="sy0">*=</span> <span class="nu0">512</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// SD card blocks are always 512 bytes</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;Volume size (bytes): &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>volumesize<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;Volume size (Kbytes): &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; volumesize <span class="sy0">/=</span> <span class="nu0">1024</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>volumesize<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;Volume size (Mbytes): &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; volumesize <span class="sy0">/=</span> <span class="nu0">1024</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>volumesize<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\n</span>Files found on the card (name, date and size in bytes): &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; root.<span class="me1">openRoot</span><span class="br0">&#40;</span>volume<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <br />
+&nbsp; <span class="co1">// list all files in the card with date and size</span><br />
+&nbsp; root.<span class="me1">ls</span><span class="br0">&#40;</span>LS_R <span class="sy0">|</span> LS_DATE <span class="sy0">|</span> LS_SIZE<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="kw1">void</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='CardInfof687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/SD.html'>SD library</a>
+</li><li><a class='wikilink' href='../Reference/SDCardNotes.html'>Notes on using SD cards</a>
+</li><li><a class='wikilink' href='Dataloggerhtml.html'>Datalogger</a> 
+</li><li><a class='wikilink' href='DumpFile.html'>DumpFile</a>
+</li><li><a class='wikilink' href='Files.html'>Files</a> 
+</li><li><a class='wikilink' href='ReadWritehtml.html'>ReadWrite</a> 
+</li><li><a class='selflink' href='CardInfo.html'>CardInfo</a>
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/CardInfo" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='CardInfo264b.html?action=edit'>Edit Page</a> | <a href='CardInfoad68.html?action=diff'>Page History</a> | <a href='CardInfo60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

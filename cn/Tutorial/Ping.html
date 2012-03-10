@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Ping </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Sensors</em>
+</p>
+<p class='vspace'></p><h3>Ping Ultrasonic Range Finder</h3>
+<p>The <a class='urllink' href='http://www.parallax.com/Store/Sensors/ObjectDetection/tabid/176/ProductID/92/List/1/Default.aspx?SortField=ProductName,ProductName' rel='nofollow'><strong>Ping)))</strong></a> is an ultrasonic range finder from Parallax.  It detects the distance of the closest object in front of the sensor (from 2 cm up to 3m).  It works by sending out a burst of ultrasound and listening for the echo when it bounces off of an object.  The Arduino board sends a short pulse to trigger the detection, then listens for a pulse on the same pin using the <a class='wikilink' href='../Reference/PulseInhtml.html'><strong>pulseIn()</strong></a> function.  The duration of this second pulse is equal to the time taken by the ultrasound to travel to the object and back to the sensor.  Using the speed of sound, this time can be converted to distance.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li>(1) Ping Ultrasonic Range Finder
+</li><li>hook-up wire
+</li></ul><p class='vspace'></p><h4>Circuit</h4>
+<p>The 5V pin of the PING))) is connected to the 5V pin on the Arduino, the GND pin is connected to the GND pin, and the SIG (signal) pin is connected to digital pin 7 on the Arduino.
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/ping_bb.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/ping_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><p><strong>Schematic:</strong>
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/PING_schem.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/PING_schem.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h4>Code</h4>
+<div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/* Ping))) Sensor<br />
+&nbsp; <br />
+&nbsp; &nbsp;This sketch reads a PING))) ultrasonic rangefinder and returns the<br />
+&nbsp; &nbsp;distance to the closest object in range. To do this, it sends a pulse<br />
+&nbsp; &nbsp;to the sensor to initiate a reading, then listens for a pulse <br />
+&nbsp; &nbsp;to return. &nbsp;The length of the returning pulse is proportional to <br />
+&nbsp; &nbsp;the distance of the object from the sensor.<br />
+&nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp;The circuit:<br />
+&nbsp; &nbsp; * +V connection of the PING))) attached to +5V<br />
+&nbsp; &nbsp; * GND connection of the PING))) attached to ground<br />
+&nbsp; &nbsp; * SIG connection of the PING))) attached to digital pin 7<br />
+<br />
+&nbsp; &nbsp;http://www.arduino.cc/en/Tutorial/Ping<br />
+&nbsp; &nbsp;<br />
+&nbsp; &nbsp;created 3 Nov 2008<br />
+&nbsp; &nbsp;by David A. Mellis<br />
+&nbsp; &nbsp;modified 30 Aug 2011<br />
+&nbsp; &nbsp;by Tom Igoe<br />
+&nbsp;<br />
+&nbsp; &nbsp;This example code is in the public domain.<br />
+<br />
+&nbsp;*/</span><br />
+<br />
+<span class="co1">// this constant won't change. &nbsp;It's the pin number</span><br />
+<span class="co1">// of the sensor's output:</span><br />
+const <span class="kw1">int</span> pingPin <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// initialize serial communication:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// establish variables for duration of the ping, </span><br />
+&nbsp; <span class="co1">// and the distance result in inches and centimeters:</span><br />
+&nbsp; <span class="kw1">long</span> duration<span class="sy0">,</span> inches<span class="sy0">,</span> cm<span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// The PING))) is triggered by a HIGH pulse of 2 or more microseconds.</span><br />
+&nbsp; <span class="co1">// Give a short LOW pulse beforehand to ensure a clean HIGH pulse:</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>pingPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>pingPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">delayMicroseconds</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>pingPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">delayMicroseconds</span><span class="br0">&#40;</span><span class="nu0">5</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>pingPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// The same pin is used to read the signal from the PING))): a HIGH</span><br />
+&nbsp; <span class="co1">// pulse whose duration is the time (in microseconds) from the sending</span><br />
+&nbsp; <span class="co1">// of the ping to the reception of its echo off of an object.</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>pingPin<span class="sy0">,</span> <span class="kw2">INPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; duration <span class="sy0">=</span> <span class="kw1">pulseIn</span><span class="br0">&#40;</span>pingPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// convert the time into a distance</span><br />
+&nbsp; inches <span class="sy0">=</span> microsecondsToInches<span class="br0">&#40;</span>duration<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; cm <span class="sy0">=</span> microsecondsToCentimeters<span class="br0">&#40;</span>duration<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>inches<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;in, &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>cm<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;cm&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <br />
+&nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">long</span> microsecondsToInches<span class="br0">&#40;</span><span class="kw1">long</span> microseconds<span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// According to Parallax's datasheet for the PING))), there are</span><br />
+&nbsp; <span class="co1">// 73.746 microseconds per inch (i.e. sound travels at 1130 feet per</span><br />
+&nbsp; <span class="co1">// second). &nbsp;This gives the distance travelled by the ping, outbound</span><br />
+&nbsp; <span class="co1">// and return, so we divide by 2 to get the distance of the obstacle.</span><br />
+&nbsp; <span class="co1">// See: http://www.parallax.com/dl/docs/prod/acc/28015-PING-v1.3.pdf</span><br />
+&nbsp; <span class="kw1">return</span> microseconds <span class="sy0">/</span> <span class="nu0">74</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">long</span> microsecondsToCentimeters<span class="br0">&#40;</span><span class="kw1">long</span> microseconds<span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// The speed of sound is 340 m/s or 29 microseconds per centimeter.</span><br />
+&nbsp; <span class="co1">// The ping travels out and back, so to find the distance of the</span><br />
+&nbsp; <span class="co1">// object we take half of the distance travelled.</span><br />
+&nbsp; <span class="kw1">return</span> microseconds <span class="sy0">/</span> <span class="nu0">29</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='Pingf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/PinMode.html'><code>pinMode()</code></a>
+</li><li><a class='wikilink' href='../Reference/DelayMicroseconds.html'><code>delayMicroseconds()</code></a>
+</li><li><a class='wikilink' href='../Reference/PulseInhtml.html'><code>pulseIn()</code></a>
+</li><li><a class='wikilink' href='../Reference/DigitalWrite.html'><code>digitalWrite()</code></a>
+</li><li><a class='wikilink' href='../Reference/Returnhtml.html'><code>return</code></a>
+</li><li><a class='wikilink' href='../Serial/Begin.html'><code>serial.begin()</code></a>
+</li><li><a class='wikilink' href='../Serial/Printhtml.html'><code>serial.print()</code></a>
+<p class='vspace'></p></li><li><a class='wikilink' href='ADXL3xx.html'>ADXL3xx</a> - read a <span class='wikiword'>ADXL3xx</span> accelerometer.
+</li><li><a class='wikilink' href='Memsic2125html.html'>Memsic2125 </a> - two-axis acceleromoter.
+</li><li><a class='wikilink' href='Knock.html'>Knock</a> - detect knocks/impacts with a piezo element
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/Ping" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Ping264b.html?action=edit'>Edit Page</a> | <a href='Pingad68.html?action=diff'>Page History</a> | <a href='Ping60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

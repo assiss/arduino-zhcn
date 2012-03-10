@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Tone </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Digital I/O</em>
+</p>
+<p class='vspace'></p><h3>Play a Melody using the tone() function</h3>
+<p>This example shows how to use the tone() command to generate notes.  It plays a little melody you may have heard before.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino board
+</li><li>8 ohm small speaker
+</li><li>100 ohm resistor
+</li><li>hook-up wire
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<div><a class='urllink' href='../uploads/Tutorial/speaker_bb.png' rel='nofollow'><img height='300px' src='../uploads/Tutorial/speaker_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><p>Connect one terminal of your speaker to digital pin 8 through a 100 ohm resistor. Connect the other terminal to ground. 
+</p>
+<p class='vspace'></p><h3>Schematic</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/speaker_bb.png' rel='nofollow'><img height='300px' src='../uploads/Tutorial/speaker_schem.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>Code</h3>
+<p>The code below uses an extra file, pitches.h.  This file contains all the pitch values for typical notes. For example, NOTE_C4 is middle C.  NOTE_FS4 is F sharp, and so forth.  This note table was originally written by Brett Hagman, on whose work the tone() command was based. You may find it useful for whenever you want to make musical notes.
+</p>
+<p class='vspace'></p><p>The main sketch is as follows:
+</p>
+<p class='vspace'></p><div  class='code'>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; Melody<br />
+&nbsp;<br />
+&nbsp;Plays a melody <br />
+&nbsp;<br />
+&nbsp;circuit:<br />
+&nbsp;* 8-ohm speaker on digital pin 8<br />
+&nbsp;<br />
+&nbsp;created 21 Jan 2010<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Tom Igoe <br />
+<br />
+This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;http://arduino.cc/en/Tutorial/Tone<br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+&nbsp;<span class="co2">#include &quot;pitches.h&quot;</span><br />
+<br />
+<span class="co1">// notes in the melody:</span><br />
+<span class="kw1">int</span> melody<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#123;</span><br />
+&nbsp; NOTE_C4<span class="sy0">,</span> NOTE_G3<span class="sy0">,</span>NOTE_G3<span class="sy0">,</span> NOTE_A3<span class="sy0">,</span> NOTE_G3<span class="sy0">,</span><span class="nu0">0</span><span class="sy0">,</span> NOTE_B3<span class="sy0">,</span> NOTE_C4<span class="br0">&#125;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">// note durations: 4 = quarter note, 8 = eighth note, etc.:</span><br />
+<span class="kw1">int</span> noteDurations<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">4</span> <span class="br0">&#125;</span><span class="sy0">;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// iterate over the notes of the melody:</span><br />
+&nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisNote <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> thisNote <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> thisNote<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+<br />
+&nbsp; &nbsp; <span class="co1">// to calculate the note duration, take one second </span><br />
+&nbsp; &nbsp; <span class="co1">// divided by the note type.</span><br />
+&nbsp; &nbsp; <span class="co1">//e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.</span><br />
+&nbsp; &nbsp; <span class="kw1">int</span> noteDuration <span class="sy0">=</span> <span class="nu0">1000</span><span class="sy0">/</span>noteDurations<span class="br0">&#91;</span>thisNote<span class="br0">&#93;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; tone<span class="br0">&#40;</span><span class="nu0">8</span><span class="sy0">,</span> melody<span class="br0">&#91;</span>thisNote<span class="br0">&#93;</span><span class="sy0">,</span>noteDuration<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; &nbsp; <span class="co1">// to distinguish the notes, set a minimum time between them.</span><br />
+&nbsp; &nbsp; <span class="co1">// the note's duration + 30% seems to work well:</span><br />
+&nbsp; &nbsp; <span class="kw1">int</span> pauseBetweenNotes <span class="sy0">=</span> noteDuration <span class="sy0">*</span> <span class="nu16">1.30</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span>pauseBetweenNotes<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// stop the tone playing:</span><br />
+&nbsp; &nbsp; noTone<span class="br0">&#40;</span><span class="nu0">8</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// no need to repeat the melody.</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='Tonef687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><p>To make the pitches.h file, click on the "new Tab" button in the upper right hand corner of the window.  It looks like this:
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/newTab.png' alt='' title='' /></div>
+<p class='vspace'></p><p>The paste in the following code:
+</p>
+<p class='vspace'></p><div  class='code'>
+<p>
+<div class='sourceblock ' id='sourceblock2'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*************************************************<br />
+&nbsp;* Public Constants<br />
+&nbsp;*************************************************/</span><br />
+<br />
+<span class="co2">#define NOTE_B0 &nbsp;31</span><br />
+<span class="co2">#define NOTE_C1 &nbsp;33</span><br />
+<span class="co2">#define NOTE_CS1 35</span><br />
+<span class="co2">#define NOTE_D1 &nbsp;37</span><br />
+<span class="co2">#define NOTE_DS1 39</span><br />
+<span class="co2">#define NOTE_E1 &nbsp;41</span><br />
+<span class="co2">#define NOTE_F1 &nbsp;44</span><br />
+<span class="co2">#define NOTE_FS1 46</span><br />
+<span class="co2">#define NOTE_G1 &nbsp;49</span><br />
+<span class="co2">#define NOTE_GS1 52</span><br />
+<span class="co2">#define NOTE_A1 &nbsp;55</span><br />
+<span class="co2">#define NOTE_AS1 58</span><br />
+<span class="co2">#define NOTE_B1 &nbsp;62</span><br />
+<span class="co2">#define NOTE_C2 &nbsp;65</span><br />
+<span class="co2">#define NOTE_CS2 69</span><br />
+<span class="co2">#define NOTE_D2 &nbsp;73</span><br />
+<span class="co2">#define NOTE_DS2 78</span><br />
+<span class="co2">#define NOTE_E2 &nbsp;82</span><br />
+<span class="co2">#define NOTE_F2 &nbsp;87</span><br />
+<span class="co2">#define NOTE_FS2 93</span><br />
+<span class="co2">#define NOTE_G2 &nbsp;98</span><br />
+<span class="co2">#define NOTE_GS2 104</span><br />
+<span class="co2">#define NOTE_A2 &nbsp;110</span><br />
+<span class="co2">#define NOTE_AS2 117</span><br />
+<span class="co2">#define NOTE_B2 &nbsp;123</span><br />
+<span class="co2">#define NOTE_C3 &nbsp;131</span><br />
+<span class="co2">#define NOTE_CS3 139</span><br />
+<span class="co2">#define NOTE_D3 &nbsp;147</span><br />
+<span class="co2">#define NOTE_DS3 156</span><br />
+<span class="co2">#define NOTE_E3 &nbsp;165</span><br />
+<span class="co2">#define NOTE_F3 &nbsp;175</span><br />
+<span class="co2">#define NOTE_FS3 185</span><br />
+<span class="co2">#define NOTE_G3 &nbsp;196</span><br />
+<span class="co2">#define NOTE_GS3 208</span><br />
+<span class="co2">#define NOTE_A3 &nbsp;220</span><br />
+<span class="co2">#define NOTE_AS3 233</span><br />
+<span class="co2">#define NOTE_B3 &nbsp;247</span><br />
+<span class="co2">#define NOTE_C4 &nbsp;262</span><br />
+<span class="co2">#define NOTE_CS4 277</span><br />
+<span class="co2">#define NOTE_D4 &nbsp;294</span><br />
+<span class="co2">#define NOTE_DS4 311</span><br />
+<span class="co2">#define NOTE_E4 &nbsp;330</span><br />
+<span class="co2">#define NOTE_F4 &nbsp;349</span><br />
+<span class="co2">#define NOTE_FS4 370</span><br />
+<span class="co2">#define NOTE_G4 &nbsp;392</span><br />
+<span class="co2">#define NOTE_GS4 415</span><br />
+<span class="co2">#define NOTE_A4 &nbsp;440</span><br />
+<span class="co2">#define NOTE_AS4 466</span><br />
+<span class="co2">#define NOTE_B4 &nbsp;494</span><br />
+<span class="co2">#define NOTE_C5 &nbsp;523</span><br />
+<span class="co2">#define NOTE_CS5 554</span><br />
+<span class="co2">#define NOTE_D5 &nbsp;587</span><br />
+<span class="co2">#define NOTE_DS5 622</span><br />
+<span class="co2">#define NOTE_E5 &nbsp;659</span><br />
+<span class="co2">#define NOTE_F5 &nbsp;698</span><br />
+<span class="co2">#define NOTE_FS5 740</span><br />
+<span class="co2">#define NOTE_G5 &nbsp;784</span><br />
+<span class="co2">#define NOTE_GS5 831</span><br />
+<span class="co2">#define NOTE_A5 &nbsp;880</span><br />
+<span class="co2">#define NOTE_AS5 932</span><br />
+<span class="co2">#define NOTE_B5 &nbsp;988</span><br />
+<span class="co2">#define NOTE_C6 &nbsp;1047</span><br />
+<span class="co2">#define NOTE_CS6 1109</span><br />
+<span class="co2">#define NOTE_D6 &nbsp;1175</span><br />
+<span class="co2">#define NOTE_DS6 1245</span><br />
+<span class="co2">#define NOTE_E6 &nbsp;1319</span><br />
+<span class="co2">#define NOTE_F6 &nbsp;1397</span><br />
+<span class="co2">#define NOTE_FS6 1480</span><br />
+<span class="co2">#define NOTE_G6 &nbsp;1568</span><br />
+<span class="co2">#define NOTE_GS6 1661</span><br />
+<span class="co2">#define NOTE_A6 &nbsp;1760</span><br />
+<span class="co2">#define NOTE_AS6 1865</span><br />
+<span class="co2">#define NOTE_B6 &nbsp;1976</span><br />
+<span class="co2">#define NOTE_C7 &nbsp;2093</span><br />
+<span class="co2">#define NOTE_CS7 2217</span><br />
+<span class="co2">#define NOTE_D7 &nbsp;2349</span><br />
+<span class="co2">#define NOTE_DS7 2489</span><br />
+<span class="co2">#define NOTE_E7 &nbsp;2637</span><br />
+<span class="co2">#define NOTE_F7 &nbsp;2794</span><br />
+<span class="co2">#define NOTE_FS7 2960</span><br />
+<span class="co2">#define NOTE_G7 &nbsp;3136</span><br />
+<span class="co2">#define NOTE_GS7 3322</span><br />
+<span class="co2">#define NOTE_A7 &nbsp;3520</span><br />
+<span class="co2">#define NOTE_AS7 3729</span><br />
+<span class="co2">#define NOTE_B7 &nbsp;3951</span><br />
+<span class="co2">#define NOTE_C8 &nbsp;4186</span><br />
+<span class="co2">#define NOTE_CS8 4435</span><br />
+<span class="co2">#define NOTE_D8 &nbsp;4699</span><br />
+<span class="co2">#define NOTE_DS8 4978</span></div></div>
+  <div class='sourceblocklink'><a href='Tone668d.html?action=sourceblock&amp;num=2' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/Arrayhtml.html'>Array</a>()   
+</li><li><a class='wikilink' href='../Reference/For.html'>for</a>()   
+</li><li><a class='wikilink' href='../Reference/Tone.html'>tone</a>()
+<p class='vspace'></p></li><li><a class='wikilink' href='Tone2.html'>PitchFollower</a> - play a pitch on a piezo speaker depending on an analog input
+</li><li><a class='wikilink' href='Tone3html.html'>SimpleKeyboard</a> - a three-key musical keyboard using force sensors and a piezo speaker.
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/Tone" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Tone264b.html?action=edit'>Edit Page</a> | <a href='Tonead68.html?action=diff'>Page History</a> | <a href='Tone60eehtml.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - BitMask </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p>Bit masks are used to access specific bits in a byte of data. This is often useful as a method of iteration, for example when sending a byte of data serially out a single pin. In this example the pin needs to change it's state from high to low for each bit in the byte to be transmitted. This is accomplished using what are known as bitwise operations and a bit mask. 
+</p>
+<p class='vspace'></p><p>Bitwise operations perform logical functions that take affect on the bit level. Standard bitwise operations include  AND (&amp;) OR (|) Left Shift (&lt;&lt;) and Right Shift (&gt;&gt;). 
+</p>
+<p class='vspace'></p><p>The AND (&amp;) operator will result in a 1 at each bit position where both input values were 1.  
+For example:
+</p><pre>
+    x:  10001101
+    y:  01010111
+x &amp; y:  00000101
+</pre>
+<p class='vspace'></p><p>The OR (|) operator (also known as Inclusive Or) will result in a 1 at each bit position where either input values were 1.  
+For example:
+</p><pre>  
+    x:  10001101
+    y:  01010111
+x | y:  11011111
+</pre>
+<p class='vspace'></p><p>The Left Shift (&lt;&lt;) operator will shift a value to the left the specified number of times.
+For example:
+</p><pre>
+        y = 1010
+        x = y &lt;&lt; 1
+yields: x = 0100 
+</pre>
+<p class='vspace'></p><p>All the bits in the byte get shifted one position to the left and the bit on the left end drops off.
+</p>
+<p class='vspace'></p><p>The Right Shift (&gt;&gt;) operator works identically to left shift except that it shifts the value to the right the specified number of times
+For example:
+</p><pre>
+        y = 1010
+        x = y &gt;&gt; 1
+yields: x = 0101 
+</pre>
+<p class='vspace'></p><p>All the bits in the byte get shifted one position to the right and the bit on the right end drops off.
+</p>
+<p class='vspace'></p><p>For a practical example, let's take the value 170, binary 10101010. To pulse this value out of pin 7 the code might look as follows:
+</p>
+<p class='vspace'></p><pre>byte transmit = 7; //define our transmit pin
+byte data = 170; //value to transmit, binary 10101010
+byte mask = 1; //our bitmask
+byte bitDelay = 100;
+
+void setup()
+{
+   pinMode(transmit,OUTPUT);
+}
+
+void loop()
+{
+  for (mask = 00000001; mask&gt;0; mask &lt;&lt;= 1) { //iterate through bit mask
+    if (data &amp; mask){ // if bitwise AND resolves to true
+      digitalWrite(transmit,HIGH); // send 1
+    }
+    else{ //if bitwise and resolves to false
+      digitalWrite(transmit,LOW); // send 0
+    }
+    delayMicroseconds(bitDelay); //delay
+  }
+}
+  
+</pre>
+<p class='vspace'></p><p>Here we use a FOR loop to iterate through a bit mask value, shifting the value one position left each time through the loop. In this example we use the &lt;&lt;= operator which is exactly like the &lt;&lt; operator except that it compacts the statement <code>mask = mask &lt;&lt; 1</code> into a shorter line.
+We then perform a bitwise AND operation on the value and the bitmask. This way as the bitmask shifts left through each position in the byte it will be compared against each bit in the byte we are sending sequentially and can then be used to set our output pin either high or low accordingly. 
+So in this example, first time through the loop the mask = 00000001 and the value = 10101010 so our operation looks like:
+</p><pre>
+  00000001
+&amp; 10101010
+  ________
+  00000000
+
+</pre><p>And our output pin gets set to 0.
+Second time throught he loop the mask = 00000010, so our operation looks like:
+</p><pre>
+  00000010
+&amp; 10101010
+  ________
+  00000010
+
+</pre><p>And our output pin gets set to 1. The loop will continue to iterate through each bit in the mask until the 1 gets shifted left off the end of the 8 bits and our mask =0. Then all 8 bits have been sent and our loop exits.
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/BitMask" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='BitMask264b.html?action=edit'>Edit Page</a> | <a href='BitMaskad68.html?action=diff'>Page History</a> | <a href='BitMask60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

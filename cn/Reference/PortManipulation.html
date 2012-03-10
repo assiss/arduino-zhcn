@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - PortManipulation </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
+<a class='wikilink' href='HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Librarieshtml.html'>Libraries</a> | <a class='wikilink' href='Comparisonhtml.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
+</p>
+<p class='vspace'></p><h2>Port Registers</h2>
+<p>Port registers allow for lower-level and faster manipulation of the i/o pins of the microcontroller on an Arduino board.  The chips used on the Arduino board (the <span class='wikiword'>ATmega8</span> and <span class='wikiword'>ATmega168</span>) have three ports:
+</p><ul><li>B (digital pin 8 to 13)
+</li><li>C (analog input pins)
+</li><li>D (digital pins 0 to 7)
+</li></ul><p class='vspace'></p><p>Each port is controlled by three registers, which are also defined variables in the arduino language. The DDR register, determines whether the pin is an INPUT or OUTPUT. The PORT register controls whether the pin is HIGH or LOW, and the PIN register reads the state of INPUT pins set to input with pinMode(). The maps of the <a class='urllink' href='http://www.arduino.cc/en/Hacking/PinMapping' rel='nofollow'>ATmega8</a>  and <a class='wikilink' href='Atmega168Hardwarehtml.html'>ATmega168</a> chips show the ports. The newer Atmega328p chip follows the pinout of the Atmega168 exactly.
+</p>
+<p class='vspace'></p><p>DDR and PORT registers may be both written to, and read. PIN registers correspond to the state of inputs and may only be read.
+</p>
+<p class='vspace'></p><p><strong>PORTD</strong> maps to Arduino digital pins 0 to 7
+</p><dl><dd><div class='indent'>DDRD  - The Port D Data Direction Register - read/write
+</div><div class='indent'>PORTD - The Port D Data Register - read/write
+</div><div class='indent'>PIND  - The Port D Input Pins Register - read only
+</div></dd></dl><p class='vspace'></p><p><strong>PORTB</strong> maps to Arduino digital pins 8 to 13 The two high bits (6 &amp; 7) map to the crystal pins and are not usable
+</p>
+<p class='vspace'></p><dl><dd><div class='indent'>DDRB - The Port B Data Direction Register - read/write
+</div><div class='indent'>PORTB - The Port B Data Register - read/write
+</div><div class='indent'>PINB - The Port B Input Pins Register - read only
+</div></dd></dl><p class='vspace'></p><p><strong>PORTC</strong> maps to Arduino analog pins 0 to 5. Pins 6 &amp; 7 are only accessible on the Arduino Mini
+</p><dl><dd><div class='indent'>DDRC - The Port C Data Direction Register - read/write
+</div><div class='indent'>PORTC - The Port C Data Register - read/write
+</div><div class='indent'>PINC - The Port C Input Pins Register - read only 
+</div></dd></dl><p class='vspace'></p><p>Each bit of these registers corresponds to a single pin; e.g. the low bit of DDRB, PORTB, and PINB refers to pin <span class='wikiword'>PB0</span> (digital pin 8).  For a complete mapping of Arduino pin numbers to ports and bits, see the diagram for your chip: <a class='wikilink' href='../Hacking/PinMappinghtml.html'>ATmega8</a>, <a class='wikilink' href='../Hacking/PinMapping168.html'>ATmega168</a>.  (Note that some bits of a port may be used for things other than i/o; be careful not to change the values of the register bits corresponding to them.)
+</p>
+<p class='vspace'></p><h4>Examples</h4>
+<p>Referring to the pin map above, the <span class='wikiword'>PortD</span> registers control Arduino digital pins 0 to 7.  
+</p>
+<p class='vspace'></p><p>You should note, however, that pins 0 &amp; 1 are used for serial communications for programming and debugging the Arduino, so changing these pins should usually be avoided unless needed for serial input or output functions. Be aware that this can interfere with program download or debugging.
+</p>
+<p class='vspace'></p><p>DDRD is the direction register for Port D (Arduino digital pins 0-7). The bits in this register control whether the pins in PORTD are configured as inputs or outputs so, for example:
+</p>
+<p class='vspace'></p><pre>DDRD = B11111110;  // sets Arduino pins 1 to 7 as outputs, pin 0 as input
+DDRD = DDRD | B11111100;  // this is safer as it sets pins 2 to 7 as outputs
+	                  // without changing the value of pins 0 &amp; 1, which are RX &amp; TX 
+</pre>
+<p class='vspace'></p><p><code>//See the bitwise operators reference pages and</code> 
+<a class='urllink' href='http://www.arduino.cc/playground/Code/BitMath' rel='nofollow'>The Bitmath Tutorial</a> in the Playground
+</p>
+<p class='vspace'></p><p>PORTB is the register for the state of the outputs. For example;
+</p>
+<p class='vspace'></p><p><code>PORTD = B10101000;  // sets digital pins 7,5,3 HIGH</code>
+</p>
+<p class='vspace'></p><p>You will only see 5 volts on these pins however if the pins have been set as outputs using the DDRD register or with pinMode().
+</p>
+<p class='vspace'></p><p>PINB is the input register variable It will read all of the digital input pins at the same time.
+</p>
+<p class='vspace'></p><h4>Why use port manipulation?</h4>
+<p>From <a class='urllink' href='http://www.arduino.cc/playground/Code/BitMath' rel='nofollow'>The Bitmath Tutorial</a>
+</p>
+<p class='vspace'></p><p>Generally speaking, doing this sort of thing is <strong>not</strong> a good idea. Why not? Here are a few reasons:
+</p>
+<p class='vspace'></p><ul><li>The code is much more difficult for you to debug and maintain, and is a lot harder for other people to understand. It only takes a few microseconds for the processor to execute code, but it might take hours for you to figure out why it isn't working right and fix it! Your time is valuable, right? But the computer's time is very cheap, measured in the cost of the electricity you feed it. Usually it is much better to write code the most obvious way.
+<p class='vspace'></p></li><li>The code is less portable. If you use digitalRead() and digitalWrite(), it is much easier to write code that will run on all of the Atmel microcontrollers, whereas the control and port registers can be different on each kind of microcontroller.
+<p class='vspace'></p></li><li>It is a lot easier to cause unintentional malfunctions with direct port access. Notice how the line DDRD = B11111110; above mentions that it must leave pin 0 as an input pin. Pin 0 is the receive line (RX) on the serial port. It would be very easy to accidentally cause your serial port to stop working by changing pin 0 into an output pin! Now that would be very confusing when you suddenly are unable to receive serial data, wouldn't it? 
+</li></ul><p class='vspace'></p><p>So you might be saying to yourself, great, why would I ever want to use this stuff then? Here are some of the positive aspects of direct port access:
+</p>
+<p class='vspace'></p><ul><li>You may need to be able to turn pins on and off very quickly, meaning within fractions of a microsecond. If you look at the source code in lib/targets/arduino/wiring.c, you will see that digitalRead() and digitalWrite() are each about a dozen or so lines of code, which get compiled into quite a few machine instructions. Each machine instruction requires one clock cycle at 16MHz, which can add up in time-sensitive applications. Direct port access can do the same job in a lot fewer clock cycles.
+<p class='vspace'></p></li><li>Sometimes you might need to set multiple output pins at exactly the same time. Calling digitalWrite(10,HIGH); followed by digitalWrite(11,HIGH); will cause pin 10 to go HIGH several microseconds before pin 11, which may confuse certain time-sensitive external digital circuits you have hooked up. Alternatively, you could set both pins high at exactly the same moment in time using PORTB |= B1100;
+<p class='vspace'></p></li><li>If you are running low on program memory, you can use these tricks to make your code smaller. It requires a lot fewer bytes of compiled code to simultaneously write a bunch of hardware pins simultaneously via the port registers than it would using a for loop to set each pin separately. In some cases, this might make the difference between your program fitting in flash memory or not!
+</li></ul><p class='vspace'></p><h3>See </h3>
+<ul><li><a class='urllink' href='../Hacking/Atmega168Hardware.html' rel='nofollow'>Pin Mapping of Atmega 168/328</a>
+</li></ul><p class='vspace'></p><p><a class='wikilink' href='HomePage.html'>Reference Home</a>
+</p>
+<p class='vspace'></p><p><em>Corrections, suggestions, and new documentation should be posted to the <a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>Forum</a>.</em>
+</p>
+<p class='vspace'></p><p>The text of the Arduino reference is licensed under a
+<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the reference are released into the public domain.
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Reference/PortManipulation" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='PortManipulation264b.html?action=edit'>Edit Page</a> | <a href='PortManipulationad68.html?action=diff'>Page History</a> | <a href='PortManipulation60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

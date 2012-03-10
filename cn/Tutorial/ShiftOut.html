@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - ShiftOut </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://www.arduino.cc/">
+    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><h1>Serial to Parallel Shifting-Out with a 74HC595</h1>
+<p>Started by Carlyn Maw and Tom Igoe Nov, 06
+</p>
+<p class='vspace'></p><h2>Shifting Out &amp; the 595 chip</h2>
+<p>At sometime or another you may run out of pins on your Arduino board and need to extend it with shift registers. This example is based on the 74HC595. The datasheet refers to the 74HC595 as an "8-bit serial-in, serial or parallel-out shift register with output latches; 3-state." In other words,  you can use it to control 8 outputs at a time while only taking up a few pins on your microcontroller. You can link multiple registers together to extend your output even more. (Users may also wish to search for other driver chips with "595" or "596" in their part numbers, there are many. The <span class='wikiword'>STP16C596</span> for example will drive 16 LED's and eliminates the series resistors with built-in constant current sources.) 
+</p>
+<p class='vspace'></p><p>How this all works is through something called "synchronous serial communication," i.e. you can pulse one pin up and down thereby communicating a data byte to the register bit by bit.  It's by pulsing second pin, the clock pin, that you delineate between bits. This is in contrast to using the "asynchronous serial communication" of the Serial.begin() function which relies on the sender and the receiver to be set independently to an agreed upon specified data rate. Once the whole byte is transmitted to the register the HIGH or LOW messages held in each bit get parceled out to each of the individual output pins.  This is the "parallel output" part, having all the pins do what you want them to do all at once.  
+</p>
+<p class='vspace'></p><p>The "serial output" part of this component comes from its extra pin which can pass the serial information received from the microcontroller out again unchanged. This means you can transmit 16 bits in a row (2 bytes) and the first 8 will flow through the first register into the second register and be expressed there. You can learn to do that from the second example.
+</p>
+<p class='vspace'></p><p>"3 states" refers to the fact that you can set the output pins as either high, low or "<a class='urllink' href='http://en.wikipedia.org/wiki/High_impedance' rel='nofollow'>high impedance</a>." Unlike the HIGH and LOW states, you can"t set pins to their high impedance state individually.  You can only set the whole chip together. This is a pretty specialized thing to do -- Think of an LED array that might need to be controlled by completely different microcontrollers depending on a specific mode setting built into your project.  Neither example takes advantage of this feature and you won"t usually need to worry about getting a chip that has it.
+</p>
+<p class='vspace'></p><p><strong>Here is a table explaining the pin-outs adapted from the <a class='urllink' href='../uploads/Tutorial/595datasheet.pdf' rel='nofollow'>Phillip's datasheet</a>.</strong>
+</p>
+<p class='vspace'></p>
+<table  border='1' bordercolor='#CCCCCC' cellpadding='5' cellspacing='0'><tr><td  rowspan='9'  valign='top'><img src='../uploads/Tutorial/595_pin_diagram.png' alt='' title='' />
+</td><td  valign='top'> PINS 1-7, 15
+</td><td  valign='top'> Q0 " Q7
+</td><td  valign='top'> Output Pins
+</td></tr><tr><td  valign='top'> PIN 8	
+</td><td  valign='top'> GND
+</td><td  valign='top'> Ground, Vss
+</td></tr><tr><td  valign='top'> PIN 9
+</td><td  valign='top'> Q7"
+</td><td  valign='top'> Serial Out
+</td></tr><tr><td  valign='top'> PIN 10
+</td><td  valign='top'> MR
+</td><td  valign='top'> Master Reclear, active low
+</td></tr><tr><td  valign='top'> PIN 11
+</td><td  valign='top'> SH_CP
+</td><td  valign='top'> Shift register clock pin
+</td></tr><tr><td  valign='top'> PIN 12
+</td><td  valign='top'> ST_CP
+</td><td  valign='top'> Storage register clock pin (latch pin)
+</td></tr><tr><td  valign='top'> PIN 13
+</td><td  valign='top'> OE
+</td><td  valign='top'> Output enable, active low
+</td></tr><tr><td  valign='top'> PIN 14
+</td><td  valign='top'> DS
+</td><td  valign='top'> Serial data input
+</td></tr><tr><td  valign='top'> PIN 16
+</td><td  valign='top'> Vcc
+</td><td  valign='top'> Positive supply voltage
+</td></tr></table>
+<p class='vspace'></p><h2>Example 1: One Shift Register</h2>
+<p>The first step is to extend your Arduino with one shift register.
+</p>
+<p class='vspace'></p><h3>The Circuit</h3>
+<h4>1. Turning it on</h4>
+<p>Make the following connections: 
+</p><ul><li>GND (pin 8) to ground, 
+</li><li>Vcc (pin 16) to 5V
+</li><li>OE (pin 13)  to ground
+</li><li>MR (pin 10) to 5V
+</li></ul><p class='vspace'></p><p>This set up makes all of the output pins active and addressable all the time.  The one flaw of this set up is that you end up with the lights turning on to their last state or something arbitrary every time you first power up the circuit before the program starts to run. You can get around this by controlling the MR and OE pins from your Arduino board too, but this way will work and leave you with more open pins. 
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/ShftOutExmp1_1.gif' alt='' title='' /></div>
+<p class='vspace'></p><h4>2. Connect to Arduino</h4>
+<ul><li>DS (pin 14)  to Ardunio <span class='wikiword'>DigitalPin</span> 11 (blue wire) 
+</li><li>SH_CP (pin 11) to to Ardunio <span class='wikiword'>DigitalPin</span> 12 (yellow wire)
+</li><li>ST_CP (pin 12) to Ardunio <span class='wikiword'>DigitalPin</span> 8 (green wire)
+</li></ul><p class='vspace'></p><p>From now on those will be refered to as the dataPin, the clockPin and the latchPin respectively.  Notice the 0.1"f capacitor on the latchPin, if you have some flicker when the latch pin pulses you can use a capacitor to even it out.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/ShftOutExmp1_2.gif' alt='' title='' /></div>
+<p class='vspace'></p><h4>3. Add 8 <span class='wikiword'>LEDs</span>. </h4>
+<p>In this case you should connect the cathode (short pin) of each LED to a common ground, and the anode (long pin) of each LED to its respective shift register output pin.  Using the shift register to supply power like this is called <em>sourcing current.</em> Some shift registers can't source current, they can only do what is called <em>sinking current.</em>  If you have one of those it means you will have to flip the direction of the <span class='wikiword'>LEDs</span>, putting the anodes directly to power and the cathodes (ground pins) to the shift register outputs. You should check the your specific datasheet if you aren"t using a 595 series chip. Don"t forget to add a 220-ohm resistor in series to protect the <span class='wikiword'>LEDs</span> from being overloaded. 
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/ShftOutExmp1_3.gif' alt='' title='' /></div>
+<p class='vspace'></p><h4>Circuit Diagram</h4>
+<div><img src='../uploads/Tutorial/ShftOut_Schm1.gif' alt='' title='' /></div>
+<p class='vspace'></p><h3>The Code</h3>
+<p>Here are three code examples. The first is just some "hello world" code that simply outputs a byte value from 0 to 255. The second program  lights one LED at a time.  The third cycles through an array. 
+</p>
+<p class='vspace'></p><div><span class='frame rfloat' style='border: 1;'> <a class='urllink' href='../../../www.arduino.cc/en/uploads/Tutorial/595_logic_table.png' rel='nofollow'><img width='200px' src='../../../www.arduino.cc/en/uploads/Tutorial/595_logic_table.png' alt='logic table' title='logic table' /></a><br /><span style='font-size:83%'>595 Logic Table</span> </span></div>
+<div><span class='frame rfloat' style='border: 1;'> <a class='urllink' href='../../../www.arduino.cc/en/uploads/Tutorial/595_timing_diagram.png' rel='nofollow'><img width='200px' src='../../../www.arduino.cc/en/uploads/Tutorial/595_timing_diagram.png' alt='logic table' title='logic table' /></a><br /><span style='font-size:83%'>595 Timing Diagram</span> </span></div>
+<p class='vspace'></p><p>The code is based on  two pieces of information in the datasheet: the timing diagram and the logic table.  The logic table is what tells you that basically everything important happens on an up beat. When the clockPin goes from low to high, the shift register reads the state of the data pin. As the data gets shifted in it is saved in an internal memory register. When the latchPin goes from low to high the sent data gets moved from the shift registers aforementioned memory register into the output pins, lighting the <span class='wikiword'>LEDs</span>.
+</p>
+<p class='vspace'></p><p><a class='wikilink' href='ShftOut11html.html'>Code Sample 1.1 Hello World</a><br /><a class='wikilink' href='ShftOut12html.html'>Code Sample 1.2 One by One</a><br /><a class='wikilink' href='ShftOut13html.html'>Code Sample 1.3 Two shift registers</a><br />
+<br clear='all' /> 
+</p>
+<p class='vspace'></p><h2>Example 2</h2>
+<p>In this example you'll add a second shift register, doubling the number of output pins you have while still using the same number of pins from the Arduino.
+</p>
+<p class='vspace'></p><h3>The Circuit</h3>
+<h4>1. Add a second shift register. </h4>
+<p>Starting from the previous example, you should put a second shift register on the board. It should have the same leads to power and ground.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/ShftOutExmp2_1.gif' alt='' title='' /></div>
+<p class='vspace'></p><h4>2. Connect  the 2 registers.</h4>
+<p>Two of these connections simply extend the same clock and latch signal from the Arduino to the second shift register (yellow and green wires).  The blue wire is going from the serial out pin (pin 9) of the first shift register to the serial data input (pin 14) of the second register.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/ShftOutExmp2_2.gif' alt='' title='' /></div>
+<p class='vspace'></p><h4>3. Add a second set of <span class='wikiword'>LEDs</span>. </h4>
+<p>In this case I added green ones so when reading the code it is clear which byte is going to which set of <span class='wikiword'>LEDs</span>
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/ShftOutExmp2_3.gif' alt='' title='' /></div>
+<p class='vspace'></p><h3>Circuit Diagram</h3>
+<div><img src='../uploads/Tutorial/ShftOut_Schm2.gif' alt='' title='' /></div>
+<p class='vspace'></p><h3>The Code</h3>
+<p>Here again are  three code samples. If you are curious, you might want to try the samples from the first example with this circuit set up just to see what happens. 
+</p>
+<p class='vspace'></p><p><a class='wikilink' href='ShftOut21.html'>Code Sample 2.1  Dual Binary Counters</a><br />There is only one extra line of code compared to the first code sample from Example 1. It sends out a second byte. This forces the first shift register, the one directly attached to the Arduino,  to pass the first byte sent through to the second register, lighting the green <span class='wikiword'>LEDs</span>. The second byte will then show up on the red <span class='wikiword'>LEDs</span>.
+</p>
+<p class='vspace'></p><p><a class='wikilink' href='ShftOut22.html'>Code Sample 2.2  2 Byte One By One</a><br />Comparing this code to the similar code from Example 1 you see that a little bit more has had to change.  The blinkAll() function has been changed to the blinkAll_2Bytes() function to reflect the fact that now there are 16 <span class='wikiword'>LEDs</span> to control.  Also, in version 1 the pulsings of the latchPin were situated inside the subfunctions lightShiftPinA and lightShiftPinB(). Here they need to be moved back into the main loop to accommodate needing to run each subfunction twice in a row, once for the green <span class='wikiword'>LEDs</span> and once for the red ones. 
+</p>
+<p class='vspace'></p><p><a class='wikilink' href='ShftOut23.html'>Code Sample 2.3 - Dual Defined  Arrays</a><br />Like sample 2.2, sample 2.3 also takes advantage of the new blinkAll_2bytes() function.  2.3's big difference from sample 1.3 is only that instead of just a single variable called "data" and a single array called "dataArray" you have to have a dataRED, a dataGREEN, dataArrayRED, dataArrayGREEN defined up front.   This means that line 
+</p>
+<p class='vspace'></p><p><code>data = dataArray[j];</code>
+</p>
+<p class='vspace'></p><p>becomes
+</p>
+<p class='vspace'></p><p><code>dataRED = dataArrayRED[j];<br />dataGREEN = dataArrayGREEN[j];</code>
+</p>
+<p class='vspace'></p><p>and  
+</p>
+<p class='vspace'></p><p><code>shiftOut(dataPin, clockPin, data);  </code>
+</p>
+<p class='vspace'></p><p>becomes 
+</p>
+<p class='vspace'></p><p><code>shiftOut(dataPin, clockPin, dataGREEN);   <br />shiftOut(dataPin, clockPin, dataRED);</code>
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/ShiftOut" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='ShiftOut264b.html?action=edit'>Edit Page</a> | <a href='ShiftOutad68.html?action=diff'>Page History</a> | <a href='ShiftOut60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>
