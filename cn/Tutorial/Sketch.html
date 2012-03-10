@@ -185,14 +185,14 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>First Sketch</h2>
-<p>In the getting started guide (<a class='wikilink' href='../Guide/Windowshtml.html'>Windows</a>, <a class='wikilink' href='../Guide/MacOSX.html'>Mac OS X</a>, <a class='urllink' href='http://www.arduino.cc/playground/Learning/Linux' rel='nofollow'>Linux</a>), you uploaded a sketch that blinks an LED.  In this tutorial, you'll learn how each part of that sketch works.
+<p class='vspace'></p><h2>第一个程序</h2>
+<p>在入门指南里(<a class='wikilink' href='../Guide/Windowshtml.html'>Windows</a>, <a class='wikilink' href='../Guide/MacOSX.html'>Mac OS X</a>, <a class='urllink' href='http://www.arduino.cc/playground/Learning/Linux' rel='nofollow'>Linux</a>), 你上传了一个能够闪烁LED的程序。在这个教程里，你将了解这个程序的每一个部分是如何工作的。
 </p>
 <p class='vspace'></p><h3>Sketch</h3>
-<p>A <em>sketch</em> is the name that Arduino uses for a program.  It's the unit of code that is uploaded to and run on an Arduino board.
+<p>Arduino 的程序称为 <em>sketch</em>。它是一个可以上传并运行在 Arduino 板上的代码单元。
 </p>
-<p class='vspace'></p><h3>Comments</h3>
-<p>The first few lines of the <a class='wikilink' href='Blink.html'>Blink</a> sketch are a <em>comment</em>:
+<p class='vspace'></p><h3>注释</h3>
+<p><a class='wikilink' href='Blink.html'>Blink</a> 程序开头的几行是 <em>注释</em>:
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock1'>
@@ -206,30 +206,30 @@ function toggle(obj) {
 &nbsp;*<br />
 &nbsp;* http://www.arduino.cc/en/Tutorial/Blink<br />
 &nbsp;*/</span></div></div>
-  <div class='sourceblocklink'><a href='Sketchf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='Sketchf687.html?action=sourceblock&amp;num=1' type='text/plain'>[获取代码]</a></div>
 </div>
 
 </p>
-<p class='vspace'></p><p>Everything between the <code>/*</code> and <code>*/</code> is ignored by the Arduino when it runs the sketch (the <code>*</code> at the start of each line is only there to make the comment look pretty, and isn't required).  It's there for people reading the code: to explain what the program does, how it works, or why it's written the way it is.  It's a good practice to comment your sketches, and to keep the comments up-to-date when you modify the code.  This helps other people to learn from or modify your code.  
+<p class='vspace'></p><p>所有介于<code>/*</code> 和 <code>*/</code> 之间的代码在运行程序时都会被 Arduino 忽略(每行开头的<code>*</code>仅仅是为了使注释看起来美观一些，并不是必需的)。注释是为那些需要读懂源程序的人写的: 解释程序做了什么，它如何工作，或为什么这样编写。给自己的程序加注释是个好习惯，并且当你修改代码时应当同时更新注释。这样能帮助别人从你的程序中学习或修改你的代码。
 </p>
-<p class='vspace'></p><p>There's another style for short, single-line comments.  These start with <code>//</code> and continue to the end of the line.  For example, in the line:
+<p class='vspace'></p><p>还有另一种风格的注释方法，用于注释较短的内容，仅对单行起作用。这样的注释以 <code>//</code> 开始，一直到行尾。例 如以下行:
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock2'>
   <div class='sourceblocktext'><div class="arduino"><span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">13</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// LED connected to digital pin 13</span></div></div>
-  <div class='sourceblocklink'><a href='Sketch668d.html?action=sourceblock&amp;num=2' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='Sketch668d.html?action=sourceblock&amp;num=2' type='text/plain'>[获取代码]</a></div>
 </div>
 
 </p>
-<p class='vspace'></p><p>the message "LED connected to digital pin 13" is a comment.
+<p class='vspace'></p><p>在这里 "LED connected to digital pin 13" 就是注释。
 </p>
-<p class='vspace'></p><h3>Variables</h3>
-<p>A <em>variable</em> is a place for storing a piece of data.  It has a name, a type, and a value.  For example, the line from the Blink sketch above declares a variable with the name <code>ledPin</code>, the type <code>int</code>, and an initial value of 13.  It's being used to indicate which Arduino pin the LED is connected to.  Every time the name <code>ledPin</code> appears in the code, its value will be retrieved.  In this case, the person writing the program could have chosen not to bother creating the <code>ledPin</code> variable and instead have simply written 13 everywhere they needed to specify a pin number.  The advantage of using a variable is that it's easier to move the LED to a different pin: you only need to edit the one line that assigns the initial value to the variable.  
+<p class='vspace'></p><h3>变量</h3>
+<p> <em>变量</em> 是保存数据片段的地方。它拥有一个名字、一个数据类型，还有一个值。比如，Blink 程序中上例的一个就声明了一个变量，它的名字是<code>ledPin</code>, 类型是<code>int</code>, 初始值是13。它用来指示 Arduino 的哪一个引脚连接了LED。每当代码中出现<code>ledPin</code>这个名字，它的值就被取出。在这个例子中，程序的作者也可以不必纠结于创建这个<code>ledPin</code>变量，完全可以直接在每一个需要引脚编号的地方直接写上13。使用变量的好处是当需要把LED移到另一个引脚时会变得更轻松：你只需要修改给变量赋初值的那一行。
 </p>
-<p class='vspace'></p><p>Often, however, the value of a variable will change while the sketch runs.  For example, you could store the value read from an input into a variable.  There's more information in the <a class='wikilink' href='Variableshtml.html'>Variables tutorial</a>.
+<p class='vspace'></p><p>不管怎样，变量的值在程序运行过程中经常会改变。例如，你可以在从一个输入端读取一个值，并保存到某个变量。在<a class='wikilink' href='Variableshtml.html'>变量教程</a>里有更多信息。
 </p>
-<p class='vspace'></p><h3>Functions</h3>
-<p>A <em>function</em> (otherwise known as a <em>procedure</em> or <em>sub-routine</em>) is a named piece of code that can be used from elsewhere in a sketch.  For example, here's the definition of the <code>setup()</code> function from the Blink example:
+<p class='vspace'></p><h3>函数</h3>
+<p><em>函数</em> (也可以称为<em>过程</em>或<em>子程序</em>)是可以在程序中调用的已命名的代码片段。例如，以下是 Blink 范例中的 <code>setup()</code> 函数定义:
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock3'>
@@ -241,44 +241,44 @@ function toggle(obj) {
 </div>
 
 </p>
-<p class='vspace'></p><p>The first line provides information about the function, like its name, "setup".  The text before and after the name specify its return type and parameters: these will be explained later.  The code between the <code>{</code> and <code>}</code> is called the <em>body</em> of the function: what the function does.  
+<p class='vspace'></p><p>第一行提供了函数的一些信息，比如函数的名字是"setup"。函数名前后的文字指定了它的返回类型和参数（这些在稍后解释）。在<code>{</code> 和 <code>}</code> 之间的代码称为<em>函数体</em>: 即函数所做的事情。
 </p>
-<p class='vspace'></p><p>You can <em>call</em> a function that's already been defined (either in your sketch or as part of the <a class='wikilink' href='../Reference/HomePage.html'>Arduino language</a>).  For example, the line <code>pinMode(ledPin, OUTPUT);</code> calls the <code>pinMode()</code> function, passing it two <em>parameters</em>: <code>ledPin</code> and <code>OUTPUT</code>.  These parameters are used by the <code>pinMode()</code> function to decide which pin and mode to set.  
+<p class='vspace'></p><p>你可以<em>call</em>一个已经定义的函数（可以是你的程序中的函数或 <a class='wikilink' href='../Reference/HomePage.html'>Arduino 语言</a>中定义的函数）。例如， <code>pinMode(ledPin, OUTPUT);</code> 这一行调用了 <code>pinMode()</code> 这个函数，并传给它2个<em>parameters</em>: <code>ledPin</code> 和 <code>OUTPUT</code>。这些参数在 <code>pinMode()</code> 函数内使用，确定要设置的引脚和模式。
 </p>
 <p class='vspace'></p><h3>pinMode(), digitalWrite(), and delay()</h3>
-<p>The <code>pinMode()</code> function configures a pin as either an input or an output.  To use it, you pass it the number of the pin to configure and the constant INPUT or OUTPUT.  When configured as an input, a pin can detect the state of a sensor like a pushbutton; this is discussed in a <a class='wikilink' href='DigitalReadSerialhtml.html'>later tutorial</a>.  As an output, it can drive an actuator like an LED.
+<p><code>pinMode()</code> 函数把一个引脚配置为输入端或输出端。要使用它，你需要给它传送一个引脚编号和一个 INPUT 或 OUTPUT 常量。当配置为输入端(INPUT)时，引脚可以检测到传感器（比如按钮开关）的状态；这在<a class='wikilink' href='DigitalReadSerialhtml.html'>稍后的教程</a>中讨论。作为输出端，它可以驱动一个执行装置，比如LED。
 </p>
-<p class='vspace'></p><p>The <code>digitalWrite()</code> functions outputs a value on a pin.  For example, the line:
+<p class='vspace'></p><p><code>digitalWrite()</code> 函数使引脚输出一个值。例如以下代码：
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock4'>
   <div class='sourceblocktext'><div class="arduino"><span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span></div></div>
-  <div class='sourceblocklink'><a href='Sketch0c37.html?action=sourceblock&amp;num=4' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='Sketch0c37.html?action=sourceblock&amp;num=4' type='text/plain'>[获取代码]</a></div>
 </div>
 
 </p>
-<p class='vspace'></p><p>set the <code>ledPin</code> (pin 13) to HIGH, or 5 volts.  Writing a LOW to pin connects it to ground, or 0 volts.  
+<p class='vspace'></p><p>把 <code>ledPin</code> (13号引脚) 设置为 HIGH, 即 5V。给一个引脚写入 LOW 即把该引脚连接到地，即0V。  
 </p>
-<p class='vspace'></p><p>The <code>delay()</code> causes the Arduino to wait for the specified number of milliseconds before continuing on to the next line.  There are 1000 milliseconds in a second, so the line:
+<p class='vspace'></p><p><code>delay()</code> 使 Arduino 在执行下一行之前等待一段时间（根据给出的数值，单位毫秒）。1秒=1000毫秒，所以代码:
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock5'>
   <div class='sourceblocktext'><div class="arduino"><span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">1000</span><span class="br0">&#41;</span><span class="sy0">;</span></div></div>
-  <div class='sourceblocklink'><a href='Sketchadf3.html?action=sourceblock&amp;num=5' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='Sketchadf3.html?action=sourceblock&amp;num=5' type='text/plain'>[获取代码]</a></div>
 </div>
 
 </p>
-<p class='vspace'></p><p>creates a delay of one second.  
+<p class='vspace'></p><p>引起一秒的延迟。
 </p>
-<p class='vspace'></p><h3>setup() and loop()</h3>
-<p>There are two special functions that are a part of every Arduino sketch: <code>setup()</code> and <code>loop()</code>.  The <code>setup()</code> is called once, when the sketch starts.  It's a good place to do setup tasks like setting pin modes or initializing libraries.  The <code>loop()</code> function is called over and over and is heart of most sketches.  You need to include both functions in your sketch, even if you don't need them for anything.  
+<p class='vspace'></p><h3>setup() 和 loop()</h3>
+<p>在每个 Arduino 程序中都有两个特殊的函数：<code>setup()</code> 和 <code>loop()</code>。<code>setup()</code> 只在程序开始时调用一次。这里适合做一些设置工作，如设置引脚的工作模式或初始化程序库等。<code>loop()</code> 函数是大多数程序的中心，它是被重复调用的。在程序中必需包含这两个函数，即使你并不需要它。
 </p>
-<p class='vspace'></p><h3>Exercises</h3>
-<p><strong>1. Change the code so that the LED is on for 100 milliseconds and off for 1000.</strong>
+<p class='vspace'></p><h3>练习</h3>
+<p><strong>1. 修改代码，使 LED 亮 100ms，熄 1000ms。</strong>
 </p>
-<p class='vspace'></p><p><strong>2. Change the code so that the LED turns on when the sketch starts and stays on.</strong>
+<p class='vspace'></p><p><strong>2. 修改代码使 LED 在程序开始时点亮，并保持点亮。</strong>
 </p>
-<p class='vspace'></p><h4>See Also</h4>
+<p class='vspace'></p><h4>参见</h4>
 <ul><li><a class='wikilink' href='../Reference/Setup.html'>setup()</a>
 </li><li><a class='wikilink' href='../Reference/Loop.html'>loop()</a>
 </li><li><a class='wikilink' href='../Reference/PinMode.html'>pinMode()</a>

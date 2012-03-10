@@ -132,37 +132,37 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Variables</h2>
-<p>A variable is a place to store a piece of data.  It has a name, a value, and a type.  For example, this statement (called a <em>declaration</em>):
+<p class='vspace'></p><h2>变量</h2>
+<p>变量是保存数据的地方。它拥有一个名称，一个值和一个类型。如下语句 (称为一个 <em>声明</em>):
 </p>
 <p class='vspace'></p><p><code>int pin = 13;</code>
 </p>
-<p class='vspace'></p><p>creates a variable whose name is <code>pin</code>, whose value is <code>13</code>, and whose type is <code>int</code>.  Later on in the program, you can refer to this variable by its name, at which point its value will be looked up and used.  For example, in this statement:
+<p class='vspace'></p><p>建立了一个名为 <code>pin</code>的变量, 它的值是 <code>13</code>, 数据类型是 <code>int</code>.  在后续的程序中，你可以通过使用变量的名称来引用这个变量（检索并使用它的数值）。如下语句：
 </p>
 <p class='vspace'></p><p><code>pinMode(pin, OUTPUT);</code>
 </p>
-<p class='vspace'></p><p>it is the value of pin (13) that will be passed to the pinMode() function.  In this case, you don't actually need to use a variable, this statement would work just as well:
+<p class='vspace'></p><p>pin 的值 (13) 会被传送给 pinMode() 函数。在这里，并不真的需要使用一个变量，以下语句能达到同样的效果：
 </p>
 <p class='vspace'></p><p><code>pinMode(13, OUTPUT);</code>
 </p>
-<p class='vspace'></p><p>The advantage of a variable in this case is that you only need to specify the actual number of the pin once, but you can use it lots of times.  So if you later decide to change from pin 13 to pin 12, you only need to change one spot in the code.  Also, you can use a descriptive name to make the significance of the variable clear (e.g. a program controlling an RGB LED might have variables called redPin, greenPin, and bluePin).
+<p class='vspace'></p><p>这个例子中使用变量的优点是你只需要指定引脚的编号一次，就可以在以后多次使用。如果你以后决定把引脚从 13 改成 12，你只要在代码中改动一个地方。同时，你可以使用一个描述性的名称使变量的含意显示清晰(例如，一个控制 RGB LED 的程序就可能有命名为 redPin, greenPin 和 bluePin 的变量)。
 </p>
-<p class='vspace'></p><p>A variable has other advantages over a value like a number.  Most importantly, you can change the value of a variable using an <em>assignment</em> (indicated by an equals sign).  For example:
+<p class='vspace'></p><p>变量还有其他优点。最重要的是，你可以通过 <em>赋值</em> (用等号表示) 来改变一个变量的值。如:
 </p>
 <p class='vspace'></p><p><code>pin = 12;</code>
 </p>
-<p class='vspace'></p><p>will change the value of the variable to 12.  Notice that we don't specify the type of the variable: it's not changed by the assignment.  That is, the name of the variable is permanently associated with a type; only its value changes. [1]   Note that you have to declare a variable before you can assign a value to it.  If you include the preceding statement in a program without the first statement above, you'll get a message like: "error: pin was not declared in this scope".  
+<p class='vspace'></p><p>会使变量的值变成 12。注意这里不需要指定变量的类型: 在赋值时并不会改变它的类型。也就是说，变量名会持久地和一个数据类型关联，只有它的值会改变。[1] 注意在赋值之前必需先声明变量。如果在没有本文中的第一个语句的情况下使用上列语句，你会得到象这样的错误信息："error: pin was not declared in this scope".  
 </p>
-<p class='vspace'></p><p>When you assign one variable to another, you're making a copy of its value and storing that copy in the location in memory associated with the other variable.  Changing one has no effect on the other.  For example, after:
+<p class='vspace'></p><p>当你把用一个变量给另一个变量赋值时，其实是复制了变量的值并保存在内存中和另一个变量相关联的位置。改变其中一个变量的值并不会影响另一个。例如:
 </p>
 <p class='vspace'></p><pre>
 int pin = 13;
 int pin2 = pin;
 pin = 12; 
 </pre>
-<p class='vspace'></p><p>only pin has the value 12; pin2 is still 13.
+<p class='vspace'></p><p>此时pin的值是12; pin2还是13。
 </p>
-<p class='vspace'></p><p>Now what, you might be wondering, did the word "scope" in that error message above mean?  It refers to the part of your program in which the variable can be used.  This is determined by where you declare it.  For example, if you want to be able to use a variable anywhere in your program, you can declare at the top of your code.  This is called a <em>global</em> variable; here's an example:
+<p class='vspace'></p><p>现在你或许想知道上面那条出错信息里的单词"scope"是什么意思？它指的是你的程序里一部分，在那里可以使用那个变量。这个范围取决于你声明变量的语句所处的位置。例如，如果你想在程序的任意位置都可以使用一个变量，那么可以在代码的开头声明它。这样的变量称为<em>全局</em>变量。例：
 </p>
 <p class='vspace'></p><pre>
 int pin = 13;
@@ -177,7 +177,7 @@ void loop()
   digitalWrite(pin, HIGH);
 } 
 </pre>
-<p class='vspace'></p><p>As you can see, <code>pin</code> is used in both the setup() and loop() functions.  Both functions are referring to the same variable, so that changing it one will affect the value it has in the other, as in:
+<p class='vspace'></p><p>如你所见，在 setup() 和 loop() 函数里都用到了 <code>pin</code>。两个函数引用的是同一个变量，所以改变了其中一个就会影响到另一个，就象下例：
 </p>
 <p class='vspace'></p><pre>
 int pin = 13;
@@ -193,9 +193,9 @@ void loop()
   digitalWrite(pin, HIGH);
 } 
 </pre>
-<p class='vspace'></p><p>Here, the digitalWrite() function called from loop() will be passed a value of 12, since that's the value that was assigned to the variable in the setup() function.
+<p class='vspace'></p><p>在这个例子中，loop() 中调用的 digitalWrite() 函数传入的值是12，因为在 setup() 函数中变量变赋成了这个值。
 </p>
-<p class='vspace'></p><p>If you only need to use a variable in a single function, you can declare it there, in which case its scope will be limited to that function.  For example:
+<p class='vspace'></p><p>如果你只需要在单个函数中使用一个变量，可以在函数内声明它，这样它的范围(scope)就被限制在函数内部。便如：
 </p>
 <p class='vspace'></p><pre>
 void setup()
@@ -205,7 +205,7 @@ void setup()
   digitalWrite(pin, HIGH);
 } 
 </pre>
-<p class='vspace'></p><p>In this case, the variable pin can only be used inside the setup() function.  If you try to do something like this:
+<p class='vspace'></p><p>在这个例子中，pin这个变量只能在 setup() 函数内部使用。如果你想这样做：
 </p>
 <p class='vspace'></p><pre>
 void loop()
@@ -213,14 +213,14 @@ void loop()
   digitalWrite(pin, LOW); // wrong: pin is not in scope here.
 } 
 </pre>
-<p class='vspace'></p><p>you'll get the same message as before: "error: 'pin' was not declared in this scope".  That is, even though you've declared pin somewhere in your program, you're trying to use it somewhere outside its scope.  
+<p class='vspace'></p><p>你会得到和刚才一样的错误信息："error: 'pin' was not declared in this scope". 这就是说，虽然你在程序的某个地方声明了 pin，但你正尝试在它的有效范围之外使用它。
 </p>
-<p class='vspace'></p><p>Why, you might be wondering, wouldn't you make all your variables global?  After all, if I don't know where I might need a variable, why should I limit its scope to just one function?  The answer is that it can make it easier to figure out what happens to it.  If a variable is global, its value could be changed anywhere in the code, meaning that you need to understand the whole program to know what will happen to the variable.  For example, if your variable has a value you didn't expect, it can be much easier to figure out where the value came from if the variable has a limited scope.
+<p class='vspace'></p><p>你也许会觉得奇怪，为什么不让所有的变量都是全局的呢？如果不知道在哪里会用到一个变量，为什么要把变量限制在一个函数里呢？答案是：这样能更容易理解在这个变量上发生了什么。如果一个变量是全局的，它的值在代码的任一个地方都可能被改变，这样你就需要读懂整个程序才能知道这个变量发生了什么变化。比如，当你发现变量的值变成了一个不应该出现的值，这时如果变量有一个限定的有效范围，你就更容易找出这个值是从哪里来的。
 </p>
 <p class='vspace'></p><p>[block scope]
 [size of variables]
 </p>
-<p class='vspace'></p><p>[1] In some languages, like Python, types are associated with values, not variable names, and you can assign values of any type to a variable.  This is referred to as <em>dynamic typing</em>.
+<p class='vspace'></p><p>[1] 在有些语言里(比如Python)，数据类型和值相关联，而和变量名无关，你可以给一个变量赋任意类型的值。这被称为<em>动态类型</em>.
 </p>
 </div>
 

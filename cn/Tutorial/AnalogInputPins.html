@@ -132,35 +132,32 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Analog Input Pins</h2>
-<p>A description of the analog input pins on an Arduino chip (Atmega8, Atmega168, Atmega328, or Atmega1280).
+<p class='vspace'></p><h2>模拟输入引脚</h2>
+<p>对 Arduino 芯片(Atmega8, Atmega168, Atmega328 或 Atmega1280) 模拟输入引脚的说明。
 </p>
-<p class='vspace'></p><h4>A/D converter</h4>
-<p>The Atmega controllers used for the Arduino contain an onboard 6 channel analog-to-digital (A/D) converter. The converter has 10 bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0 - 13).
+<p class='vspace'></p><h4>A/D 转换器</h4>
+<p>在 Arduino 中使用的 Atmega 控制器包含了6个通道的模拟/数字(A/D)转换器。这个转换器拥有10位的分辨率，返回从0-1023之间的整数值。虽然对于大多数 Arduino 使用者来说模拟引脚的功能是用来读取模拟传感器，其实模拟引脚同样拥有通用输入/输出(GPIO)引脚的所有功能(和0 - 13号数字引脚一样)。
 </p>
-<p class='vspace'></p><p>Consequently, if a user needs more general purpose input output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.
+<p class='vspace'></p><p>因些，如果使用者需要更多的通用输入输出引脚，而模拟引脚还没有用掉，那么模拟引脚可以用来作为GPIO。
 </p>
-<p class='vspace'></p><h4>Pin mapping</h4>
-<p>The analog pins can be used identically to the digital pins, using the aliases A0 (for analog input 0), A1, etc.  For example, the code would look like this to set analog pin 0 to an output, and to set it HIGH:
+<p class='vspace'></p><h4>引脚映射</h4>
+<p>模拟引脚的使用和数字引脚相同，使用别名A0(模拟输入0)，A1 等等。比如，设置0号模拟引脚为输出并设置为高电平的代码就象这样：
 </p>
 <p class='vspace'></p><pre>pinMode(A0, OUTPUT);
 digitalWrite(A0, HIGH);
 </pre>
-<p class='vspace'></p><h4>Pullup resistors</h4>
-<p>The analog pins also have pullup resistors, which work identically to pullup resistors on the digital pins. They are enabled by issuing a command such as
+<p class='vspace'></p><h4>上拉电阻</h4>
+<p>模拟引脚同样有上拉电阻，和数字引脚的上拉电阻一样工作。当引脚是<em>输入端</em>时用如下的命令开启
 </p>
 <p class='vspace'></p><pre>
-digitalWrite(A0, HIGH);  // set pullup on analog pin 0 
+digitalWrite(A0, HIGH);  // 设置0号引脚的上拉电阻
 </pre>
-<p class='vspace'></p><p>while the pin is an <em>input</em>.
+<p class='vspace'></p><p>要注意开启上拉电阻会影响 analogRead() 的值。
 </p>
-<p class='vspace'></p><p>Be aware however that turning on a pullup will affect the values reported by analogRead(). 
+<p class='vspace'></p><h4>细节和注意事项</h4>
+<p>当引脚被设置为输出时，annalogRead命令不能正常工作，所以在这种情况下，应当在用analogRead之前先把它设置为输入。同样的，如果输出引脚被设置为HIGH，当它切换为输入时，同时就设置了上拉电阻。
 </p>
-<p class='vspace'></p><h4>Details and Caveats</h4>
-<p>The analogRead command will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using analogRead. Similarly if the pin has been set to HIGH as an output, the pullup resistor will be set, when switched back to an input.
-</p>
-<p class='vspace'></p><p>The Atmega datasheet also cautions against switching analog pins in close temporal proximity to making A/D readings (analogRead) on other analog pins. This can cause electrical noise and introduce jitter in the analog system.
-It may be desirable, after manipulating analog pins (in digital mode), to add a short delay before using analogRead() to read other analog pins.
+<p class='vspace'></p><p>Atmega的 datasheet 中也提到要注意避免在临近的引脚正在进行 A/D 读取(analogRead)时切换模拟引脚。这样可能会产生电子噪声，并使模拟电路出现杂波。建议的方法是在操作模拟引脚(在数字模式下)后，插入一个短暂延时，再使用analogRead()来读取其他模拟引脚。
 </p>
 <p class='vspace'></p>
 </div>
