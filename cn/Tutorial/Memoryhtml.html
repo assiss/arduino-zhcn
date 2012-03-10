@@ -132,35 +132,35 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Memory</h2>
-<p>There are three pools of memory in the microcontroller used on Arduino boards (<span class='wikiword'>ATmega168</span>):
-</p><ul><li>Flash memory (program space), is where the Arduino sketch is stored.
-</li><li>SRAM (static random access memory) is where the sketch creates and manipulates variables when it runs.
-</li><li>EEPROM is memory space that programmers can use to store long-term information.
-</li></ul><p class='vspace'></p><p>Flash memory and EEPROM memory are non-volatile (the information persists after the power is turned off). SRAM is volatile and will be lost when the power is cycled.
+<p class='vspace'></p><h2>存储器</h2>
+<p>用在 Arduino (<span class='wikiword'>ATmega168</span>) 上的单片机含有三类存储器:
+</p><ul><li>Flash memory (程序空间), 这里保存着 Arduino 程序。
+</li><li>SRAM (静态随机存取存储器) 程序运行时创建和使用的变量都放在这里。
+</li><li>EEPROM 需要长期保存的信息存放的地方。
+</li></ul><p class='vspace'></p><p>Flash 存储器和 EEPROM 存储器是非易失性的(掉电后信息仍然存在)。SRAM 是易失性的，掉电后信息丢失。
 </p>
-<p class='vspace'></p><p>The <span class='wikiword'>ATmega168</span> chip has the following amounts of memory:
+<p class='vspace'></p><p><span class='wikiword'>ATmega168</span> 芯片的存储器容量如下:
 </p>
 <p class='vspace'></p><pre>
-Flash  16k bytes (of which 2k is used for the bootloader)
-SRAM   1024 bytes
-EEPROM 512 bytes
+Flash  16k 字节 (其中2k被bootloader使用)
+SRAM   1024 字节
+EEPROM 512 字节
 
 </pre>
-<p class='vspace'></p><p>Notice that there's not much SRAM available.  It's easy to use it all up by having lots of strings in your program.  For example, a declaration like:
+<p class='vspace'></p><p>注意可用的 SRAM 空间并不多。如果你的程序中有大量的字符串，很容易就会把它用完。比如象这样的声明:
 </p>
 <p class='vspace'></p><p>char message[] = "I support the Cape Wind project.";
 </p>
-<p class='vspace'></p><p>puts 32 bytes into SRAM (each character takes a byte).  This might not seem like a lot, but it doesn't take long to get to 1024, especially if you have a large amount of text to send to a display, or a large lookup table, for example.
+<p class='vspace'></p><p>在 SRAM 中占用了 32 字节（每个字符占 1 个字节）。这看起来并不多，不过用完这1024字节也是很快的，特别是当你要在显示设备上输出一大堆的文字，或是一个大的查找表时。
 </p>
-<p class='vspace'></p><p>If you run out of SRAM, your program may fail in unexpected ways; it will appear to upload successfully, but not run, or run strangely.  To check if this is happening, you can try commenting out or shortening the strings or other data structures in your sketch (without changing the code).  If it then runs successfully, you're probably running out of SRAM.  There are a few things you can do to address this problem:
+<p class='vspace'></p><p>如果用完了 SRAM，你的程序会出错: 看起来上传成功了，但是不能运行，或者运行了但表现得很奇怪。为了确认是这个原因引起的，你可以尝试注释掉或缩短字符串和其他数据结构(不要改变代码)。如果运行成功了，那就说明很可能是SRAM用尽了。有一些办法来对付这种情况：
 </p>
-<p class='vspace'></p><ul><li>If your sketch talks to a program running on a (desktop/laptop) computer, you can try shifting data or calculations to the computer, reducing the load on the Arduino.
-<p class='vspace'></p></li><li>If you have lookup tables or other large arrays, use the smallest data type necessary to store the values you need; for example, an <a class='wikilink' href='../Reference/Int.html'>int</a> takes up two bytes, while a <a class='wikilink' href='../Reference/Byte.html'>byte</a> uses only one (but can store a smaller range of values).
-<p class='vspace'></p></li><li>If you don't need to modify the strings or data while your sketch is running, you can store them in flash (program) memory instead of SRAM; to do this, use the <a class='urllink' href='http://www.arduino.cc/en/Reference/PROGMEM' rel='nofollow'>PROGMEM</a> keyword.
-</li></ul><p class='vspace'></p><p>To use the EEPROM, see the <a class='urllink' href='http://www.arduino.cc/en/Reference/EEPROM' rel='nofollow'>EEPROM library</a>.
+<p class='vspace'></p><ul><li>如果你的程序在和电脑通讯，你可以试着把数据转移到电脑上，或在电脑上运算，以减少 Arduino 的占用。
+<p class='vspace'></p></li><li>如果有查找表或别的大型数组，请使用足够保存你所需数值的最小的数据类型; 例如，<a class='wikilink' href='../Reference/Int.html'>int</a> 类型占用2字节，而 <a class='wikilink' href='../Reference/Byte.html'>byte</a> 类型仅需要 1 字节(但是只能保存更小范围的值)。
+<p class='vspace'></p></li><li>如果在程序运行时不需要修改字符串或数据，你可以把它们保存在flash内存(程序空间)中; 要这样做，使用关键词 <a class='urllink' href='http://www.arduino.cc/en/Reference/PROGMEM' rel='nofollow'>PROGMEM</a>。
+</li></ul><p class='vspace'></p><p>要使用 EEPROM, 参见 <a class='urllink' href='http://www.arduino.cc/en/Reference/EEPROM' rel='nofollow'>EEPROM library</a>.
 </p>
-<p class='vspace'></p><p><a class='wikilink' href='Foundationshtml.html'>Foundations</a>
+<p class='vspace'></p><p><a class='wikilink' href='Foundationshtml.html'>基础</a>
 </p>
 </div>
 

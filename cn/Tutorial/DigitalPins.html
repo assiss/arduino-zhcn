@@ -132,34 +132,34 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Digital Pins</h2>
-<p>The pins on the Arduino can be configured as either inputs or outputs.  This document explains the functioning of the pins in those modes. While the title of this document refers to digital pins, it is important to note that vast majority of Arduino (Atmega) analog pins, may be configured, and used, in exactly the same manner as digital pins.
+<p class='vspace'></p><h2>数字引脚</h2>
+<p>Arduino 的引脚可以配置为输入或输出。 本文讲解引脚在这两种模式下的功能。虽然本文的标题说的是数字引脚，但是大多数 Arduino (Atmega) 模拟引脚的配置和使用方法都和数字引脚相同。
 </p>
-<p class='vspace'></p><h3>Properties of Pins Configured as INPUT</h3>
-<p>Arduino (Atmega) pins default to inputs, so they don't need to be explicitly declared as inputs with pinMode(). Pins configured as inputs are said to be in a high-impedance state. One way of explaining this is that input pins make extremely small demands on the circuit that they are sampling, say equivalent to a series resistor of 100 megohm in front of the pin. This means that it takes very little current to move the input pin from one state to another, and can make the pins useful for such tasks as implementing <a class='urllink' href='http://www.arduino.cc/playground/Code/CapacitiveSensor' rel='nofollow'>a capacitive touch sensor</a>, reading an LED as a <a class='urllink' href='http://www.arduino.cc/playground/Learning/LEDSensor' rel='nofollow'>photodiode</a>, or reading an analog sensor with a scheme such as <a class='wikilink' href='RCtimehtml.html'>RCTime.</a>
+<p class='vspace'></p><h3>输入引脚的属性</h3>
+<p>Arduino (Atmega) 的引脚默认就是输入，所以不必用 pinMode() 显式声明为输入。配置为输入的引脚处于高阻抗状态，也就是说在这些输入引脚采样时只会消耗极小的电流，可以视为在引脚前串接了一个100M欧的电阻。这就意味着只要微小的电流就能改变输入引脚的状态，因此引脚可以用于实现<a class='urllink' href='http://www.arduino.cc/playground/Code/CapacitiveSensor' rel='nofollow'>电容触摸传感器</a>, 把 LED 当作<a class='urllink' href='http://www.arduino.cc/playground/Learning/LEDSensor' rel='nofollow'>光电二极管</a>, 或用一个简单的 <a class='wikilink' href='RCtimehtml.html'>RC电路</a> 来从一个模拟传感器读取数据。
 </p>
-<p class='vspace'></p><p>This also means however, that input pins with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin. 
+<p class='vspace'></p><p>然而这同样也带来一个问题，如果输入引脚没有连接，或仅仅是连了一条线而没有接入其他电路，这个引脚的状态因为环境的原因（电子杂波或接近电容）会变成随机值。
 </p>
-<p class='vspace'></p><h4>Pullup Resistors</h4>
-<p>Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pullup resistor (to +5V), or a pulldown resistor (resistor to ground) on the input, with 10K being a common value.
+<p class='vspace'></p><h4>上拉电阻</h4>
+<p>一般来说，有必要在没有输入的情况下使输入引脚保持一个已知的状态。可以通过在输入端加入一个上拉电阻(连接到+5V)或下拉电阻(连接到地)来实现，电阻一般选用10k的。
 </p>
-<p class='vspace'></p><p>There are also convenient 20K pullup resistors built into the Atmega chip that can be accessed from software. These built-in pullup resistors are accessed in the following manner.
+<p class='vspace'></p><p>Atmega 芯片内置了一个可以用软件设置的20k的上拉电阻，可以通过以下方法设置。
 </p>
 <p class='vspace'></p><pre>
-pinMode(pin, INPUT);           // set pin to input
-digitalWrite(pin, HIGH);       // turn on pullup resistors
+pinMode(pin, INPUT);           // 设置为输入
+digitalWrite(pin, HIGH);       // 开启上拉电阻
 
 </pre>
-<p class='vspace'></p><p>Note that the pullup resistors provide enough current to dimly light an LED connected to a pin that has been configured as an input. If LED's in a project seem to be working, but very dimly, this is likely what is going on, and the programmer has forgotten to use pinMode() to set the pins to outputs.
+<p class='vspace'></p><p>需要注意的是，上拉电阻的电流足够使接在输入引脚上的LED发出微光。如果一个项目里的LED看起来已经工作了，但是亮度却很低，那么很可能是忘了用 pinMode() 设置引脚为输出端。
 </p>
-<p class='vspace'></p><p>Note also that the pullup resistors are controlled by the same registers (internal chip memory locations) that control whether a pin is HIGH or LOW. Consequently a pin that is configured to have pullup resistors turned on when the pin is an INPUT, will have the pin configured as HIGH if the pin is then swtiched to an OUTPUT with pinMode(). This works in the other direction as well, and an output pin that is left in a HIGH state will have the pullup resistors set if switched to an input with pinMode().
+<p class='vspace'></p><p>另一个需要注意的事是控制上拉电阻和控制引脚保持高/低电平使用的是同一个寄存器(芯片内部的记忆单元)。因此当一个配置为输入端又开启了上拉电阻的引脚在程序中用 pinMode() 改为输出端时，该引脚就被设置为高电平输出。反过来也一样，在高电平状态的输出端用 pinMode() 转为输入端时就同时开启了上拉电阻。
 </p>
-<p class='vspace'></p><p><strong>NOTE:</strong> Digital pin 13 is harder to use as a digital input than the other digital pins because it has an LED and resistor attached to it that's soldered to the board on most boards. If you enable its internal 20k pull-up resistor, it will hang at around 1.7 V instead of the expected 5V because the onboard LED and series resistor pull the voltage level down, meaning it always returns LOW.  If you must use pin 13 as a digital input, use an external pull down resistor.
+<p class='vspace'></p><p><strong>注意:</strong> 把13号数字引脚用于输入时会比其他数字引脚更复杂，因为在大多数Arduino板上13号引脚上已经焊接了一个LED和电阻。如果你开启这个引脚内部的20k上拉电阻，其电平将不是你期望的5V，而是因为LED和串联电阻的作用被拉到了1.7V，也就是说这个引脚会保持在低电平状态。如果你一定要把13号引脚作为数字输入，需要使用一个外置的下拉电阻。
 </p>
-<p class='vspace'></p><h3>Properties of Pins Configured as OUTPUT</h3>
-<p>Pins configured as OUTPUT with pinMode() are said to be in a low-impedance state. This means that they can provide a substantial amount of current to other circuits. Atmega pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This is enough current to brightly light up an LED (don't forget the series resistor), or run many sensors, for example, but not enough current to run most relays, solenoids, or motors.
+<p class='vspace'></p><h3>输出引脚的属性</h3>
+<p>用 pinMode() 配置为输出的引脚处于低阻抗模式。这表示它们能为其他电路提供一定的电流。Atmega 引脚可以提供（电流输出）或吸收（电流流入）最高40mA的电流，供外部设备/电路使用。这足够点亮一个LED(不要忘了串联电阻)，或给大多数传感器供电，但是对大多数继电器, 螺线管和电机来说这样的电流是不够的。
 </p>
-<p class='vspace'></p><p>Short circuits on Arduino pins, or attempting to run high current devices from them, can damage or destroy the output transistors in the pin, or damage the entire Atmega chip. Often this will result in a "dead" pin in the microcontroller but the remaining chip will still function adequately. For this reason it is a good idea to connect OUTPUT pins to other devices with 470&#937; or 1k resistors, unless maximum current draw from the pins is required for a particular application.
+<p class='vspace'></p><p>短路 Arduino 的引脚或尝试驱动需要大电流的设备都可能损坏引脚内的输出晶体管，甚至烧毁整个 Atmega 芯片。多数情况下会导致单片机的一个引脚“死掉”而其他引脚仍然正常工作。因为这个原因，在输出引脚连接其他设备时，除非是必需要使用最大的电流驱动，串联一个470欧或1k的电阻是个不错的做法。
 </p>
 <p class='vspace'></p><p><a class='wikilink' href='Foundationshtml.html'>back to Foundations</a>
 </p>

@@ -133,11 +133,11 @@ function toggle(obj) {
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
 <p class='vspace'></p><h2>PWM</h2>
-<p>The Fading example demonstrates the use of analog output (PWM) to fade an LED. It is available in the File-&gt;Sketchbook-&gt;Examples-&gt;Analog menu of the Arduino software.
+<p>Fading 示例演示了用模拟输出来使 LED 亮度渐变。这个示例可以在 Arduino 软件的 File-&gt;Sketchbook-&gt;Examples-&gt;Analog 菜单下找到。
 </p>
-<p class='vspace'></p><p>Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
+<p class='vspace'></p><p>脉冲宽度调制，或PWM，是一种使用数字方法来获得模拟结果的技术。数字控制用来产生方波（一种在开/关之间跳变的信号）， 通过改变开信号和关信号所占的时间，这种开－关组合能模拟出介于全开（5V）和全关（0V）之间的电压。开信号的持续时间称为脉冲宽度。要获得不同的模拟值，你只需要改变（调制）脉冲的宽度。如果这个开－关组合的变化速度足够快，在LED示例中的结果看起来就象是一个稳定在0－5V之间的电压在控制LED的亮度。
 </p>
-<p class='vspace'></p><p>In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to <a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite</a>() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
+<p class='vspace'></p><p>下图中，绿色的线代表一段固定的时间。这段时间范围就是PWM频率的倒数。换句话说，因为Arduino的PWM频率大约是500Hz，所以每条绿线之间的时间是2毫秒。调用 <a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite</a>() 的范围是 0 - 255，所以 analogWrite(255) 的占空比是100%（保持高电平），而 analogWrite(127) 的占空比就是50%（占一半的时间）。
 </p>
 <p class='vspace'></p><div><img src='../uploads/Tutorial/pwm.gif' alt='' title='' /></div>
 <p class='vspace'></p><p>Once you get this example running, grab your arduino and shake it back and forth. What you are doing here is essentially mapping time across the space. To our eyes, the movement blurs each LED blink into a line. As the LED fades in and out, those little lines will grow and shrink in length. Now you are seeing the pulse width.
