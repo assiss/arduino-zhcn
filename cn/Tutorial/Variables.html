@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Variables </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><h2>变量</h2>
+<p>变量是保存数据的地方。它拥有一个名称，一个值和一个类型。如下语句 (称为一个 <em>声明</em>):
+</p>
+<p class='vspace'></p><p><code>int pin = 13;</code>
+</p>
+<p class='vspace'></p><p>建立了一个名为 <code>pin</code>的变量, 它的值是 <code>13</code>, 数据类型是 <code>int</code>.  在后续的程序中，你可以通过使用变量的名称来引用这个变量（检索并使用它的数值）。如下语句：
+</p>
+<p class='vspace'></p><p><code>pinMode(pin, OUTPUT);</code>
+</p>
+<p class='vspace'></p><p>pin 的值 (13) 会被传送给 pinMode() 函数。在这里，并不真的需要使用一个变量，以下语句能达到同样的效果：
+</p>
+<p class='vspace'></p><p><code>pinMode(13, OUTPUT);</code>
+</p>
+<p class='vspace'></p><p>这个例子中使用变量的优点是你只需要指定引脚的编号一次，就可以在以后多次使用。如果你以后决定把引脚从 13 改成 12，你只要在代码中改动一个地方。同时，你可以使用一个描述性的名称使变量的含意显示清晰(例如，一个控制 RGB LED 的程序就可能有命名为 redPin, greenPin 和 bluePin 的变量)。
+</p>
+<p class='vspace'></p><p>变量还有其他优点。最重要的是，你可以通过 <em>赋值</em> (用等号表示) 来改变一个变量的值。如:
+</p>
+<p class='vspace'></p><p><code>pin = 12;</code>
+</p>
+<p class='vspace'></p><p>会使变量的值变成 12。注意这里不需要指定变量的类型: 在赋值时并不会改变它的类型。也就是说，变量名会持久地和一个数据类型关联，只有它的值会改变。[1] 注意在赋值之前必需先声明变量。如果在没有本文中的第一个语句的情况下使用上列语句，你会得到象这样的错误信息："error: pin was not declared in this scope".  
+</p>
+<p class='vspace'></p><p>当你把用一个变量给另一个变量赋值时，其实是复制了变量的值并保存在内存中和另一个变量相关联的位置。改变其中一个变量的值并不会影响另一个。例如:
+</p>
+<p class='vspace'></p><pre>
+int pin = 13;
+int pin2 = pin;
+pin = 12; 
+</pre>
+<p class='vspace'></p><p>此时pin的值是12; pin2还是13。
+</p>
+<p class='vspace'></p><p>现在你或许想知道上面那条出错信息里的单词"scope"是什么意思？它指的是你的程序里一部分，在那里可以使用那个变量。这个范围取决于你声明变量的语句所处的位置。例如，如果你想在程序的任意位置都可以使用一个变量，那么可以在代码的开头声明它。这样的变量称为<em>全局</em>变量。例：
+</p>
+<p class='vspace'></p><pre>
+int pin = 13;
+
+void setup()
+{
+  pinMode(pin, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(pin, HIGH);
+} 
+</pre>
+<p class='vspace'></p><p>如你所见，在 setup() 和 loop() 函数里都用到了 <code>pin</code>。两个函数引用的是同一个变量，所以改变了其中一个就会影响到另一个，就象下例：
+</p>
+<p class='vspace'></p><pre>
+int pin = 13;
+
+void setup()
+{
+  pin = 12;
+  pinMode(pin, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(pin, HIGH);
+} 
+</pre>
+<p class='vspace'></p><p>在这个例子中，loop() 中调用的 digitalWrite() 函数传入的值是12，因为在 setup() 函数中变量变赋成了这个值。
+</p>
+<p class='vspace'></p><p>如果你只需要在单个函数中使用一个变量，可以在函数内声明它，这样它的范围(scope)就被限制在函数内部。便如：
+</p>
+<p class='vspace'></p><pre>
+void setup()
+{
+  int pin = 13;
+  pinMode(pin, OUTPUT);
+  digitalWrite(pin, HIGH);
+} 
+</pre>
+<p class='vspace'></p><p>在这个例子中，pin这个变量只能在 setup() 函数内部使用。如果你想这样做：
+</p>
+<p class='vspace'></p><pre>
+void loop()
+{
+  digitalWrite(pin, LOW); // wrong: pin is not in scope here.
+} 
+</pre>
+<p class='vspace'></p><p>你会得到和刚才一样的错误信息："error: 'pin' was not declared in this scope". 这就是说，虽然你在程序的某个地方声明了 pin，但你正尝试在它的有效范围之外使用它。
+</p>
+<p class='vspace'></p><p>你也许会觉得奇怪，为什么不让所有的变量都是全局的呢？如果不知道在哪里会用到一个变量，为什么要把变量限制在一个函数里呢？答案是：这样能更容易理解在这个变量上发生了什么。如果一个变量是全局的，它的值在代码的任一个地方都可能被改变，这样你就需要读懂整个程序才能知道这个变量发生了什么变化。比如，当你发现变量的值变成了一个不应该出现的值，这时如果变量有一个限定的有效范围，你就更容易找出这个值是从哪里来的。
+</p>
+<p class='vspace'></p><p>[block scope]
+[size of variables]
+</p>
+<p class='vspace'></p><p>[1] 在有些语言里(比如Python)，数据类型和值相关联，而和变量名无关，你可以给一个变量赋任意类型的值。这被称为<em>动态类型</em>.
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/Variables" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Variables264b.html?action=edit'>Edit Page</a> | <a href='Variablesad68.html?action=diff'>Page History</a> | <a href='Variables60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='Buy.html'>Buy</a>
 <a class='wikilink' href='Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='Hardware.html'>Hardware</a>
@@ -166,7 +166,7 @@ function toggle(obj) {
 <p class='vspace'></p></li><li><strong>VCC.</strong> The regulated power supply on the board.  This comes from the battery or DC power supply via the regulator, or from the USB-to-TTL Serial convertor.  
 <p class='vspace'></p></li><li><strong>GND.</strong> Ground pins.  
 </li></ul><p class='vspace'></p><h3>Memory</h3>
-<p>The <span class='wikiword'>ATmega168</span> has 16 KB of flash memory for storing code (of which 2 KB is used for the bootloader).  It has 1 KB of SRAM and 512 bytes of EEPROM (which can be read and written with the <a class='urllink' href='http://www.arduino.cc/en/Reference/EEPROM' rel='nofollow'>EEPROM library</a>).  The <span class='wikiword'>ATmega328</span> has 32 KB of flash, 2 KB of SRAM, and 1 KB of EEPROM.
+<p>The <span class='wikiword'>ATmega168</span> has 16 KB of flash memory for storing code (of which 2 KB is used for the bootloader).  It has 1 KB of SRAM and 512 bytes of EEPROM (which can be read and written with the <a class='urllink' href='http://arduino.cc/en/Reference/EEPROM' rel='nofollow'>EEPROM library</a>).  The <span class='wikiword'>ATmega328</span> has 32 KB of flash, 2 KB of SRAM, and 1 KB of EEPROM.
 </p>
 <p class='vspace'></p><h3>Input and Output</h3>
 <p>Each of the 14 digital pins on the Pro can be used as an input or output, using <a class='wikilink' href='../Reference/PinMode.html'>pinMode()</a>, <a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite()</a>, and <a class='wikilink' href='../Reference/DigitalRead.html'>digitalRead()</a> functions.  They operate at 3.3 volts.  Each pin can provide or receive a maximum of 40 mA and has an internal pull-up resistor (disconnected by default) of 20-50 kOhms.  In addition, some pins have specialized functions:
@@ -188,7 +188,7 @@ function toggle(obj) {
 <p class='vspace'></p><h3>Communication</h3>
 <p>The Arduino Pro has a number of facilities for communicating with a computer, another Arduino, or other microcontrollers.  The <span class='wikiword'>ATmega168</span> and <span class='wikiword'>ATmega328</span> provide UART TTL serial communication, which is available on digital pins 0 (RX) and 1 (TX).  The Arduino software includes a serial monitor which allows simple textual data to be sent to and from the Arduino board via a USB connection.
 </p>
-<p class='vspace'></p><p>A <a class='urllink' href='http://www.arduino.cc/en/Reference/SoftwareSerial' rel='nofollow'>SoftwareSerial library</a> allows for serial communication on any of the Pro's digital pins.
+<p class='vspace'></p><p>A <a class='urllink' href='http://arduino.cc/en/Reference/SoftwareSerial' rel='nofollow'>SoftwareSerial library</a> allows for serial communication on any of the Pro's digital pins.
 </p>
 <p class='vspace'></p><p>The <span class='wikiword'>ATmega168</span> and <span class='wikiword'>ATmega328</span> also support <span class='wikiword'>I2C</span> (TWI) and SPI communication.  The Arduino software includes a Wire library to simplify use of the <span class='wikiword'>I2C</span> bus; see the <a class='wikilink' href='../Reference/Wire.html'>documentation</a> for details.  To use the SPI communication, please see the <span class='wikiword'>ATmega168</span> or <span class='wikiword'>ATmega328</span> datasheet.
 </p>
@@ -197,7 +197,7 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p>The <span class='wikiword'>ATmega168</span> or <span class='wikiword'>ATmega328</span> on the Arduino Pro comes preburned with a <a class='wikilink' href='../Guide/Environment5078.html'>bootloader</a> that allows you to upload new code to it without the use of an external hardware programmer.  It communicates using the original <span class='wikiword'>STK500</span> protocol (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/doc2525.pdf' rel='nofollow'>reference</a>, <a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/avr061.zip' rel='nofollow'>C header files</a>).
 </p>
-<p class='vspace'></p><p>You can also bypass the bootloader and program the <span class='wikiword'>ATmega168</span> or <span class='wikiword'>ATmega328</span> through the ICSP (In-Circuit Serial Programming) header; see <a class='wikilink' href='../Hacking/Programmerhtml.html'>these instructions</a> for details.
+<p class='vspace'></p><p>You can also bypass the bootloader and program the <span class='wikiword'>ATmega168</span> or <span class='wikiword'>ATmega328</span> through the ICSP (In-Circuit Serial Programming) header; see <a class='wikilink' href='../Hacking/Programmer.html'>these instructions</a> for details.
 </p>
 <p class='vspace'></p><h3>Automatic (Software) Reset</h3>
 <p>Rather then requiring a physical press of the reset button before an upload, the Arduino Pro is designed in a way that allows it to be reset by software running on a connected computer.  One of the pins on the six-pin header is connected to the reset line of the <span class='wikiword'>ATmega168</span> or <span class='wikiword'>ATmega328</span> via a 100 nanofarad capacitor.  This pin connects to one of the hardware flow control lines of the USB-to-serial convertor connected to the header: RTS when using an FTDI cable, DTR when using the Sparkfun breakout board.  When this line is asserted (taken low), the reset line drops long enough to reset the chip.  The Arduino software uses this capability to allow you to upload code by simply pressing the upload button in the Arduino environment.  This means that the bootloader can have a shorter timeout, as the lowering of the reset line can be well-coordinated with the start of the upload.  

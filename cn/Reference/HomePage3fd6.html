@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
 <a class='selflink' href='HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -132,7 +132,7 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><i>(redirected from 
     <a rel='nofollow' href='Extended264b.html?action=edit'>Reference.Extended</a>)</i></p><p class='vspace'></p>
-<p><strong>Reference</strong> &nbsp;  <a class='selflink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Librarieshtml.html'>Libraries</a> | <a class='wikilink' href='Comparisonhtml.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
+<p><strong>Reference</strong> &nbsp;  <a class='selflink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
 <p class='vspace'></p><h1>Language Reference</h1>
 <p>Arduino programs can be divided in three main parts: <em>structure</em>, <em>values</em> (variables and constants), and <em>functions</em>. 
@@ -151,7 +151,7 @@ function toggle(obj) {
 </li><li><a class='wikilink' href='DoWhile.html'>do... while</a>
 </li><li><a class='wikilink' href='Break.html'>break</a>
 </li><li><a class='wikilink' href='Continue.html'>continue</a>
-</li><li><a class='wikilink' href='Returnhtml.html'>return</a>
+</li><li><a class='wikilink' href='Return.html'>return</a>
 </li><li><a class='wikilink' href='Goto.html'>goto</a>
 </li></ul><p class='vspace'></p><h4>Further Syntax</h4>
 <ul><li><a class='wikilink' href='SemiColon.html'>;</a> (semicolon)
@@ -166,7 +166,7 @@ function toggle(obj) {
 </li><li><a class='wikilink' href='Arithmetic.html'>-</a> (subtraction)
 </li><li><a class='wikilink' href='Arithmetic.html'>*</a> (multiplication)
 </li><li><a class='wikilink' href='Arithmetic.html'>/</a> (division)
-</li><li><a class='wikilink' href='Modulohtml.html'>%</a> (modulo)
+</li><li><a class='wikilink' href='Modulo.html'>%</a> (modulo)
 </li></ul><p class='vspace'></p><h4>Comparison Operators</h4>
 <ul><li><a class='wikilink' href='If.html'>==</a> (equal to)
 </li><li><a class='wikilink' href='If.html'>!=</a> (not equal to)
@@ -189,20 +189,20 @@ function toggle(obj) {
 </li><li><a class='wikilink' href='Bitshift.html'>&lt;&lt;</a> (bitshift left)
 </li><li><a class='wikilink' href='Bitshift.html'>&gt;&gt;</a> (bitshift right)
 </li></ul><p class='vspace'></p><h4>Compound Operators</h4>
-<ul><li><a class='wikilink' href='Incrementhtml.html'>++</a> (increment)
-</li><li><a class='wikilink' href='Incrementhtml.html'>--</a> (decrement)
-</li><li><a class='wikilink' href='IncrementCompoundhtml.html'>+=</a> (compound addition)
-</li><li><a class='wikilink' href='IncrementCompoundhtml.html'>-=</a> (compound subtraction)
-</li><li><a class='wikilink' href='IncrementCompoundhtml.html'>*=</a> (compound multiplication)
-</li><li><a class='wikilink' href='IncrementCompoundhtml.html'>/=</a> (compound division)
+<ul><li><a class='wikilink' href='Increment.html'>++</a> (increment)
+</li><li><a class='wikilink' href='Increment.html'>--</a> (decrement)
+</li><li><a class='wikilink' href='IncrementCompound.html'>+=</a> (compound addition)
+</li><li><a class='wikilink' href='IncrementCompound.html'>-=</a> (compound subtraction)
+</li><li><a class='wikilink' href='IncrementCompound.html'>*=</a> (compound multiplication)
+</li><li><a class='wikilink' href='IncrementCompound.html'>/=</a> (compound division)
 <p class='vspace'></p></li><li><a class='wikilink' href='BitwiseCompoundAnd.html'>&amp;=</a> (compound bitwise and)
 </li><li><a class='wikilink' href='BitwiseCompoundOr.html'>|=</a> (compound bitwise or)
 </li></ul><p class='vspace'></p></td><td  width='33%' valign='top'>
 <h2>Variables</h2>
 <h4>Constants</h4>
-<ul><li><a class='wikilink' href='Constantshtml.html'>HIGH</a> | <a class='wikilink' href='Constantshtml.html'>LOW</a>
-</li><li><a class='wikilink' href='Constantshtml.html'>INPUT</a> | <a class='wikilink' href='Constantshtml.html'>OUTPUT</a>
-</li><li><a class='wikilink' href='Constantshtml.html'>true</a> | <a class='wikilink' href='Constantshtml.html'>false</a>
+<ul><li><a class='wikilink' href='Constants.html'>HIGH</a> | <a class='wikilink' href='Constants.html'>LOW</a>
+</li><li><a class='wikilink' href='Constants.html'>INPUT</a> | <a class='wikilink' href='Constants.html'>OUTPUT</a>
+</li><li><a class='wikilink' href='Constants.html'>true</a> | <a class='wikilink' href='Constants.html'>false</a>
 </li><li><a class='wikilink' href='IntegerConstants.html'>integer constants</a>
 </li><li><a class='wikilink' href='Fpconstants.html'>floating point constants</a>
 </li></ul><p class='vspace'></p><h4>Data Types</h4>
@@ -220,7 +220,7 @@ function toggle(obj) {
 </li><li><a class='wikilink' href='Double.html'>double</a>
 </li><li><a class='wikilink' href='String.html'>string</a> - char array
 </li><li><a class='wikilink' href='StringObject.html'>String</a> - object
-</li><li><a class='wikilink' href='Arrayhtml.html'>array</a>
+</li><li><a class='wikilink' href='Array.html'>array</a>
 </li></ul><p class='vspace'></p><h4>Conversion</h4>
 <ul><li><a class='wikilink' href='CharCast.html'>char()</a>
 </li><li><a class='wikilink' href='ByteCast.html'>byte()</a>
@@ -250,9 +250,9 @@ function toggle(obj) {
 </li><li><a class='wikilink' href='NoTone.html'>noTone</a>()
 </li><li><a class='wikilink' href='ShiftOut.html'>shiftOut</a>() 
 </li><li><a class='wikilink' href='ShiftIn.html'>shiftIn</a>() 
-</li><li><a class='wikilink' href='PulseInhtml.html'>pulseIn</a>()
+</li><li><a class='wikilink' href='PulseIn.html'>pulseIn</a>()
 </li></ul><p class='vspace'></p><p><strong>Time</strong>
-</p><ul><li><a class='wikilink' href='Millishtml.html'>millis</a>()   
+</p><ul><li><a class='wikilink' href='Millis.html'>millis</a>()   
 </li><li><a class='wikilink' href='Micros.html'>micros</a>()   
 </li><li><a class='wikilink' href='Delay.html'>delay</a>()  
 </li><li><a class='wikilink' href='DelayMicroseconds.html'>delayMicroseconds</a>()
@@ -262,12 +262,12 @@ function toggle(obj) {
 </li><li><a class='wikilink' href='Abs.html'>abs</a>()
 </li><li><a class='wikilink' href='Constrain.html'>constrain</a>()
 </li><li><a class='wikilink' href='Map.html'>map</a>()
-</li><li><a class='wikilink' href='Powhtml.html'>pow</a>()
+</li><li><a class='wikilink' href='Pow.html'>pow</a>()
 </li><li><a class='wikilink' href='Sqrt.html'>sqrt</a>()
 </li></ul><p class='vspace'></p><p><strong>Trigonometry</strong> 
 </p><ul><li><a class='wikilink' href='Sin.html'>sin</a>()
 </li><li><a class='wikilink' href='Cos.html'>cos</a>()
-</li><li><a class='wikilink' href='Tanhtml.html'>tan</a>()
+</li><li><a class='wikilink' href='Tan.html'>tan</a>()
 </li></ul><p class='vspace'></p><p><strong>Random Numbers</strong>
 </p>
 <p class='vspace'></p><ul><li><a class='wikilink' href='RandomSeed.html'>randomSeed</a>()
@@ -292,7 +292,7 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><ul><li><a class='wikilink' href='Serial.html'>Serial</a>
 </li><li><a class='wikilink' href='Stream.html'>Stream</a>
-</li></ul><p class='vspace'></p><p><strong>Looking for something else?</strong>  See the <a class='wikilink' href='Librarieshtml.html'>libraries page</a> for interfacing with particular types of hardware.  Try the list of <a class='urllink' href='http://www.arduino.cc/playground/Main/GeneralCodeLibrary' rel='nofollow'>community-contributed code</a>.   The Arduino language is based on C/C++.  It links against <a class='urllink' href='http://www.nongnu.org/avr-libc/user-manual/modules.html' rel='nofollow'>AVR Libc</a> and allows the use of any of its functions; see its <a class='urllink' href='http://www.nongnu.org/avr-libc/user-manual/index.html' rel='nofollow'>user manual</a> for details.
+</li></ul><p class='vspace'></p><p><strong>Looking for something else?</strong>  See the <a class='wikilink' href='Libraries.html'>libraries page</a> for interfacing with particular types of hardware.  Try the list of <a class='urllink' href='http://arduino.cc/playground/Main/GeneralCodeLibrary' rel='nofollow'>community-contributed code</a>.   The Arduino language is based on C/C++.  It links against <a class='urllink' href='http://www.nongnu.org/avr-libc/user-manual/modules.html' rel='nofollow'>AVR Libc</a> and allows the use of any of its functions; see its <a class='urllink' href='http://www.nongnu.org/avr-libc/user-manual/index.html' rel='nofollow'>user manual</a> for details.
 </p>
 <p class='vspace'></p></td></tr></table>
 <p><a class='selflink' href='HomePage.html'>Reference Home</a>

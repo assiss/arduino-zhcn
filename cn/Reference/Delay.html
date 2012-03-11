@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
 <a class='wikilink' href='HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -130,7 +130,7 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Librarieshtml.html'>Libraries</a> | <a class='wikilink' href='Comparisonhtml.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
+<p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
 <p class='vspace'></p><h2>delay()</h2>
 <h4>Description</h4>
@@ -164,15 +164,15 @@ void loop()
 
 </pre>
 <p class='vspace'></p><h4>Caveat</h4>
-<p>While it is easy to create a blinking LED with the delay() function, and many sketches use short delays for such tasks as switch debouncing, the use of delay() in a sketch has significant drawbacks. No other reading of sensors, mathematical calculations, or pin manipulation can go on during the delay function, so in effect, it brings most other activity to a halt. For alternative approaches to controlling timing see the <a class='wikilink' href='Millishtml.html'>millis()</a> function and the sketch sited below. More knowledgeable programmers usually avoid the use of delay() for timing of events longer than 10's of milliseconds unless the Arduino sketch is very simple.
+<p>While it is easy to create a blinking LED with the delay() function, and many sketches use short delays for such tasks as switch debouncing, the use of delay() in a sketch has significant drawbacks. No other reading of sensors, mathematical calculations, or pin manipulation can go on during the delay function, so in effect, it brings most other activity to a halt. For alternative approaches to controlling timing see the <a class='wikilink' href='Millis.html'>millis()</a> function and the sketch sited below. More knowledgeable programmers usually avoid the use of delay() for timing of events longer than 10's of milliseconds unless the Arduino sketch is very simple.
 </p>
 <p class='vspace'></p><p>Certain things <em>do</em> go on while the delay() function is controlling the Atmega chip however, because the delay function does not disable interrupts. Serial communication that appears at the RX pin is recorded, PWM (<a class='wikilink' href='AnalogWrite.html'>analogWrite</a>) values and pin states are maintained, and <a class='wikilink' href='AttachInterrupt.html'>interrupts</a> will work as they should.
 </p>
 <p class='vspace'></p><h4>See also</h4>
-<ul><li><a class='wikilink' href='Millishtml.html'>millis</a>()
+<ul><li><a class='wikilink' href='Millis.html'>millis</a>()
 </li><li><a class='wikilink' href='Micros.html'>micros</a>()
 </li><li><a class='wikilink' href='DelayMicroseconds.html'>delayMicroseconds</a>()
-</li><li><a class='wikilink' href='../Tutorial/BlinkWithoutDelayhtml.html'>Blink Without Delay</a> example
+</li><li><a class='wikilink' href='../Tutorial/BlinkWithoutDelay.html'>Blink Without Delay</a> example
 </li></ul><p class='vspace'></p><p><a class='wikilink' href='HomePage.html'>Reference Home</a>
 </p>
 <p class='vspace'></p><p><em>Corrections, suggestions, and new documentation should be posted to the <a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>Forum</a>.</em>

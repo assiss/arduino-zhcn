@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -130,13 +130,13 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
 <p class='vspace'></p><h2>数字引脚</h2>
 <p>Arduino 的引脚可以配置为输入或输出。 本文讲解引脚在这两种模式下的功能。虽然本文的标题说的是数字引脚，但是大多数 Arduino (Atmega) 模拟引脚的配置和使用方法都和数字引脚相同。
 </p>
 <p class='vspace'></p><h3>输入引脚的属性</h3>
-<p>Arduino (Atmega) 的引脚默认就是输入，所以不必用 pinMode() 显式声明为输入。配置为输入的引脚处于高阻抗状态，也就是说在这些输入引脚采样时只会消耗极小的电流，可以视为在引脚前串接了一个100M欧的电阻。这就意味着只要微小的电流就能改变输入引脚的状态，因此引脚可以用于实现<a class='urllink' href='http://www.arduino.cc/playground/Code/CapacitiveSensor' rel='nofollow'>电容触摸传感器</a>, 把 LED 当作<a class='urllink' href='http://www.arduino.cc/playground/Learning/LEDSensor' rel='nofollow'>光电二极管</a>, 或用一个简单的 <a class='wikilink' href='RCtimehtml.html'>RC电路</a> 来从一个模拟传感器读取数据。
+<p>Arduino (Atmega) 的引脚默认就是输入，所以不必用 pinMode() 显式声明为输入。配置为输入的引脚处于高阻抗状态，也就是说在这些输入引脚采样时只会消耗极小的电流，可以视为在引脚前串接了一个100M欧的电阻。这就意味着只要微小的电流就能改变输入引脚的状态，因此引脚可以用于实现<a class='urllink' href='http://arduino.cc/playground/Code/CapacitiveSensor' rel='nofollow'>电容触摸传感器</a>, 把 LED 当作<a class='urllink' href='http://arduino.cc/playground/Learning/LEDSensor' rel='nofollow'>光电二极管</a>, 或用一个简单的 <a class='wikilink' href='RCtime.html'>RC电路</a> 来从一个模拟传感器读取数据。
 </p>
 <p class='vspace'></p><p>然而这同样也带来一个问题，如果输入引脚没有连接，或仅仅是连了一条线而没有接入其他电路，这个引脚的状态因为环境的原因（电子杂波或接近电容）会变成随机值。
 </p>
@@ -161,7 +161,7 @@ digitalWrite(pin, HIGH);       // 开启上拉电阻
 </p>
 <p class='vspace'></p><p>短路 Arduino 的引脚或尝试驱动需要大电流的设备都可能损坏引脚内的输出晶体管，甚至烧毁整个 Atmega 芯片。多数情况下会导致单片机的一个引脚“死掉”而其他引脚仍然正常工作。因为这个原因，在输出引脚连接其他设备时，除非是必需要使用最大的电流驱动，串联一个470欧或1k的电阻是个不错的做法。
 </p>
-<p class='vspace'></p><p><a class='wikilink' href='Foundationshtml.html'>back to Foundations</a>
+<p class='vspace'></p><p><a class='wikilink' href='Foundations.html'>back to Foundations</a>
 </p>
 <p class='vspace'></p><h4>See Also</h4>
 <ul><li><a class='wikilink' href='../Reference/PinMode.html'>pinMode()</a>

@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
 <a class='wikilink' href='HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -130,14 +130,14 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Librarieshtml.html'>Libraries</a> | <a class='wikilink' href='Comparisonhtml.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
+<p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
 <p class='vspace'></p><h2>Port Registers</h2>
 <p>Port registers allow for lower-level and faster manipulation of the i/o pins of the microcontroller on an Arduino board.  The chips used on the Arduino board (the <span class='wikiword'>ATmega8</span> and <span class='wikiword'>ATmega168</span>) have three ports:
 </p><ul><li>B (digital pin 8 to 13)
 </li><li>C (analog input pins)
 </li><li>D (digital pins 0 to 7)
-</li></ul><p class='vspace'></p><p>Each port is controlled by three registers, which are also defined variables in the arduino language. The DDR register, determines whether the pin is an INPUT or OUTPUT. The PORT register controls whether the pin is HIGH or LOW, and the PIN register reads the state of INPUT pins set to input with pinMode(). The maps of the <a class='urllink' href='http://www.arduino.cc/en/Hacking/PinMapping' rel='nofollow'>ATmega8</a>  and <a class='wikilink' href='Atmega168Hardwarehtml.html'>ATmega168</a> chips show the ports. The newer Atmega328p chip follows the pinout of the Atmega168 exactly.
+</li></ul><p class='vspace'></p><p>Each port is controlled by three registers, which are also defined variables in the arduino language. The DDR register, determines whether the pin is an INPUT or OUTPUT. The PORT register controls whether the pin is HIGH or LOW, and the PIN register reads the state of INPUT pins set to input with pinMode(). The maps of the <a class='urllink' href='http://arduino.cc/en/Hacking/PinMapping' rel='nofollow'>ATmega8</a>  and <a class='wikilink' href='Atmega168Hardware.html'>ATmega168</a> chips show the ports. The newer Atmega328p chip follows the pinout of the Atmega168 exactly.
 </p>
 <p class='vspace'></p><p>DDR and PORT registers may be both written to, and read. PIN registers correspond to the state of inputs and may only be read.
 </p>
@@ -154,7 +154,7 @@ function toggle(obj) {
 </p><dl><dd><div class='indent'>DDRC - The Port C Data Direction Register - read/write
 </div><div class='indent'>PORTC - The Port C Data Register - read/write
 </div><div class='indent'>PINC - The Port C Input Pins Register - read only 
-</div></dd></dl><p class='vspace'></p><p>Each bit of these registers corresponds to a single pin; e.g. the low bit of DDRB, PORTB, and PINB refers to pin <span class='wikiword'>PB0</span> (digital pin 8).  For a complete mapping of Arduino pin numbers to ports and bits, see the diagram for your chip: <a class='wikilink' href='../Hacking/PinMappinghtml.html'>ATmega8</a>, <a class='wikilink' href='../Hacking/PinMapping168.html'>ATmega168</a>.  (Note that some bits of a port may be used for things other than i/o; be careful not to change the values of the register bits corresponding to them.)
+</div></dd></dl><p class='vspace'></p><p>Each bit of these registers corresponds to a single pin; e.g. the low bit of DDRB, PORTB, and PINB refers to pin <span class='wikiword'>PB0</span> (digital pin 8).  For a complete mapping of Arduino pin numbers to ports and bits, see the diagram for your chip: <a class='wikilink' href='../Hacking/PinMapping.html'>ATmega8</a>, <a class='wikilink' href='../Hacking/PinMapping168.html'>ATmega168</a>.  (Note that some bits of a port may be used for things other than i/o; be careful not to change the values of the register bits corresponding to them.)
 </p>
 <p class='vspace'></p><h4>Examples</h4>
 <p>Referring to the pin map above, the <span class='wikiword'>PortD</span> registers control Arduino digital pins 0 to 7.  
@@ -168,7 +168,7 @@ DDRD = DDRD | B11111100;  // this is safer as it sets pins 2 to 7 as outputs
 	                  // without changing the value of pins 0 &amp; 1, which are RX &amp; TX 
 </pre>
 <p class='vspace'></p><p><code>//See the bitwise operators reference pages and</code> 
-<a class='urllink' href='http://www.arduino.cc/playground/Code/BitMath' rel='nofollow'>The Bitmath Tutorial</a> in the Playground
+<a class='urllink' href='http://arduino.cc/playground/Code/BitMath' rel='nofollow'>The Bitmath Tutorial</a> in the Playground
 </p>
 <p class='vspace'></p><p>PORTB is the register for the state of the outputs. For example;
 </p>
@@ -179,7 +179,7 @@ DDRD = DDRD | B11111100;  // this is safer as it sets pins 2 to 7 as outputs
 <p class='vspace'></p><p>PINB is the input register variable It will read all of the digital input pins at the same time.
 </p>
 <p class='vspace'></p><h4>Why use port manipulation?</h4>
-<p>From <a class='urllink' href='http://www.arduino.cc/playground/Code/BitMath' rel='nofollow'>The Bitmath Tutorial</a>
+<p>From <a class='urllink' href='http://arduino.cc/playground/Code/BitMath' rel='nofollow'>The Bitmath Tutorial</a>
 </p>
 <p class='vspace'></p><p>Generally speaking, doing this sort of thing is <strong>not</strong> a good idea. Why not? Here are a few reasons:
 </p>

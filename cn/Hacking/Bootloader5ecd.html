@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -132,14 +132,14 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><i>(redirected from 
     <a rel='nofollow' href='../Main/Bootloader264b.html?action=edit'>Main.Bootloader</a>)</i></p><p class='vspace'></p>
-<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
 </p>
 <p class='vspace'></p><h2>Bootloader Development</h2>
 <h4>What's a bootloader?</h4>
 <p>See <a class='wikilink' href='../Guide/Environment5078.html'>this page</a> for an explanation of what a bootloader is and why we're using one.
 </p>
 <p class='vspace'></p><h4>Not using a bootloader</h4>
-<p>If you want to use the full program space (flash) of the chip or avoid the bootloader delay, you can burn your sketches using an external <a class='wikilink' href='Programmerhtml.html'>programmer</a>.
+<p>If you want to use the full program space (flash) of the chip or avoid the bootloader delay, you can burn your sketches using an external <a class='wikilink' href='Programmer.html'>programmer</a>.
 </p>
 <p class='vspace'></p><h4>Burning the Bootloader</h4>
 <p>To burn the bootloader, you'll need to buy an <a class='urllink' href='http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2726' rel='nofollow'>AVR-ISP</a> (in-system programmer), <a class='urllink' href='http://www.ladyada.net/make/usbtinyisp/' rel='nofollow'>USBtinyISP</a> or build a <a class='wikilink' href='ParallelProgrammer.html'>ParallelProgrammer</a>.  The programmer should be connected to the ICSP pins (the 2 by 3 pin header) - make sure you plug it in the right way. The board must be powered by an external power supply or the USB port.
@@ -147,7 +147,7 @@ function toggle(obj) {
 <p class='vspace'></p><p>Make sure you have the right item selected in the <strong>Tools | Board</strong> menu.  Then, just launch the appropriate command from the Tools &gt; Burn Bootloader menu of the Arduino environment.  Burning the bootloader may take 15 seconds or more, so be patient.  
 </p>
 <p class='vspace'></p><h4>Bootloading an Arduino Mini</h4>
-<p>Here are some instructions on  <a class='wikilink' href='MiniBootloaderhtml.html'>bootloading the Mini</a>, thanks to Gian Pablo Vilamil.
+<p>Here are some instructions on  <a class='wikilink' href='MiniBootloader.html'>bootloading the Mini</a>, thanks to Gian Pablo Vilamil.
 </p>
 <p class='vspace'></p><h4>It still doesn't work! (parallel programmer on Windows XP)</h4>
 <p>Windows XP may be polling your parallel port and disrupting the bootloader burning process.  You'll need this <a class='urllink' href='http://www.melabs.com/downloads/XP_stop_polling.reg' rel='nofollow'>registry patch</a>:
@@ -157,7 +157,7 @@ function toggle(obj) {
 "DisableWarmPoll"=dword:00000001
 
 </pre>
-<p class='vspace'></p><p>See this <a class='urllink' href='http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1142106610' rel='nofollow'>forum thread</a> for details.
+<p class='vspace'></p><p>See this <a class='urllink' href='http://arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1142106610' rel='nofollow'>forum thread</a> for details.
 </p>
 <p class='vspace'></p><h4>Versions of the bootloader</h4>
 <p>There are different versions of the bootloader - both in order to work on different hardware and because it has changed over time.
@@ -172,7 +172,7 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p>Some ancient versions of the bootloader run at 9600 baud (instead of 19200).  In order to successfully upload sketches to boards with this bootloader, you'll need to change the serial.download_rate in your <a class='wikilink' href='Preferences.html'>preferences file</a>  to 9600.
 </p>
-<p class='vspace'></p><p>Third parties have also worked on the bootloader. This page is link to some other <a class='urllink' href='http://www.arduino.cc/playground/Code/BootloaderDevelopment' rel='nofollow'>bootloader development</a>
+<p class='vspace'></p><p>Third parties have also worked on the bootloader. This page is link to some other <a class='urllink' href='http://arduino.cc/playground/Code/BootloaderDevelopment' rel='nofollow'>bootloader development</a>
 </p>
 <p class='vspace'></p><h4>How does it work?</h4>
 <p>The "Burn Bootloader" commands in the Arduino environment use an open-source tool, avrdude.  There are four steps: unlocking the bootloader section of the chip, setting the the fuses on the chip, uploading the bootloader code to the chip, and locking the bootloader section of the chip.  These are controlled by a number of preferences in the Arduino <a class='wikilink' href='Preferences.html'>preferences file</a>.

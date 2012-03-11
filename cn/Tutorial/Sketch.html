@@ -149,7 +149,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -157,8 +157,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -169,7 +169,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -183,10 +183,10 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
 <p class='vspace'></p><h2>第一个程序</h2>
-<p>在入门指南里(<a class='wikilink' href='../Guide/Windowshtml.html'>Windows</a>, <a class='wikilink' href='../Guide/MacOSX.html'>Mac OS X</a>, <a class='urllink' href='http://www.arduino.cc/playground/Learning/Linux' rel='nofollow'>Linux</a>), 你上传了一个能够闪烁LED的程序。在这个教程里，你将了解这个程序的每一个部分是如何工作的。
+<p>在入门指南里(<a class='wikilink' href='../Guide/Windows.html'>Windows</a>, <a class='wikilink' href='../Guide/MacOSX.html'>Mac OS X</a>, <a class='urllink' href='http://arduino.cc/playground/Learning/Linux' rel='nofollow'>Linux</a>), 你上传了一个能够闪烁LED的程序。在这个教程里，你将了解这个程序的每一个部分是如何工作的。
 </p>
 <p class='vspace'></p><h3>Sketch</h3>
 <p>Arduino 的程序称为 <em>sketch</em>。它是一个可以上传并运行在 Arduino 板上的代码单元。
@@ -204,7 +204,7 @@ function toggle(obj) {
 &nbsp;* depending on your Arduino board, it has either a built-in LED<br />
 &nbsp;* or a built-in resistor so that you need only an LED.<br />
 &nbsp;*<br />
-&nbsp;* http://www.arduino.cc/en/Tutorial/Blink<br />
+&nbsp;* http://arduino.cc/en/Tutorial/Blink<br />
 &nbsp;*/</span></div></div>
   <div class='sourceblocklink'><a href='Sketchf687.html?action=sourceblock&amp;num=1' type='text/plain'>[获取代码]</a></div>
 </div>
@@ -226,7 +226,7 @@ function toggle(obj) {
 <p class='vspace'></p><h3>变量</h3>
 <p> <em>变量</em> 是保存数据片段的地方。它拥有一个名字、一个数据类型，还有一个值。比如，Blink 程序中上例的一个就声明了一个变量，它的名字是<code>ledPin</code>, 类型是<code>int</code>, 初始值是13。它用来指示 Arduino 的哪一个引脚连接了LED。每当代码中出现<code>ledPin</code>这个名字，它的值就被取出。在这个例子中，程序的作者也可以不必纠结于创建这个<code>ledPin</code>变量，完全可以直接在每一个需要引脚编号的地方直接写上13。使用变量的好处是当需要把LED移到另一个引脚时会变得更轻松：你只需要修改给变量赋初值的那一行。
 </p>
-<p class='vspace'></p><p>不管怎样，变量的值在程序运行过程中经常会改变。例如，你可以在从一个输入端读取一个值，并保存到某个变量。在<a class='wikilink' href='Variableshtml.html'>变量教程</a>里有更多信息。
+<p class='vspace'></p><p>不管怎样，变量的值在程序运行过程中经常会改变。例如，你可以在从一个输入端读取一个值，并保存到某个变量。在<a class='wikilink' href='Variables.html'>变量教程</a>里有更多信息。
 </p>
 <p class='vspace'></p><h3>函数</h3>
 <p><em>函数</em> (也可以称为<em>过程</em>或<em>子程序</em>)是可以在程序中调用的已命名的代码片段。例如，以下是 Blink 范例中的 <code>setup()</code> 函数定义:
@@ -246,7 +246,7 @@ function toggle(obj) {
 <p class='vspace'></p><p>你可以<em>call</em>一个已经定义的函数（可以是你的程序中的函数或 <a class='wikilink' href='../Reference/HomePage.html'>Arduino 语言</a>中定义的函数）。例如， <code>pinMode(ledPin, OUTPUT);</code> 这一行调用了 <code>pinMode()</code> 这个函数，并传给它2个<em>parameters</em>: <code>ledPin</code> 和 <code>OUTPUT</code>。这些参数在 <code>pinMode()</code> 函数内使用，确定要设置的引脚和模式。
 </p>
 <p class='vspace'></p><h3>pinMode(), digitalWrite(), and delay()</h3>
-<p><code>pinMode()</code> 函数把一个引脚配置为输入端或输出端。要使用它，你需要给它传送一个引脚编号和一个 INPUT 或 OUTPUT 常量。当配置为输入端(INPUT)时，引脚可以检测到传感器（比如按钮开关）的状态；这在<a class='wikilink' href='DigitalReadSerialhtml.html'>稍后的教程</a>中讨论。作为输出端，它可以驱动一个执行装置，比如LED。
+<p><code>pinMode()</code> 函数把一个引脚配置为输入端或输出端。要使用它，你需要给它传送一个引脚编号和一个 INPUT 或 OUTPUT 常量。当配置为输入端(INPUT)时，引脚可以检测到传感器（比如按钮开关）的状态；这在<a class='wikilink' href='DigitalReadSerial.html'>稍后的教程</a>中讨论。作为输出端，它可以驱动一个执行装置，比如LED。
 </p>
 <p class='vspace'></p><p><code>digitalWrite()</code> 函数使引脚输出一个值。例如以下代码：
 </p>

@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Getting Started</a>
 <a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -138,7 +138,7 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p><em>Arduino Software</em>
 </p>
-<p class='vspace'></p><ul><li>Make sure you have the right item selected in the <strong>Tools &gt; Board</strong> menu.  If you have an Arduino Uno, you'll need to choose it.  Also, newer Arduino Duemilanove boards come with an <span class='wikiword'>ATmega328</span>, while older ones have an <span class='wikiword'>ATmega168</span>.  To check, read the text on the microcontroller (the larger chip) on your Arduino board.  For more information on the board menu items, see the <a class='wikilink' href='Environmenthtml.html'>guide to the Arduino environment</a>.
+<p class='vspace'></p><ul><li>Make sure you have the right item selected in the <strong>Tools &gt; Board</strong> menu.  If you have an Arduino Uno, you'll need to choose it.  Also, newer Arduino Duemilanove boards come with an <span class='wikiword'>ATmega328</span>, while older ones have an <span class='wikiword'>ATmega168</span>.  To check, read the text on the microcontroller (the larger chip) on your Arduino board.  For more information on the board menu items, see the <a class='wikilink' href='Environment.html'>guide to the Arduino environment</a>.
 <p class='vspace'></p></li><li>Then, check that the proper port is selected in the <strong>Tools &gt; Serial Port</strong> menu (if your port doesn't appear, try restarting the IDE with the board connected to the computer).  On the Mac, the serial port should be something like /dev/tty.usbmodem621 (for the Uno or Mega 2560) or /dev/tty.usbserial-A02f8e (for older, FTDI-based boards).  On Linux, it should be /dev/ttyACM0 or similar (for the Uno or Mega 2560) or /dev/ttyUSB0 or similar (for older boards).  On Windows, it will be a COM port but you'll need to check in the Device Manager (under Ports) to see which one.  If you don't seem to have a serial port for your Arduino board, see the following information about drivers.
 </li></ul><p class='vspace'></p><p><em>Drivers</em>
 </p>
@@ -175,7 +175,7 @@ function toggle(obj) {
 <p class='vspace'></p><ul><li>Make sure there's a bootloader burned on your Arduino board.  To check, reset the board.  The built-in L LED (which is connected to pin 13) should blink.  If it doesn't, there may not be a bootloader on your board.
 </li></ul><p class='vspace'></p><p><br clear='all' />
 </p>
-<p class='vspace'></p><p>If it still doesn't work, you can ask for help <a class='urllink' href='http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?board=troubleshoot' rel='nofollow'>in the forum</a>.  Please include the following information:
+<p class='vspace'></p><p>If it still doesn't work, you can ask for help <a class='urllink' href='http://arduino.cc/cgi-bin/yabb2/YaBB.pl?board=troubleshoot' rel='nofollow'>in the forum</a>.  Please include the following information:
 </p>
 <p class='vspace'></p><ul><li>Your operating system.
 <p class='vspace'></p></li><li>What kind of board you have.  If it's a Mini, <span class='wikiword'>LilyPad</span> or other board that requires extra wiring, include a photo of your circuit, if possible.
@@ -298,7 +298,7 @@ dyld: /Applications/arduino-0004/Arduino 04.app/Contents/MacOS/Arduino Undefined
 </p>
 <p class='vspace'></p><p>"I had a bunch of virtual COM ports set up for Bluetooth so the board was set to use <span class='wikiword'>COM17</span>.  The IDE wasn't able to find the board so I deleted the other virtual ports in Control Panel (on XP) and moved the FTDI's assignment down to <span class='wikiword'>COM2</span>.  Make sure to set Arduino to use the new port and good luck."
 </p>
-<p class='vspace'></p><p>On the Mac, if you have an old version of the FTDI drivers, you may need to remove them and reinstall the latest version.  See <a class='urllink' href='http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1143197735' rel='nofollow'>this forum thread for directions</a> (thanks to gck).
+<p class='vspace'></p><p>On the Mac, if you have an old version of the FTDI drivers, you may need to remove them and reinstall the latest version.  See <a class='urllink' href='http://arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1143197735' rel='nofollow'>this forum thread for directions</a> (thanks to gck).
 </p>
 <p class='vspace'></p><h3><a name='toc16' id='toc16'></a>What if I get a gnu.<span class='wikiword'>io.PortInUseException</span> when uploading code or using the serial monitor (on the Mac)?</h3>
 <pre>
@@ -318,7 +318,7 @@ gnu.io.PortInUseException: Unknown Application
 </p>
 <p class='vspace'></p><p><a name='sketchstart' id='sketchstart'></a>
 </p><h3><a name='toc18' id='toc18'></a>Why doesn't my sketch start when I power up or reset the Arduino board?</h3>
-<p>Most likely because you are sending serial data to the board when it firsts turns on.  During the first few seconds, the bootloader (a program pre-burned onto the chip on the board) listens for the computer to send it a new sketch to be uploaded to the board.  After a few seconds without communication, the bootloader will time out and start the sketch that's already on the board.  If you continue to send data to the bootloader, it will never time out and your sketch will never start.  You'll either need to find a way to stop serial data from arriving for the first few seconds when the board powers (e.g. by enabling the chip that sends the data from within your setup() function) or burn your sketch onto the board with an <a class='wikilink' href='../Hacking/Programmerhtml.html'>external programmer</a>, replacing the bootloader.
+<p>Most likely because you are sending serial data to the board when it firsts turns on.  During the first few seconds, the bootloader (a program pre-burned onto the chip on the board) listens for the computer to send it a new sketch to be uploaded to the board.  After a few seconds without communication, the bootloader will time out and start the sketch that's already on the board.  If you continue to send data to the bootloader, it will never time out and your sketch will never start.  You'll either need to find a way to stop serial data from arriving for the first few seconds when the board powers (e.g. by enabling the chip that sends the data from within your setup() function) or burn your sketch onto the board with an <a class='wikilink' href='../Hacking/Programmer.html'>external programmer</a>, replacing the bootloader.
 </p>
 <p class='vspace'></p><h3><a name='toc19' id='toc19'></a>Why does my sketch appear to upload successfully but not do anything?</h3>
 <p>You have selected the wrong item from the Tools &gt; Microcontroller menu.  Make sure the selected microcontroller corresponds to the one on your board (either <span class='wikiword'>ATmega8</span> or <span class='wikiword'>ATmega168</span>) - the name will be written on the largest chip on the board.
@@ -360,7 +360,7 @@ avrdude: Yikes!  Invalid device signature.
 </pre>
 <p class='vspace'></p><p>it can mean one of two things.  Either you have the wrong board selected from the Tools &gt; Board menu or you're not using the right version of avrdude.  Arduino uses a slightly modified version of avrdude to upload sketches to the Arduino board.  The standard version queries for the board's device signature in a way not understood by the bootloader, resulting in this error.  Make sure you're using the version of avrdude that comes with Arduino (<a class='urllink' href='http://svn.berlios.de/wsvn/arduino/avrdude-5.4-arduino/#_avrdude-5.4-arduino_' rel='nofollow'>source code</a>).
 </p>
-<p class='vspace'></p><p><a class='urllink' href='http://www.arduino.cc/en/Guide/HomePage' rel='nofollow'>Guide Home</a>
+<p class='vspace'></p><p><a class='urllink' href='http://arduino.cc/en/Guide/HomePage' rel='nofollow'>Guide Home</a>
 The text of the Arduino getting started guide is licensed under a
 <a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the guide are released into the public domain.
 </p>
@@ -381,7 +381,7 @@ src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></sc
 <!--PageFooterFmt-->
 <div id="pagefooter">
 &copy;Arduino | 
-  <a href='Troubleshooting264bhtml.html?action=edit'>Edit Page</a> | <a href='Troubleshootingad68.html?action=diff'>Page History</a> | <a href='Troubleshooting60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+  <a href='Troubleshooting264b.html?action=edit'>Edit Page</a> | <a href='Troubleshootingad68.html?action=diff'>Page History</a> | <a href='Troubleshooting60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
 </div>
 <!--/PageFooterFmt-->
 </div>

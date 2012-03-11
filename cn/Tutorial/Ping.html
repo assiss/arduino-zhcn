@@ -149,7 +149,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -157,8 +157,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -169,7 +169,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -183,12 +183,12 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
 <p class='vspace'></p><p><em>Examples &gt; Sensors</em>
 </p>
 <p class='vspace'></p><h3>Ping Ultrasonic Range Finder</h3>
-<p>The <a class='urllink' href='http://www.parallax.com/Store/Sensors/ObjectDetection/tabid/176/ProductID/92/List/1/Default.aspx?SortField=ProductName,ProductName' rel='nofollow'><strong>Ping)))</strong></a> is an ultrasonic range finder from Parallax.  It detects the distance of the closest object in front of the sensor (from 2 cm up to 3m).  It works by sending out a burst of ultrasound and listening for the echo when it bounces off of an object.  The Arduino board sends a short pulse to trigger the detection, then listens for a pulse on the same pin using the <a class='wikilink' href='../Reference/PulseInhtml.html'><strong>pulseIn()</strong></a> function.  The duration of this second pulse is equal to the time taken by the ultrasound to travel to the object and back to the sensor.  Using the speed of sound, this time can be converted to distance.
+<p>The <a class='urllink' href='http://www.parallax.com/Store/Sensors/ObjectDetection/tabid/176/ProductID/92/List/1/Default.aspx?SortField=ProductName,ProductName' rel='nofollow'><strong>Ping)))</strong></a> is an ultrasonic range finder from Parallax.  It detects the distance of the closest object in front of the sensor (from 2 cm up to 3m).  It works by sending out a burst of ultrasound and listening for the echo when it bounces off of an object.  The Arduino board sends a short pulse to trigger the detection, then listens for a pulse on the same pin using the <a class='wikilink' href='../Reference/PulseIn.html'><strong>pulseIn()</strong></a> function.  The duration of this second pulse is equal to the time taken by the ultrasound to travel to the object and back to the sensor.  Using the speed of sound, this time can be converted to distance.
 </p>
 <p class='vspace'></p><h3>Hardware Required</h3>
 <ul><li>Arduino Board
@@ -224,7 +224,7 @@ function toggle(obj) {
 &nbsp; &nbsp; * GND connection of the PING))) attached to ground<br />
 &nbsp; &nbsp; * SIG connection of the PING))) attached to digital pin 7<br />
 <br />
-&nbsp; &nbsp;http://www.arduino.cc/en/Tutorial/Ping<br />
+&nbsp; &nbsp;http://arduino.cc/en/Tutorial/Ping<br />
 &nbsp; &nbsp;<br />
 &nbsp; &nbsp;created 3 Nov 2008<br />
 &nbsp; &nbsp;by David A. Mellis<br />
@@ -303,13 +303,13 @@ const <span class="kw1">int</span> pingPin <span class="sy0">=</span> <span clas
 <p class='vspace'></p><h3>See Also:</h3>
 <ul><li><a class='wikilink' href='../Reference/PinMode.html'><code>pinMode()</code></a>
 </li><li><a class='wikilink' href='../Reference/DelayMicroseconds.html'><code>delayMicroseconds()</code></a>
-</li><li><a class='wikilink' href='../Reference/PulseInhtml.html'><code>pulseIn()</code></a>
+</li><li><a class='wikilink' href='../Reference/PulseIn.html'><code>pulseIn()</code></a>
 </li><li><a class='wikilink' href='../Reference/DigitalWrite.html'><code>digitalWrite()</code></a>
-</li><li><a class='wikilink' href='../Reference/Returnhtml.html'><code>return</code></a>
+</li><li><a class='wikilink' href='../Reference/Return.html'><code>return</code></a>
 </li><li><a class='wikilink' href='../Serial/Begin.html'><code>serial.begin()</code></a>
-</li><li><a class='wikilink' href='../Serial/Printhtml.html'><code>serial.print()</code></a>
+</li><li><a class='wikilink' href='../Serial/Print.html'><code>serial.print()</code></a>
 <p class='vspace'></p></li><li><a class='wikilink' href='ADXL3xx.html'>ADXL3xx</a> - read a <span class='wikiword'>ADXL3xx</span> accelerometer.
-</li><li><a class='wikilink' href='Memsic2125html.html'>Memsic2125 </a> - two-axis acceleromoter.
+</li><li><a class='wikilink' href='Memsic2125.html'>Memsic2125 </a> - two-axis acceleromoter.
 </li><li><a class='wikilink' href='Knock.html'>Knock</a> - detect knocks/impacts with a piezo element
 </li></ul><p class='vspace'></p>
 </div>

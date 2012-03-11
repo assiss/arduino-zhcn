@@ -149,7 +149,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -157,8 +157,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -169,7 +169,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -183,12 +183,12 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
 <p class='vspace'></p><p><em>Examples &gt; Analog I/O</em>
 </p>
 <p class='vspace'></p><h3>Smoothing</h3>
-<p>This sketch reads repeatedly from an analog input, calculating a running average and printing it to the computer.  This example is useful for smoothing out the values from jumpy or erratic sensors, and also demonstrates the use of <a class='wikilink' href='../Reference/Arrayhtml.html'>arrays</a> to store data. 
+<p>This sketch reads repeatedly from an analog input, calculating a running average and printing it to the computer.  This example is useful for smoothing out the values from jumpy or erratic sensors, and also demonstrates the use of <a class='wikilink' href='../Reference/Array.html'>arrays</a> to store data. 
 </p>
 <p class='vspace'></p><h3>Hardware</h3>
 <ul><li>Arduino Board
@@ -204,7 +204,7 @@ function toggle(obj) {
 <p><span style='font-size:83%'>click the image to enlarge</span>
 </p><div><a class='urllink' href='../uploads/Tutorial/AnalogReadSerial_sch.png' rel='nofollow'><img height='400px' src='../uploads/Tutorial/AnalogReadSerial_sch.png' alt='' title='' /></a></div>
 <p class='vspace'></p><h3>Code</h3>
-<p>The code below sequentially stores 10 readings from your analog sensor into an <a class='wikilink' href='../Reference/Arrayhtml.html'>arrays</a>, one by one. With each new value, the sum of all the numbers is generated and divided, producing an average value which then be used to smooth outlying data. Because this averaging takes place each time a new value is added to the array (rather then waiting for 10 new values, for instance) there is no lag time in calculating this running average. 
+<p>The code below sequentially stores 10 readings from your analog sensor into an <a class='wikilink' href='../Reference/Array.html'>arrays</a>, one by one. With each new value, the sum of all the numbers is generated and divided, producing an average value which then be used to smooth outlying data. Because this averaging takes place each time a new value is added to the array (rather then waiting for 10 new values, for instance) there is no lag time in calculating this running average. 
 </p>
 <p class='vspace'></p><p>Altering the size of the array used, by changing <code>numReadings</code> to a larger value will smooth the data collected even further. 
 </p>
@@ -226,7 +226,7 @@ function toggle(obj) {
 &nbsp; modified 30 Aug 2011<br />
 &nbsp; By David A. Mellis &nbsp;&lt;dam@mellis.org&gt;<br />
 <br />
-&nbsp; http://www.arduino.cc/en/Tutorial/Smoothing<br />
+&nbsp; http://arduino.cc/en/Tutorial/Smoothing<br />
 &nbsp; <br />
 &nbsp; This example code is in the public domain.<br />
 <br />
@@ -282,12 +282,12 @@ const <span class="kw1">int</span> numReadings <span class="sy0">=</span> <span 
 </p>
 <p class='vspace'></p></div>
 <p class='vspace'></p><h3>See Also:</h3>
-<ul><li><a class='wikilink' href='../Reference/Arrayhtml.html'>array</a>
+<ul><li><a class='wikilink' href='../Reference/Array.html'>array</a>
 </li><li><a class='wikilink' href='../Reference/If.html'>if</a>()
 </li><li><a class='wikilink' href='../Reference/For.html'>for</a>()
 </li><li><a class='wikilink' href='../Reference/Serial.html'>serial</a>()
 <p class='vspace'></p></li><li><a class='wikilink' href='AnalogInput.html'>AnalogInput</a> - use a potentiometer to control the blinking of an LED
-</li><li><a class='wikilink' href='AnalogInOutSerialhtml.html'>AnalogInOutSerial</a> - read an analog pin, map the result, and use that data to dim or brighten an LED
+</li><li><a class='wikilink' href='AnalogInOutSerial.html'>AnalogInOutSerial</a> - read an analog pin, map the result, and use that data to dim or brighten an LED
 </li><li><a class='wikilink' href='Fade.html'>Fade</a> - use an analog input to fade an LED
 </li><li><a class='wikilink' href='Calibration.html'>Calibration</a> - define a maximum and minimum for expected analog sensor values
 </li></ul><p class='vspace'></p>
@@ -308,7 +308,7 @@ src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></sc
 <!--PageFooterFmt-->
 <div id="pagefooter">
 &copy;Arduino | 
-  <a href='Smoothing264b.html?action=edit'>Edit Page</a> | <a href='Smoothingad68html.html?action=diff'>Page History</a> | <a href='Smoothing60eehtml.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+  <a href='Smoothing264b.html?action=edit'>Edit Page</a> | <a href='Smoothingad68.html?action=diff'>Page History</a> | <a href='Smoothing60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
 </div>
 <!--/PageFooterFmt-->
 </div>

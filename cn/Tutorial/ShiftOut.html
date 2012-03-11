@@ -96,7 +96,7 @@ function toggle(obj) {
 <div id="page">
 <!--PageHeaderFmt-->
 <div id="pageheader">
-  <div class="title"><a href='../../enhtml.html'>Arduino</a></div>
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
   <div class="search">
     <!-- SiteSearch Google -->
     <FORM method=GET action="http://www.google.com/search">
@@ -104,8 +104,8 @@ function toggle(obj) {
     <input type=hidden name=oe value=UTF-8>
     <INPUT TYPE=text name=q size=25 maxlength=255 value="">
     <INPUT type=submit name=btnG VALUE="search">
-    <input type=hidden name=domains value="http://www.arduino.cc/">
-    <input type=hidden name=sitesearch value="http://www.arduino.cc/">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
     </FORM>
     <!-- SiteSearch Google -->
   </div>
@@ -116,7 +116,7 @@ function toggle(obj) {
   <div id="navbar">
   	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
 <a class='wikilink' href='../Main/Software.html'>Download</a>
-<a class='wikilink' href='../Guide/HomePagehtml.html'>Getting Started</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
 <a class='wikilink' href='HomePage.html'>Learning</a>
 <a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
 <a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
@@ -130,7 +130,7 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundationshtml.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
 <p class='vspace'></p><h1>Serial to Parallel Shifting-Out with a 74HC595</h1>
 <p>Started by Carlyn Maw and Tom Igoe Nov, 06
@@ -205,11 +205,11 @@ function toggle(obj) {
 <p class='vspace'></p><h3>The Code</h3>
 <p>Here are three code examples. The first is just some "hello world" code that simply outputs a byte value from 0 to 255. The second program  lights one LED at a time.  The third cycles through an array. 
 </p>
-<p class='vspace'></p><div><span class='frame rfloat' style='border: 1;'> <a class='urllink' href='../../../www.arduino.cc/en/uploads/Tutorial/595_logic_table.png' rel='nofollow'><img width='200px' src='../../../www.arduino.cc/en/uploads/Tutorial/595_logic_table.png' alt='logic table' title='logic table' /></a><br /><span style='font-size:83%'>595 Logic Table</span> </span></div>
-<div><span class='frame rfloat' style='border: 1;'> <a class='urllink' href='../../../www.arduino.cc/en/uploads/Tutorial/595_timing_diagram.png' rel='nofollow'><img width='200px' src='../../../www.arduino.cc/en/uploads/Tutorial/595_timing_diagram.png' alt='logic table' title='logic table' /></a><br /><span style='font-size:83%'>595 Timing Diagram</span> </span></div>
+<p class='vspace'></p><div><span class='frame rfloat' style='border: 1;'> <a class='urllink' href='../../../arduino.cc/en/uploads/Tutorial/595_logic_table.png' rel='nofollow'><img width='200px' src='../../../arduino.cc/en/uploads/Tutorial/595_logic_table.png' alt='logic table' title='logic table' /></a><br /><span style='font-size:83%'>595 Logic Table</span> </span></div>
+<div><span class='frame rfloat' style='border: 1;'> <a class='urllink' href='../../../arduino.cc/en/uploads/Tutorial/595_timing_diagram.png' rel='nofollow'><img width='200px' src='../../../arduino.cc/en/uploads/Tutorial/595_timing_diagram.png' alt='logic table' title='logic table' /></a><br /><span style='font-size:83%'>595 Timing Diagram</span> </span></div>
 <p class='vspace'></p><p>The code is based on  two pieces of information in the datasheet: the timing diagram and the logic table.  The logic table is what tells you that basically everything important happens on an up beat. When the clockPin goes from low to high, the shift register reads the state of the data pin. As the data gets shifted in it is saved in an internal memory register. When the latchPin goes from low to high the sent data gets moved from the shift registers aforementioned memory register into the output pins, lighting the <span class='wikiword'>LEDs</span>.
 </p>
-<p class='vspace'></p><p><a class='wikilink' href='ShftOut11html.html'>Code Sample 1.1 Hello World</a><br /><a class='wikilink' href='ShftOut12html.html'>Code Sample 1.2 One by One</a><br /><a class='wikilink' href='ShftOut13html.html'>Code Sample 1.3 Two shift registers</a><br />
+<p class='vspace'></p><p><a class='wikilink' href='ShftOut11.html'>Code Sample 1.1 Hello World</a><br /><a class='wikilink' href='ShftOut12.html'>Code Sample 1.2 One by One</a><br /><a class='wikilink' href='ShftOut13.html'>Code Sample 1.3 Two shift registers</a><br />
 <br clear='all' /> 
 </p>
 <p class='vspace'></p><h2>Example 2</h2>
