@@ -132,10 +132,10 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Writing a Library for Arduino</h2>
-<p>This document explains how to create a library for Arduino.  It starts with a sketch with a sketch for flashing Morse code and explains how to convert its functions into a library.  This allows other people to easily use the code that you've written and to easily update it as you improve the library.
+<p class='vspace'></p><h2>为Arduino编写函数库</h2>
+<p>本文介绍如何为Arduino编写函数库。本文从一个简单的摩斯电码例子开始，描述如何将它的功能改写成函数库。这将使代码变得更为易用，也更易维护和升级功能。
 </p>
-<p class='vspace'></p><p>We start with a sketch that does simple Morse code:
+<p class='vspace'></p><p>先从一个简单的摩斯电码程序开始：
 </p>
 <p class='vspace'></p><pre>
 int pin = 13;
@@ -170,15 +170,17 @@ void dash()
 }
 
 </pre>
-<p class='vspace'></p><p>If you run this sketch, it will flash out the code for SOS (a distress call) on pin 13.
+<p class='vspace'></p><p>运行以上程序，Arduino的13脚LED将按SOS方式（一种求救信号格式）闪烁。
 </p>
-<p class='vspace'></p><p>The sketch has a few different parts that we'll need to bring into our library.  First, of course, we have the <strong>dot()</strong> and <strong>dash()</strong> functions that do the actual blinking.  Second, there's the <strong>ledPin</strong> variable which the functions use to determine which pin to use.  Finally, there's the call to <strong>pinMode()</strong> that initializes the pin as an output.
+<p class='vspace'></p><p>这段代码中的一部分可以写成库函数： 
+首先，用于闪烁的<strong>blink()</strong>和<strong>dash()</strong>两个功能函数；
+其次，用于指定使用哪个管脚的<strong>ledPin</strong>变量
+最后，初始化管脚的<strong>pinMode()</strong>函数调用
+<p class='vspace'></p><p>让我们把这段代码改写成函数库吧！
 </p>
-<p class='vspace'></p><p>Let's start turning the sketch into a library!
+<p class='vspace'></p><p>一个函数库应至少包含两个文件：头文件（扩展名为*.h*）和源代码文件（扩展名为*.cpp*）。头文件包含函数库的声明，即函数库的功能说明列表；源代码文件包含函数库的实际实现。让我们来为这个函数库起个名字吧----“Morse”，那么头文件就命名为Morse.h。看看这个文件里都有些什么内容----开始的时候可能会显得有些奇怪，但当你看到代码实现之后就能完全理解是怎么回事了。
 </p>
-<p class='vspace'></p><p>You need at least two files for a library: a header file (w/ the extension .h) and the source file (w/ extension .cpp).  The header file has definitions for the library: basically a listing of everything that's inside; while the source file has the actual code.  We'll call our library "Morse", so our header file will be Morse.h.  Let's take a look at what goes in it.  It might seem a bit strange at first, but it will make more sense once you see the source file that goes with it.
-</p>
-<p class='vspace'></p><p>The core of the header file consists of a line for each function in the library, wrapped up in a class along with any variables you need:
+<p class='vspace'></p><p>头文件的核心内容，是一个封装了成员函数与相关变量的类声明：
 </p>
 <p class='vspace'></p><pre>
 class Morse
@@ -192,30 +194,30 @@ class Morse
 };
 
 </pre>
-<p class='vspace'></p><p>A class is simply a collection of functions and variables that are all kept together in one place.  These functions and variables can be <em>public</em>, meaning that they can be accessed by people using your library, or <em>private</em>, meaning they can only be accessed from within the class itself.  Each class has a special function known as a <em>constructor</em>, which is used to create an <em>instance</em> of the class.  The constructor has the same name as the class, and no return type.
+<p class='vspace'></p><p>简单点说，类就是一个把函数和变量放在一起的集合。类里的函数与变量，其访问权限可以是<em>public</em>（公有，即提供给函数库的使用者使用），也可以是<em>private</em>（私有，即只能由类自己使用）。类有个特殊的函数--<em>构造函数</em>，它用于创建类的一个<em>实例</em>。构造函数的类型与类相同，且没有返回值。
 </p>
-<p class='vspace'></p><p>You need a couple of other things in the header file.  One is an #include statement that gives you access to the standard types and constants of the Arduino language (this is automatically added to normal sketches, but not to libraries).  It looks like this (and goes above the class definition given previously):
+<p class='vspace'></p><p>头文件里还有些其它杂项。如为了使用标准类型和Arduino语言的常量，需要#include语句（Arduino的IDE会自动为普通代码加上这些#include语句，但不会自动为函数库加）。这些#include语句类似：
 </p>
 <p class='vspace'></p><pre>
 #include "WProgram.h"
 
 </pre>
-<p class='vspace'></p><p>Finally, it's common to wrap the whole header file up in a weird looking construct:
+<p class='vspace'></p><p>最后，为了防止多次引用头文件造成各种问题，我们常用一种看起来有点奇怪的方式来封装整个头文件的内容：
 </p>
 <p class='vspace'></p><pre>
 #ifndef Morse_h
 #define Morse_h
 
-// the #include statment and code go here...
+//#include语句，类声明，以及其它各种代码……
 
 #endif
 
 </pre>
-<p class='vspace'></p><p>Basically, this prevents problems if someone accidently #include's your library twice.
+<p class='vspace'></p><p>该封装的主要作用是防止头文件被引用多次。
 </p>
-<p class='vspace'></p><p>Finally, you usually put a comment at the top of the library with its name, a short description of what it does, who wrote it, the date, and the license.  
+<p class='vspace'></p><p>通常也会在函数库的头文件里，加上一些关于作者、用途、日期、协议等注释。
 </p>
-<p class='vspace'></p><p>Let's take a look at the complete header file:
+<p class='vspace'></p><p>最终完成的头文件如下：
 </p>
 <p class='vspace'></p><pre>
 /*
@@ -241,16 +243,16 @@ class Morse
 #endif
 
 </pre>
-<p class='vspace'></p><p>Now let's go through the various parts of the source file, Morse.cpp.  
+<p class='vspace'></p><p>接下来，让我们继续完成源代码文件，Morse.cpp。
 </p>
-<p class='vspace'></p><p>First comes a couple of #include statements.  These give the rest of the code access to the standard Arduino functions, and to the definitions in your header file:
+<p class='vspace'></p><p>首先仍然是一些#include语句。这些语句让下面的程序能够使用Arduino的标准函数和刚才在Morse.h里声明的类。
 </p>
 <p class='vspace'></p><pre>
 #include "WProgram.h"
 #include "Morse.h"
 
 </pre>
-<p class='vspace'></p><p>Then comes the constructor.  Again, this explains what should happen when someone creates an instance of your class.  In this case, the user specifies which pin they would like to use.  We configure the pin as an output save it into a private variable for use in the other functions:
+<p class='vspace'></p><p>接下来是构造函数。再次说下，构造函数是当创建类的一个实例时调用的。在本例中，用于指定使用哪个管脚。我们把该管脚设置成输出模式并且用一个私有成员变量保存起来，以备其它函数使用。
 </p>
 <p class='vspace'></p><pre>
 Morse::Morse(int pin)
@@ -260,9 +262,9 @@ Morse::Morse(int pin)
 }
 
 </pre>
-<p class='vspace'></p><p>There are a couple of strange things in this code.  First is the <strong>Morse::</strong> before the name of the function.  This says that the function is part of the <strong>Morse</strong> class.  You'll see this again in the other functions in the class.  The second unusual thing is the underscore in the name of our private variable, <strong>_pin</strong>.  This variable can actually have any name you want, as long as it matches the definition in the header file.  Adding an underscore to the start of the name is a common convention to make it clear which variables are private, and also to distinguish the name from that of the argument to the function (<strong>pin</strong> in this case).  
+<p class='vspace'></p><p>这段代码看起来有好几个怪地方。一是函数名之前的<strong>Morse::</strong>。这其实是用来指定该函数是<strong>Morse</strong>类的成员函数。下面定义类的其它成员函数时，将会一再出现。另一个不常见的是私有成员变量名<strong>_pin</strong>中的下划线。其实你可以按C++的命名规则，给它任意命名。加下划线是一种约定俗成的不成文规范，让我们既能区分传进来的<strong>pin</strong>参数，也能清晰地知道它的<strong>private</strong>私有性质。
 </p>
-<p class='vspace'></p><p>Next comes the actual code from the sketch that you're turning into a library (finally!).  It looks pretty much the same, except with <strong>Morse::</strong> in front of the names of the functions, and <strong>_pin</strong> instead of <strong>pin</strong>:
+<p class='vspace'></p><p>下面终于到了我们转换实际代码的时刻了。除了<strong>Morse::</strong>和<strong>_pin</strong>，下面的代码与之前看起来没啥两样：
 </p>
 <p class='vspace'></p><pre>
 void Morse::dot()
@@ -282,7 +284,7 @@ void Morse::dash()
 }
 
 </pre>
-<p class='vspace'></p><p>Finally, it's typical to include the comment header at the top of the source file as well.  Let's see the whole thing:
+<p class='vspace'></p><p>好，让我们看看Morse.cpp全貌吧：
 </p>
 <p class='vspace'></p><pre>
 /*
@@ -317,11 +319,16 @@ void Morse::dash()
 }
 
 </pre>
-<p class='vspace'></p><p>And that's all you need (there's some other nice optional stuff, but we'll talk about that later).  Let's see how you use the library.
+<p class='vspace'></p><p>这就是所有要做的工作（当然还有一些别的选项，容后再述）。来看看怎么使用这个函数库吧。
 </p>
-<p class='vspace'></p><p>First, make a <strong>Morse</strong> directory inside of the <strong>libraries</strong> sub-directory of your sketchbook directory.  Copy or move the Morse.h and Morse.cpp files into that directory.  Now launch the Arduino environment.  If you open the <strong>Sketch &gt; Import Library</strong> menu, you should see Morse inside.  The library will be compiled with sketches that use it.  If the library doesn't seem to build, make sure that the files really end in .cpp and .h (with no extra .pde or .txt extension, for example).
+<p class='vspace'></p><p>
+<ul>
+    <li>在你的代码库目录里（sketchbook中的<strong>libraries</strong>目录），创建一个叫<strong>Morse</strong>的子目录<br/>
+    <li>把Morse.h和Morse.cpp拷贝到Morse目录里<br/>
+    <li>启动Arduino IDE，打开<strong>Sketch > Import Library</strong>菜单，此时应能看到<strong>Morse</strong>菜单项。
+</ul>本函数库将与使用它的代码一起编译。若编译不成功，请确认这些文件的扩展名是.cpp和.h，而不是.pde或.txt之类。
 </p>
-<p class='vspace'></p><p>Let's see how we can replicate our old SOS sketch using the new library:
+<p class='vspace'></p><p>让我们用刚创建的函数库来重写SOS程序吧：
 </p>
 <p class='vspace'></p><pre>
 #include &lt;Morse.h&gt;
@@ -341,30 +348,30 @@ void loop()
 }
 
 </pre>
-<p class='vspace'></p><p>There are a few differences from the old sketch (besides the fact that some of the code has moved to a library).
+<p class='vspace'></p><p>与之前的程序相比，有一些不同：
 </p>
-<p class='vspace'></p><p>First, we've added an #include statement to the top of the sketch.  This makes the Morse library available to the sketch and includes it in the code sent to the board.  That means if you no longer need a library in a sketch, you should delete the #include statement to save space.
+<p class='vspace'></p><p>加了一个#include语句。这条语句让程序可以使用Morse库且包含了对应的代码，最终下载到Arduino板上。若不再需要某个函数库，则应删除对应的#include语句，以减少生成的程序大小，节约空间。
 </p>
-<p class='vspace'></p><p>Second, we now create an instance of the Morse class called <strong>morse</strong>:
+<p class='vspace'></p><p>创建了Morse类的一个实例：<strong>morse</strong>:
 </p>
 <p class='vspace'></p><pre>
 Morse morse(13);
 
 </pre>
-<p class='vspace'></p><p>When this line gets executed (which actually happens even before the <strong>setup()</strong> function), the constructor for the Morse class will be called, and passed the argument you've given here (in this case, just <strong>13</strong>).
+<p class='vspace'></p><p>当这行代码被执行时（实际上这行代码在<strong>setup</strong>函数之前执行），将传入参数（本例中的参数是<strong>13</strong>）并调用Morse类的构造函数。
 </p>
-<p class='vspace'></p><p>Notice that our <strong>setup()</strong> is now empty; that's because the call to <strong>pinMode()</strong> happens inside the library (when the instance is constructed).  
+<p class='vspace'></p><p>注意<strong>setup()</strong>函数现在里面没语句了，因为原先对<strong>pinMode()</strong>的调用已经转移到函数库的构造函数里了。
 </p>
-<p class='vspace'></p><p>Finally, to call the <strong>dot()</strong> and <strong>dash()</strong> functions, we need to prefix them with <strong>morse.</strong> - the name of the instance we want to use.  We could have multiple instances of the Morse class, each on their own pin stored in the _pin private variable of that instance.  By calling a function on a particular instance, we specify which instance's variables should be used during that call to a function.  That is, if we had both:
+<p class='vspace'></p><p>最后，为了调用<strong>dot()</strong>和<strong>dash()</strong>成员函数，需要在之前加上<strong>morse.</strong>这样的前缀----需要使用的实例名。可以在程序里定义多个实例，每个实例拥有各自的管脚（保存在每个实例自己的<strong>_pin</strong>变量里）。调用某个实例的成员函数，使用的就是该实例的成员变量。如下例：
 </p>
 <p class='vspace'></p><pre>
 Morse morse(13);
 Morse morse2(12);
 
 </pre>
-<p class='vspace'></p><p>then inside a call to <strong>morse2.dot()</strong>, <strong>_pin</strong> would be 12.  
+<p class='vspace'></p><p>在调用<strong>morse2.dot()</strong>时，<strong>_pin</strong>为12。
 </p>
-<p class='vspace'></p><p>If you tried the new sketch, you probably noticed that nothing from our library was recognized by the environment and highlighted in color.  Unfortunately, the Arduino software can't automatically figure out what you've define in your library (though it would be a nice feature to have), so you have to give it a little help.  To do this, create a file called <strong>keywords.txt</strong> in the Morse directory.  It should look like this:
+<p class='vspace'></p><p>新程序里关于Morse函数库的内容无法被IDE识别和高亮。很不幸的是，目前Arduino的IDE无法自动识别自定义函数库里的内容（这个功能应该有），所以需要给Arduino一点小帮助：在Morse的文件夹里，创建一个叫<strong>keywords.txt</strong>文件，内容如下：
 </p>
 <p class='vspace'></p><pre>
 Morse	KEYWORD1
@@ -372,13 +379,13 @@ dash	KEYWORD2
 dot	KEYWORD2
 
 </pre>
-<p class='vspace'></p><p>Each line has the name of the keyword, followed by a tab (not spaces), followed by the kind of keyword.  Classes should be <span class='wikiword'>KEYWORD1</span> and are colored orange; functions should be <span class='wikiword'>KEYWORD2</span> and will be brown.  You'll have to restart the Arduino environment to get it to recognize the new keywords.
+<p class='vspace'></p><p>每一行均由关键字的名字、TAB键（非空格）、关键字种类顺序组成。类名是<span class='wikiword'>KEYWORD1</span>，将被高亮成橘黄色；函数名是<span class='wikiword'>KEYWORD2</span>，将被高亮成棕色。重启Arduino IDE后这些设置将生效。
 </p>
-<p class='vspace'></p><p>It's also nice to provide people with an example sketch that uses your library.  To do this, create an <strong>examples</strong> directory inside the <strong>Morse</strong> directory.  Then, move or copy the directory containing the sketch (let's call it <strong>SOS</strong>) we wrote above into the examples directory.  (You can find the sketch using the <strong>Sketch &gt; Show Sketch Folder</strong> command.)  If you restart the Arduino environment (this is the last time, I promise) - you'll see a <strong>Library-Morse</strong> item inside the <strong>File &gt; Sketchbook &gt; Examples</strong> menu containing your example.  You might want to add some comments that better explain how to use your library.
+<p class='vspace'></p><p>若在函数库的文件夹内包含一些使用例子，会让库更易使用。只要在Morse文件夹内创建<strong>examples</strong>目录，然后把刚才写的程序（命名为SOS程序）文件保存到该目录即可。你可以通过<strong>Sketch > ShowSketch Folder</strong>菜单快速找到对应库函数的目录。重启Arduino IDE后（我保证这是最后一次重启），将会在<strong>File > Sketchbook > Examples</strong>菜单里找到<strong>Library-Mourse</strong>例子。最好再加一些注释来说明如何使用你编写的函数库。
 </p>
-<p class='vspace'></p><p>If you'd like to check out the complete library (with keywords and example), you can download it: <a class='urllink' href='../uploads/Hacking/Morse.zip' rel='nofollow'>Morse.zip</a>.
+<p class='vspace'></p><p>此处可下载完成的例子函数库：<a class='urllink' href='../uploads/Hacking/Morse.zip' rel='nofollow'>Morse.zip</a>.
 </p>
-<p class='vspace'></p><p>That's all for now but I'll probably write an advanced library tutorial soon.  In the meantime, if you have any problems or suggestions, please post them to the <a class='urllink' href='http://arduino.cc/cgi-bin/yabb2/YaBB.pl?board=dev' rel='nofollow'>Software Development forum</a>.
+<p class='vspace'></p><p>这就是当前需要做的所有事情，不过稍后也许我会写一个更高级的函数库创建指南。同时，若你有任何问题或建议，请发往<a class='urllink' href='http://arduino.cc/cgi-bin/yabb2/YaBB.pl?board=dev' rel='nofollow'>Software Development forum</a>.
 </p>
 </div>
 
