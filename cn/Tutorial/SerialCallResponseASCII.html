@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - SerialCallResponseASCII </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Communication</em>
+</p>
+<p class='vspace'></p><h3>Serial Call and Response (handshaking) with ASCII-encoded output</h3>
+<p>This example demonstrates string-based communication from the Arduino board to the computer using a call-and-response (handshaking) method. 
+</p>
+<p class='vspace'></p><p>The sketch sends an ASCII string on startup and repeats that until it gets a serial response from the computer. Then it sends three sensor values as ASCII-encoded numbers, separated by commas and terminated by a linefeed and carriage return, and waits for another response from the computer.
+</p>
+<p class='vspace'></p><p>You can use the Arduino serial monitor to view the sent data, or it can be read by Processing (see code below), Flash, PD, Max/MSP (see example below), etc. The examples below split the incoming string on the commas and convert the string into numbers again. 
+</p>
+<p class='vspace'></p><p>Compare this to the <a class='wikilink' href='SerialCallResponse.html'>Serial call and response example</a>. They are similar, in that both use a handshaking method, but this one encodes the sensor readings as strings, while the other sends them as binary values.  While sending as ASCII-encoded strings takes more bytes, it means you can easily send values larger than 255 for each sensor reading. It's also easier to read in a serial terminal program.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li>(2) analog sensors (potentiometer, photocell, FSR, etc.)
+</li><li>(1) momentary switch/button
+</li><li>(3) 10K ohm resistors 
+</li><li>breadboard
+</li><li>hook-up wire
+</li></ul><p class='vspace'></p><p><strong>Software Required</strong>
+</p><ul><li><a class='urllink' href='http://www.processing.org/' rel='nofollow'>Processing</a> or
+</li><li><a class='urllink' href='http://www.cycling74.com/products/max5' rel='nofollow'>Max/MSP version 5</a>
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<p>Connect analog sensors to analog input pin 0 and 1 with 10Kohm resistors used as voltage dividers. Connect a pushbutton or switch connected to digital I/O pin 2 with a 10Kohm resistor as a reference to ground. 
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/SerialCallResponse-circuit3.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/SerialCallResponse-circuit3.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><h3>Schematic</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/SerialCallResponse_sch.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/SerialCallResponse_sch.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>Code</h3>
+<div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; Serial Call and Response in ASCII<br />
+&nbsp;Language: Wiring/Arduino<br />
+&nbsp;<br />
+&nbsp;This program sends an ASCII A (byte of value 65) on startup<br />
+&nbsp;and repeats that until it gets some data in.<br />
+&nbsp;Then it waits for a byte in the serial port, and <br />
+&nbsp;sends three ASCII-encoded, comma-separated sensor values, <br />
+&nbsp;truncated by a linefeed and carriage return, <br />
+&nbsp;whenever it gets a byte in.<br />
+&nbsp;<br />
+&nbsp;Thanks to Greg Shakar and Scott Fitzgerald for the improvements<br />
+&nbsp;<br />
+&nbsp; The circuit:<br />
+&nbsp;* potentiometers attached to analog inputs 0 and 1 <br />
+&nbsp;* pushbutton attached to digital I/O 2<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;Created 26 Sept. 2005<br />
+&nbsp;by Tom Igoe<br />
+&nbsp;modified 26 Oct 2011<br />
+&nbsp;by Tom Igoe and Scott Fitzgerald<br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;http://arduino.cc/en/Tutorial/SerialCallResponseASCII<br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+<br />
+<span class="kw1">int</span> firstSensor <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// first analog sensor</span><br />
+<span class="kw1">int</span> secondSensor <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; <span class="co1">// second analog sensor</span><br />
+<span class="kw1">int</span> thirdSensor <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// digital sensor</span><br />
+<span class="kw1">int</span> inByte <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// incoming serial byte</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// start serial port at 9600 bps:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span> <span class="kw2">INPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; <span class="co1">// digital sensor is on digital pin 2</span><br />
+&nbsp; establishContact<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<span class="co1">// send a byte to establish contact until receiver responds </span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// if we get a valid byte, read analog ins:</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">Serial</span>.<span class="kw1">available</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// get incoming byte:</span><br />
+&nbsp; &nbsp; inByte <span class="sy0">=</span> <span class="kw1">Serial</span>.<span class="kw1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// read first analog input:</span><br />
+&nbsp; &nbsp; firstSensor <span class="sy0">=</span> <span class="kw1">analogRead</span><span class="br0">&#40;</span>A0<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// read second analog input:</span><br />
+&nbsp; &nbsp; secondSensor <span class="sy0">=</span> <span class="kw1">analogRead</span><span class="br0">&#40;</span>A1<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// read &nbsp;switch, map it to 0 or 255L</span><br />
+&nbsp; &nbsp; thirdSensor <span class="sy0">=</span> <span class="kw1">map</span><span class="br0">&#40;</span><span class="kw1">digitalRead</span><span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">255</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<br />
+&nbsp; &nbsp; <span class="co1">// send sensor values:</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>firstSensor<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;,&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>secondSensor<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;,&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>thirdSensor<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> establishContact<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">while</span> <span class="br0">&#40;</span><span class="kw1">Serial</span>.<span class="kw1">available</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">&lt;=</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;0,0,0&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; <span class="co1">// send an initial string</span><br />
+&nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">300</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<br />
+<span class="coMULTI">/*<br />
+Processing code to run with this example:<br />
+<br />
+// This example code is in the public domain.<br />
+<br />
+import processing.serial.*; &nbsp; &nbsp; // import the Processing serial library<br />
+Serial myPort; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// The serial port<br />
+<br />
+float bgcolor;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Background color<br />
+float fgcolor;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Fill color<br />
+float xpos, ypos; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Starting position of the ball<br />
+<br />
+void setup() {<br />
+&nbsp; size(640,480);<br />
+<br />
+&nbsp; // List all the available serial ports<br />
+&nbsp; println(Serial.list());<br />
+<br />
+&nbsp; // I know that the first port in the serial list on my mac<br />
+&nbsp; // is always my &nbsp;Arduino module, so I open Serial.list()[0].<br />
+&nbsp; // Change the 0 to the appropriate number of the serial port<br />
+&nbsp; // that your microcontroller is attached to.<br />
+&nbsp; myPort = new Serial(this, Serial.list()[0], 9600);<br />
+<br />
+&nbsp; // read bytes into a buffer until you get a linefeed (ASCII 10):<br />
+&nbsp; myPort.bufferUntil('\n');<br />
+&nbsp; <br />
+&nbsp; // draw with smooth edges:<br />
+&nbsp; smooth();<br />
+}<br />
+<br />
+void draw() {<br />
+&nbsp; background(bgcolor);<br />
+&nbsp; fill(fgcolor);<br />
+&nbsp; // Draw the shape<br />
+&nbsp; ellipse(xpos, ypos, 20, 20);<br />
+}<br />
+<br />
+// serialEvent &nbsp;method is run automatically by the Processing applet<br />
+// whenever the buffer reaches the &nbsp;byte value set in the bufferUntil() <br />
+// method in the setup():<br />
+<br />
+void serialEvent(Serial myPort) { <br />
+&nbsp; // read the serial buffer:<br />
+&nbsp; String myString = myPort.readStringUntil('\n');<br />
+&nbsp; // if you got any bytes other than the linefeed:<br />
+&nbsp; &nbsp; myString = trim(myString);<br />
+&nbsp;<br />
+&nbsp; &nbsp; // split the string at the commas<br />
+&nbsp; &nbsp; // and convert the sections into integers:<br />
+&nbsp; &nbsp; int sensors[] = int(split(myString, ','));<br />
+<br />
+&nbsp; &nbsp; // print out the values you got:<br />
+&nbsp; &nbsp; for (int sensorNum = 0; sensorNum &lt; sensors.length; sensorNum++) {<br />
+&nbsp; &nbsp; &nbsp; print(&quot;Sensor &quot; + sensorNum + &quot;: &quot; + sensors[sensorNum] + &quot;\t&quot;); <br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; // add a linefeed after all the sensor values are printed:<br />
+&nbsp; &nbsp; println();<br />
+&nbsp; &nbsp; if (sensors.length &gt; 1) {<br />
+&nbsp; &nbsp; &nbsp; xpos = map(sensors[0], 0,1023,0,width);<br />
+&nbsp; &nbsp; &nbsp; ypos = map(sensors[1], 0,1023,0,height);<br />
+&nbsp; &nbsp; &nbsp; fgcolor = sensors[2];<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; // send a byte to ask for more data:<br />
+&nbsp; &nbsp; myPort.write(&quot;A&quot;);<br />
+&nbsp; }<br />
+<br />
+*/</span><br />
+<br />
+<span class="coMULTI">/*<br />
+<br />
+Max/MSP version 5 patch to run with this example:<br />
+<br />
+----------begin_max5_patcher----------<br />
+3365.3oc4bk0iiaiD9Y2+J3JLOrAq6Fhj5LOscRP.lGxtCxDr6CYBFHaQaqL<br />
+xRNRzcOcBx+8s3grkZac31Vr8jMASKScPU7qNXUTUw+3lIVyx+LqzB80neFM<br />
+YxebyjIxSINwDc6IVqi977znR4sYMOe8ZVF2Zp5Zb1m4pyuJOujghPkrhjnT<br />
+zl7BNZQQ9ZDeURIBdlsUOyh7LdYxuyDOGlbms9zYaWmjkx3x2Cd+Iy2xqNa0<br />
+stIhOeUR1xOVvlyUTuuqOzSHRfs7fspEz.8K5GJIVRn4y90ao90okrn0RZw5<br />
+dAkaItvedyMh+LcffRF6QnaO.SzPQnmsM5eFskmmugkgrOebfzNNPbbDibJU<br />
+hCXG2tvArSEsn5b9SaXptwJQviQVV6drKCRslUVFsjcn3SJH8bJ.C4n.Ctcf<br />
+gRjhDTaO4gPI7DbbbgfaEWtz.RKhNR7XVT1xSASrOYLITJrfUG75VVwqULQR<br />
+mlAWRyihOUXAepvhiGsNrX2ErPbtFfkMELvzRrzp6nBM9Dk5CUJq3G1IzDXL<br />
+snsuz4WR3r054+rduzb86jPHxZp3OyxyWK92seS5VFX+lu5128c2e6s3c2w9<br />
+K7C4wr0G47hG38OkMe2k99jB12m9zsgem+2b66e261CFMYCz1YCdJ7WaLiX2<br />
+oHJE2qU9FV5EWWiIlU5MZi3vnJ+pANhxagvfNwMxq8r.bz7TVTw3pQqkgHRa<br />
+dNzNQDZqHhhPMCr.JsEFQJQgIjt8kz40VJo.dwrKjoeRufBNTZrwizInztyB<br />
+igWks.LhvOJeBLfmd4jVlmmlWnFJXABXeWPnMNzS7Ka8uv0.ki4htxQK2.0b<br />
+nNcAj9u1BWI77nSA8nlB8TBfNdcgdAcNwmY.veOEsDzP2b9A2P5GTTg031oQ<br />
+bmqAUyRVJP7HrMBSOekyN7ThXqfDao7le2g3X2su7S2ezTwE64NtAE6Js93D<br />
+HQGJ4N21CJN701TDHyfvipZTEb3JssP6z1hWuxJWZXoskdSE2B5aiRSu8GYk<br />
+axyJYn6e+2912h9P1GxdO3ScIJBM6IvKAfXQ7Ur5qR2TTD36cAKBtKp94XYP<br />
+vLwSQhWoXI81DUDwYwHTR1TDuXa1bYyYOA8aZRFaAiEeG5sx9NCtedIZQdAa<br />
+Y9VnqkF8mh97l7R065I3Wn7EvyNOo.bbDssD3CR55gHHtoRfZ3aKxf2fdEDa<br />
+Pv2gjiq+UNm80neRr5hRVIBvIHNvR31iTCxX1CIygwblrEDKFq.Ihy.d0OqK<br />
+QPmrLWRD4v4EwhfDzDPaJXaghxPdtn+tBht+qDcbIOpfucyc.c.c3mXB53wn<br />
+D03WQIhNXZEvHYEYZT9dzivYYO.jUBGdLPhFsFfMTbDO5N4fbNvWDHM1Ac+l<br />
+BQjdgeHCf82OOmyQeeB+2WxJhRik35OAX0aWly9P11MwxGihQ+6477YLwih2<br />
+o7HXYyAdiT9ASGy0k0QY3UpP45nVTx.uiqR4ZYD8EdQxR.0P+cfC8y7e4qDr<br />
+p4Bgtjkq32lxV.gckm8.7nIfpDHsceZpRdpH5QgLh.q2TjCOiTt8wD35qjAu<br />
+hlwDx8neH5yfL7uAhx.KELmokquC8eEhAxUDuhJVjTv.8BP.3.oCPVLp7Sn6<br />
+Kh2ljkKknp0WGkYNp7Rhx7nGQNKpi9PKSW3YHtYAKIKgCcJLZKkrokfneoT0<br />
+Bosh.JpQR89EGEzHiIngUt4SUGv5EtwoEPywLf17Ur4epxFECjxlmjnsvAl5<br />
+.gLA9Hj+lwVljImFXaVBXzGzHDJDK3BaVJbu4UEVRWGEKs3A+bVZ97OgJWsE<br />
+zChyeL6UPp0wWEo.VYHpximVX.Ti7kg1f9fkvZhD8USB9Aqi5Zi8KILqio6R<br />
+knfudQ98Te+ivVPgSdku9Orh3nrcQJJI.VgFXzHC7HIohY6JA4jZj6DKv1Ys<br />
+SOo1iHfyeUExn6zcmBrFVTuCl.VAdHo54CUmDXR2TcwJTPw70qquZ1HmfZN3<br />
+ArykBIVVbMgpIVwrEmReH9Le6ueaUft09Sy6LIaCLC.nkJ0ed96MZaJ+iGWh<br />
+n40WDMm05C2BeZh0xhj37LAYz3YEmt5EJr6qzbpS4x6HKZyQdXddd5rnBACY<br />
+VJqAiFTVhxRVCFn4IJJB7no5hIq2TjnLHr6brrHnOVUNuHOMsQWotxCG4JJ2<br />
+9dLIluR1W6wqFes65RY0Uiab9NCS64q1zxY.H4V8u52TCFH9N2PWbfesqerv<br />
+VZW+t0vWTg2hcs2u310il6fUBvuNM1tpdW1CmTYSTqxMV.qs3+MOjRzPpREv<br />
+MrWH06pARaL0ygQRKjRaGP2M4aqS.29xvzp3o5yTgUG7TQWi6.Kc6DKacIYZ<br />
+e1Iyftah.Wdr6QhsC.14kJrpz60xpXclvzE.SeoBqlEP+GH7KBHe4Z8MjTc5<br />
+GHIcBj0Wr4+uCK0FPGLThutfxtlXR9MOmh1DATUND8D5MXzaHn2PQuww7SUo<br />
+09qNP5cpJ6qlopjidq1PD6WLh3KVOasL2g9v97UeJ3zj7phsV77eA.FXRcMv<br />
+9Qiv+RiFT6SBM7ruNPC0a15zcMytmI7HA2Qg+ywYp72CCTZXptug79PGEK8S<br />
+KQgIIMw0ONVTlusXdEnWEACpIAFyJ4IY6hk9m2SqO6FWkDG2LxU0ZKDuIG3m<br />
+6R.pAw8NY516KT519KS51anzsHliqH5VXEdXzM4KT5FBAAgudn6fgR2WWx2C<br />
+mtoWW1SHmBcSudna7oP2jqG518.0sVna+qK4D2gh2dWWzMcnzs8Ejt0mr5Cf<br />
+XUF8.K9ivqA726iQbdQxrsbkKXM95LG6qHLde5gNuXee4iko4yhR0eloc8h0<br />
+M6QhKyGpydjqII0WCNjtO8qZKeib8uBRlw+1sWhLvpqRuQGWlKd.Hh6U.hHR<br />
+1.vhpQPEpusJMZ5JuzbMW9nyyWtLcWNKdl0bklwS1UJKcLDo8v3u3r2w0LfN<br />
+GUcFD609pHMLsG07vrRdOb.0jhSfwSDyz4wmfPuSuIkQ.VuVKd6Nbzhpn8Lv<br />
+MMoTVHWUG2W8tWxhQxyEkNtEurRQvinxQGxy+XAMPC2WXsKW+iDbgRmpGhRo<br />
+iZ0s6pRoees+B9cALXqK7nFnxYWhBtpKE9.RswmqWmL9936cT2siCumLp7dc<br />
+dVNLdefk4F13QcXSB8G7vlX+EnLO00evx7DxqiPuAfgpDSTCCtcBCuR59sLi<br />
+31r5o5wkXi8vsWbxSU9k5D3rUfJrOfp0ClB7zU.lMBOp0+kda+fnbwpmpV80<br />
+q9uZMQsSS.IrUrBY1XK2UPddsqLpVg0oT3tMZfNKIJhm0q.nH2TcLIlniNY2<br />
+VMT2XxEdqFpsBETlEti5ZU4DVaTqlOtsREDatZErMYjusgLxRFWVoZkbQ8MT<br />
+SPobbkTv57KXHaJUDqq1EmQuoRgUKPAgT82ix6wFawY9s0LdQ9EYwH5evWMC<br />
+R2UPLwn6FPsYLPkG8ip0.s+GpEqRUorsZMf9paM3GYQwUp8IYa1xQy1tXgnb<br />
+PefU7jnLzWmjBlGXyyyhKMeQhoS4FsABkUi1pQLrgJrNkETQ8vJpw0wMVOer<br />
+x9RP+6pT3K7Dphw6rsbd9toOWkTkFS0dQUeiK7wvA5NbXVdQrptm1clkGtoW<br />
+3GDPnthe43a6FD7rM8hZkCzgEmNVAOOuVhNNGXGybmcoYPDKh8ihr39cmV7z<br />
+4fBRsAf8cjo09Se6UG9pMRMW+9WTeha26KES6+q5T0oKyxAZPH9VeLpXMMFK<br />
+MJLq5iEI.oJBLu8Ufm.OZ77fOQ1Rn34+P1W+kPXrawJ7qhXkOUMireP+hUgz<br />
++BKVI63l4SoRJ644ofVV6f7SPrNA6SOkVxMARijz4v7R334jvAR9mDM4zCMQ<br />
+MJIQaj1LsASglGlr6ilLKN4ZO.ZBaaTZxe.jD08zHIhuiHwD7v5HCB105LI1<br />
+fAPr9FE9bF.EEXTJBODgLmSjgpXgtjPYBmnXuxVWBhkbgIVM4o+9n0ZctDKd<br />
+Hpulc1.5P31Dr4oo9lN.a1oCFDuidhldItTUBXo2ze8105bmnfN.p08DoVGa<br />
+o1qiCtlUYYqyjZ8HCAaMK+dH.njtIlyiDxPoIr4noAiSFzKoAI76ZVZxcHzj<br />
+yKSgTsEm53Enxxs5snpsA.8cJaYhILbMqSTtCwIT2SzWcJUNwuCtNBJactl6<br />
+F.wFd8ow38BmsvSI4Q205b8XNXDX1mK.ND23cLqe7CI9Uri4iy+RSSUgG5p+<br />
+HIpz3nQKZUBfJEBksNW2AcFp8b7I6NnNwkbbb10xHTqsY8b.OBxBZWnopDbs<br />
+BOIm+BGfGCsIpqTxkZqhBPSshVmK0RGCp0OPE7taMpU15boVxUnkJ7PVQRyZ<br />
+PmNnvjLbn5zqPZZHV6nFdYVFhSeT5UHMYV8Nr2HrbTNZCrNXoAV8xrHZctyg<br />
+MDIM7IxUE6mpR5SM8u1pqn0kvKf9roQ8N0YETQVpJnPOhptBazRteTK1KOcT<br />
+a+8meDTjfQXFCepaMuunggpQRiV5jcsxuB+C9dg27m27+.7QBpFG<br />
+-----------end_max5_patcher-----------<br />
+<br />
+*/</span></div></div>
+  <div class='sourceblocklink'><a href='SerialCallResponseASCIIf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>Processing Code</h3>
+<p>Copy the Processing sketch from the code sample above. As you change the value of the analog sensor, you'll get a ball moving onscreen something like this.  When you turn the switch off, the ball will disappear:
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/serialCallResponse-output.png' alt='' title='' /></div>
+<p class='vspace'></p><h3>Max Code</h3>
+<p>The max patch looks like this.  Copy the text from the code sample above and paste it into a new Max window
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/max-serialCallResponseASCII.png' rel='nofollow'><img width='600px' src='../uploads/Tutorial/max-serialCallResponseASCII.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Serial/Begin.html'><code>serial.begin()</code></a>
+</li><li><a class='wikilink' href='../Serial/Available.html'><code>serial.available()</code></a>
+</li><li><a class='wikilink' href='../Serial/Print.html'><code>serial.print()</code></a>
+</li><li><a class='wikilink' href='../Reference/AnalogRead.html'><code>analogRead()</code></a>
+</li><li><a class='wikilink' href='../Reference/Map.html'><code>map()</code></a>
+<p class='vspace'></p></li><li><a class='wikilink' href='Dimmer.html'>Dimmer</a> - move the mouse to change the brightness of an LED.
+</li><li><a class='wikilink' href='Graph.html'>Graph</a> -  send data to the computer and graph it in Processing
+</li><li><a class='wikilink' href='PhysicalPixel.html'>Physical Pixel</a> - turn an LED on and off by sending data from Processing. 
+</li><li><a class='wikilink' href='VirtualColorMixer.html'>Virtual Color Mixer</a> - send multiple variables from an Arduino to the computer and read them in Processing. 
+</li><li><a class='wikilink' href='SerialCallResponse.html'>Serial Call Response</a> - send multiple variables using a call and response (handshaking) method.
+</li><li><a class='wikilink' href='SwitchCase2.html'>Serial Input (Switch (case) Statement)</a> - How to take different actions based on characters received by the serial port. 
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/SerialCallResponseASCII" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='SerialCallResponseASCII264b.html?action=edit'>Edit Page</a> | <a href='SerialCallResponseASCIIad68.html?action=diff'>Page History</a> | <a href='SerialCallResponseASCII60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

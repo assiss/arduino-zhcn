@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Sketch </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><h2>第一个程序</h2>
+<p>在入门指南里(<a class='wikilink' href='../Guide/Windows.html'>Windows</a>, <a class='wikilink' href='../Guide/MacOSX.html'>Mac OS X</a>, <a class='urllink' href='http://arduino.cc/playground/Learning/Linux' rel='nofollow'>Linux</a>), 你上传了一个能够闪烁LED的程序。在这个教程里，你将了解这个程序的每一个部分是如何工作的。
+</p>
+<p class='vspace'></p><h3>Sketch</h3>
+<p>Arduino 的程序称为 <em>sketch</em>。它是一个可以上传并运行在 Arduino 板上的代码单元。
+</p>
+<p class='vspace'></p><h3>注释</h3>
+<p><a class='wikilink' href='Blink.html'>Blink</a> 程序开头的几行是 <em>注释</em>:
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp;* Blink<br />
+&nbsp;*<br />
+&nbsp;* The basic Arduino example. &nbsp;Turns on an LED on for one second,<br />
+&nbsp;* then off for one second, and so on... &nbsp;We use pin 13 because,<br />
+&nbsp;* depending on your Arduino board, it has either a built-in LED<br />
+&nbsp;* or a built-in resistor so that you need only an LED.<br />
+&nbsp;*<br />
+&nbsp;* http://arduino.cc/en/Tutorial/Blink<br />
+&nbsp;*/</span></div></div>
+  <div class='sourceblocklink'><a href='Sketchf687.html?action=sourceblock&amp;num=1' type='text/plain'>[获取代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>所有介于<code>/*</code> 和 <code>*/</code> 之间的代码在运行程序时都会被 Arduino 忽略(每行开头的<code>*</code>仅仅是为了使注释看起来美观一些，并不是必需的)。注释是为那些需要读懂源程序的人写的: 解释程序做了什么，它如何工作，或为什么这样编写。给自己的程序加注释是个好习惯，并且当你修改代码时应当同时更新注释。这样能帮助别人从你的程序中学习或修改你的代码。
+</p>
+<p class='vspace'></p><p>还有另一种风格的注释方法，用于注释较短的内容，仅对单行起作用。这样的注释以 <code>//</code> 开始，一直到行尾。例 如以下行:
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock2'>
+  <div class='sourceblocktext'><div class="arduino"><span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">13</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// LED connected to digital pin 13</span></div></div>
+  <div class='sourceblocklink'><a href='Sketch668d.html?action=sourceblock&amp;num=2' type='text/plain'>[获取代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>在这里 "LED connected to digital pin 13" 就是注释。
+</p>
+<p class='vspace'></p><h3>变量</h3>
+<p> <em>变量</em> 是保存数据片段的地方。它拥有一个名字、一个数据类型，还有一个值。比如，Blink 程序中上例的一个就声明了一个变量，它的名字是<code>ledPin</code>, 类型是<code>int</code>, 初始值是13。它用来指示 Arduino 的哪一个引脚连接了LED。每当代码中出现<code>ledPin</code>这个名字，它的值就被取出。在这个例子中，程序的作者也可以不必纠结于创建这个<code>ledPin</code>变量，完全可以直接在每一个需要引脚编号的地方直接写上13。使用变量的好处是当需要把LED移到另一个引脚时会变得更轻松：你只需要修改给变量赋初值的那一行。
+</p>
+<p class='vspace'></p><p>不管怎样，变量的值在程序运行过程中经常会改变。例如，你可以在从一个输入端读取一个值，并保存到某个变量。在<a class='wikilink' href='Variables.html'>变量教程</a>里有更多信息。
+</p>
+<p class='vspace'></p><h3>函数</h3>
+<p><em>函数</em> (也可以称为<em>过程</em>或<em>子程序</em>)是可以在程序中调用的已命名的代码片段。例如，以下是 Blink 范例中的 <code>setup()</code> 函数定义:
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock3'>
+  <div class='sourceblocktext'><div class="arduino"><span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<span class="co1">// sets the digital pin as output</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='Sketch2992.html?action=sourceblock&amp;num=3' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>第一行提供了函数的一些信息，比如函数的名字是"setup"。函数名前后的文字指定了它的返回类型和参数（这些在稍后解释）。在<code>{</code> 和 <code>}</code> 之间的代码称为<em>函数体</em>: 即函数所做的事情。
+</p>
+<p class='vspace'></p><p>你可以<em>call</em>一个已经定义的函数（可以是你的程序中的函数或 <a class='wikilink' href='../Reference/HomePage.html'>Arduino 语言</a>中定义的函数）。例如， <code>pinMode(ledPin, OUTPUT);</code> 这一行调用了 <code>pinMode()</code> 这个函数，并传给它2个<em>parameters</em>: <code>ledPin</code> 和 <code>OUTPUT</code>。这些参数在 <code>pinMode()</code> 函数内使用，确定要设置的引脚和模式。
+</p>
+<p class='vspace'></p><h3>pinMode(), digitalWrite(), and delay()</h3>
+<p><code>pinMode()</code> 函数把一个引脚配置为输入端或输出端。要使用它，你需要给它传送一个引脚编号和一个 INPUT 或 OUTPUT 常量。当配置为输入端(INPUT)时，引脚可以检测到传感器（比如按钮开关）的状态；这在<a class='wikilink' href='DigitalReadSerial.html'>稍后的教程</a>中讨论。作为输出端，它可以驱动一个执行装置，比如LED。
+</p>
+<p class='vspace'></p><p><code>digitalWrite()</code> 函数使引脚输出一个值。例如以下代码：
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock4'>
+  <div class='sourceblocktext'><div class="arduino"><span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span></div></div>
+  <div class='sourceblocklink'><a href='Sketch0c37.html?action=sourceblock&amp;num=4' type='text/plain'>[获取代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>把 <code>ledPin</code> (13号引脚) 设置为 HIGH, 即 5V。给一个引脚写入 LOW 即把该引脚连接到地，即0V。  
+</p>
+<p class='vspace'></p><p><code>delay()</code> 使 Arduino 在执行下一行之前等待一段时间（根据给出的数值，单位毫秒）。1秒=1000毫秒，所以代码:
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock5'>
+  <div class='sourceblocktext'><div class="arduino"><span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">1000</span><span class="br0">&#41;</span><span class="sy0">;</span></div></div>
+  <div class='sourceblocklink'><a href='Sketchadf3.html?action=sourceblock&amp;num=5' type='text/plain'>[获取代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>引起一秒的延迟。
+</p>
+<p class='vspace'></p><h3>setup() 和 loop()</h3>
+<p>在每个 Arduino 程序中都有两个特殊的函数：<code>setup()</code> 和 <code>loop()</code>。<code>setup()</code> 只在程序开始时调用一次。这里适合做一些设置工作，如设置引脚的工作模式或初始化程序库等。<code>loop()</code> 函数是大多数程序的中心，它是被重复调用的。在程序中必需包含这两个函数，即使你并不需要它。
+</p>
+<p class='vspace'></p><h3>练习</h3>
+<p><strong>1. 修改代码，使 LED 亮 100ms，熄 1000ms。</strong>
+</p>
+<p class='vspace'></p><p><strong>2. 修改代码使 LED 在程序开始时点亮，并保持点亮。</strong>
+</p>
+<p class='vspace'></p><h4>参见</h4>
+<ul><li><a class='wikilink' href='../Reference/Setup.html'>setup()</a>
+</li><li><a class='wikilink' href='../Reference/Loop.html'>loop()</a>
+</li><li><a class='wikilink' href='../Reference/PinMode.html'>pinMode()</a>
+</li><li><a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite()</a>
+</li><li><a class='wikilink' href='../Reference/Delay.html'>delay()</a>
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/Sketch" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Sketch264b.html?action=edit'>Edit Page</a> | <a href='Sketchad68.html?action=diff'>Page History</a> | <a href='Sketch60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

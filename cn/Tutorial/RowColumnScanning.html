@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - RowColumnScanning </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Display</em>
+</p>
+<p class='vspace'></p><h3>Row-columm Scanning to control an 8x8 LED Matrix</h3>
+<p>LED displays are often packaged as matrixes of <span class='wikiword'>LEDs</span> arranged in rows of common anodes and columns of common cathodes, or the reverse.  Here's a <a class='urllink' href='http://sigma.octopart.com/140413/datasheet/Lumex-LDM-24488NI.pdf' rel='nofollow'>typical example</a>, and its schematic:
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/LEDmatrix_img.jpg' alt='' title='' /></div>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/LEDmatrix_schem.png' alt='' title='' /></div>
+<p class='vspace'></p><p>These can be very useful displays. To control a matrix, you connect both its rows and columns to your microcontroller. The columns are connected to the <span class='wikiword'>LEDs</span> anodes (see Figure 1), so a column needs to be high for any of the <span class='wikiword'>LEDs</span> in that column to turn on.  The rows are connected to the <span class='wikiword'>LEDs</span> cathodes, so the row needs to be low for an individual LED to turn on. If the row and the column are both high or both low, no voltage flows through the LED and it doesn’t turn on.
+</p>
+<p class='vspace'></p><p>To control an individual LED, you set its column high and its row low.  To control multiple <span class='wikiword'>LEDs</span> in a row, you set the rows high, then take the column high, then set the lows row or high as appropriate; a low row will turn the corresponding LED on, and a high row will turn it off.
+</p>
+<p class='vspace'></p><p>Although there are pre-made LED matrices, you can also make your own matrix from 64 <span class='wikiword'>LEDs</span>, using the schematic as shown above.
+</p>
+<p class='vspace'></p><p>It doesn’t matter which pins of the microcontroller you connect the rows and columns to, because you can assign things in software. Connected the pins in a way that makes wiring easiest. A typical layout is shown below.
+</p>
+<p class='vspace'></p><p>Here's a matrix of the pin connections, based on the diagram above:
+</p>
+<p class='vspace'></p>
+<table  border='1' align='center' summary="Mapping: LED Matrix pin numbers to rows and columns to Arduino pin numbers"><tr><td  align='center' valign='top'>
+<p><strong>Matrix pin no.</strong>
+</p></td><td  align='center' valign='top'>
+<p><strong>Row</strong>
+</p></td><td  align='center' valign='top'>
+<p><strong>Column</strong>
+</p></td><td  align='center' valign='top'>
+<p><strong>Arduino pin number</strong>
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>1
+</p></td><td  align='center' valign='top'>
+<p>5
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>13
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>2
+</p></td><td  align='center' valign='top'>
+<p>7
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>12
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>3
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>2
+</p></td><td  align='center' valign='top'>
+<p>11
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>4
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>3
+</p></td><td  align='center' valign='top'>
+<p>10
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>5
+</p></td><td  align='center' valign='top'>
+<p>8
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>16 (analog pin 2)
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>6
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>5
+</p></td><td  align='center' valign='top'>
+<p>17 (analog pin 3)
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>7
+</p></td><td  align='center' valign='top'>
+<p>6
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>18 (analog pin 4)
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>8
+</p></td><td  align='center' valign='top'>
+<p>3
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>19 (analog pin 5)
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>9
+</p></td><td  align='center' valign='top'>
+<p>1
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>2
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>10
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>4
+</p></td><td  align='center' valign='top'>
+<p>3
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>11
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>6
+</p></td><td  align='center' valign='top'>
+<p>4
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>12
+</p></td><td  align='center' valign='top'>
+<p>4
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>5
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>13
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>1
+</p></td><td  align='center' valign='top'>
+<p>6
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>14
+</p></td><td  align='center' valign='top'>
+<p>2
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>7
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>15
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>7
+</p></td><td  align='center' valign='top'>
+<p>8
+</p></td></tr><tr><td  align='center' valign='top'>
+<p>16
+</p></td><td  align='center' valign='top'>
+<p>-
+</p></td><td  align='center' valign='top'>
+<p>8
+</p></td><td  align='center' valign='top'>
+<p>9
+</p></td></tr></table>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li>(1) 8 x 8 LED Matrix
+</li><li>(2) potentiometers
+</li><li>hook-up wire
+</li><li>breadboard
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<p>The 16 pins of the matrix are hooked up to 16 pins of the Arduino.  Four of the analog pins are used as digital inputs 16 through 19.  The order of the pins is assigned in two arrays in the code.
+</p>
+<p class='vspace'></p><p>Two potentiometers, connected to analog pins 0 and 1,  control the movement of a lit LED in the matrix.
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/rowColScan_bb.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/rowColScan_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><p><strong>Schematic:</strong>
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>. 
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/rowColScan_schem.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/rowColScan_schem.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>Code</h3>
+<div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; Row-Column Scanning an 8x8 LED matrix with X-Y input<br />
+&nbsp;<br />
+&nbsp;This example controls an 8x8 LED matrix using two analog inputs<br />
+&nbsp;<br />
+&nbsp;created 27 May 2009<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Tom Igoe<br />
+&nbsp;<br />
+&nbsp;This example works for the Lumex &nbsp;LDM-24488NI Matrix. See <br />
+&nbsp;http://sigma.octopart.com/140413/datasheet/Lumex-LDM-24488NI.pdf<br />
+&nbsp;for the pin connections<br />
+&nbsp;<br />
+&nbsp;For other LED cathode column matrixes, you should only need to change <br />
+&nbsp;the pin numbers in the row[] and column[] arrays<br />
+&nbsp;<br />
+&nbsp;rows are the anodes<br />
+&nbsp;cols are the cathodes<br />
+&nbsp;---------<br />
+&nbsp;<br />
+&nbsp;Pin numbers:<br />
+&nbsp;Matrix:<br />
+&nbsp;* Digital pins 2 through 13,<br />
+&nbsp;* analog pins 2 through 5 used as digital 16 through 19<br />
+&nbsp;Potentiometers:<br />
+&nbsp;* center pins are attached to analog pins 0 and 1, respectively<br />
+&nbsp;* side pins attached to +5V and ground, respectively.<br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;http://arduino.cc/en/Tutorial/RowColumnScanning<br />
+&nbsp;<br />
+&nbsp;see also http://www.tigoe.net/pcomp/code/category/arduinowiring/514 for more<br />
+&nbsp;*/</span><br />
+<br />
+<br />
+<span class="co1">// 2-dimensional array of row pin numbers:</span><br />
+const <span class="kw1">int</span> row<span class="br0">&#91;</span><span class="nu0">8</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="nu0">2</span><span class="sy0">,</span><span class="nu0">7</span><span class="sy0">,</span><span class="nu0">19</span><span class="sy0">,</span><span class="nu0">5</span><span class="sy0">,</span><span class="nu0">13</span><span class="sy0">,</span><span class="nu0">18</span><span class="sy0">,</span><span class="nu0">12</span><span class="sy0">,</span><span class="nu0">16</span> <span class="br0">&#125;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">// 2-dimensional array of column pin numbers:</span><br />
+const <span class="kw1">int</span> col<span class="br0">&#91;</span><span class="nu0">8</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="nu0">6</span><span class="sy0">,</span><span class="nu0">11</span><span class="sy0">,</span><span class="nu0">10</span><span class="sy0">,</span><span class="nu0">3</span><span class="sy0">,</span><span class="nu0">17</span><span class="sy0">,</span><span class="nu0">4</span><span class="sy0">,</span><span class="nu0">8</span><span class="sy0">,</span><span class="nu0">9</span> &nbsp;<span class="br0">&#125;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">// 2-dimensional array of pixels:</span><br />
+<span class="kw1">int</span> pixels<span class="br0">&#91;</span><span class="nu0">8</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">8</span><span class="br0">&#93;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+<br />
+<span class="co1">// cursor position:</span><br />
+<span class="kw1">int</span> x <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span><br />
+<span class="kw1">int</span> y <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// initialize the I/O pins as outputs:</span><br />
+<br />
+&nbsp; <span class="co1">// iterate over the pins:</span><br />
+&nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisPin <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> thisPin <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> thisPin<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// initialize the output pins:</span><br />
+&nbsp; &nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>col<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; &nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>row<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<br />
+&nbsp; &nbsp; <span class="co1">// take the col pins (i.e. the cathodes) high to ensure that</span><br />
+&nbsp; &nbsp; <span class="co1">// the LEDS are off: </span><br />
+&nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>col<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
+&nbsp; <span class="br0">&#125;</span><br />
+<br />
+&nbsp; <span class="co1">// initialize the pixel matrix:</span><br />
+&nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> x <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> x <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> x<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> y <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> y <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> y<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; pixels<span class="br0">&#91;</span>x<span class="br0">&#93;</span><span class="br0">&#91;</span>y<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw2">HIGH</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// read input:</span><br />
+&nbsp; readSensors<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// draw the screen:</span><br />
+&nbsp; refreshScreen<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> readSensors<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// turn off the last position:</span><br />
+&nbsp; pixels<span class="br0">&#91;</span>x<span class="br0">&#93;</span><span class="br0">&#91;</span>y<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw2">HIGH</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// read the sensors for X and Y values:</span><br />
+&nbsp; x <span class="sy0">=</span> <span class="nu0">7</span> <span class="sy0">-</span> <span class="kw1">map</span><span class="br0">&#40;</span><span class="kw1">analogRead</span><span class="br0">&#40;</span>A0<span class="br0">&#41;</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1023</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">7</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; y <span class="sy0">=</span> <span class="kw1">map</span><span class="br0">&#40;</span><span class="kw1">analogRead</span><span class="br0">&#40;</span>A1<span class="br0">&#41;</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">1023</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">7</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// set the new pixel position low so that the LED will turn on</span><br />
+&nbsp; <span class="co1">// in the next screen refresh:</span><br />
+&nbsp; pixels<span class="br0">&#91;</span>x<span class="br0">&#93;</span><span class="br0">&#91;</span>y<span class="br0">&#93;</span> <span class="sy0">=</span> <span class="kw2">LOW</span><span class="sy0">;</span><br />
+<br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> refreshScreen<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// iterate over the rows (anodes):</span><br />
+&nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisRow <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> thisRow <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> thisRow<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// take the row pin (anode) high:</span><br />
+&nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>row<span class="br0">&#91;</span>thisRow<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// iterate over the cols (cathodes):</span><br />
+&nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisCol <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> thisCol <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> thisCol<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1">// get the state of the current pixel;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">int</span> thisPixel <span class="sy0">=</span> pixels<span class="br0">&#91;</span>thisRow<span class="br0">&#93;</span><span class="br0">&#91;</span>thisCol<span class="br0">&#93;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1">// when the row is HIGH and the col is LOW,</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1">// the LED where they meet turns on:</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>col<span class="br0">&#91;</span>thisCol<span class="br0">&#93;</span><span class="sy0">,</span> thisPixel<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="co1">// turn the pixel off:</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>thisPixel <span class="sy0">==</span> <span class="kw2">LOW</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>col<span class="br0">&#91;</span>thisCol<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <span class="co1">// take the row pin low to turn off the whole row:</span><br />
+&nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>row<span class="br0">&#91;</span>thisRow<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='RowColumnScanningf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/PinMode.html'><code>pinMode()</code></a>
+</li><li><a class='wikilink' href='../Reference/For.html'><code>for()</code></a>
+</li><li><a class='wikilink' href='../Reference/DigitalWrite.html'><code>digitalWrite()</code></a>
+</li><li><a class='wikilink' href='../Reference/If.html'><code>if()</code></a>
+</li><li><a class='wikilink' href='../Reference/Map.html'><code>map()</code></a>
+<p class='vspace'></p></li><li><a class='wikilink' href='../Reference/FunctionDeclaration.html'>Writing Functions</a> - create modular pieces of code to perform a defined task. 
+</li><li><a class='wikilink' href='ForLoop.html'>For Loop</a> - control multiple <span class='wikiword'>LEDs</span> with a For Loop.
+</li><li><a class='wikilink' href='Array.html'>Array</a> - a variation on the For Loop example that demonstrates how to use an array.
+</li><li><a class='wikilink' href='IfStatement.html'>If Statement</a> - how to use an if statement to change output conditions based on changing input conditions.
+</li><li>LED <a class='wikilink' href='BarGraph.html'>Bar Graph</a>: how to make an LED bar graph.
+</li></ul><p class='vspace'></p><p>There is <a class='urllink' href='http://arduino.cc/playground/Main/DirectDriveLEDMatrix' rel='nofollow'>a more complex example in the Arduino playground</a>. Other examples can be found <a class='urllink' href='http://www.tigoe.net/pcomp/code/' rel='nofollow'>on Tom Igoe's blog</a>: 
+</p>
+<p class='vspace'></p><ul><li><a class='urllink' href='http://www.tigoe.net/pcomp/code/category/arduinowiring/514' rel='nofollow'>Tom's original version of this tutorial</a>
+</li><li><a class='urllink' href='http://www.tigoe.net/pcomp/code/category/arduinowiring/424' rel='nofollow'>Two matrixes on an Arduino Mega</a>
+</li><li><a class='urllink' href='http://www.tigoe.net/pcomp/code/category/Processing/454' rel='nofollow'>Two-Matrix Pong</a>
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/RowColumnScanning" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='RowColumnScanning264b.html?action=edit'>Edit Page</a> | <a href='RowColumnScanningad68.html?action=diff'>Page History</a> | <a href='RowColumnScanning60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

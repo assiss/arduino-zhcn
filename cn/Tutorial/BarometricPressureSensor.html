@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - BarometricPressureSensor </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; SPI <span class='wikiword'>LIbrary</span></em>
+</p>
+<p class='vspace'></p><h3>Using SPI to read a Barometric Pressure Sensor</h3>
+<p>This example shows how to use the SPI (Serial Peripheral Interface)  Communications Library to read data from a <span class='wikiword'>SCP1000</span> Barometric Pressure sensor. Please <a class='urllink' href='http://dev.arduino.cc/wiki/uno/Reference/SPI' rel='nofollow'>click here</a> for more information on SPI. 
+</p>
+<p class='vspace'></p><div  class='BOM' >
+<h3>Hardware Required</h3>
+<ul><li><span class='wikiword'>SCP1000</span> Pressure Sensor Breakout Board
+</li><li>Arduino board
+</li><li>Breadboard or prototyping Board
+</li></ul></div>
+<p class='vspace'></p><h3>Circuit</h3>
+<div  class='circuit' >
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/BaromettricPressureSensor_bb.png' rel='nofollow'><img height='300px' src='../uploads/Tutorial/BaromettricPressureSensor_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>Schematic</h3>
+<div  class='circuit' >
+<div><img height='300px' src='../uploads/Tutorial/BaromettricPressureSensor_sch.png' alt='' title='' /></div>
+</div>
+<p class='vspace'></p><p>The <span class='wikiword'>SCP1000</span> barometric pressure sensor can read both air presure and temperature and report them via the SPI connection. For details of the control registers, see the <a class='urllink' href='http://www.sparkfun.com/datasheets/Components/SCP1000-D01.pdf' rel='nofollow'>SCP1000 data sheet</a>. 
+</p>
+<p class='vspace'></p><p>In the code below, the Arduino starts out by setting the <span class='wikiword'>SCP1000</span>'s configuration registers in the <code>setup()</code>.  In the main loop,it sets the sensor to read in high resolution mode, meaning that it will return a 19-bit value for the pressure reading, and 16 bits for the temperature. The actual reading in degrees Celsius is the 16-bit result divided by 20.  
+</p>
+<p class='vspace'></p><p>Then it reads the temperature's two bytes.  Once it's got the temperature, it reads the pressure in two parts.  First it reads the highest three bits, then the lower 16 bits.  It combines these two into one single long integer by bit shifting the high bits then using a bitwise OR to combine them with the lower 16 bits.  The actual humidity in Pascals is the 19-bit result divide by 4.
+</p>
+<p class='vspace'></p><div  class='code' >
+<p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp;SCP1000 Barometric Pressure Sensor Display<br />
+&nbsp;<br />
+&nbsp;Shows the output of a Barometric Pressure Sensor on a<br />
+&nbsp;Uses the SPI library. For details on the sensor, see:<br />
+&nbsp;http://www.sparkfun.com/commerce/product_info.php?products_id=8161<br />
+&nbsp;http://www.vti.fi/en/support/obsolete_products/pressure_sensors/<br />
+&nbsp;<br />
+&nbsp;This sketch adapted from Nathan Seidle's SCP1000 example for PIC:<br />
+&nbsp;http://www.sparkfun.com/datasheets/Sensors/SCP1000-Testing.zip<br />
+&nbsp;<br />
+&nbsp;Circuit:<br />
+&nbsp;SCP1000 sensor attached to pins 6, 7, 10 - 13:<br />
+&nbsp;DRDY: pin 6<br />
+&nbsp;CSB: pin 7<br />
+&nbsp;MOSI: pin 11<br />
+&nbsp;MISO: pin 12<br />
+&nbsp;SCK: pin 13<br />
+&nbsp;<br />
+&nbsp;created 31 July 2010<br />
+&nbsp;modified 14 August 2010<br />
+&nbsp;by Tom Igoe<br />
+&nbsp;*/</span><br />
+<br />
+<span class="co1">// the sensor communicates using SPI, so include the library:</span><br />
+<span class="co2">#include &lt;SPI.h&gt;</span><br />
+<br />
+<span class="co1">//Sensor's memory register addresses:</span><br />
+const <span class="kw1">int</span> PRESSURE <span class="sy0">=</span> <span class="nu12">0x1F</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<span class="co1">//3 most significant bits of pressure</span><br />
+const <span class="kw1">int</span> PRESSURE_LSB <span class="sy0">=</span> <span class="nu12">0x20</span><span class="sy0">;</span> &nbsp;<span class="co1">//16 least significant bits of pressure</span><br />
+const <span class="kw1">int</span> TEMPERATURE <span class="sy0">=</span> <span class="nu12">0x21</span><span class="sy0">;</span> &nbsp; <span class="co1">//16 bit temperature reading</span><br />
+const <span class="kw1">byte</span> READ <span class="sy0">=</span> <span class="nu6">0b11111100</span><span class="sy0">;</span> &nbsp; &nbsp; <span class="co1">// SCP1000's read command</span><br />
+const <span class="kw1">byte</span> WRITE <span class="sy0">=</span> <span class="nu6">0b00000010</span><span class="sy0">;</span> &nbsp; <span class="co1">// SCP1000's write command</span><br />
+<br />
+<span class="co1">// pins used for the connection with the sensor</span><br />
+<span class="co1">// the other you need are controlled by the SPI library):</span><br />
+const <span class="kw1">int</span> dataReadyPin <span class="sy0">=</span> <span class="nu0">6</span><span class="sy0">;</span><br />
+const <span class="kw1">int</span> chipSelectPin <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// start the SPI library:</span><br />
+&nbsp; SPI.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// initalize the &nbsp;data ready and chip select pins:</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>dataReadyPin<span class="sy0">,</span> <span class="kw2">INPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>chipSelectPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">//Configure SCP1000 for low noise configuration:</span><br />
+&nbsp; writeRegister<span class="br0">&#40;</span><span class="nu12">0x02</span><span class="sy0">,</span> <span class="nu12">0x2D</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; writeRegister<span class="br0">&#40;</span><span class="nu12">0x01</span><span class="sy0">,</span> <span class="nu12">0x03</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; writeRegister<span class="br0">&#40;</span><span class="nu12">0x03</span><span class="sy0">,</span> <span class="nu12">0x02</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// give the sensor time to set up:</span><br />
+&nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">//Select High Resolution Mode</span><br />
+&nbsp; writeRegister<span class="br0">&#40;</span><span class="nu12">0x03</span><span class="sy0">,</span> <span class="nu12">0x0A</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// don't do anything until the data ready pin is high:</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">digitalRead</span><span class="br0">&#40;</span>dataReadyPin<span class="br0">&#41;</span> <span class="sy0">==</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">//Read the temperature data</span><br />
+&nbsp; &nbsp; <span class="kw1">int</span> tempData <span class="sy0">=</span> readRegister<span class="br0">&#40;</span><span class="nu12">0x21</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; &nbsp; <span class="co1">// convert the temperature to celsius and display it:</span><br />
+&nbsp; &nbsp; <span class="kw1">float</span> realTemp <span class="sy0">=</span> <span class="br0">&#40;</span><span class="kw1">float</span><span class="br0">&#41;</span>tempData <span class="sy0">/</span> <span class="nu16">20.0</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;Temp[C]=&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>realTemp<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<br />
+&nbsp; &nbsp; <span class="co1">//Read the pressure data highest 3 bits:</span><br />
+&nbsp; &nbsp; <span class="kw1">byte</span> &nbsp;pressure_data_high <span class="sy0">=</span> readRegister<span class="br0">&#40;</span><span class="nu12">0x1F</span><span class="sy0">,</span> <span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; pressure_data_high <span class="sy0">&amp;=</span> <span class="nu6">0b00000111</span><span class="sy0">;</span> <span class="co1">//you only needs bits 2 to 0</span><br />
+<br />
+&nbsp; &nbsp; <span class="co1">//Read the pressure data lower 16 bits:</span><br />
+&nbsp; &nbsp; <span class="kw1">unsigned</span> <span class="kw1">int</span> pressure_data_low <span class="sy0">=</span> readRegister<span class="br0">&#40;</span><span class="nu12">0x20</span><span class="sy0">,</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">//combine the two parts into one 19-bit number:</span><br />
+&nbsp; &nbsp; <span class="kw1">long</span> pressure <span class="sy0">=</span> <span class="br0">&#40;</span><span class="br0">&#40;</span>pressure_data_high <span class="sy0">&lt;&lt;</span> <span class="nu0">16</span><span class="br0">&#41;</span> <span class="sy0">|</span> pressure_data_low<span class="br0">&#41;</span><span class="sy0">/</span><span class="nu0">4</span><span class="sy0">;</span><br />
+<br />
+&nbsp; &nbsp; <span class="co1">// display the temperature:</span><br />
+&nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\t</span>Pressure [Pa]=&quot;</span> <span class="sy0">+</span> String<span class="br0">&#40;</span>pressure<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="co1">//Read from or write to register from the SCP1000:</span><br />
+<span class="kw1">unsigned</span> <span class="kw1">int</span> readRegister<span class="br0">&#40;</span><span class="kw1">byte</span> thisRegister<span class="sy0">,</span> <span class="kw1">int</span> bytesToRead <span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">byte</span> inByte <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// incoming byte from the SPI</span><br />
+&nbsp; <span class="kw1">unsigned</span> <span class="kw1">int</span> result <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; <span class="co1">// result to return</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>thisRegister<span class="sy0">,</span> <span class="kw2">BIN</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\t</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// SCP1000 expects the register name in the upper 6 bits</span><br />
+&nbsp; <span class="co1">// of the byte. So shift the bits left by two bits:</span><br />
+&nbsp; thisRegister <span class="sy0">=</span> thisRegister <span class="sy0">&lt;&lt;</span> <span class="nu0">2</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// now combine the address and the command into one byte</span><br />
+&nbsp; <span class="kw1">byte</span> dataToSend <span class="sy0">=</span> thisRegister <span class="sy0">&amp;</span> READ<span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>thisRegister<span class="sy0">,</span> <span class="kw2">BIN</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// take the chip select low to select the device:</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>chipSelectPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// send the device the register you want to read:</span><br />
+&nbsp; SPI.<span class="kw1">transfer</span><span class="br0">&#40;</span>dataToSend<span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// send a value of 0 to read the first byte returned:</span><br />
+&nbsp; result <span class="sy0">=</span> SPI.<span class="kw1">transfer</span><span class="br0">&#40;</span><span class="nu12">0x00</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// decrement the number of bytes left to read:</span><br />
+&nbsp; bytesToRead<span class="sy0">--;</span><br />
+&nbsp; <span class="co1">// if you still have another byte to read:</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>bytesToRead <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// shift the first byte left, then get the second byte:</span><br />
+&nbsp; &nbsp; result <span class="sy0">=</span> result <span class="sy0">&lt;&lt;</span> <span class="nu0">8</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; inByte <span class="sy0">=</span> SPI.<span class="kw1">transfer</span><span class="br0">&#40;</span><span class="nu12">0x00</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// combine the byte you just got with the previous one:</span><br />
+&nbsp; &nbsp; result <span class="sy0">=</span> result <span class="sy0">|</span> inByte<span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// decrement the number of bytes left to read:</span><br />
+&nbsp; &nbsp; bytesToRead<span class="sy0">--;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+&nbsp; <span class="co1">// take the chip select high to de-select:</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>chipSelectPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// return the result:</span><br />
+&nbsp; <span class="kw1">return</span><span class="br0">&#40;</span>result<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<br />
+<span class="co1">//Sends a write command to SCP1000</span><br />
+<br />
+<span class="kw1">void</span> writeRegister<span class="br0">&#40;</span><span class="kw1">byte</span> thisRegister<span class="sy0">,</span> <span class="kw1">byte</span> thisValue<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+<br />
+&nbsp; <span class="co1">// SCP1000 expects the register address in the upper 6 bits</span><br />
+&nbsp; <span class="co1">// of the byte. So shift the bits left by two bits:</span><br />
+&nbsp; thisRegister <span class="sy0">=</span> thisRegister <span class="sy0">&lt;&lt;</span> <span class="nu0">2</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// now combine the register address and the command into one byte:</span><br />
+&nbsp; <span class="kw1">byte</span> dataToSend <span class="sy0">=</span> thisRegister <span class="sy0">|</span> WRITE<span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// take the chip select low to select the device:</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>chipSelectPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; SPI.<span class="kw1">transfer</span><span class="br0">&#40;</span>dataToSend<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">//Send register location</span><br />
+&nbsp; SPI.<span class="kw1">transfer</span><span class="br0">&#40;</span>thisValue<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<span class="co1">//Send value to record into register</span><br />
+<br />
+&nbsp; <span class="co1">// take the chip select high to de-select:</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>chipSelectPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='BarometricPressureSensorf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/SPI.html'>Arduino SPI LIbrary</a>
+</li><li><a class='wikilink' href='SPIDigitalPot.html'>SPIDigitalPot</a>
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/BarometricPressureSensor" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='BarometricPressureSensor264b.html?action=edit'>Edit Page</a> | <a href='BarometricPressureSensorad68.html?action=diff'>Page History</a> | <a href='BarometricPressureSensor60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

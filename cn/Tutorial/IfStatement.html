@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - IfStatement </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p>''Examples &gt; Control Structures"
+</p>
+<p class='vspace'></p><h3>If语句(条件控制语句)</h3>
+<p class='vspace'></p><p><a class='wikilink' href='../Reference/If.html'><strong>if()</strong></a>语句是编程中最基础的一种流程控制。if语句可以根据指定条件的真与假来执行对应的程序，如下所示
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock2'>
+  <div class='sourceblocktext'><div class="arduino"><br />
+<span class="kw1">if</span> <span class="br0">&#40;</span>someCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;<span class="co1">//若条件为真，则执行下面的语句</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='IfStatement668d.html?action=sourceblock&amp;num=2' type='text/plain'>[下载代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>if-else是if语句的一种比较常用的变化形式，其结构如下所示：
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock3'>
+  <div class='sourceblocktext'><div class="arduino"><br />
+<span class="kw1">if</span> <span class="br0">&#40;</span>someCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;<span class="co1">// 条件为真则执行此处语句</span><br />
+<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;<span class="co1">// 条件为假则执行此处语句</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='IfStatement2992.html?action=sourceblock&amp;num=3' type='text/plain'>[获取代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>另外还有else-if的形式，用于在if检验条件为假时进行其它条件检测：
+</p>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock4'>
+  <div class='sourceblocktext'><div class="arduino"><br />
+<span class="kw1">if</span> <span class="br0">&#40;</span>someCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;<span class="co1">// 条件为真则执行此处语句</span><br />
+<span class="br0">&#125;</span> <span class="kw1">else</span> <span class="kw1">if</span> <span class="br0">&#40;</span>anotherCondition<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;<span class="co1">// 仅在somecondition为假</span><br />
+&nbsp; &nbsp;<span class="co1">// 且anotherCondition为真时执行</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='IfStatement0c37.html?action=sourceblock&amp;num=4' type='text/plain'>[获取代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><p>if语句使用频率非常高。下例展示了如何判断analog读取的值高于某阈值时点亮板上的13脚LED（大多数Arduino板上自带）：
+</p>
+<p class='vspace'></p><h3>所需硬件</h3>
+<ul><li>Arduino板
+</li><li>(1) 电位器或可调电阻
+</li><li>(1) 220欧姆电阻
+</li><li>(1) LED
+</li><li>连接导线
+</li></ul><p class='vspace'></p><h3>电路图</h3>
+<p><span style='font-size:83%'>点击图片放大浏览</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/if.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/if.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>使用Fritzing<a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>设计此图。 请前往<a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing项目主页</a> 寻找更多电路图样例。</span>
+</p>
+<p class='vspace'></p><p><strong>示意图</strong>
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大浏览</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/ifStatement_sch.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/ifStatement_sch.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>源代码</h3>
+<p>下例所示的代码中，名为<code>analogValue</code>的变量用于保存从电位器读取到的值，该电位器连接于Arduino的<code>analogPin 0</code>（模拟IO口0脚）。该值与一个基准值作比较，若此值在基准值之上，则点亮13脚上的LED；在基准值<code>之下</code>则LED熄灭。
+</p>
+<p class='vspace'></p><div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; 条件判断 -- If语句<br />
+&nbsp;<br />
+&nbsp;此例演示了if()语句的用法。<br />
+&nbsp;该程序读取并打印电位器的值（从模拟输入口），若该值在设定的基准值之上则点亮LED。<br />
+&nbsp;<br />
+&nbsp;电路：<br />
+&nbsp;* 电位器连在模拟0脚。<br />
+&nbsp;电位器中间的脚连在模拟引脚上，两边的脚分别连+5V和接地。<br />
+&nbsp;* LED连在13脚上。<br />
+&nbsp;<br />
+&nbsp;* 注意：绝大多数的Arduino板上已经在13脚上连了一个LED，所以在此例无须多连。<br />
+&nbsp;<br />
+&nbsp;created 17 Jan 2009<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Tom Igoe<br />
+<br />
+This example code is in the public domain.<br />
+&nbsp;<br />
+http://arduino.cc/en/Tutorial/IfStatement<br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+&nbsp;<br />
+<span class="co1">// 这些是常量，值不会变动</span><br />
+const <span class="kw1">int</span> analogPin <span class="sy0">=</span> A0<span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// 电位器连的脚</span><br />
+const <span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">13</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; <span class="co1">// LED连的脚</span><br />
+const <span class="kw1">int</span> threshold <span class="sy0">=</span> <span class="nu0">400</span><span class="sy0">;</span> &nbsp; <span class="co1">// 指定电位器读数的基准值</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// 将LED连的脚初始化为OUTPUT状态</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// 初始化串口通讯</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// 读取电位器的值</span><br />
+&nbsp; <span class="kw1">int</span> analogValue <span class="sy0">=</span> <span class="kw1">analogRead</span><span class="br0">&#40;</span>analogPin<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// 若电位器读数高于设定的基准值，点亮LED</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>analogValue <span class="sy0">&gt;</span> threshold<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span> <br />
+&nbsp; <span class="kw1">else</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span><span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; <span class="br0">&#125;</span><br />
+<br />
+&nbsp; <span class="co1">// 输出该值到串口</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>analogValue<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='IfStatementf687.html?action=sourceblock&amp;num=1' type='text/plain'>[获取代码]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>参见：</h3>
+<ul><li><a class='wikilink' href='../Reference/If.html'>if()</a>
+</li><li><a class='wikilink' href='../Reference/Else.html'>if...else</a>
+</li><li><a class='wikilink' href='../Reference/AnalogRead.html'>analogRead()</a>
+</li><li><a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite()</a>
+</li><li><a class='wikilink' href='../Serial/Begin.html'>serial.begin()</a>
+</li><li><a class='wikilink' href='../Serial/Print.html'>serial.print()</a>
+<p class='vspace'></p></li><li><a class='wikilink' href='ForLoop.html'>For Loop</a> - 在一个for循环里控制多个<span class='wikiword'>LED</span>。
+</li><li><a class='wikilink' href='WhileLoop.html'>While Loop</a> - 当按钮按下时，使用While循环校准传感器。
+</li><li><a class='wikilink' href='SwitchCase.html'>Switch Case</a> - 在多个离散值中选择执行，类似执行多个if语句。此例演示了如何把传感器的值分成四类，根据不同的类别执行对应的操作。
+</li><li><a class='wikilink' href='Array.html'>Array</a>: For循环的另一种实现，演示如何使用数组。
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/IfStatement" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='IfStatement264b.html?action=edit'>Edit Page</a> | <a href='IfStatementad68.html?action=diff'>Page History</a> | <a href='IfStatement60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

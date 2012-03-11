@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - ASCIITable </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Communication</em>
+</p>
+<p class='vspace'></p><h3>ASCII Table</h3>
+<p>Demonstrates the advanced serial printing functions by generating a table of characters and their ASCII values in decimal, hexadecimal, octal, and binary. For more on ASCII, see <a class='urllink' href='http://www.asciitable.com%20and%20http://en.wikipedia.org/wiki/ASCII' rel='nofollow'>asciitable.com</a>
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<div><a class='urllink' href='../uploads/Tutorial/Arduino_bb.png' rel='nofollow'><img height='250px' src='../uploads/Tutorial/Arduino_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><p>None, but the Arduino has to be connected to the computer.
+</p>
+<p class='vspace'></p><h3>Code</h3>
+<p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; ASCII table<br />
+&nbsp;<br />
+&nbsp;Prints out byte values in all possible formats: &nbsp;<br />
+&nbsp;* as raw binary values<br />
+&nbsp;* as ASCII-encoded decimal, hex, octal, and binary values<br />
+&nbsp;<br />
+&nbsp;For more on ASCII, see http://www.asciitable.com and http://en.wikipedia.org/wiki/ASCII<br />
+&nbsp;<br />
+&nbsp;The circuit: &nbsp;No external hardware needed.<br />
+&nbsp;<br />
+&nbsp;created 2006<br />
+&nbsp;by Nicholas Zambetti <br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Tom Igoe<br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+<br />
+&nbsp;&lt;http://www.zambetti.com&gt; <br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <br />
+<span class="br0">&#123;</span> <br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+<br />
+&nbsp; <span class="co1">// prints title with ending line break </span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;ASCII Table ~ Character Map&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+<span class="br0">&#125;</span> <br />
+<br />
+<span class="co1">// first visible ASCIIcharacter '!' is number 33:</span><br />
+<span class="kw1">int</span> thisByte <span class="sy0">=</span> <span class="nu0">33</span><span class="sy0">;</span> <br />
+<span class="co1">// you can also write ASCII characters in single quotes.</span><br />
+<span class="co1">// for example. '!' is the same as 33, so you could also use this:</span><br />
+<span class="co1">//int thisByte = '!'; &nbsp;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <br />
+<span class="br0">&#123;</span> <br />
+&nbsp; <span class="co1">// prints value unaltered, i.e. the raw binary version of the </span><br />
+&nbsp; <span class="co1">// byte. The serial monitor interprets all bytes as </span><br />
+&nbsp; <span class="co1">// ASCII, so 33, the first number, &nbsp;will show up as '!' </span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">write</span><span class="br0">&#40;</span>thisByte<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
+<br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;, dec: &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; <span class="co1">// prints value as string as an ASCII-encoded decimal (base 10).</span><br />
+&nbsp; <span class="co1">// Decimal is the &nbsp;default format for Serial.print() and Serial.println(),</span><br />
+&nbsp; <span class="co1">// so no modifier is needed:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>thisByte<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<br />
+&nbsp; <span class="co1">// But you can declare the modifier for decimal if you want to.</span><br />
+&nbsp; <span class="co1">//this also works if you uncomment it:</span><br />
+<br />
+&nbsp; <span class="co1">// Serial.print(thisByte, DEC); &nbsp;</span><br />
+<br />
+<br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;, hex: &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; <span class="co1">// prints value as string in hexadecimal (base 16):</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>thisByte<span class="sy0">,</span> <span class="kw2">HEX</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; <br />
+<br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;, oct: &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; <span class="co1">// prints value as string in octal (base 8);</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>thisByte<span class="sy0">,</span> <span class="kw2">OCT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; <br />
+<br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;, bin: &quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; <span class="co1">// prints value as string in binary (base 2) </span><br />
+&nbsp; <span class="co1">// also prints ending line break:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span>thisByte<span class="sy0">,</span> <span class="kw2">BIN</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; <br />
+<br />
+&nbsp; <span class="co1">// if printed last visible character '~' or 126, stop: </span><br />
+&nbsp; <span class="kw1">if</span><span class="br0">&#40;</span>thisByte <span class="sy0">==</span> <span class="nu0">126</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> &nbsp; &nbsp; <span class="co1">// you could also use if (thisByte == '~') {</span><br />
+&nbsp; &nbsp; <span class="co1">// This loop loops forever and does nothing</span><br />
+&nbsp; &nbsp; <span class="kw1">while</span><span class="br0">&#40;</span><span class="kw1">true</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">continue</span><span class="sy0">;</span> <br />
+&nbsp; &nbsp; <span class="br0">&#125;</span> <br />
+&nbsp; <span class="br0">&#125;</span> <br />
+&nbsp; <span class="co1">// go on to the next character</span><br />
+&nbsp; thisByte<span class="sy0">++;</span> &nbsp;<br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='ASCIITablef687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p><h3>Output</h3>
+<pre>
+ASCII Table ~ Character Map
+!, dec: 33, hex: 21, oct: 41, bin
+4, decúASCII Table ~ Character Map
+!, dec: 33, hex: 21, oct: 41, bin: 100001
+", dec: 34, hex: 22, oct: 42, bin: 100010
+#, dec: 35, hex: 23, oct: 43, bin: 100011
+$, dec: 36, hex: 24, oct: 44, bin: 100100
+%, dec: 37, hex: 25, oct: 45, bin: 100101
+&amp;, dec: 38, hex: 26, oct: 46, bin: 100110
+', dec: 39, hex: 27, oct: 47, bin: 100111
+(, dec: 40, hex: 28, oct: 50, bin: 101000
+), dec: 41, hex: 29, oct: 51, bin: 101001
+*, dec: 42, hex: 2A, oct: 52, bin: 101010
++, dec: 43, hex: 2B, oct: 53, bin: 101011
+,, dec: 44, hex: 2C, oct: 54, bin: 101100
+-, dec: 45, hex: 2D, oct: 55, bin: 101101
+., dec: 46, hex: 2E, oct: 56, bin: 101110
+/, dec: 47, hex: 2F, oct: 57, bin: 101111
+0, dec: 48, hex: 30, oct: 60, bin: 110000
+1, dec: 49, hex: 31, oct: 61, bin: 110001
+2, dec: 50, hex: 32, oct: 62, bin: 110010
+3, dec: 51, hex: 33, oct: 63, bin: 110011
+4, dec: 52, hex: 34, oct: 64, bin: 110100
+5, dec: 53, hex: 35, oct: 65, bin: 110101
+6, dec: 54, hex: 36, oct: 66, bin: 110110
+7, dec: 55, hex: 37, oct: 67, bin: 110111
+8, dec: 56, hex: 38, oct: 70, bin: 111000
+9, dec: 57, hex: 39, oct: 71, bin: 111001
+:, dec: 58, hex: 3A, oct: 72, bin: 111010
+;, dec: 59, hex: 3B, oct: 73, bin: 111011
+&lt;, dec: 60, hex: 3C, oct: 74, bin: 111100
+=, dec: 61, hex: 3D, oct: 75, bin: 111101
+&gt;, dec: 62, hex: 3E, oct: 76, bin: 111110
+?, dec: 63, hex: 3F, oct: 77, bin: 111111
+@, dec: 64, hex: 40, oct: 100, bin: 1000000
+A, dec: 65, hex: 41, oct: 101, bin: 1000001
+B, dec: 66, hex: 42, oct: 102, bin: 1000010
+C, dec: 67, hex: 43, oct: 103, bin: 1000011
+D, dec: 68, hex: 44, oct: 104, bin: 1000100
+E, dec: 69, hex: 45, oct: 105, bin: 1000101
+
+
+...
+
+</pre>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/Increment.html'>increment, ++</a>
+</li><li><a class='wikilink' href='../Reference/While.html'>while</a>()
+</li><li><a class='wikilink' href='../Reference/Serial.html'>serial</a>()
+<p class='vspace'></p></li><li><a class='wikilink' href='SerialCallResponseASCII.html'>Serial Call and Response ASCII</a> - sending multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/ASCIITable" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='ASCIITable264b.html?action=edit'>Edit Page</a> | <a href='ASCIITablead68.html?action=diff'>Page History</a> | <a href='ASCIITable60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - ADXL3xx </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Sensors</em>
+</p>
+<p class='vspace'></p><h3><span class='wikiword'>ADXL3xx</span> Accelerometer</h3>
+<p>This tutorial shows you how to read an Analog Devices <span class='wikiword'>ADXL3xx</span> series (e.g. <span class='wikiword'>ADXL320</span>, <span class='wikiword'>ADXL321</span>, <span class='wikiword'>ADXL322</span>, <span class='wikiword'>ADXL330</span>) <a class='urllink' href='http://en.wikipedia.org/wiki/Accelerometer' rel='nofollow'><strong>accelerometer</strong></a> and communicate the acceleration to the a personal computer.  
+</p>
+<p class='vspace'></p><p>This tutorial was built using the <a class='urllink' href='http://www.sparkfun.com/commerce/categories.php?c=80' rel='nofollow'>breakout boards from Sparkfun</a>.  The <a class='urllink' href='http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=35&amp;products_id=163&amp;zenid=48f2b4f461fed55c1d7f9fb38644fd9f' rel='nofollow'>adafruit accelerometer breakout board</a> also works, though it must be wired differently. 
+</p>
+<p class='vspace'></p><p>The <span class='wikiword'>ADXL3xx</span> outputs the acceleration on each axis as an analog voltage between 0 and 5 volts.  To read this, all you need is the <code>analogRead()</code> function.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li><span class='wikiword'>ADXL3xx</span> Accelerometer
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<p>The accelerometer uses very little amperage, so it can be plugged into your Arduino and run directly off of the output from the Arduino's digital output pins.  To do this, you'll use three of the analog input pins as digital I/O pins, for power and ground to the accelerometer, and for the self-test pin.  You'll use the other three analog inputs to read the acclerometer's analog outputs.
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/ADXL3XX_2_BB.png' rel='nofollow'><img width='250px' src='../uploads/Tutorial/ADXL3XX_2_BB.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><p><strong>Schematic:</strong>
+</p>
+<p class='vspace'></p><p>click the image to enlarge
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/ADXL3XX_2_schem.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/ADXL3XX_2_schem.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p>Here are the pin connections for the configuration shown above:
+</p>
+<p class='vspace'></p>
+<table  cellpadding='3' border='1'><tr ><td  align='left'><strong>Breakout Board Pin</strong></td><td  align='left'>Self-Test</td><td  align='left'>Z-Axis</td><td  align='left'>Y-Axis</td><td  align='left'>X-Axis</td><td  align='left'>Ground</td><td  align='left'>VDD</td></tr>
+<tr ><td  align='left'><strong>Arduino Analog Input Pin</strong></td><td  align='left'>0</td><td  align='left'>1</td><td  align='left'>2</td><td  align='left'>3</td><td  align='left'>4</td><td  align='left'>5</td></tr>
+</table>
+<p class='vspace'></p><p>Or, if you're using just the accelerometer:
+</p>
+<p class='vspace'></p>
+<table  cellpadding='3' border='1'><tr ><td  align='left'><strong><span class='wikiword'>ADXL3xx</span> Pin</strong></td><td  align='left'>Self-Test</td><td  align='left'><span class='wikiword'>ZOut</span></td><td  align='left'><span class='wikiword'>YOut</span></td><td  align='left'><span class='wikiword'>XOut</span></td><td  align='left'>Ground</td><td  align='left'>VDD</td></tr>
+<tr ><td  align='left'><strong>Arduino Pin</strong></td><td  align='left'><em>None</em> (unconnected)</td><td  align='left'>Analog Input 1</td><td  align='left'>Analog Input 2</td><td  align='left'>Analog Input 3</td><td  align='left'>GND</td><td  align='left'>5V</td></tr>
+</table>
+<p class='vspace'></p><h3>Code</h3>
+<div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp;ADXL3xx<br />
+&nbsp;<br />
+&nbsp;Reads an Analog Devices ADXL3xx accelerometer and communicates the<br />
+&nbsp;acceleration to the computer. &nbsp;The pins used are designed to be easily<br />
+&nbsp;compatible with the breakout boards from Sparkfun, available from:<br />
+&nbsp;http://www.sparkfun.com/commerce/categories.php?c=80<br />
+<br />
+&nbsp;http://arduino.cc/en/Tutorial/ADXL3xx<br />
+<br />
+&nbsp;The circuit:<br />
+&nbsp;analog 0: accelerometer self test<br />
+&nbsp;analog 1: z-axis<br />
+&nbsp;analog 2: y-axis<br />
+&nbsp;analog 3: x-axis<br />
+&nbsp;analog 4: ground<br />
+&nbsp;analog 5: vcc<br />
+&nbsp;<br />
+&nbsp;created 2 Jul 2008<br />
+&nbsp;by David A. Mellis<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Tom Igoe <br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+<br />
+*/</span><br />
+<br />
+<span class="co1">// these constants describe the pins. They won't change:</span><br />
+const <span class="kw1">int</span> groundpin <span class="sy0">=</span> <span class="nu0">18</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// analog input pin 4 -- ground</span><br />
+const <span class="kw1">int</span> powerpin <span class="sy0">=</span> <span class="nu0">19</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// analog input pin 5 -- voltage</span><br />
+const <span class="kw1">int</span> xpin <span class="sy0">=</span> A3<span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// x-axis of the accelerometer</span><br />
+const <span class="kw1">int</span> ypin <span class="sy0">=</span> A2<span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// y-axis</span><br />
+const <span class="kw1">int</span> zpin <span class="sy0">=</span> A1<span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// z-axis (only on 3-axis models)</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// initialize the serial communications:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <br />
+&nbsp; <span class="co1">// Provide ground and power by using the analog inputs as normal</span><br />
+&nbsp; <span class="co1">// digital pins. &nbsp;This makes it possible to directly connect the</span><br />
+&nbsp; <span class="co1">// breakout board to the Arduino. &nbsp;If you use the normal 5V and</span><br />
+&nbsp; <span class="co1">// GND pins on the Arduino, you can remove these lines.</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>groundpin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>powerpin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>groundpin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span> <br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>powerpin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
+<span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// print the sensor values:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="kw1">analogRead</span><span class="br0">&#40;</span>xpin<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// print a tab between values:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\t</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="kw1">analogRead</span><span class="br0">&#40;</span>ypin<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// print a tab between values:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es1">\t</span>&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="kw1">analogRead</span><span class="br0">&#40;</span>zpin<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// delay before next reading:</span><br />
+&nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='ADXL3xxf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>Data</h3>
+<p>Here are some accelerometer readings collected by the positioning the y-axis of an <span class='wikiword'>ADXL322</span> 2g accelerometer at various angles from ground.  Values should be the same for the other axes, but will vary based on the sensitivity of the device.  With the axis horizontal (i.e. parallel to ground or 0&deg;), the accelerometer reading should be around 512, but values at other angles will be different for a different accelerometer (e.g. the <span class='wikiword'>ADXL302</span> 5g one).
+</p>
+<p class='vspace'></p>
+<table  cellpadding='3' border='1'><tr ><td  align='left'><strong>Angle</strong></td><td  align='left'>-90</td><td  align='left'>-80</td><td  align='left'>-70</td><td  align='left'>-60</td><td  align='left'>-50</td><td  align='left'>-40</td><td  align='left'>-30</td><td  align='left'>-20</td><td  align='left'>-10</td><td  align='left'>0</td><td  align='left'>10</td><td  align='left'>20</td><td  align='left'>30</td><td  align='left'>40</td><td  align='left'>50</td><td  align='left'>60</td><td  align='left'>70</td><td  align='left'>80</td><td  align='left'>90</td></tr>
+<tr ><td  align='left'><strong>Acceleration</strong></td><td  align='left'>662</td><td  align='left'>660</td><td  align='left'>654</td><td  align='left'>642</td><td  align='left'>628</td><td  align='left'>610</td><td  align='left'>589</td><td  align='left'>563</td><td  align='left'>537</td><td  align='left'>510</td><td  align='left'>485</td><td  align='left'>455</td><td  align='left'>433</td><td  align='left'>408</td><td  align='left'>390</td><td  align='left'>374</td><td  align='left'>363</td><td  align='left'>357</td><td  align='left'>355</td></tr>
+</table>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Reference/PinMode.html'><code>pinMode()</code></a>
+</li><li><a class='wikilink' href='../Reference/DigitalWrite.html'><code>digitalWrite()</code></a>
+</li><li><a class='wikilink' href='../Reference/AnalogRead.html'><code>analogRead()</code></a>
+</li><li><a class='wikilink' href='../Serial/Begin.html'><code>serial.begin()</code></a>
+</li><li><a class='wikilink' href='../Serial/Print.html'><code>serial.print()</code></a>
+<p class='vspace'></p></li><li><a class='wikilink' href='AnalogInput.html'>AnalogInput</a> - Use a potentiometer to control the blinking of an LED. 
+</li><li><a class='wikilink' href='AnalogInOutSerial.html'>AnalogInOutSerial</a> - read an analog input, map its values, and then use that information to dim or brighten an LED. 
+</li><li><a class='wikilink' href='Memsic2125.html'>Memsic2125</a> - read a two axis accelerometer
+</li><li><a class='wikilink' href='Knock.html'>Knock</a> - detect knocks/impacts with a piezo element
+</li><li><a class='wikilink' href='Ping.html'>Ping</a> - detect objects with an ultrasonic range finder
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/ADXL3xx" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='ADXL3xx264b.html?action=edit'>Edit Page</a> | <a href='ADXL3xxad68.html?action=diff'>Page History</a> | <a href='ADXL3xx60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

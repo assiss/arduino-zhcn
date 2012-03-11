@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - ArduinoBoardFioProgramming </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='Buy.html'>Buy</a>
+<a class='wikilink' href='Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='Hardware.html'>Hardware</a>
+<a class='wikilink' href='FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<h2>Arduino Fio Programming</h2>
+<p>The <span class='wikiword'>ATmega328P</span> on the Arduino Fio comes preburned with a <a class='wikilink' href='../Guide/Environment5078.html'>bootloader</a> that allows you to upload new code to it without the use of an external hardware programmer. It communicates using the original <span class='wikiword'>STK500</span> protocol (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/doc2525.pdf' rel='nofollow'>reference</a>, <a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/avr061.zip' rel='nofollow'>C header files</a>).
+</p>
+<p class='vspace'></p><p>There are two ways you can upload new sketches to the Arduino Fio: you can use an FTDI USB-to-serial cable, or USB-to-serial adaptor board; or you can program it wirelessly, over a pair of <span class='wikiword'>XBee</span> radios. If you're new to the <span class='wikiword'>XBee</span> radios, it's helpful to know a bit about them before attempting the wireless programming. This <a class='urllink' href='http://itp.nyu.edu/physcomp/Tutorials/XbeeBasics' rel='nofollow'>introduction</a> may help.
+</p>
+<p class='vspace'></p><p>You can also bypass the bootloader and program the <span class='wikiword'>ATmega328P</span> with an external programmer; see <a class='wikilink' href='../Hacking/MiniBootloader.html'>these instructions</a> for details.
+</p>
+<p class='vspace'></p><h3>Wired Programming</h3>
+<p><span class='wikiword'>LIke</span> all Arduino boards, the Arduino Fio can be programmed with the Arduino software (<a class='wikilink' href='Software.html'>download</a>). If you're new to Arduino, see the <a class='wikilink' href='../Guide/HomePage.html'>Getting Started Guide</a> , the <a class='wikilink' href='../Reference/HomePage.html'>reference</a> and <a class='wikilink' href='../Tutorial/HomePage.html'>tutorials</a>.
+</p>
+<p class='vspace'></p><p>The Fio does not have a built-in USB-to-serial adaptor, so if you're going to program it over USB, you'll need an adapter. Either of these will work well:
+</p>
+<p class='vspace'></p>
+<table  width='100%' border='0'><tr><td  valign='top'>
+<div><a class='urllink' href='http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=33&amp;products_id=70&amp;zenid=820efea6fe32ea04a0a7879262db3e54' rel='nofollow'><img width='150px' src='../uploads/Main/FTDI_cable.jpg' alt='' title='' /></a><br /><em>FTDI 3.3V cable, available from <a class='urllink' href='http://www.adafruit.com/' rel='nofollow'>Adafruit.com</a></em> </div>
+</td><td  valign='top'>
+<div><a class='urllink' href='http://www.sparkfun.com/commerce/product_info.php?products_id=8772' rel='nofollow'><img width='150px' src='../uploads/Main/FTDI_adaptor.jpg' alt='' title='' /></a><br /><em>Sparkfun's FTDI Basic Breakout adaptor.<br /> This has the same pin configuration as the FTDI cable</em></div>
+</td></tr></table>
+<p><br clear='all' />
+To program the Fio using either FTDI cable or an adaptor with the same pin configuration, attach a row of male pin headers to the cable or adaptor like so:
+</p>
+<p class='vspace'></p>
+<table  width='100%' border='0'><tr><td  valign='top'>
+<div><img width='150' src='../uploads/Main/fio_pin_headers.jpg' alt='' title='' /></div>
+</td><td  valign='top'>
+<div><img width='150' src='../uploads/Main/FTDI_pin_headers.jpg' alt='' title='' /></div>
+<p class='vspace'></p></td></tr></table>
+<p><br clear='all' />
+</p>
+<p class='vspace'></p><p>Then connect the headers to the FTDI pins on the Fio:
+</p>
+<p class='vspace'></p>
+<table  width='100%' border='0'><tr><td  valign='top'>
+<div><img width='150' src='../uploads/Main/fio_wired_programming.jpg' alt='' title='' /></div>
+<p><em>Using the adaptor to program a Fio</em>
+</p></td><td  valign='top'>
+<div><img width='150' src='../uploads/Main/FTDI_wired_programming.jpg' alt='' title='' /></div>
+<p><em>Using the FTDI cable to program a Fio</em>
+</p></td></tr></table>
+<p><br clear='all' />
+</p>
+<p class='vspace'></p><p>These are alternative ways to program a Fio with a L-shaped plug and low-profile sockets:
+</p>
+<p class='vspace'></p>
+<table  width='100%' border='0'><tr><td  valign='top'>
+<div><img width='240' src='../uploads/Main/fio_wired_programming_with_sockets.jpg' alt='' title='' /></div>
+<p><em>Using a L-shaped plug and soldered low-profile sockets to program a Fio</em>
+</p></td><td  valign='top'>
+<div><img width='240' src='../uploads/Main/fio_wired_programming_without_sockets.jpg' alt='' title='' /></div>
+<p><em>Using a L-shaped plug without soldered low-profile sockets to program a Fio</em>
+</p></td></tr></table>
+<p><br clear='all' />
+</p>
+<p class='vspace'></p><p>If your headers don't fit snugly in the holes (and most won't), you should hold the connector firmly so that the metal of the pins touches the metal of the holes while you're programming.
+</p>
+<p class='vspace'></p><p>When your cable is connected to the Fio, open the Arduino programming environment, choose <strong>Fio</strong> from the <strong>Tools--&gt;Board</strong> menu. Then choose your serial port from the serial port menu, and you're ready to program  If you're using the FTDI adaptor, you'll see the TX and RX lights flicker.  You won't see any visible sign on the Fio, but you will see the following in the IDE when you've successfully uploaded code:
+</p>
+<p class='vspace'></p><div><img src='../uploads/Main/upload_complete.png' alt='' title='' /></div>
+<p class='vspace'></p><p><strong>NOTE:</strong> Please remove a <span class='wikiword'>XBee</span> modem from a Fio board while uploading sketches.
+</p>
+<p class='vspace'></p><p><br clear='all' />
+</p><hr />
+<p><br clear='all' />
+</p>
+<p class='vspace'></p><h3>Wireless Programming</h3>
+<p><em>This tutorial borrows from <a class='urllink' href='http://www.ladyada.net/make/xbee/arduino.html' rel='nofollow'>Xbee Adapter - wireless Arduino programming</a> by Limor Fried</em>
+</p>
+<p class='vspace'></p><p>In order to upload sketches wirelessly using <span class='wikiword'>XBee</span> radios, you'll need the following:
+</p><ul><li><strong>two <a class='urllink' href='http://www.digi.com/products/wireless/point-multipoint/xbee-series1-module.jsp#overview' rel='nofollow'>XBee or XBee Pro 802.15.4</a>  <span class='wikiword'>XBee</span> modules.</strong> These are also known as Series 1 modules, for those who've worked with <span class='wikiword'>XBees</span> for awhile.  You can't use the <span class='wikiword'>DigiMesh</span> or ZB series radios (aka Series 2 or 2.5). Those modules do not allow for automatic IO Line Passing that is required for toggling the reset pin when programming. 
+</li><li><strong>a recent version of the 802.15.4 firmware (10A5 or later).</strong> If you need to upgrade your firmware, you need to use <a class='urllink' href='http://ftp1.digi.com/support/utilities/40002637_c.exe' rel='nofollow'>X-CTU</a> (Windows only, unfortunately). If you confirmed these points, please follow the following steps.
+</li><li><strong>a USB-to-serial adaptor</strong> for one of the modules.  You can use Sparkfun's <a class='urllink' href='http://www.sparkfun.com/commerce/product_info.php?products_id=8687' rel='nofollow'>XBee Explorer USB</a> or Adafruit's <a class='urllink' href='http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=29&amp;products_id=126&amp;zenid=820efea6fe32ea04a0a7879262db3e54' rel='nofollow'>XBee Adapter kit</a> or any other FTDI-to-<span class='wikiword'>XBee</span> adaptor.
+</li></ul><p class='vspace'></p><h4>Modifying the <span class='wikiword'>XBee</span>-to-USB adaptor</h4>
+<p>On your USB-to-serial adaptor, solder in a tiny jumper between the RTS pin and D3 as shown here:
+</p>
+<p class='vspace'></p>
+<table  width='100%' border='0'><tr><td  valign='top'>
+<div><img width='200px' src='../uploads/Main/XBeeExplorerUSBForFio.jpg' alt='' title='' /></div>
+<p><em>Modified <span class='wikiword'>XBee</span> Explorer USB</em>
+</p></td><td  valign='top'>
+<div><img width='200px' src='../uploads/Main/AdafruitXBeeUSBForFio.jpg' alt='' title='' /></div>
+<p><em>Modified Adafruit <span class='wikiword'>XBee</span> Adapter Kit<br />The arrow shows the added solder connection</em>
+</p></td></tr></table>
+<p class='vspace'></p><h3>Preparing the <span class='wikiword'>XBee</span> radios</h3>
+<p>In order to program the Fio wirelessly, you need to configure two <span class='wikiword'>XBee</span> radios, one for the Fio and one to connect to the programming computer serially. The latter will connect to your computer using the adapters mentioned in the last step. Once you've done that, you'll program the Fio using the radio link just like a normal Arduino USB-to-serial link.
+</p>
+<p class='vspace'></p><p>The settings for the two radios are as follows:
+</p>
+<p class='vspace'></p>
+<table  width='70%' align='center' border='1' cellpadding = 3 cellspacing='0' ><tr><td  valign='top'>
+<p><strong>Parameter</strong>
+</p></td><td  valign='top'>
+<p><strong>Programming Radio</strong>
+</p></td><td  valign='top'>
+<p><strong>Fio Radio</strong>
+</p></td></tr><tr><td  valign='top'>
+<p>BD
+</p></td><td  valign='top'>
+<p>4 (Atmega168) or  6 (Atmega328)
+</p></td><td  valign='top'>
+<p>4 (Atmega168) or  6 (Atmega328)
+</p></td></tr><tr><td  valign='top'>
+<p>ID
+</p></td><td  valign='top'>
+<p>user's preference (0000 to FFFF)
+</p></td><td  valign='top'>
+<p>user's preference (0000 to FFFF)
+</p></td></tr><tr><td  valign='top'>
+<p>MY
+</p></td><td  valign='top'>
+<p>User's preference, e.g. 0000
+</p></td><td  valign='top'>
+<p>user's preference, e.g. 0001
+</p></td></tr><tr><td  valign='top'>
+<p>DL
+</p></td><td  valign='top'>
+<p>FFFF or Fio's MY value 
+</p></td><td  valign='top'>
+<p>programmer's MY value
+</p></td></tr><tr><td  valign='top'>
+<p>D3
+</p></td><td  valign='top'>
+<p>3 
+</p></td><td  valign='top'>
+<p>5 
+</p></td></tr><tr><td  valign='top'>
+<p>IC
+</p></td><td  valign='top'>
+<p>8
+</p></td><td  valign='top'>
+<p>not set
+</p></td></tr><tr><td  valign='top'>
+<p>RR
+</p></td><td  valign='top'>
+<p>3
+</p></td><td  valign='top'>
+<p>not set
+</p></td></tr><tr><td  valign='top'>
+<p>IU
+</p></td><td  valign='top'>
+<p>not set
+</p></td><td  valign='top'>
+<p>0
+</p></td></tr><tr><td  valign='top'>
+<pre> IA
+</pre></td><td  valign='top'>
+<p>not set
+</p></td><td  valign='top'>
+<p>FFFF
+</p></td></tr><tr><td  valign='top'>
+<pre> RO
+</pre></td><td  valign='top'>
+<p>10 
+</p></td><td  valign='top'>
+<p>10 
+</p></td></tr></table>
+<p><strong>Note:</strong> If you set the programmer's destination address (DL) to FFFF, it will re-program all Fios in its PAN ID.  To program one Fio at a time wirelessly while others are on, set the programmer's DL to that Fio's MY address.
+</p>
+<p class='vspace'></p><h4>Modifying the serial port settings (Windows only)</h4>
+<p>If you're running Windows, you have to make a slight change to the driver preferences. In the Device Manager, select the <strong>USB COM port</strong>. Then right click and select <strong>Properties</strong>. Click on the <strong>Port Settings</strong> tab, and click on <strong>Advanced...</strong>, then make <strong>Set RTS On Close</strong> is selected and click <strong>OK</strong> to apply settings.
+</p>
+<p class='vspace'></p><h3>How to configure <span class='wikiword'>XBee</span> modems</h3>
+<p>You can configure your radios using a terminal application, or using X-CTU on Windows, or you can use the <a class='urllink' href='../uploads/Main/XBeeConfigTool.zip' rel='nofollow'>Fio XBee Config Tool</a>. This is a modified version of Shigeru Kobayashi's <a class='urllink' href='http://funnel.googlecode.com/files/XBeeConfigTool.zip' rel='nofollow'>XBeeConfigTool</a>.
+</p>
+<p class='vspace'></p><h4>Using Arduino Fio <span class='wikiword'>XbeeConfigTool</span></h4>
+<ol><li>Choose a proper serial port
+</li><li>Choose a proper mode (Programmer or Fio)
+</li><li>Choose a proper baud rate (57600bps)
+</li><li>Set a proper PAN ID (e.g. 1234, should be same on both)
+</li><li>Set a proper MY ID (e.g. 1, for end devices, 0 for programmer)
+</li><li>Press the Configure button to configure the <span class='wikiword'>XBee</span> modem 
+</li></ol><p class='vspace'></p><div><img width='400px' src='../uploads/Main/FioXBeeConfigToolCoordinatorExample.jpg' alt='' title='' /></div>
+<p class='vspace'></p><div><img width='400px' src='../uploads/Main/FioXBeeConfigToolEndDevicesExample.jpg' alt='' title='' /></div>
+<p class='vspace'></p><h4>Configuring the radios using a serial terminal application</h4>
+<p>If you prefer to set your settings manually, you can set them using any Serial terminal application, such as <a class='urllink' href='http://freeware.the-meiers.org/' rel='nofollow'>CoolTerm</a>. Connect the adapter to your computer, and open its serial port at 9600 bps using your favorite serial terminal application. 
+</p>
+<p class='vspace'></p><p>Set your terminal application's termination string to be a carriage return (ASCI 0x0D) only.  Then open the port, and type:
+</p>
+<p class='vspace'></p><p><code>+++</code>
+</p>
+<p class='vspace'></p><p>The <span class='wikiword'>XBee</span> will respond:
+</p>
+<p class='vspace'></p><p><code>OK</code>
+</p>
+<p class='vspace'></p><p>For the programmer radio, type:
+</p>
+<p class='vspace'></p><p><code>ATRE,<span class='wikiword'>BD6</span>,<span class='wikiword'>ID1234</span>,<span class='wikiword'>MY0</span>,DLFFFF,D33,<span class='wikiword'>IC8</span>, <span class='wikiword'>RR3</span>,<span class='wikiword'>RO10</span>,WR</code>
+</p>
+<p class='vspace'></p><p>The <span class='wikiword'>XBee</span> will respond:
+</p>
+<p class='vspace'></p><pre>
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+
+</pre>
+<p class='vspace'></p><p>For the Fio radio, type:
+</p>
+<p class='vspace'></p><p><code>ATRE,<span class='wikiword'>BD6</span>,<span class='wikiword'>ID1234</span>,<span class='wikiword'>MY1</span>,<span class='wikiword'>DL0</span>,D35,<span class='wikiword'>IU0</span>,IAFFFF,<span class='wikiword'>RO10</span>,WR</code>
+</p>
+<p class='vspace'></p><p>The <span class='wikiword'>XBee</span> will respond:
+</p><pre>
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+
+</pre>
+<p class='vspace'></p><p>That's it!  Now connect the Fio radio to your Fio, leave the programming radio in the <span class='wikiword'>XBee</span> adapter, and you're ready to upload sketches to your Fio.
+</p>
+<p class='vspace'></p><p><br clear='all' />
+</p><hr />
+<p><br clear='all' />
+</p>
+<p class='vspace'></p><h3>Uploading sketches from an Arduino IDE to a Fio board</h3>
+<p>Uploading sketches to the Fio is similar to other Arduino boards.
+</p>
+<p class='vspace'></p><ol><li>Choose <strong>Tools/Board/Arduino Fio</strong> or <strong>Tools/Board/Arduino Pro or Pro Mini (8MHz)</strong>
+</li><li>Choose a proper serial port in <strong>Tools/Serial Port</strong>
+</li><li>Write a sketch and press the Upload button
+</li></ol><p class='vspace'></p><p>As you upload, you should see the green RSSI light on the Fio light up. If you're using an <span class='wikiword'>XBee</span> Explorer, you'll also see the TX and RX lights on it flicker as the sketch uploads. 
+</p>
+<p class='vspace'></p><p>If the Fio does not respond, here are the most common causes of error:
+</p><ol><li>make sure the Fio is powered.  You can use USB power if you don't have a battery.
+</li><li>make sure the slider switch on the Fio is turned ON
+</li><li>Check your radio configurations.  Did you miss a setting?  This is particularly common if you confgured them using a serial terminal application.
+</li></ol><p class='vspace'></p><p>When in doubt, check the Fio by programming it over a wired connection as described above.
+</p>
+<p class='vspace'></p><p><br clear='all' />
+</p>
+<p class='vspace'></p><hr />
+<p class='vspace'></p><p>When your'e ready to start writing sketches for the Arduino Fio, here are some <a class='wikilink' href='ArduinoBoardFioTips.html'>programming tips</a> that will make your life easier.
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Main/ArduinoBoardFioProgramming" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='ArduinoBoardFioProgramming264b.html?action=edit'>Edit Page</a> | <a href='ArduinoBoardFioProgrammingad68.html?action=diff'>Page History</a> | <a href='ArduinoBoardFioProgramming60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

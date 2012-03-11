@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - LibraryTutorial </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='../Tutorial/HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
+</p>
+<p class='vspace'></p><h2>为Arduino编写函数库</h2>
+<p>本文介绍如何为Arduino编写函数库。本文从一个简单的摩斯电码例子开始，描述如何将它的功能改写成函数库。这将使代码变得更为易用，也更易维护和升级功能。
+</p>
+<p class='vspace'></p><p>先从一个简单的摩斯电码程序开始：
+</p>
+<p class='vspace'></p><pre>
+int pin = 13;
+
+void setup()
+{
+  pinMode(pin, OUTPUT);
+}
+
+void loop()
+{
+  dot(); dot(); dot();
+  dash(); dash(); dash();
+  dot(); dot(); dot();
+  delay(3000);
+}
+
+void dot()
+{
+  digitalWrite(pin, HIGH);
+  delay(250);
+  digitalWrite(pin, LOW);
+  delay(250);
+}
+
+void dash()
+{
+  digitalWrite(pin, HIGH);
+  delay(1000);
+  digitalWrite(pin, LOW);
+  delay(250);
+}
+
+</pre>
+<p class='vspace'></p><p>运行以上程序，Arduino的13脚LED将按SOS方式（一种求救信号格式）闪烁。
+</p>
+<p class='vspace'></p><p>这段代码中的一部分可以写成库函数： 
+首先，用于闪烁的<strong>blink()</strong>和<strong>dash()</strong>两个功能函数；
+其次，用于指定使用哪个管脚的<strong>ledPin</strong>变量
+最后，初始化管脚的<strong>pinMode()</strong>函数调用
+<p class='vspace'></p><p>让我们把这段代码改写成函数库吧！
+</p>
+<p class='vspace'></p><p>一个函数库应至少包含两个文件：头文件（扩展名为*.h*）和源代码文件（扩展名为*.cpp*）。头文件包含函数库的声明，即函数库的功能说明列表；源代码文件包含函数库的实际实现。让我们来为这个函数库起个名字吧----“Morse”，那么头文件就命名为Morse.h。看看这个文件里都有些什么内容----开始的时候可能会显得有些奇怪，但当你看到代码实现之后就能完全理解是怎么回事了。
+</p>
+<p class='vspace'></p><p>头文件的核心内容，是一个封装了成员函数与相关变量的类声明：
+</p>
+<p class='vspace'></p><pre>
+class Morse
+{
+  public:
+    Morse(int pin);
+    void dot();
+    void dash();
+  private:
+    int _pin;
+};
+
+</pre>
+<p class='vspace'></p><p>简单点说，类就是一个把函数和变量放在一起的集合。类里的函数与变量，其访问权限可以是<em>public</em>（公有，即提供给函数库的使用者使用），也可以是<em>private</em>（私有，即只能由类自己使用）。类有个特殊的函数--<em>构造函数</em>，它用于创建类的一个<em>实例</em>。构造函数的类型与类相同，且没有返回值。
+</p>
+<p class='vspace'></p><p>头文件里还有些其它杂项。如为了使用标准类型和Arduino语言的常量，需要#include语句（Arduino的IDE会自动为普通代码加上这些#include语句，但不会自动为函数库加）。这些#include语句类似：
+</p>
+<p class='vspace'></p><pre>
+#include "WProgram.h"
+
+</pre>
+<p class='vspace'></p><p>最后，为了防止多次引用头文件造成各种问题，我们常用一种看起来有点奇怪的方式来封装整个头文件的内容：
+</p>
+<p class='vspace'></p><pre>
+#ifndef Morse_h
+#define Morse_h
+
+//#include语句，类声明，以及其它各种代码……
+
+#endif
+
+</pre>
+<p class='vspace'></p><p>该封装的主要作用是防止头文件被引用多次。
+</p>
+<p class='vspace'></p><p>通常也会在函数库的头文件里，加上一些关于作者、用途、日期、协议等注释。
+</p>
+<p class='vspace'></p><p>最终完成的头文件如下：
+</p>
+<p class='vspace'></p><pre>
+/*
+  Morse.h - Library for flashing Morse code.
+  Created by David A. Mellis, November 2, 2007.
+  Released into the public domain.
+*/
+#ifndef Morse_h
+#define Morse_h
+
+#include "WProgram.h"
+
+class Morse
+{
+  public:
+    Morse(int pin);
+    void dot();
+    void dash();
+  private:
+    int _pin;
+};
+
+#endif
+
+</pre>
+<p class='vspace'></p><p>接下来，让我们继续完成源代码文件，Morse.cpp。
+</p>
+<p class='vspace'></p><p>首先仍然是一些#include语句。这些语句让下面的程序能够使用Arduino的标准函数和刚才在Morse.h里声明的类。
+</p>
+<p class='vspace'></p><pre>
+#include "WProgram.h"
+#include "Morse.h"
+
+</pre>
+<p class='vspace'></p><p>接下来是构造函数。再次说下，构造函数是当创建类的一个实例时调用的。在本例中，用于指定使用哪个管脚。我们把该管脚设置成输出模式并且用一个私有成员变量保存起来，以备其它函数使用。
+</p>
+<p class='vspace'></p><pre>
+Morse::Morse(int pin)
+{
+  pinMode(pin, OUTPUT);
+  _pin = pin;
+}
+
+</pre>
+<p class='vspace'></p><p>这段代码看起来有好几个怪地方。一是函数名之前的<strong>Morse::</strong>。这其实是用来指定该函数是<strong>Morse</strong>类的成员函数。下面定义类的其它成员函数时，将会一再出现。另一个不常见的是私有成员变量名<strong>_pin</strong>中的下划线。其实你可以按C++的命名规则，给它任意命名。加下划线是一种约定俗成的不成文规范，让我们既能区分传进来的<strong>pin</strong>参数，也能清晰地知道它的<strong>private</strong>私有性质。
+</p>
+<p class='vspace'></p><p>下面终于到了我们转换实际代码的时刻了。除了<strong>Morse::</strong>和<strong>_pin</strong>，下面的代码与之前看起来没啥两样：
+</p>
+<p class='vspace'></p><pre>
+void Morse::dot()
+{
+  digitalWrite(_pin, HIGH);
+  delay(250);
+  digitalWrite(_pin, LOW);
+  delay(250);  
+}
+
+void Morse::dash()
+{
+  digitalWrite(_pin, HIGH);
+  delay(1000);
+  digitalWrite(_pin, LOW);
+  delay(250);
+}
+
+</pre>
+<p class='vspace'></p><p>好，让我们看看Morse.cpp全貌吧：
+</p>
+<p class='vspace'></p><pre>
+/*
+  Morse.cpp - Library for flashing Morse code.
+  Created by David A. Mellis, November 2, 2007.
+  Released into the public domain.
+*/
+
+#include "WProgram.h"
+#include "Morse.h"
+
+Morse::Morse(int pin)
+{
+  pinMode(pin, OUTPUT);
+  _pin = pin;
+}
+
+void Morse::dot()
+{
+  digitalWrite(_pin, HIGH);
+  delay(250);
+  digitalWrite(_pin, LOW);
+  delay(250);  
+}
+
+void Morse::dash()
+{
+  digitalWrite(_pin, HIGH);
+  delay(1000);
+  digitalWrite(_pin, LOW);
+  delay(250);
+}
+
+</pre>
+<p class='vspace'></p><p>这就是所有要做的工作（当然还有一些别的选项，容后再述）。来看看怎么使用这个函数库吧。
+</p>
+<p class='vspace'></p><p>
+<ul>
+    <li>在你的代码库目录里（sketchbook中的<strong>libraries</strong>目录），创建一个叫<strong>Morse</strong>的子目录<br/>
+    <li>把Morse.h和Morse.cpp拷贝到Morse目录里<br/>
+    <li>启动Arduino IDE，打开<strong>Sketch > Import Library</strong>菜单，此时应能看到<strong>Morse</strong>菜单项。
+</ul>本函数库将与使用它的代码一起编译。若编译不成功，请确认这些文件的扩展名是.cpp和.h，而不是.pde或.txt之类。
+</p>
+<p class='vspace'></p><p>让我们用刚创建的函数库来重写SOS程序吧：
+</p>
+<p class='vspace'></p><pre>
+#include &lt;Morse.h&gt;
+
+Morse morse(13);
+
+void setup()
+{
+}
+
+void loop()
+{
+  morse.dot(); morse.dot(); morse.dot();
+  morse.dash(); morse.dash(); morse.dash();
+  morse.dot(); morse.dot(); morse.dot();
+  delay(3000);
+}
+
+</pre>
+<p class='vspace'></p><p>与之前的程序相比，有一些不同：
+</p>
+<p class='vspace'></p><p>加了一个#include语句。这条语句让程序可以使用Morse库且包含了对应的代码，最终下载到Arduino板上。若不再需要某个函数库，则应删除对应的#include语句，以减少生成的程序大小，节约空间。
+</p>
+<p class='vspace'></p><p>创建了Morse类的一个实例：<strong>morse</strong>:
+</p>
+<p class='vspace'></p><pre>
+Morse morse(13);
+
+</pre>
+<p class='vspace'></p><p>当这行代码被执行时（实际上这行代码在<strong>setup</strong>函数之前执行），将传入参数（本例中的参数是<strong>13</strong>）并调用Morse类的构造函数。
+</p>
+<p class='vspace'></p><p>注意<strong>setup()</strong>函数现在里面没语句了，因为原先对<strong>pinMode()</strong>的调用已经转移到函数库的构造函数里了。
+</p>
+<p class='vspace'></p><p>最后，为了调用<strong>dot()</strong>和<strong>dash()</strong>成员函数，需要在之前加上<strong>morse.</strong>这样的前缀----需要使用的实例名。可以在程序里定义多个实例，每个实例拥有各自的管脚（保存在每个实例自己的<strong>_pin</strong>变量里）。调用某个实例的成员函数，使用的就是该实例的成员变量。如下例：
+</p>
+<p class='vspace'></p><pre>
+Morse morse(13);
+Morse morse2(12);
+
+</pre>
+<p class='vspace'></p><p>在调用<strong>morse2.dot()</strong>时，<strong>_pin</strong>为12。
+</p>
+<p class='vspace'></p><p>新程序里关于Morse函数库的内容无法被IDE识别和高亮。很不幸的是，目前Arduino的IDE无法自动识别自定义函数库里的内容（这个功能应该有），所以需要给Arduino一点小帮助：在Morse的文件夹里，创建一个叫<strong>keywords.txt</strong>文件，内容如下：
+</p>
+<p class='vspace'></p><pre>
+Morse	KEYWORD1
+dash	KEYWORD2
+dot	KEYWORD2
+
+</pre>
+<p class='vspace'></p><p>每一行均由关键字的名字、TAB键（非空格）、关键字种类顺序组成。类名是<span class='wikiword'>KEYWORD1</span>，将被高亮成橘黄色；函数名是<span class='wikiword'>KEYWORD2</span>，将被高亮成棕色。重启Arduino IDE后这些设置将生效。
+</p>
+<p class='vspace'></p><p>若在函数库的文件夹内包含一些使用例子，会让库更易使用。只要在Morse文件夹内创建<strong>examples</strong>目录，然后把刚才写的程序（命名为SOS程序）文件保存到该目录即可。你可以通过<strong>Sketch > ShowSketch Folder</strong>菜单快速找到对应库函数的目录。重启Arduino IDE后（我保证这是最后一次重启），将会在<strong>File > Sketchbook > Examples</strong>菜单里找到<strong>Library-Mourse</strong>例子。最好再加一些注释来说明如何使用你编写的函数库。
+</p>
+<p class='vspace'></p><p>此处可下载完成的例子函数库：<a class='urllink' href='../uploads/Hacking/Morse.zip' rel='nofollow'>Morse.zip</a>.
+</p>
+<p class='vspace'></p><p>这就是当前需要做的所有事情，不过稍后也许我会写一个更高级的函数库创建指南。同时，若你有任何问题或建议，请发往<a class='urllink' href='http://arduino.cc/cgi-bin/yabb2/YaBB.pl?board=dev' rel='nofollow'>Software Development forum</a>.
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Hacking/LibraryTutorial" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='LibraryTutorial264b.html?action=edit'>Edit Page</a> | <a href='LibraryTutorialad68.html?action=diff'>Page History</a> | <a href='LibraryTutorial60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

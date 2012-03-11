@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Fade </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Analog I/O</em>
+</p>
+<p class='vspace'></p><h3>Fading</h3>
+<p>Demonstrates the use of the <a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite()</a> function in fading an LED off and on. <span class='wikiword'>AnalogWrite</span> uses <a class='wikilink' href='PWM.html'>pulse width modulation (PWM)</a>, turning a digital pin on and off very quickly, to create a fading effect.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino board
+</li><li>Breadboard
+</li><li>a LED
+</li><li>a 220 ohm resistor
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<p>Connect the <strong>anode</strong> (the longer, positive leg) of your LED to digital output pin 9 on your Arduino through a 220-ohm resistor. Connect the <strong>cathode</strong> (the shorter, negative leg) directly to ground. 
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+</p><div><a class='urllink' href='../uploads/Tutorial/simplefade_bb.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/simplefade_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>Schematic</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p><div><a class='urllink' href='../uploads/Tutorial/simplefade_pin9_schem.png' rel='nofollow'><img width='300px' src='../uploads/Tutorial/simplefade_pin9_schem.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><h3>Code</h3>
+<p>After declaring pin 9 to be your <code>ledPin</code>, there is nothing to do in the <code>setup()</code> function of your code. 
+</p>
+<p class='vspace'></p><p>The <code>analogWrite()</code> function that you will be using in the main loop of your code requires two arguments: One telling the function which pin to write to, and one indicating what <a class='wikilink' href='PWM.html'>PWM</a> value to write. 
+</p>
+<p class='vspace'></p><p>In order to fade your LED off and on, gradually increase your PWM value from 0 (all the way off) to 255 (all the way on), and then back to 0 once again to complete the cycle.  In the sketch below, the PWM value is set using a variable called <code>brightness</code>.  Each time through the loop, it increases by the value of the variable <code>fadeAmount</code>. 
+</p>
+<p class='vspace'></p><p>If <code>brightness</code> is at either extreme of its value (either 0 or 255), then <code>fadeAmount</code> is changed to its negative. In other words, if <code>fadeAmount</code> is 5, then it is set to -5. If it's 55, then it's set to 5. The next time through the loop, this change causes <code>brightness</code> to change direction as well.
+</p>
+<p class='vspace'></p><p><code>analogWrite()</code> can change the PWM value very fast, so the delay at the end of the sketch controls the speed of the fade.  Try changing the value of the delay and see how it changes the program.
+</p>
+<p class='vspace'></p><div  class='code'>
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp;Fade<br />
+&nbsp;<br />
+&nbsp;This example shows how to fade an LED on pin 9<br />
+&nbsp;using the analogWrite() function.<br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+<span class="kw1">int</span> brightness <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// how bright the LED is</span><br />
+<span class="kw1">int</span> fadeAmount <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// how many points to fade the LED by</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span> <br />
+&nbsp; <span class="co1">// declare pin 9 to be an output:</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span><span class="nu0">9</span><span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span> <br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span> <br />
+&nbsp; <span class="co1">// set the brightness of pin 9:</span><br />
+&nbsp; <span class="kw1">analogWrite</span><span class="br0">&#40;</span><span class="nu0">9</span><span class="sy0">,</span> brightness<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
+<br />
+&nbsp; <span class="co1">// change the brightness for next time through the loop:</span><br />
+&nbsp; brightness <span class="sy0">=</span> brightness <span class="sy0">+</span> fadeAmount<span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// reverse the direction of the fading at the ends of the fade: </span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>brightness <span class="sy0">==</span> <span class="nu0">0</span> <span class="sy0">||</span> brightness <span class="sy0">==</span> <span class="nu0">255</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; fadeAmount <span class="sy0">=</span> <span class="sy0">-</span>fadeAmount <span class="sy0">;</span> <br />
+&nbsp; <span class="br0">&#125;</span> &nbsp; &nbsp; <br />
+&nbsp; <span class="co1">// wait for 30 milliseconds to see the dimming effect &nbsp; &nbsp;</span><br />
+&nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='Fadef687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<h3>See Also</h3>
+<ul><li><a class='wikilink' href='../Reference/Setup.html'>setup</a>()
+</li><li><a class='wikilink' href='../Reference/Loop.html'>loop</a>()
+</li><li><a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite</a>() 
+</li><li><a class='wikilink' href='../Reference/Int.html'>int</a>
+</li><li><a class='wikilink' href='../Reference/For.html'>for</a>
+</li><li><a class='wikilink' href='PWM.html'>PWM</a>
+<p class='vspace'></p></li><li><a class='wikilink' href='BareMinimum.html'>BareMinimum</a>: The bare minimum of code needed to start an Arduino sketch.
+</li><li><a class='wikilink' href='Blink.html'>Blink</a>: Turn an LED on and off.
+</li><li><a class='wikilink' href='DigitalReadSerial.html'>DigitalReadSerial</a>: Read a switch, print the state out to the Arduino Serial Monitor.
+</li><li><a class='wikilink' href='AnalogReadSerial.html'>AnalogReadSerial</a>: Read a potentiometer, print it's state out to the Arduino Serial Monitor.
+</li><li><a class='selflink' href='Fade.html'>Fade</a>: Demonstrates the use of analog output to fade an LED.
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/Fade" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Fade264b.html?action=edit'>Edit Page</a> | <a href='Fadead68.html?action=diff'>Page History</a> | <a href='Fade60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

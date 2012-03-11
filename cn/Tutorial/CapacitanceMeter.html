@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - CapacitanceMeter </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><h2>Capacitance Meter and RC Time Constants</h2>
+<p class='vspace'></p><div> <img width='350px' src='../uploads/Tutorial/RCSchem.png' alt='' title='' /></div>
+<p class='vspace'></p><h4>Overview: A resistor will charge a capacitor in TC seconds, where </h4>
+<ul><li>TC = R * C
+<p class='vspace'></p></li><li>TC = time constant in seconds
+</li><li>R = resistance in ohms
+</li><li>C = capacitance in farads (1 microfarad [ufd] = .0000001 farad = 10^-6 farads )
+</li></ul><p class='vspace'></p><p>The voltage at 1 Time Constant equals 63.2% of the charging voltage.
+</p>
+<p class='vspace'></p><p>Example: 1 megohm * 1 microfarad = 1 second<br />Example: 10k ohms  * 100 microfarad = 1 second
+</p>
+<p class='vspace'></p><div> <img width='450px' src='../uploads/Tutorial/RCTimeConstant.gif' alt='' title='' /></div>
+<p class='vspace'></p><h4>Experimental Setup</h4>
+<p>This sketch works because the Arduino pins can be in one of two states, which are electrically very different.
+</p>
+<p class='vspace'></p><ul><li>Input State (set with pinMode(pin, INPUT);)
+<ul><li>High Impedance (resistance) - Makes very little demand on the circuit that it is sampling
+</li><li>Good for reading sensors but not lighting LED's
+</li></ul><p class='vspace'></p></li><li>Output State (set with pinMode(pin, OUTPUT);)
+<ul><li>Low Impedance - Can provide 40 mA source (positive voltage), or sink (negative voltage) 
+</li><li>Good for lighting LED's, driving other circuits - useless for reading sensors.
+</li></ul></li></ul><p class='vspace'></p><p>Additionally the pins can be HIGH (+5 volts), to charge the capacitor; or LOW (ground) to discharge the capacitor
+</p>
+<p class='vspace'></p><div> <img width='350px' src='../uploads/Tutorial/CapacitanceMeterSchem.png' alt='' title='' /></div>
+<p class='vspace'></p><h4>Alogrithm for capacitance meter sketch</h4>
+<ul><li>Set discharge pin to INPUT (so it can't discharge the capacitor)
+</li><li>Record the start time with millis()
+</li><li>Set charge pin to OUTPUT and make it HIGH
+</li><li>Check the voltage repeatedly in a loop until it gets to 63.2% of total voltage.
+</li><li>After the cap is charged, subtract the current time from the start time to find out how long the capacitor took to charge.
+</li><li>Divide the Time in seconds by the charging Resistance in ohms to find the Capacitance.
+</li><li>Report the value with serial.print
+</li><li>Discharge the capacitor. To do this:
+<ul><li>Set the charge pin to Input
+</li><li>Set the discharge pin to OUTPUT and make it LOW 
+</li><li>Read the voltage to make sure the capacitor is fully discharged
+</li></ul></li><li>Loop and do it again
+</li></ul><p class='vspace'></p><h4>Arduino Sketch</h4>
+<pre>
+/*  RCTiming_capacitance_meter
+ *   Paul Badger 2008
+ *  Demonstrates use of RC time constants to measure the value of a capacitor 
+ *
+ * Theory   A capcitor will charge, through a resistor, in one time constant, defined as T seconds where
+ *    TC = R * C
+ * 
+ *    TC = time constant period in seconds
+ *    R = resistance in ohms
+ *    C = capacitance in farads (1 microfarad (ufd) = .0000001 farad = 10^-6 farads ) 
+ *
+ *    The capacitor's voltage at one time constant is defined as 63.2% of the charging voltage.
+ *
+ *  Hardware setup:
+ *  Test Capacitor between common point and ground (positive side of an electrolytic capacitor  to common)
+ *  Test Resistor between chargePin and common point
+ *  220 ohm resistor between dischargePin and common point
+ *  Wire between common point and analogPin (A/D input)
+ */
+
+#define analogPin      0          // analog pin for measuring capacitor voltage
+#define chargePin      13         // pin to charge the capacitor - connected to one end of the charging resistor
+#define dischargePin   11         // pin to discharge the capacitor
+#define resistorValue  10000.0F   // change this to whatever resistor value you are using
+                                  // F formatter tells compliler it's a floating point value
+
+unsigned long startTime;
+unsigned long elapsedTime;
+float microFarads;                // floating point variable to preserve precision, make calculations
+float nanoFarads;
+
+void setup(){
+  pinMode(chargePin, OUTPUT);     // set chargePin to output
+  digitalWrite(chargePin, LOW);  
+
+  Serial.begin(9600);             // initialize serial transmission for debugging
+}
+
+void loop(){
+  digitalWrite(chargePin, HIGH);  // set chargePin HIGH and capacitor charging
+  startTime = millis();
+
+  while(analogRead(analogPin) &lt; 648){       // 647 is 63.2% of 1023, which corresponds to full-scale voltage 
+  }
+
+  elapsedTime= millis() - startTime;
+ // convert milliseconds to seconds ( 10^-3 ) and Farads to microFarads ( 10^6 ),  net 10^3 (1000)  
+  microFarads = ((float)elapsedTime / resistorValue) * 1000;   
+  Serial.print(elapsedTime);       // print the value to serial port
+  Serial.print(" mS    ");         // print units and carriage return
+
+
+  if (microFarads &gt; 1){
+    Serial.print((long)microFarads);       // print the value to serial port
+    Serial.println(" microFarads");         // print units and carriage return
+  }
+  else
+  {
+    // if value is smaller than one microFarad, convert to nanoFarads (10^-9 Farad). 
+    // This is  a workaround because Serial.print will not print floats
+
+    nanoFarads = microFarads * 1000.0;      // multiply by 1000 to convert to nanoFarads (10^-9 Farads)
+    Serial.print((long)nanoFarads);         // print the value to serial port
+    Serial.println(" nanoFarads");          // print units and carriage return
+  }
+
+  /* dicharge the capacitor  */
+  digitalWrite(chargePin, LOW);             // set charge pin to  LOW 
+  pinMode(dischargePin, OUTPUT);            // set discharge pin to output 
+  digitalWrite(dischargePin, LOW);          // set discharge pin LOW 
+  while(analogRead(analogPin) &gt; 0){         // wait until capacitor is completely discharged
+  }
+
+  pinMode(dischargePin, INPUT);            // set discharge pin back to input
+} 
+</pre>
+<p class='vspace'></p><h4>Further things to try</h4>
+<ul><li>Substitute in larger resistors if the charging time is too short, smaller resistors if the charging time is too long. 
+<p class='vspace'></p></li><li>Measure capacitors in parallel and in series, check to see if your observations agree with electronic theory
+</li><li>Average together a group of readings for more accuracy
+</li><li>Swap out several charging resistors on different pins to make an "auto-ranging" capacitance meter
+</li><li>Modify the sketch to have the charging resistor also discharge the capacitor. Note that the reported value is not twice the value reported when it only charges this capacitor. Explain this. Hint - study the changing curve on the graph.
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/CapacitanceMeter" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='CapacitanceMeter264b.html?action=edit'>Edit Page</a> | <a href='CapacitanceMeterad68.html?action=diff'>Page History</a> | <a href='CapacitanceMeter60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

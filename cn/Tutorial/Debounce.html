@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - Debounce </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Digital I/O</em>
+</p>
+<p class='vspace'></p><h3>Debounce</h3>
+<p>This example demonstrates the use of a pushbutton as a switch: each time you press the button, the LED (or whatever) is turned on (if it's off) or off (if on).  It also <strong>debounces</strong> the input, which means checking twice in a short period of time to make sure it's definitely pressed. Without debouncing, pressing the button once can appear to the code as multiple presses.  Makes use of the millis() function to keep track of the time when the button is pressed.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li>momentary button or switch
+</li><li>10K ohm resistor
+</li><li>breadboard
+</li><li>hook-up wire
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<div><img src='../uploads/Tutorial/button.png' alt='' title='' /></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><h3>Schematic</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/button_sch.png' rel='nofollow'><img height='400px' src='../uploads/Tutorial/button_sch.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>Code</h3>
+<p>The code below is based on <a class='urllink' href='http://www.ladyada.net/learn/sensors/tilt.html' rel='nofollow'>Limor Fried's version of debounce</a>, but the logic is inverted from her example. In her example, the switch returns LOW when closed, and HIGH when open.  Here, the switch returns HIGH when pressed and LOW when not pressed. 
+</p>
+<p class='vspace'></p><div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/* <br />
+&nbsp;Debounce<br />
+&nbsp;<br />
+&nbsp;Each time the input pin goes from LOW to HIGH (e.g. because of a push-button<br />
+&nbsp;press), the output pin is toggled from LOW to HIGH or HIGH to LOW. &nbsp;There's<br />
+&nbsp;a minimum delay between toggles to debounce the circuit (i.e. to ignore<br />
+&nbsp;noise). &nbsp;<br />
+&nbsp;<br />
+&nbsp;The circuit:<br />
+&nbsp;* LED attached from pin 13 to ground<br />
+&nbsp;* pushbutton attached from pin 2 to +5V<br />
+&nbsp;* 10K resistor attached from pin 2 to ground<br />
+&nbsp;<br />
+&nbsp;* Note: On most Arduino boards, there is already an LED on the board<br />
+&nbsp;connected to pin 13, so you don't need any extra components for this example.<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;created 21 November 2006<br />
+&nbsp;by David A. Mellis<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Limor Fried<br />
+&nbsp;<br />
+This example code is in the public domain.<br />
+&nbsp;<br />
+&nbsp;http://arduino.cc/en/Tutorial/Debounce<br />
+&nbsp;*/</span><br />
+<br />
+<span class="co1">// constants won't change. They're used here to </span><br />
+<span class="co1">// set pin numbers:</span><br />
+const <span class="kw1">int</span> buttonPin <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span> &nbsp; &nbsp; <span class="co1">// the number of the pushbutton pin</span><br />
+const <span class="kw1">int</span> ledPin <span class="sy0">=</span> &nbsp;<span class="nu0">13</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<span class="co1">// the number of the LED pin</span><br />
+<br />
+<span class="co1">// Variables will change:</span><br />
+<span class="kw1">int</span> ledState <span class="sy0">=</span> <span class="kw2">HIGH</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// the current state of the output pin</span><br />
+<span class="kw1">int</span> buttonState<span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// the current reading from the input pin</span><br />
+<span class="kw1">int</span> lastButtonState <span class="sy0">=</span> <span class="kw2">LOW</span><span class="sy0">;</span> &nbsp; <span class="co1">// the previous reading from the input pin</span><br />
+<br />
+<span class="co1">// the following variables are long's because the time, measured in miliseconds,</span><br />
+<span class="co1">// will quickly become a bigger number than can be stored in an int.</span><br />
+<span class="kw1">long</span> lastDebounceTime <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp;<span class="co1">// the last time the output pin was toggled</span><br />
+<span class="kw1">long</span> debounceDelay <span class="sy0">=</span> <span class="nu0">50</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// the debounce time; increase if the output flickers</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>buttonPin<span class="sy0">,</span> <span class="kw2">INPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// read the state of the switch into a local variable:</span><br />
+&nbsp; <span class="kw1">int</span> reading <span class="sy0">=</span> <span class="kw1">digitalRead</span><span class="br0">&#40;</span>buttonPin<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// check to see if you just pressed the button </span><br />
+&nbsp; <span class="co1">// (i.e. the input went from LOW to HIGH), &nbsp;and you've waited </span><br />
+&nbsp; <span class="co1">// long enough since the last press to ignore any noise: &nbsp;</span><br />
+<br />
+&nbsp; <span class="co1">// If the switch changed, due to noise or pressing:</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>reading <span class="sy0">!=</span> lastButtonState<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// reset the debouncing timer</span><br />
+&nbsp; &nbsp; lastDebounceTime <span class="sy0">=</span> <span class="kw1">millis</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span> <br />
+&nbsp; <br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">millis</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">-</span> lastDebounceTime<span class="br0">&#41;</span> <span class="sy0">&gt;</span> debounceDelay<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// whatever the reading is at, it's been there for longer</span><br />
+&nbsp; &nbsp; <span class="co1">// than the debounce delay, so take it as the actual current state:</span><br />
+&nbsp; &nbsp; buttonState <span class="sy0">=</span> reading<span class="sy0">;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+&nbsp; <br />
+&nbsp; <span class="co1">// set the LED using the state of the button:</span><br />
+&nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> buttonState<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+&nbsp; <span class="co1">// save the reading. &nbsp;Next time through the loop,</span><br />
+&nbsp; <span class="co1">// it'll be the lastButtonState:</span><br />
+&nbsp; lastButtonState <span class="sy0">=</span> reading<span class="sy0">;</span><br />
+<span class="br0">&#125;</span></div></div>
+  <div class='sourceblocklink'><a href='Debouncef687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>See Also</h3>
+<ul><li><a class='wikilink' href='../Reference/PinMode.html'>pinMode</a>()   
+</li><li><a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite</a>() 
+</li><li><a class='wikilink' href='../Reference/DigitalRead.html'>digitalRead</a>()
+</li><li><a class='wikilink' href='../Reference/If.html'>if</a>()
+</li><li><a class='wikilink' href='../Reference/Millis.html'>millis</a>()
+<p class='vspace'></p></li><li><a class='wikilink' href='DigitalReadSerial.html'>DigitalReadSerial</a> - read a switch, print the state out to the Serial Monitor
+</li><li><a class='wikilink' href='Blink.html'>Blink</a> - turn an LED on and off
+</li><li><a class='wikilink' href='ButtonStateChange.html'>Button State Change</a> - counting the number of button pushes
+</li></ul>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/Debounce" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='Debounce264b.html?action=edit'>Edit Page</a> | <a href='Debouncead68.html?action=diff'>Page History</a> | <a href='Debounce60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

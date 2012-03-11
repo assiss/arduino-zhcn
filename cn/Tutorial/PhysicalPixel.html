@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - PhysicalPixel </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.arduino  {font-family:monospace;}
+.arduino .imp {font-weight: bold; color: red;}
+.arduino .kw1 {color: #CC6600;}
+.arduino .kw2 {color: #006699;}
+.arduino .kw3 {color: #CC6600; font-weight: bold;}
+.arduino .co1 {color: #7E7E7E; font-style: italic;}
+.arduino .co2 {color: #7E7E7E;}
+.arduino .coMULTI {color: #7E7E7E; font-style: italic;}
+.arduino .es0 {color: #000099; font-weight: bold;}
+.arduino .es1 {color: #000099; font-weight: bold;}
+.arduino .es2 {color: #660099; font-weight: bold;}
+.arduino .es3 {color: #660099; font-weight: bold;}
+.arduino .es4 {color: #660099; font-weight: bold;}
+.arduino .es5 {color: #006699; font-weight: bold;}
+.arduino .br0 {color: #000000;}
+.arduino .sy0 {color: #000000;}
+.arduino .st0 {color: #0066CC;}
+.arduino .nu0 {color: #000000;}
+.arduino .nu6 {color: #208080;}
+.arduino .nu8 {color: #208080;}
+.arduino .nu12 {color: #208080;}
+.arduino .nu16 {color:#800080;}
+.arduino .nu17 {color:#800080;}
+.arduino .nu18 {color:#800080;}
+.arduino .nu19 {color:#800080;}
+.arduino .me1 {color: #ff1493;}
+.arduino .me2 {color: #ff1493;}
+.arduino span.xtra { display:block; }
+
+.sourceblocklink {
+  text-align: right;
+  font-size: smaller;
+}
+.sourceblocktext {
+  padding: 0.5em;
+  color: #000000;
+  background-color: #ffffff;
+}
+.sourceblocktext div {
+  font-family: monospace;
+  font-size: small;
+  line-height: 1;
+  height: 1%;
+}
+.sourceblocktext div.head,
+.sourceblocktext div.foot {
+  font: italic medium serif;
+  padding: 0.5em;
+}
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><p><em>Examples &gt; Communication</em>
+</p>
+<p class='vspace'></p><h3>Physical Pixel</h3>
+<p>This example example uses the Arduino board to receive data from the computer.  The Arduino boards turns on an LED when it receives the character 'H', and turns off the LED when it receives the character 'L'.
+</p>
+<p class='vspace'></p><p>The data can be sent from the Arduino serial monitor, or another program like Processing (see code below), Flash (via a serial-net proxy), PD, or Max/MSP.
+</p>
+<p class='vspace'></p><h3>Hardware Required</h3>
+<ul><li>Arduino Board
+</li><li>Analog Sensor (potentiometer, photocell, FSR, etc.)
+</li></ul><p class='vspace'></p><p><strong>Software Required</strong>
+</p><ul><li><a class='urllink' href='http://www.processing.org/' rel='nofollow'>Processing</a> or
+</li><li><a class='urllink' href='http://www.cycling74.com/products/max5' rel='nofollow'>Max/MSP version 5</a>
+</li></ul><p class='vspace'></p><h3>Circuit</h3>
+<p>Attach an LED to pin 13. The long leg, or anode, goes to pin 13. The short leg, or cathode, goes to ground.  You can also use the built-in LED on most Arduino boards.
+</p>
+<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+</p><div><a class='urllink' href='../uploads/Tutorial/ExampleCircuit_bb.png' rel='nofollow'><img height='300px' src='../uploads/Tutorial/ExampleCircuit_bb.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+</p>
+<p class='vspace'></p><h3>Schematic</h3>
+<p><span style='font-size:83%'>click the image to enlarge</span>
+</p><div><a class='urllink' href='../uploads/Tutorial/ExampleCircuit_sch.png' rel='nofollow'><img height='300px' src='../uploads/Tutorial/ExampleCircuit_sch.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>Code</h3>
+<div  class='code' >
+<p class='vspace'></p><p>
+<div class='sourceblock ' id='sourceblock1'>
+  <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
+&nbsp; Physical Pixel<br />
+&nbsp;<br />
+&nbsp;An example of using the Arduino board to receive data from the <br />
+&nbsp;computer. &nbsp;In this case, the Arduino boards turns on an LED when<br />
+&nbsp;it receives the character 'H', and turns off the LED when it<br />
+&nbsp;receives the character 'L'.<br />
+&nbsp;<br />
+&nbsp;The data can be sent from the Arduino serial monitor, or another<br />
+&nbsp;program like Processing (see code below), Flash (via a serial-net<br />
+&nbsp;proxy), PD, or Max/MSP.<br />
+&nbsp;<br />
+&nbsp;The circuit:<br />
+&nbsp;* LED connected from digital pin 13 to ground<br />
+&nbsp;<br />
+&nbsp;created 2006<br />
+&nbsp;by David A. Mellis<br />
+&nbsp;modified 30 Aug 2011<br />
+&nbsp;by Tom Igoe and Scott Fitzgerald<br />
+&nbsp;<br />
+&nbsp;This example code is in the public domain.<br />
+<br />
+&nbsp;http://arduino.cc/en/Tutorial/PhysicalPixel<br />
+&nbsp;*/</span><br />
+<br />
+const <span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">13</span><span class="sy0">;</span> <span class="co1">// the pin that the LED is attached to</span><br />
+<span class="kw1">int</span> incomingByte<span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<span class="co1">// a variable to read incoming serial data into</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// initialize serial communication:</span><br />
+&nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; <span class="co1">// initialize the LED pin as an output:</span><br />
+&nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; <span class="co1">// see if there's incoming serial data:</span><br />
+&nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="kw1">Serial</span>.<span class="kw1">available</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">&gt;</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="co1">// read the oldest byte in the serial buffer:</span><br />
+&nbsp; &nbsp; incomingByte <span class="sy0">=</span> <span class="kw1">Serial</span>.<span class="kw1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="co1">// if it's a capital H (ASCII 72), turn on the LED:</span><br />
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>incomingByte <span class="sy0">==</span> <span class="st0">'H'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span> <br />
+&nbsp; &nbsp; <span class="co1">// if it's an L (ASCII 76) turn off the LED:</span><br />
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>incomingByte <span class="sy0">==</span> <span class="st0">'L'</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+&nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="coMULTI">/* Processing code for this example<br />
+&nbsp;<br />
+&nbsp;// mouseover serial <br />
+&nbsp;<br />
+&nbsp;// Demonstrates how to send data to the Arduino I/O board, in order to <br />
+&nbsp;// turn ON a light if the mouse is over a square and turn it off <br />
+&nbsp;// if the mouse is not. <br />
+&nbsp;<br />
+&nbsp;// created 2003-4<br />
+&nbsp;// based on examples by Casey Reas and Hernando Barragan<br />
+&nbsp;// modified 30 Aug 2011<br />
+&nbsp;// by Tom Igoe<br />
+&nbsp;// This example code is in the public domain.<br />
+<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;import processing.serial.*; <br />
+&nbsp;<br />
+&nbsp;float boxX;<br />
+&nbsp;float boxY;<br />
+&nbsp;int boxSize = 20;<br />
+&nbsp;boolean mouseOverBox = false;<br />
+&nbsp;<br />
+&nbsp;Serial port; <br />
+&nbsp;<br />
+&nbsp;void setup() &nbsp;{<br />
+&nbsp;size(200, 200);<br />
+&nbsp;boxX = width/2.0;<br />
+&nbsp;boxY = height/2.0;<br />
+&nbsp;rectMode(RADIUS); <br />
+&nbsp;<br />
+&nbsp;// List all the available serial ports in the output pane. <br />
+&nbsp;// You will need to choose the port that the Arduino board is <br />
+&nbsp;// connected to from this list. The first port in the list is <br />
+&nbsp;// port #0 and the third port in the list is port #2. <br />
+&nbsp;println(Serial.list()); <br />
+&nbsp;<br />
+&nbsp;// Open the port that the Arduino board is connected to (in this case #0) <br />
+&nbsp;// Make sure to open the port at the same speed Arduino is using (9600bps) <br />
+&nbsp;port = new Serial(this, Serial.list()[0], 9600); <br />
+&nbsp;<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;void draw() <br />
+&nbsp;{ <br />
+&nbsp;background(0);<br />
+&nbsp;<br />
+&nbsp;// Test if the cursor is over the box <br />
+&nbsp;if (mouseX &gt; boxX-boxSize &amp;&amp; mouseX &lt; boxX+boxSize &amp;&amp; <br />
+&nbsp;mouseY &gt; boxY-boxSize &amp;&amp; mouseY &lt; boxY+boxSize) {<br />
+&nbsp;mouseOverBox = true; &nbsp;<br />
+&nbsp;// draw a line around the box and change its color:<br />
+&nbsp;stroke(255); <br />
+&nbsp;fill(153);<br />
+&nbsp;// send an 'H' to indicate mouse is over square:<br />
+&nbsp;port.write('H'); &nbsp; &nbsp; &nbsp; <br />
+&nbsp;} <br />
+&nbsp;else {<br />
+&nbsp;// return the box to it's inactive state:<br />
+&nbsp;stroke(153);<br />
+&nbsp;fill(153);<br />
+&nbsp;// send an 'L' to turn the LED off: <br />
+&nbsp;port.write('L'); &nbsp; &nbsp; &nbsp;<br />
+&nbsp;mouseOverBox = false;<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;// Draw the box<br />
+&nbsp;rect(boxX, boxY, boxSize, boxSize);<br />
+&nbsp;}<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;*/</span><br />
+<br />
+<span class="coMULTI">/*<br />
+Max/MSP version 5 patch to run with this example:<br />
+<br />
+----------begin_max5_patcher----------<br />
+1672.3oc2ZszaaiCD9ryuBBebQVCQRYao8xhf1cQCPVfBzh8RRQ.sDsM2HSZ<br />
+HQmlzh9eu7gjsjsEk7y0oWjiHoHm4aluYHGlueUmtiDuPy5B9Cv8fNc99Uc5<br />
+XZR2Pm726zcF4knDRlYXciDylQ4xtWa6SReQZZ+iSeMiEQR.ej8BM4A9C7OO<br />
+kkAlSjQSAYTdbFfvA27o2c6sfO.Doqd6NfXgDHmRUCKkolg4hT06BfbQJGH3<br />
+5Qd2e8d.QJIQSow5tzebZ7BFW.FIHow8.2JAQpVIIYByxo9KIMkSjL9D0BRT<br />
+sbGHZJIkDoZOSMuQT.8YZ5qpgGI3locF4IpQRzq2nDF+odZMIJkRjpEF44M3<br />
+A9nWAum7LKFbSOv+PSRXYOvmIhYiYpg.8A2LOUOxPyH+TjPJA+MS9sIzTRRr<br />
+QP9rXF31IBZAHpVHkHrfaPRHLuUCzoj9GSoQRqIB52y6Z.tu8o4EX+fddfuj<br />
++MrXiwPL5+9cXwrOVvkbxLpomazHbQO7EyX7DpzXYgkFdF6algCQpkX4XUlo<br />
+hA6oa7GWck9w0Gnmy6RXQOoQeCfWwlzsdnHLTq8n9PCHLv7Cxa6PAN3RCKjh<br />
+ISRVZ+sSl704Tqt0kocE9R8J+P+RJOZ4ysp6gN0vppBbOTEN8qp0YCq5bq47<br />
+PUwfA5e766z7NbGMuncw7VgNRSyQhbnPMGrDsGaFSvKM5NcWoIVdZn44.eOi<br />
+9DTRUT.7jDQzSTiF4UzXLc7tLGh4T9pwaFQkGUGIiOOkpBSJUwGsBd40krHQ<br />
+9XEvwq2V6eLIhV6GuzP7uzzXBmzsXPSRYwBtVLp7s5lKVv6UN2VW7xRtYDbx<br />
+7s7wRgHYDI8YVFaTBshkP49R3rYpH3RlUhTQmK5jMadJyF3cYaTNQMGSyhRE<br />
+IIUlJaOOukdhoOyhnekEKmZlqU3UkLrk7bpPrpztKBVUR1uorLddk6xIOqNt<br />
+lBOroRrNVFJGLrDxudpET4kzkstNp2lzuUHVMgk5TDZx9GWumnoQTbhXsEtF<br />
+tzCcM+z0QKXsngCUtTOEIN0SX2iHTTIIz968.Kf.uhfzUCUuAd3UKd.OKt.N<br />
+HTynxTQyjpQD9jlwEXeKQxfHCBahUge6RprSa2V4m3aYOMyaP6gah2Yf1zbD<br />
+jVwZVGFZHHxINFxpjr5CiTS9JiZn6e6nTlXQZTAFj6QCppQwzL0AxVtoi6WE<br />
+QXsANkEGWMEuwNvhmKTnat7A9RqLq6pXuEwY6xM5xRraoTiurj51J1vKLzFs<br />
+CvM7HI14Mpje6YRxHOSieTsJpvJORjxT1nERK6s7YTN7sr6rylNwf5zMiHI4<br />
+meZ4rTYt2PpVettZERbjJ6PjfqN2loPSrUcusH01CegsGEE5467rnCdqT1ES<br />
+QxtCvFq.cvGz+BaAHXKzRSfP+2Jf.KCvj5ZLJRAhwi+SWHvPyN3vXiaPn6JR<br />
+3eoA.0TkFhTvpsDMIrL20nAkCI4EoYfSHAuiPBdmJRyd.IynYYjIzMvjOTKf<br />
+3DLvnvRLDLpWeEOYXMfAZqfQ0.qsnlUdmA33t8CNJ7MZEb.u7fiZHLYzDkJp<br />
+R7CqEVLGN75U+1JXxFUY.xEEBcRCqhOEkz2bENEWnh4pbh0wY25EefbD6EmW<br />
+UA6Ip8wFLyuFXx+Wrp8m6iff1B86W7bqJO9+mx8er4E3.abCLrYdA16sBuHx<br />
+vKT6BlpIGQIhL55W7oicf3ayv3ixQCm4aQuY1HZUPQWY+cASx2WZ3f1fICuz<br />
+vj5R5ZbM1y8gXYN4dIXaYGq4NhQvS5MmcDADy+S.j8CQ78vk7Q7gtPDX3kFh<br />
+3NGaAsYBUAO.8N1U4WKycxbQdrWxJdXd10gNIO+hkUMmm.CZwknu7JbNUYUq<br />
+0sOsTsI1QudDtjw0t+xZ85wWZd80tMCiiMADNX4UzrcSeK23su87IANqmA7j<br />
+tiRzoXi2YRh67ldAk79gPmTe3YKuoY0qdEDV3X8xylCJMTN45JIakB7uY8XW<br />
+uVr3PO8wWwEoTW8lsfraX7ZqzZDDXCRqNkztHsGCYpIDDAOqxDpMVUMKcOrp<br />
+942acPvx2NPocMC1wQZ8glRn3myTykVaEUNLoEeJjVaAevA4EAZnsNgkeyO+<br />
+3rEZB7f0DTazDcQTNmdt8aACGi1QOWnMmd+.6YjMHH19OB5gKsMF877x8wsJ<br />
+hN97JSnSfLUXGUoj6ujWXd6Pk1SAC+Pkogm.tZ.1lX1qL.pe6PE11DPeMMZ2<br />
+.P0K+3peBt3NskC<br />
+-----------end_max5_patcher-----------<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;*/</span></div></div>
+  <div class='sourceblocklink'><a href='PhysicalPixelf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+</div>
+
+</p>
+<p class='vspace'></p></div>
+<p class='vspace'></p><h3>Processing Code</h3>
+<p>Copy the Processing code from the code sample above.  As you mouse over the center square, the LED on pin 13 should turn on and off.   The Processing applet looks like this: 
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/physicalPixel-output.png' alt='' title='' /></div>
+<p class='vspace'></p><p>Mouse over the square to turn the LED on and off.
+</p>
+<p class='vspace'></p><h3>Max patch</h3>
+<p>The Max/MSP patch looks like the image below. Copy it from the code sample above and paste it into a new patch window.
+</p>
+<p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/max-physicalPixel.png' rel='nofollow'><img width='600px' src='../uploads/Tutorial/max-physicalPixel.png' alt='' title='' /></a></div>
+<p class='vspace'></p><h3>See Also:</h3>
+<ul><li><a class='wikilink' href='../Serial/Read.html'><code>serial.read()</code></a>()
+</li><li><a class='wikilink' href='../Serial/Available.html'><code>serial.available</code></a>()
+</li><li><a class='wikilink' href='IfStatement.html'><code>if</code> statement</a>
+<p class='vspace'></p></li><li><a class='wikilink' href='Dimmer.html'>Dimmer</a> - move the mouse to change the brightness of an LED.
+</li><li><a class='wikilink' href='Graph.html'>Graph</a> -  send data to the computer and graph it in Processing
+</li><li><a class='wikilink' href='VirtualColorMixer.html'>Virtual Color Mixer</a> - send multiple variables from an Arduino to the computer and read them in Processing. 
+</li><li><a class='wikilink' href='SerialCallResponse.html'>Serial Call Response</a> - send multiple variables using a call and response (handshaking) method.
+</li><li><a class='wikilink' href='SerialCallResponseASCII.html'>Serial Call and Response ASCII</a> - send multiple vairables using a call-and-response (handshaking) method, and ASCII-encoding the values before sending.
+</li><li><a class='wikilink' href='SwitchCase2.html'>Serial Input (Switch (case) Statement)</a> - How to take different actions based 0n characters received by the serial port. 
+</li></ul><p class='vspace'></p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/PhysicalPixel" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='PhysicalPixel264b.html?action=edit'>Edit Page</a> | <a href='PhysicalPixelad68.html?action=diff'>Page History</a> | <a href='PhysicalPixel60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>

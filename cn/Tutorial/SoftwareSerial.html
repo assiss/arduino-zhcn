@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Arduino - SoftwareSerial </title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png">
+  <link rel='stylesheet' href='../pub/skins/arduinoWide_SSO/arduinoWide_SSO.css' 
+type='text/css' />
+  <link href="https://plus.google.com/114839908922424087554" rel="publisher" />
+    <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+span.anchor {
+	float: left;
+	font-size: 10px;
+	margin-left: -10px;
+	width: 10px;
+    position:relative; top:-0.1em;
+	text-align: center;
+}
+span.anchor a { text-decoration: none; }
+span.anchor a:hover { text-decoration: underline; }
+ol.toc { text-indent:-20px; list-style: none; }
+ol.toc ol.toc { text-indent:-40px; }
+div.tocfloat { font-size: smaller; margin-bottom: 10px;
+    border-top: 1px dotted #555555; border-bottom: 1px dotted #555555;
+    padding-top: 5px; padding-bottom: 5px; 
+    width: 38%; float: right; margin-left: 10px; clear: right;
+    margin-right:-13px; padding-right: 13px; padding-left: 13px;
+    background-color: #eeeeee; }
+div.toc { font-size: smaller; 
+    padding: 5px; border: 1px dotted #cccccc;
+    background: #f7f7f7;
+    margin-bottom: 10px; }
+div.toc p { background-color: #f9f6d6;
+    margin-top:-5px;   padding-top: 5px;
+    margin-left:-5px;  padding-left: 5px;
+    margin-right:-5px; padding-right: 5px;
+    padding-bottom: 3px;
+    border-bottom:  1px dotted #cccccc; }.editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style><script type="text/javascript">
+function toggle(obj) {
+    var elstyle = document.getElementById(obj).style;
+    var text    = document.getElementById(obj + "tog");
+    if (elstyle.display == 'none') {
+        elstyle.display = 'block';
+        text.innerHTML = "hide";
+    } else {
+        elstyle.display = 'none';
+        text.innerHTML = "show";
+    }
+}
+</script>  <meta name='robots' content='index,follow' />
+
+  <meta name="verify-v1" content="TtxFIEJAB6zdJ509wLxjnapQzKAMNm9u0Wj4ho6wxIY=" />
+  <script src="https://id.arduino.cc/css/sso_bar_js_2.php?s=reference"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../id.arduino.cc/css/sso_bar.css" />
+</head>
+<body>
+
+		<div id="ssotoolbar">
+		  <div id="al">
+			<nobr><div id="ssoNavBar">&nbsp;</div></nobr>
+		  </div>
+		  <div id="ar">
+			<nobr>
+			  <div id="loginInfo"><div id="loading">Loading...</div></div>
+			</nobr>
+		  </div>
+		</div>
+		<script>ssoGenerateNavigationBar('');</script>
+<div id="page">
+<!--PageHeaderFmt-->
+<div id="pageheader">
+  <div class="title"><a href='../../en.html'>Arduino</a></div>
+  <div class="search">
+    <!-- SiteSearch Google -->
+    <FORM method=GET action="http://www.google.com/search">
+    <input type=hidden name=ie value=UTF-8>
+    <input type=hidden name=oe value=UTF-8>
+    <INPUT TYPE=text name=q size=25 maxlength=255 value="">
+    <INPUT type=submit name=btnG VALUE="search">
+    <input type=hidden name=domains value="http://arduino.cc/">
+    <input type=hidden name=sitesearch value="http://arduino.cc/">
+    </FORM>
+    <!-- SiteSearch Google -->
+  </div>
+</div>
+<!--/PageHeaderFmt-->
+<!--PageLeftFmt-->
+<div id="pagenav">
+  <div id="navbar">
+  	<p><a class='wikilink' href='../Main/Buy.html'>Buy</a>
+<a class='wikilink' href='../Main/Software.html'>Download</a>
+<a class='wikilink' href='../Guide/HomePage.html'>Getting Started</a>
+<a class='wikilink' href='HomePage.html'>Learning</a>
+<a class='wikilink' href='../Reference/HomePage.html'>Reference</a>
+<a class='wikilink' href='../Main/Hardware.html'>Hardware</a>
+<a class='wikilink' href='../Main/FAQ.html'>FAQ</a>
+</p>
+<p class='vspace'></p>
+
+  </div>
+</div>
+<!--/PageLeftFmt-->
+<div id="pagetext">
+<!--PageText-->
+<div id='wikitext'>
+<p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
+</p>
+<p class='vspace'></p><h1>Arduino Software Serial Interface</h1>
+<p><strong>Note:</strong> <em>If you just want to use a software serial interface, see the <a class='wikilink' href='../Reference/SoftwareSerial.html'>SoftwareSerial library</a> included with Arduino 0007 and later.  Read on if you'd like to know how that library works.</em>
+</p>
+<p class='vspace'></p><p>In this tutorial you will learn how to implement Asynchronous serial 
+communication on the Arduino in software to communicate with 
+other serial devices. Using software serial allows you to create a serial connection on any of the digital i/o pins on the Arduino. This should be used when multiple serial connections are necessary. If only one serial connection is necessary the <a class='urllink' href='http://arduino.cc/en/Reference/HomePage' rel='nofollow'>hardware serial port</a> should be used. This is a general purpose software tutorial, NOT a specific device tutorial. A tutorial on communicating with a computer is <a class='wikilink' href='ArduinoSoftwareRS232.html'>here</a>. Device specific tutorials are on the <a class='urllink' href='http://arduino.cc/en/Main/LearnArduino' rel='nofollow'>Tutorial  Page</a>. For a good explanation of serial communication see <a class='urllink' href='http://en.wikipedia.org/wiki/Serial_communication' rel='nofollow'>Wikipedia</a>.
+The software serial connection can run at 4800 baud or 9600 baud reliably.  
+</p>
+<p class='vspace'></p><p>Functions Available:
+</p>
+<p class='vspace'></p><p><strong><span class='wikiword'>SWread</span>(); </strong>
+Returns a byte long integer value from the software serial connection
+</p>
+<p class='vspace'></p><p>Example:
+</p><pre>
+byte RXval; 
+RXval = SWread();
+
+</pre>
+<p class='vspace'></p><p><strong><span class='wikiword'>SWprint</span>();</strong>
+Sends a byte long integer value out the software serial connection
+</p>
+<p class='vspace'></p><p>Example:
+</p>
+<p class='vspace'></p><pre>
+byte TXval = 'h';
+byte TXval2 = 126;
+SWprint(TXval);
+SWprint(TXval2);
+
+</pre>
+<p class='vspace'></p><p>Definitions Needed:
+</p><pre>
+#define bit9600Delay 84  
+#define halfBit9600Delay 42
+#define bit4800Delay 188 
+#define halfBit4800Delay 94
+
+</pre><p>These definitions set the delays necessary for 9600 baud and 4800 baud software serial operation.
+</p>
+<p class='vspace'></p><p>Materials needed:
+</p>
+<p class='vspace'></p><ul><li>Device to communicate with
+</li><li>Solderless breadboard
+</li><li>Hookup wire
+</li><li>Arduino Microcontroller Module
+</li><li>Light emitting Diode (LED) - optional, for debugging
+</li></ul><p class='vspace'></p><h3>Prepare the breadboard </h3>
+<p>Insert the device you want to communicate with in the breadboard. Connect ground on the breadboard to ground from the microcontroller. If your device uses 5v power connect 5v from the microcontoller to 5v on the breadboard. Otherwise connect power and ground from an alternate power source to the breadboard in the same fashion. Make any other connections necessary for your device. Additionally you may want to connect an LED for debugging purposes between pin 13 and Ground.
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/pwr_wires_web2.jpg' alt='' title='' /></div>
+<p class='vspace'></p><p>Decide which pins you want to use for transmitting and receiving. In this example we will use pin 7 for transmitting and pin 6 for receiving, but any of the digital pins should work.  
+</p>
+<p class='vspace'></p><div><img src='../uploads/Tutorial/ser_wires_web2.jpg' alt='' title='' /></div>
+<p class='vspace'></p><h3>Program the Arduino</h3>
+<p>Now we will write the code to enable serial data communication. This program will simply wait for a character to arrive in the serial recieving port and then spit it back out in uppercase out the transmit port. This is a good general purpose serial debugging program and you should be able to extrapolate from this example to cover all your basic serial needs. We will walk through the code in small sections.
+</p>
+<p class='vspace'></p><pre>#include &lt;ctype.h&gt;
+
+#define bit9600Delay 84  
+#define halfBit9600Delay 42
+#define bit4800Delay 188 
+#define halfBit4800Delay 94 
+</pre>
+<p class='vspace'></p><p>Here we set up our pre-processor directives. Pre-processor directives are processed before the actual compilation begins. They start with a "#" and do not end with semi-colons. 
+</p>
+<p class='vspace'></p><p>First we include the file ctype.h in our application. This gives us access to the <code>toupper()</code> function from the Character Operations C library which we will use later in our main loop. This library is part of the Arduino install, so you don't need to do anything other than type the #include line in order to use it. Next we establish our baudrate delay definitions. These are pre-processor directives that define the delays for different baudrates. The <code>#define bit9600Delay 84 </code> line causes the compiler to substitute the number 84 where ever it encounters the label "bit9600Delay". Pre-processor definitions are often used for constants because they don't take up any program memory space on the chip. 
+</p>
+<p class='vspace'></p><pre>byte rx = 6;
+byte tx = 7;
+byte SWval;
+</pre>
+<p class='vspace'></p><p>Here we set our transmit (tx) and recieve (rx) pins. Change the pin numbers to suit your application. We also allocate a variable to store our recieved data in, <code>SWval</code>.
+</p>
+<p class='vspace'></p><pre>void setup() {
+  pinMode(rx,INPUT);
+  pinMode(tx,OUTPUT);
+  digitalWrite(tx,HIGH);
+  digitalWrite(13,HIGH); //turn on debugging LED
+  SWprint('h');  //debugging hello
+  SWprint('i');
+  SWprint(10); //carriage return
+}
+</pre>
+<p class='vspace'></p><p>Here we initialize the lines, turn on our debugging LED and print a debugging message to confirm all is working as planned. We can pass inidvidual characters or numbers to the <span class='wikiword'>SWprint</span> function.
+</p>
+<p class='vspace'></p><pre>void SWprint(int data)
+{
+  byte mask;
+  //startbit
+  digitalWrite(tx,LOW);
+  delayMicroseconds(bit9600Delay);
+  for (mask = 0x01; mask&gt;0; mask &lt;&lt;= 1) {
+    if (data &amp; mask){ // choose bit
+     digitalWrite(tx,HIGH); // send 1
+    }
+    else{
+     digitalWrite(tx,LOW); // send 0
+    }
+    delayMicroseconds(bit9600Delay);
+  }
+  //stop bit
+  digitalWrite(tx, HIGH);
+  delayMicroseconds(bit9600Delay);
+}
+</pre>
+<p class='vspace'></p><p>This is the <span class='wikiword'>SWprint</span> function. First the transmit line is pulled low to signal a start bit. Then we itterate through a <a class='wikilink' href='BitMask.html'>bit mask</a> and flip the output pin high or low 8 times for the 8 bits in the value to be transmitted. Finally we pull the line high again to signal a stop bit. For each bit we transmit we hold the line high or low for the specified delay. In this example we are using a 9600 baudrate. To use 4800 simply replace the variable <code>bit9600Delay</code> with <code>bit4800Delay</code>.
+</p>
+<p class='vspace'></p><pre>int SWread()
+{
+  byte val = 0;
+  while (digitalRead(rx));
+  //wait for start bit
+  if (digitalRead(rx) == LOW) {
+    delayMicroseconds(halfBit9600Delay);
+    for (int offset = 0; offset &lt; 8; offset++) {
+     delayMicroseconds(bit9600Delay);
+     val |= digitalRead(rx) &lt;&lt; offset;
+    }
+    //wait for stop bit + extra
+    delayMicroseconds(bit9600Delay); 
+    delayMicroseconds(bit9600Delay);
+    return val;
+  }
+}
+</pre>
+<p class='vspace'></p><p>This is the <span class='wikiword'>SWread</span> function. This will wait for a byte to arrive on the recieve pin and then return it to the allocated variable. First we wait for the recieve line to be pulled low. We check after a half bit delay to make sure the line is still low and we didn't just recieve line noise. Then we iterate through a bit mask and shift 1s or 0s into our output byte based on what we recieve. Finally we allow a pause for the stop bit and then return the value. 
+</p>
+<p class='vspace'></p><pre>void loop()
+{
+    SWval = SWread(); 
+    SWprint(toupper(SWval));
+}
+</pre>
+<p class='vspace'></p><p>Finally we implement our main program loop. In this program we simply wait for characters to arrive, change them to uppercase and send them back. This is always a good program to run when you want to make sure a serial connection is working properly.
+</p>
+<p class='vspace'></p><p>For lots of fun serial devices check out the <a class='urllink' href='http://www.sparkfun.com/commerce/categories.php' rel='nofollow'>Sparkfun online catalog</a>. They have lots of easy to use serial modules for GPS, bluetooth, wi-fi, <span class='wikiword'>LCDs</span>, etc.
+</p>
+<p class='vspace'></p><p>For easy copy and pasting the full program text of this tutorial is below:
+</p>
+<p class='vspace'></p><pre>
+//Created August 15 2006
+//Heather Dewey-Hagborg
+//http://arduino.cc
+
+#include &lt;ctype.h&gt;
+
+#define bit9600Delay 84  
+#define halfBit9600Delay 42
+#define bit4800Delay 188 
+#define halfBit4800Delay 94 
+
+byte rx = 6;
+byte tx = 7;
+byte SWval;
+
+void setup() {
+  pinMode(rx,INPUT);
+  pinMode(tx,OUTPUT);
+  digitalWrite(tx,HIGH);
+  digitalWrite(13,HIGH); //turn on debugging LED
+  SWprint('h');  //debugging hello
+  SWprint('i');
+  SWprint(10); //carriage return
+}
+
+void SWprint(int data)
+{
+  byte mask;
+  //startbit
+  digitalWrite(tx,LOW);
+  delayMicroseconds(bit9600Delay);
+  for (mask = 0x01; mask&gt;0; mask &lt;&lt;= 1) {
+    if (data &amp; mask){ // choose bit
+     digitalWrite(tx,HIGH); // send 1
+    }
+    else{
+     digitalWrite(tx,LOW); // send 0
+    }
+    delayMicroseconds(bit9600Delay);
+  }
+  //stop bit
+  digitalWrite(tx, HIGH);
+  delayMicroseconds(bit9600Delay);
+}
+
+int SWread()
+{
+  byte val = 0;
+  while (digitalRead(rx));
+  //wait for start bit
+  if (digitalRead(rx) == LOW) {
+    delayMicroseconds(halfBit9600Delay);
+    for (int offset = 0; offset &lt; 8; offset++) {
+     delayMicroseconds(bit9600Delay);
+     val |= digitalRead(rx) &lt;&lt; offset;
+    }
+    //wait for stop bit + extra
+    delayMicroseconds(bit9600Delay); 
+    delayMicroseconds(bit9600Delay);
+    return val;
+  }
+}
+
+void loop()
+{
+    SWval = SWread(); 
+    SWprint(toupper(SWval));
+}
+</pre>
+<p class='vspace'></p><p><em>code and tutorial by Heather Dewey-Hagborg</em>
+</p>
+</div>
+
+
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">var addthis_language = "en";
+</script>
+<div class="addthis_container addthis_toolbox addthis_default_style" addthis:url="http://arduino.cc/en/Tutorial/SoftwareSerial" addthis:title="Arduino Wiki English">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=arduinoteam" class="addthis_button_compact">Share</a><span 
+class="addthis_separator">|</span><a class="addthis_button_email"></a><a class="addthis_button_favorites"></a><a class="addthis_button_print"></a><a 
+class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><script type="text/javascript" 
+src="../../../s7.addthis.com/js/250/addthis_widget.js#username=arduinoteam"></script></div>
+<!-- AddThis Button END -->
+
+</div>
+<!--PageFooterFmt-->
+<div id="pagefooter">
+&copy;Arduino | 
+  <a href='SoftwareSerial264b.html?action=edit'>Edit Page</a> | <a href='SoftwareSerialad68.html?action=diff'>Page History</a> | <a href='SoftwareSerial60ee.html?action=print' target='_blank'>Printable View</a> | <a href='../Site/AllRecentChanges.html'>All Recent Site Changes</a>
+</div>
+<!--/PageFooterFmt-->
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? 
+"https://stats.arduino.cc/piwik/" : "http://stats.arduino.cc/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img 
+src="http://stats.arduino.cc/piwik/piwik.php?idsite=1" style="border:0" 
+alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+
+</body>
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+</html>
