@@ -187,47 +187,47 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p><em>Examples &gt; Control Structures</em>
 </p>
-<p class='vspace'></p><h3>For Loop (aka The Knight Rider)</h3>
-<p>Often you want to iterate over a series of pins and do something to each one.  For instance, this example blinks 6 <span class='wikiword'>LEDs</span>  attached the Arduino by using a  <a class='wikilink' href='../Reference/For.html'><strong>for()</strong></a> loop to cycle back and forth through digital pins 2-7. The LEDS are turned on and off, in sequence, by using both the <a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite()</a>  and <a class='wikilink' href='../Reference/Delay.html'>delay()</a> functions . 
+<p class='vspace'></p><h3>For循环（霹雳游侠）</h3>
+<p>经常需要遍历一系列的引脚以对每个引脚进行处理工作，如此例中，使用<a class='wikilink' href='../Reference/For.html'><strong>for()</strong></a>循环遍历数字脚的2-7脚来驱动引脚上连接的<span class='wikiword'>LED</span>。这些LED被<a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite()</a>和<a class='wikilink' href='../Reference/Delay.html'>delay()</a> 函数控制着依次点亮和熄灭。
 </p>
-<p class='vspace'></p><p>We also call this example "<a class='urllink' href='http://en.wikipedia.org/wiki/KITT' rel='nofollow'>Knight Rider</a>" in memory of a TV-series from the 80's where David Hasselhoff had an AI machine named KITT driving his Pontiac. The car had been augmented with plenty of <span class='wikiword'>LEDs</span> in all possible sizes performing flashy effects. In particular, it had a display that scanned back and forth across a line, as shown in this exciting <a class='urllink' href='http://video.yahoo.com/video/play?vid=707585' rel='nofollow'>fight between KITT and KARR</a>. This example duplicates the KITT display.
+<p class='vspace'></p><p>我们也叫这个例子为<a class='urllink' href='http://en.wikipedia.org/wiki/KITT' rel='nofollow'>“霹雳游侠”</a>" 以此纪念80年代的电视剧，此剧中David Hasselhoff拥有一部由人工智能KITT控制驾驶的Pontiac。该车装上了大量的LED来展示各种耀眼的特效，特别是用来显示<a class='urllink' href='http://video.yahoo.com/video/play?vid=707585' rel='nofollow'>KITT和KARR激烈斗争</a>的来回扫描的特效。本例展示了KITT的显示效果。
 </p>
-<p class='vspace'></p><h3>Hardware Required</h3>
-<ul><li>Arduino Board
-</li><li>(6) 220 ohm resistors
+<p class='vspace'></p><h3>所需硬件</h3>
+<ul><li>Arduino板
+</li><li>(6) 220欧姆电阻
 </li><li>(6) <span class='wikiword'>LEDs</span>
-</li><li>hook-up wire
-</li><li>breadboard
-</li></ul><p class='vspace'></p><h3>Circuit</h3>
-<p>Connect six LEDS, with 220 ohm resistors in series, to digital pins 2-7 on your Arduino.
+</li><li>连接导线
+</li><li>面包板
+</li></ul><p class='vspace'></p><h3>电路图</h3>
+<p>将6个LED分别连上220欧姆的电阻，然后接到Arduino的2-7脚。
 </p>
-<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大浏览</span>
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/forLoop_bb.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/forLoop_bb.png' alt='' title='' /></a></div>
-<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+<p class='vspace'></p><p><span style='font-size:83%'>使用<a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>设计此图。请前往<a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing项目主页</a>寻找更多电路图样例。</span>
 </p>
-<p class='vspace'></p><p><strong>Schematic:</strong>
+<p class='vspace'></p><p><strong>示意图</strong>
 </p>
-<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大浏览</span>
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/forLoop2_schem.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/forLoop2_schem.png' alt='' title='' /></a></div>
-<p class='vspace'></p><h3>Code</h3>
-<p>The code below begins by utilizing a <code>for()</code> loop to assign digital pins 2-7 as outputs for the 6 <span class='wikiword'>LEDs</span> used. 
+<p class='vspace'></p><h3>源代码</h3>
+<p>下面的代码从<code>for()</code>循环开始，将2-7脚设为OUTPUT模式，以驱动6个LED。
 </p>
-<p class='vspace'></p><p>In the main loop of the code, two <code>for()</code> loops are used to loop incrementally, stepping through the <span class='wikiword'>LEDs</span>, one by one, from pin 2 to pin seven. Once pin 7 is lit, the process reverses, stepping back down through each LED. 
+<p class='vspace'></p><p>在主循环中，使用了两个<code>for()</code>循环来一步一步地控制LED。当7脚上的LED被点亮后，循环将从头开始，周而复始。
 </p>
 <p class='vspace'></p><div  class='code' >
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock1'>
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
-&nbsp; For Loop Iteration<br />
+&nbsp; For循环<br />
 &nbsp;<br />
-&nbsp;Demonstrates the use of a for() loop. <br />
-&nbsp;Lights multiple LEDs in sequence, then in reverse.<br />
-&nbsp;<br />
-&nbsp;The circuit:<br />
-&nbsp;* LEDs from pins 2 through 7 to ground<br />
-&nbsp;<br />
+&nbsp; 演示for循环的使用方法。<br />
+&nbsp; 依次点亮LED，周而复始。<br />
+&nbsp; <br />
+&nbsp; 电路:<br />
+&nbsp; * LED接2脚至7脚，然后接地<br />
+     
 &nbsp;created 2006<br />
 &nbsp;by David A. Mellis<br />
 &nbsp;modified 30 Aug 2011<br />
@@ -238,46 +238,46 @@ This example code is in the public domain.<br />
 &nbsp;http://arduino.cc/en/Tutorial/ForLoop<br />
 &nbsp;*/</span><br />
 <br />
-<span class="kw1">int</span> timer <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// The higher the number, the slower the timing.</span><br />
+<span class="kw1">int</span> timer <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// 数值越高，点亮时间越长</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// use a for loop to initialize each pin as an output:</span><br />
+&nbsp; <span class="co1">// 使用for循环来初始化2-7脚为OUTPUT。</span><br />
 &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisPin <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span> thisPin <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> thisPin<span class="sy0">++</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span><br />
 &nbsp; &nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>thisPin<span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<br />
 &nbsp; <span class="br0">&#125;</span><br />
 <span class="br0">&#125;</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// loop from the lowest pin to the highest:</span><br />
+&nbsp; <span class="co1">// 从最小的脚循环到最大的脚</span><br />
 &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisPin <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span> thisPin <span class="sy0">&lt;</span> <span class="nu0">8</span><span class="sy0">;</span> thisPin<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <br />
-&nbsp; &nbsp; <span class="co1">// turn the pin on:</span><br />
+&nbsp; &nbsp; <span class="co1">// 将引脚置为HIGH，点亮LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>thisPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; <br />
 &nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span>timer<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
-&nbsp; &nbsp; <span class="co1">// turn the pin off:</span><br />
+&nbsp; &nbsp; <span class="co1">// 将引脚置为LOW，熄灭LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>thisPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
 &nbsp; <span class="br0">&#125;</span><br />
 <br />
-&nbsp; <span class="co1">// loop from the highest pin to the lowest:</span><br />
+&nbsp; <span class="co1">// 从最大的引脚循环到最小的脚</span><br />
 &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisPin <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">;</span> thisPin <span class="sy0">&gt;=</span> <span class="nu0">2</span><span class="sy0">;</span> thisPin<span class="sy0">--</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <br />
-&nbsp; &nbsp; <span class="co1">// turn the pin on:</span><br />
+&nbsp; &nbsp; <span class="co1">// 将引脚置为HIGH，点亮LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>thisPin<span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span>timer<span class="br0">&#41;</span><span class="sy0">;</span><br />
-&nbsp; &nbsp; <span class="co1">// turn the pin off:</span><br />
+&nbsp; &nbsp; <span class="co1">// 将引脚置为LOW，熄灭LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>thisPin<span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <span class="br0">&#125;</span><br />
 <span class="br0">&#125;</span></div></div>
-  <div class='sourceblocklink'><a href='ForLoopf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
+  <div class='sourceblocklink'><a href='ForLoopf687.html?action=sourceblock&amp;num=1' type='text/plain'>[下载代码]</a></div>
 </div>
 
 </p>
 <p class='vspace'></p></div>
-<p class='vspace'></p><h3>See Also:</h3>
+<p class='vspace'></p><h3>参考：</h3>
 <ul><li><a class='wikilink' href='../Reference/For.html'><code>for()</code></a>
 </li><li><a class='wikilink' href='../Reference/DigitalWrite.html'><code>digitalWrite()</code></a>
 </li><li><a class='wikilink' href='../Reference/Delay.html'><code>delay()</code></a>
-<p class='vspace'></p></li><li><a class='wikilink' href='WhileLoop.html'>WhileLoop</a> - Use a While Loop to calibrate a sensor while a button is being pressed.
-</li><li><a class='wikilink' href='SwitchCase.html'>SwitchCase</a> - Choose between a number of discrete values in a manner that is the equivalent of using multiples If  statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
-</li><li><a class='wikilink' href='Array.html'>Array</a>: a variation on the For Loop example that demonstrates how to use an array.
+<p class='vspace'></p></li><li><a class='wikilink' href='WhileLoop.html'>WhileLoop</a> - 当按钮按下时，使用While循环校准传感器。
+</li><li><a class='wikilink' href='SwitchCase.html'>SwitchCase</a> - 在多个离散值中选择执行，类似执行多个if语句。此例演示了如何把传感器的值分成四类，根据不同的类别执行对应的操作。
+</li><li><a class='wikilink' href='Array.html'>Array</a>: For循环的另一种实现，演示如何使用数组。
 </li></ul>
 </div>
 
