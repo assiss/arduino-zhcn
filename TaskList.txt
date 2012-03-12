@@ -392,7 +392,7 @@ ASSISS	Reference/If.html
 	Tutorial/ADXL3xx.html
 	Tutorial/AnalogInOutSerial.html
 	Tutorial/AnalogInput.html
-	Tutorial/AnalogInputPins.html
+NNN	Tutorial/AnalogInputPins.html
 	Tutorial/AnalogReadSerial.html
 	Tutorial/AnalogWriteMega.html
 	Tutorial/ArduinoISP.html
@@ -419,7 +419,7 @@ ASSISS	Reference/If.html
 	Tutorial/Debounce.html
 	Tutorial/DhcpAddressPrinter.html
 	Tutorial/DhcpChatServer.html
-	Tutorial/DigitalPins.html
+NNN	Tutorial/DigitalPins.html
 	Tutorial/DigitalPotentiometer.html
 	Tutorial/DigitalReadSerial.html
 	Tutorial/Dimmer.html
@@ -433,7 +433,7 @@ GCCFeli	Tutorial/EEPROMClear.html
 	Tutorial/Fading.html
 	Tutorial/Files.html
 ASSISS	Tutorial/ForLoop.html
-	Tutorial/Foundations.html
+NNN	Tutorial/Foundations.html
 	Tutorial/Graph.html
 	Tutorial/HomePage.html
 	Tutorial/IfStatement.html
@@ -454,7 +454,7 @@ ASSISS	Tutorial/ForLoop.html
 	Tutorial/Loop.html
 	Tutorial/MasterReader.html
 	Tutorial/MasterWriter.html
-	Tutorial/Memory.html
+NNN	Tutorial/Memory.html
 	Tutorial/Memsic2125.html
 	Tutorial/Midi.html
 	Tutorial/MotorKnob.html
@@ -465,7 +465,7 @@ ASSISS	Tutorial/ForLoop.html
 	Tutorial/PachubeClientString.html
 	Tutorial/PhysicalPixel.html
 	Tutorial/Ping.html
-	Tutorial/PWM.html
+NNN	Tutorial/PWM.html
 	Tutorial/Qt401.html
 	Tutorial/RCtime.html
 	Tutorial/ReadWrite.html
@@ -481,7 +481,7 @@ ASSISS	Tutorial/ForLoop.html
 	Tutorial/ShftOut22.html
 	Tutorial/ShftOut23.html
 	Tutorial/ShiftOut.html
-	Tutorial/Sketch.html
+NNN	Tutorial/Sketch.html
 	Tutorial/Smoothing.html
 	Tutorial/SoftwareSerial.html
 	Tutorial/SoftwareSerialExample.html
@@ -514,7 +514,7 @@ ASSISS	Tutorial/ForLoop.html
 	Tutorial/TwoSwitchesOnePin.html
 	Tutorial/UdpNtpClient.html
 	Tutorial/UDPSendReceiveString.html
-	Tutorial/Variables.html
+NNN	Tutorial/Variables.html
 	Tutorial/VirtualColorMixer.html
 	Tutorial/WebClient.html
 	Tutorial/WebServer.html
