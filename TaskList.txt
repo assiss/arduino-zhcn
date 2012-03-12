@@ -33,7 +33,7 @@ BigQ */
 	Hacking/BuildProcess.html
 	Hacking/DFUProgramming8U2.html
 	Hacking/HomePage.html
-	Hacking/LibraryTutorial.html
+ASSISS	Hacking/LibraryTutorial.html
 	Hacking/MidiWith8U2Firmware.html
 	Hacking/MiniBootloader.html
 BigQ	Hacking/NGAutoReset.html
@@ -204,7 +204,7 @@ BigQ	Hacking/ParallelProgrammer.html
 	Reference/HighByte.html
 	Reference/HomePage.html
 	Reference/HomePage3fd6.html
-	Reference/If.html
+ASSISS	Reference/If.html
 	Reference/Include.html
 	Reference/Increment.html
 	Reference/IncrementCompound.html
@@ -432,7 +432,7 @@ GCCFeli	Tutorial/EEPROMClear.html
 	Tutorial/Fade.html
 	Tutorial/Fading.html
 	Tutorial/Files.html
-	Tutorial/ForLoop.html
+ASSISS	Tutorial/ForLoop.html
 	Tutorial/Foundations.html
 	Tutorial/Graph.html
 	Tutorial/HomePage.html
