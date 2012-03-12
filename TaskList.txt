@@ -6,6 +6,7 @@
 # name	url
 ###################################################################################
 	index.html
+/* Big Q
 	Guide/ArduinoBT.html
 	Guide/ArduinoEthernetShield.html
 	Guide/ArduinoLilyPad.html
@@ -22,6 +23,7 @@
 	Guide/Howto.html
 	Guide/Introduction.html
 	Guide/MacOSX.html
+BigQ */
 	Guide/Troubleshooting.html
 	Guide/UnoDriversWindowsXP.html
 	Guide/Windows.html
@@ -34,9 +36,9 @@
 	Hacking/LibraryTutorial.html
 	Hacking/MidiWith8U2Firmware.html
 	Hacking/MiniBootloader.html
-	Hacking/NGAutoReset.html
+BigQ	Hacking/NGAutoReset.html
 	Hacking/OtherHardware.html
-	Hacking/ParallelProgrammer.html
+BigQ	Hacking/ParallelProgrammer.html
 	Hacking/PinMapping.html
 	Hacking/PinMapping168.html
 	Hacking/PinMapping1a4e.html
@@ -373,15 +375,19 @@
 	Reference/WireWrite.html
 	Reference/Word.html
 	Reference/WordCast.html
-	Serial/Available.html
-	Serial/Begin.html
-	Serial/End.html
+
+/* Big Q  Claim
+
+	Serial/Available.html 	
+	Serial/Begin.html     	
+	Serial/End.html       	  
 	Serial/Flush.html
 	Serial/Peek.html
 	Serial/Print.html
 	Serial/Println.html
 	Serial/Read.html
 	Serial/Write.html
+*/
 	Site/AllRecentChanges.html
 	Tutorial/ADXL3xx.html
 	Tutorial/AnalogInOutSerial.html
