@@ -132,23 +132,23 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Bootloader Development</h2>
-<h4>What's a bootloader?</h4>
-<p>See <a class='wikilink' href='../Guide/Environment5078.html'>this page</a> for an explanation of what a bootloader is and why we're using one.
+<p class='vspace'></p><h2>Bootloader开发</h2>
+<h4>Bootloader是什么</h4>
+<p>关于Bootloader是什么，和我们为什么使用Bootloader，请参考<a class='wikilink' href='../Guide/Environment5078.html'>此页</a>。
 </p>
-<p class='vspace'></p><h4>Not using a bootloader</h4>
-<p>If you want to use the full program space (flash) of the chip or avoid the bootloader delay, you can burn your sketches using an external <a class='wikilink' href='Programmer.html'>programmer</a>.
+<p class='vspace'></p><h4>不使用Bootloader</h4>
+<p>如果你想使用芯片Flash的全部空间，或者想避免Bootloader带来的延迟，则可以使用别的<a class='wikilink' href='Programmer.html'>[编程器]</a>来烧写程序。
 </p>
-<p class='vspace'></p><h4>Burning the Bootloader</h4>
-<p>To burn the bootloader, you'll need to buy an <a class='urllink' href='http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2726' rel='nofollow'>AVR-ISP</a> (in-system programmer), <a class='urllink' href='http://www.ladyada.net/make/usbtinyisp/' rel='nofollow'>USBtinyISP</a> or build a <a class='wikilink' href='ParallelProgrammer.html'>ParallelProgrammer</a>.  The programmer should be connected to the ICSP pins (the 2 by 3 pin header) - make sure you plug it in the right way. The board must be powered by an external power supply or the USB port.
+<p class='vspace'></p><h4>烧写Bootloader</h4>
+<p>为了烧写Bootloader，需要购买一个<a class='urllink' href='http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2726' rel='nofollow'>AVR-ISP</a> (在线编程器)、<a class='urllink' href='http://www.ladyada.net/make/usbtinyisp/' rel='nofollow'>USBtinyISP</a>或做个<a class='wikilink' href='ParallelProgrammer.html'>并口编程器</a>。编程器连至ICSP管脚（2至3脚）----请确保连接正确无误。Arduino板必须由外接电源或USB口供电。
 </p>
-<p class='vspace'></p><p>Make sure you have the right item selected in the <strong>Tools | Board</strong> menu.  Then, just launch the appropriate command from the Tools &gt; Burn Bootloader menu of the Arduino environment.  Burning the bootloader may take 15 seconds or more, so be patient.  
+<p class='vspace'></p><p>请确保选择了Tools | Board中的正确菜单项，然后直接运行Tools &gt; Burn Bootloader菜单中的对应命令。烧写Bootloader需要花费大约15秒或更长时间，请耐心等待。
 </p>
-<p class='vspace'></p><h4>Bootloading an Arduino Mini</h4>
-<p>Here are some instructions on  <a class='wikilink' href='MiniBootloader.html'>bootloading the Mini</a>, thanks to Gian Pablo Vilamil.
+<p class='vspace'></p><h4>为Arduino Mini烧写Bootloader</h4>
+<p>以下是如何<a class='wikilink' href='MiniBootloader.html'>为Mini烧写Bootloader</a>的说明（多谢Gian Pablo Vilamil）：
 </p>
-<p class='vspace'></p><h4>It still doesn't work! (parallel programmer on Windows XP)</h4>
-<p>Windows XP may be polling your parallel port and disrupting the bootloader burning process.  You'll need this <a class='urllink' href='http://www.melabs.com/downloads/XP_stop_polling.reg' rel='nofollow'>registry patch</a>:
+<p class='vspace'></p><h4>Windows XP下并口编程器仍然无法正常运行。</h4>
+<p>Windows XP可能会轮询并口从而干扰Bootloader的烧写过程，因此请为注册表添加以下内容：<a class='urllink' href='http://www.melabs.com/downloads/XP_stop_polling.reg' rel='nofollow'>registry patch</a>:
 </p>
 <p class='vspace'></p><pre> 
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Parport\Parameters]
@@ -157,45 +157,52 @@ function toggle(obj) {
 </pre>
 <p class='vspace'></p><p>See this <a class='urllink' href='http://arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1142106610' rel='nofollow'>forum thread</a> for details.
 </p>
-<p class='vspace'></p><h4>Versions of the bootloader</h4>
-<p>There are different versions of the bootloader - both in order to work on different hardware and because it has changed over time.
+<p class='vspace'></p><h4>Bootloader的各个版本</h4>
+<p>Bootloader有各种各样的版本----因为要在各种不同的硬件上运行，也因为本身在不断地升级、变化。
 </p>
-<p class='vspace'></p><p>The current bootloaders (i.e. the ones included in Arduino 0009) are almost identical for the Diecimila and NG (with <span class='wikiword'>ATmega168</span>).  They both run at 19200 baud and take up 2 KB of flash memory on the <span class='wikiword'>ATmega168</span>.  The only differences is the time the bootloader waits for a new program to arrive and the number of times it flashes the pin 13 LED when it starts.  Because of the automatic reset on the Diecimila, its bootloader needs only wait a very short amount of time (less than a second) - to save time, it also flashes the pin 13 LED only once.  The NG bootloader waits about 6-8 seconds and flashes the LED three times.
+<p class='vspace'></p><p>Diecimila和NG（ATmega168）Bootloader的当前版本（如Arduino 0009版自带的）几乎完全相同。以上两者的Bootloader均在19200的波特率下工作，并且占用ATmega168上2K的Flash内存。仅有的区别，就是Bootloader等待新程序到来的时间和开始运行时13脚上LED闪烁的次数。由于Diecimila的自动重启，其Bootloader仅需要等待非常短的时间（少于一秒）----为了节约时间，并且仅闪烁13脚LED一次。NG的Bootloader需要等待6至8秒，并且闪烁3次。
 </p>
-<p class='vspace'></p><p>The bootloader that actually shipped on the Arduino NG is slightly different.  It enables the internal pullup resistor on pin 6, and doesn't enable the internal pullup on the RX pin.  Nor does it timeout upon receiving invalid data, so if you send data to it immediately after it resets, your sketch will never start.
+<p class='vspace'></p><p>Arduino NG自带的Bootloader有一点点不同。它启用了6脚的内置上拉电阻，而没有启动RX脚的内置上拉电阻。因此，若在重启NG之后，就立即向它发送数据，会导致它无法正常启动板上的程序，也不会因为收到无效数据就超时退出。
 </p>
-<p class='vspace'></p><p>The Arduino BT bootloader does some initial configuration of the bluetooth module.  
+<p class='vspace'></p><p>Arduino BT的Bootloader会做一些蓝牙模块的初始化工作。
 </p>
-<p class='vspace'></p><p>The <span class='wikiword'>ATmega8</span> bootloader only takes up 1 KB of flash.  It does not timeout when it receives invalid data, you need to make sure that no data is sent to the board during the 6-8 seconds when the bootloader is running.
+<p class='vspace'></p><p>ATmega8的Bootloader仅占用1K的Flash空间。当它收到无效数据时不会超时退出，因此需要确保在Bootloader运行的6至8秒中，不能向它发送数据。
 </p>
-<p class='vspace'></p><p>Some ancient versions of the bootloader run at 9600 baud (instead of 19200).  In order to successfully upload sketches to boards with this bootloader, you'll need to change the serial.download_rate in your <a class='wikilink' href='Preferences.html'>preferences file</a>  to 9600.
+<p class='vspace'></p><p>一些早期的Bootloader版本运行在9600波特率下（而不是19200）。为了正常下载程序，需要修改<a class='wikilink' href='Preferences.html'>preferences file</a>文件中的serail.download\_rate参数值为9600。
 </p>
-<p class='vspace'></p><p>Third parties have also worked on the bootloader. This page is link to some other <a class='urllink' href='http://arduino.cc/playground/Code/BootloaderDevelopment' rel='nofollow'>bootloader development</a>
+<p class='vspace'></p><p>一些第三方团体也在开发 Bootloader，他们的工作请参考<a class='urllink' href='http://arduino.cc/playground/Code/BootloaderDevelopment' rel='nofollow'>[这个链接]</a>
 </p>
-<p class='vspace'></p><h4>How does it work?</h4>
-<p>The "Burn Bootloader" commands in the Arduino environment use an open-source tool, avrdude.  There are four steps: unlocking the bootloader section of the chip, setting the the fuses on the chip, uploading the bootloader code to the chip, and locking the bootloader section of the chip.  These are controlled by a number of preferences in the Arduino <a class='wikilink' href='Preferences.html'>preferences file</a>.
+<p class='vspace'></p><h4>Bootloader运行原理</h4>
+<p>Arduino IDE菜单里的"Burn Bootloader"命令使用的是一款开源工具----avrdude，共有4步：
+<ul>
+    <li>1. 解锁芯片上的Bootloader区
+    <li>2. 设置芯片的熔丝位
+    <li>3. 下载Bootloader程序到芯片上
+    <li>4. 锁住芯片上的Bootloader区
+</ul>
+这些步骤由Arduino<a class='wikilink' href='Preferences.html'>配置文件</a>中的一些设置决定。
 </p>
-<p class='vspace'></p><p>For the <span class='wikiword'>ATmega8</span> bootloader, these are:
+<p class='vspace'></p><p>以<span class='wikiword'>ATmega8</span>为例，决定以上步骤的设置是：
 </p>
-<p class='vspace'></p><ul><li>bootloader.atmega8.programmer (default value: stk500) is the protocal used by the bootloader.
-<p class='vspace'></p></li><li>bootloader.atmega8.unlock_bits (default value: 0xFF) is the value to write to the <span class='wikiword'>ATmega8</span> lock byte to unlock the bootloader section.
-<p class='vspace'></p></li><li>bootloader.atmega8.high_fuses (default value: 0xca) is the value to write to the high byte of the <span class='wikiword'>ATmega8</span> fuses.
-<p class='vspace'></p></li><li>bootloader.atmega8.low_fuses (default value: 0xdf) is the value to write to the low byte of the <span class='wikiword'>ATmega8</span> fuses.
-<p class='vspace'></p></li><li>bootloader.atmega8.path (default value: bootloader) is the path (relative to the Arduino application directory) containing the precompiled bootloader.
-<p class='vspace'></p></li><li>bootloader.atmega8.file (default value: <span class='wikiword'>ATmegaBOOT</span>.hex) is the name of the file containing the precompiled bootloader code (in bootloader.path).
-<p class='vspace'></p></li><li>bootloader.atmega8.lock_bits (default value: 0x0F) is the value to write to the <span class='wikiword'>ATmega8</span> lock byte to lock the bootloader section (so it doesn't get accidently overwritten when you upload a sketch).
-</li></ul><p class='vspace'></p><p>For the <span class='wikiword'>ATmega168</span>, these are (where &lt;BOARD&gt; is either "diecimila" or "ng"):
+<p class='vspace'></p><ul><li>bootloader.atmega8.programmer （默认： stk500）bootloader使用的协议
+<p class='vspace'></p></li><li>bootloader.atmega8.unlock_bits （默认： 0xFF） 为解锁Bootloader区而向ATmega8锁位写入的值
+<p class='vspace'></p></li><li>bootloader.atmega8.high_fuses （默认： 0xca） 写入Atmega8熔丝位中的高位值
+<p class='vspace'></p></li><li>bootloader.atmega8.low_fuses （默认： 0xdf） 写入Atmega8熔丝位中的低位值
+<p class='vspace'></p></li><li>bootloader.atmega8.path （默认： bootloader） 包含编译好的bootloader路径（相对于Arduino的安装目录）
+<p class='vspace'></p></li><li>bootloader.atmega8.file （默认： ATmegaBOOT.hex） 编译好的Bootloader文件名（在bootloader.path目录里）
+<p class='vspace'></p></li><li>bootloader.atmega8.lock_bits （默认： 0x0F） 锁住Bootloader区时向Arduino锁位写的值（这样Bootloader才不会被新上传的程序覆盖）
+</li></ul><p class='vspace'></p><p>以<span class='wikiword'>ATmega168</span>为例，决定以上步骤的设置是(&lt;BOARD&gt; 表示"diecimila" 或"ng")：
 </p>
-<p class='vspace'></p><ul><li>bootloader.atmega168-&lt;BOARD&gt;.programmer (default value: avrispmkii) is the protocal used by the bootloader.
-<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.unlock_bits (default value: 0x3F) is the value to write to the <span class='wikiword'>ATmega168</span> lock byte to unlock the bootloader section.
-<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.extended_fuses (default value: 0x00) is the value to write to the high byte of the <span class='wikiword'>ATmega168</span> fuses.
-<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.high_fuses (default value: 0xdd) is the value to write to the high byte of the <span class='wikiword'>ATmega168</span> fuses.
-<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.low_fuses (default value: 0xff) is the value to write to the low byte of the <span class='wikiword'>ATmega168</span> fuses.
-<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.path (default value: bootloader168) is the path (relative to the Arduino application directory) containing the precompiled bootloader.
-<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.file (default value: <span class='wikiword'>ATmegaBOOT</span>_168_&lt;BOARD&gt;.hex) is the name of the file containing the precompiled bootloader code (in bootloader.path).
-<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.lock_bits (default value: 0x0F) is the value to write to the <span class='wikiword'>ATmega168</span> lock byte to lock the bootloader section (so it doesn't get accidently overwritten when you upload a sketch).
-</li></ul><p class='vspace'></p><h4>Source Code</h4>
-<p>The <a class='urllink' href='http://code.google.com/p/arduino/source/browse/#svn/trunk/hardware/bootloaders' rel='nofollow'>bootloader source code</a> is available.
+<p class='vspace'></p><ul><li>bootloader.atmega168-&lt;BOARD&gt;.programmer （默认： avrispmkii）bootloader使用的协议
+<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.unlock_bits （默认： 0x3F） 为解锁Bootloader区而向ATmega168锁位写入的值
+<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.extended_fuses （默认： 0x00） 写入Atmega168熔丝位中的高位值
+<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.high_fuses （默认： 0xdd） 写入Atmega168熔丝位中的高位值
+<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.low_fuses （默认： 0xff） 写入Atmega168熔丝位中的低位值
+<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.path （默认： bootloader168） 包含编译好的bootloader路径（相对于Arduino的安装目录）
+<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.file (默认：<span class='wikiword'>ATmegaBOOT</span>_168_&lt;BOARD&gt;.hex)编译好的Bootloader文件名（在bootloader.path目录里）
+<p class='vspace'></p></li><li>bootloader.atmega168-&lt;BOARD&gt;.lock_bits （默认： 0x0F） 锁住Bootloader区时向Arduino锁位写的值（这样Bootloader才不会被新上传的程序覆盖）
+</li></ul><p class='vspace'></p><h4>源代码</h4>
+<p>从此处<a class='urllink' href='http://code.google.com/p/arduino/source/browse/#svn/trunk/hardware/bootloaders' rel='nofollow'>访问Bootloader源代码</a>。
 </p>
 </div>
 

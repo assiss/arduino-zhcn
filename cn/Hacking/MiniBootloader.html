@@ -132,99 +132,94 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Bootload the Arduino Mini</h2>
-<p><em>by Gian Pablo Vilamil</em>
+<p class='vspace'></p><h2>为Arduino Mini安装引导程序（Bootload）</h2>
+<p><em>原作：Gian Pablo Vilamil</em>
 </p>
-<p class='vspace'></p><p>This document explains how to bootload an Arduino mini.
+<p class='vspace'></p><p>本文描述了如何为Arduino mini安装引导程序。
 </p>
-<p class='vspace'></p><p>If you know what a <a class='wikilink' href='Bootloader.html'>bootloader</a> is, why you want to do it, and are just looking for specific instructions for the Arduino Mini, then skip ahead to the section called "bootload the Arduino Mini".
+<p class='vspace'></p><p>如果你已经了解了<a class='wikilink' href='Bootloader.html'>引导程序(Bootloader)</a>是什么，知道为什么要用它，或者只是想查找Arduino Mini的具体说明，请直接前往“引导Arduino Mini”一节。
 </p>
-<p class='vspace'></p><h3>What is a bootloader, and what is bootloading?</h3>
-<p>The bootloader is the little program that runs when you turn the Arduino on, or press the reset button. Its main function is to wait for the Arduino software on your computer to send it a new program for the Arduino, which it then writes to the memory on the Arduino. This is important, because normally you need a special device to program the Arduino. The bootloader is what enables you to program the Arduino using just the USB cable.
+<p class='vspace'></p><h3>什么是引导程序（Bootloader），引导（Bootloading）又是什么？</h3>
+<p>引导程序是打开Arduino电源或重启Arduino时，Arduino运行的一小段程序。其主要功能是等待PC机上的Arduino IDE发送的新程序，然后将新程序写入到Arduino的板上内存中。它非常重要，因为一般情况下都需要一些专用的设备来为Arduino板编程，而引导程序则直接通过USB方式为Arduino编程。
 </p>
-<p class='vspace'></p><p>When we refer to "bootloading" the Arduino, we are talking about using a special device (called an In-System Programmer or ISP) to replace the bootloader software.
+<p class='vspace'></p><p>文中提到的“引导（Bootloading）”Arduino，意指使用专门的设备（在线编程器----ISP）烧写替换引导程序。
 </p>
-<p class='vspace'></p><h3>Why do I need to bootload the Arduino?</h3>
-<p>There are at least four reasons why you might need to do this:
-</p><ol><li>Your Arduino does not have a bootloader on it. This might happen if you have replaced the microcontroller with a new chip. This is unlikely to be the case with a  Mini, since the chip is not replaceable, and all Minis have the bootloader installed when shipped.
-</li><li>Replace the existing bootloader with a different bootloader. The  bootloader on  Arduinos prior to the Diecimila imposes a 10 second delay after resetting, while it waits for information from the Arduino software. This delay also occurs when the Arduino is powered up, or after programming. There are alternative bootloaders that eliminate these delays, including the Diecimila bootloader, the Adaboot bootloader, the <span class='wikiword'>LilyPad</span> bootloader, and others. You can also download the source code and modify the bootloader yourself (see <a class='wikilink' href='Bootloader.html'>this page</a> for more details and a link to the source).  This is useful if you want your project to start up immediately, and especially useful if it receives serial input. If the bootloader receives any input during startup, it will think the Arduino software is trying to talk to it, and delay, possibly indefinitely, starting your program. Here is <a class='urllink' href='http://www.ladyada.net/library/arduino/bootloader.html' rel='nofollow'>some info on alternative bootloaders</a>.
-</li><li>Not use a bootloader at all. The process for replacing the bootloader on the Arduino also lets you replace it entirely, with your own application. The advantages of doing this are that your application will start immediately, and it will give you an extra 2K of program memory. The disadvantage is that you will no longer be able to program your Arduino over USB - you will have to use the ISP (at least until you replace the bootloader).
-</li><li>The existing bootloader has somehow become corrupted. This is extremely unlikely. However, it is possible that under some circumstances the Arduino flash memory may become corrupted, and you may not be able to program the Arduino normally. Reinstalling the bootloader may fix these problems. It's kind of like reformatting your computer's hard drive.
-</li></ol><p class='vspace'></p><h2>Bootload the Arduino Mini</h2>
-<h3>How is bootloading the Arduino Mini different from programming other Arduinos?</h3>
-<p>Regular-size Arduinos have a 6 pin connector for the ISP. The Arduino Mini does not have this, so you have to make a connector cable. Other than this, the procedure is the same. With slight variations on the process, you can bootload many different configurations of Atmel-based projects.
+<p class='vspace'></p><h3>为什么要为Arduino安装引导</h3>
+<p>需要这么做的四个原因：
+</p><ol><li>Arduino板上没有引导程序。这可能发生在板子上的单片机芯片更换之后。不过对于Mini来说不太可能，因为Mini上的芯片不易替换，而Mini板上的芯片已经写好了引导程序。
+</li><li>更新板上的引导程序。Arduino Diecimila之前的引导程序会在重启之后延时10秒，以等待Arduino传输新程序。该延时也存在于Arduino加电启动和下载程序之后。其它版本的引导程序会消除该延时，比如Diecimila的引导程序、Adaboot和<span class='wikiword'>LilyPad</span>的引导程序等。也可自行下载源代码并更改（参阅<a class='wikilink' href='Bootloader.html'>[此页]</a>的详细指导和源代码链接）。这将对需要立即启动的程序，特别是需要接收串口的程序很有用处。如果引导程序在运行过程中接收到数据，则认为Arduino软件需要与之通信，就会开始延时，这有可能会导致板上的程序无法启动。<a class='urllink' href='http://www.ladyada.net/library/arduino/bootloader.html' rel='nofollow'>[其它引导程序简介点此]</a>。
+</li><li>不用引导程序。替换引导程序的做法，其实也可以用来直接替换成要运行的程序。这样做的好处是，程序直接运行，并且节约了2K的板上内存。缺点是没法直接用USB口给Arduino下载程序了，必须使用ISP编程器（至少在你的板子有引导程序之前）。
+</li><li>当前的引导程序坏了。这种情况很罕见。如Arduino板上的Flash内存出现问题时，可能引导程序无法工作。重新烧写引导程序也许能修复这个问题，类似于重新格式化电脑的硬盘。
+</li></ol><p class='vspace'></p><h2>为Arduino Mini安装引导程序</h2>
+<h3>为Arduino Mini安装引导程序与其它Arduino有何不同？</h3>
+<p>正常大小的Arduino与ISP有6只管脚连接，而Arduino Mini没有，所以需要定制一条连接线。除此之外，操作都是一样的。另外，对操作过程稍作修改，也可应用于安装其它基于Atmel项目的引导程序。
 </p>
-<p class='vspace'></p><h3>What do I need?</h3>
-<ul><li>An ISP (eg. AVR ISP <span class='wikiword'>MkII</span>)
-</li><li>6 pieces of wire
-</li><li>One piece of male header strip, with 12 pins
-</li><li>Two pieces of male header stip, 3 pins each
-</li></ul><p>8 AVR Studio software (from Atmel, <a class='urllink' href='http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2725' rel='nofollow'>free download</a>)
+<p class='vspace'></p><h3>需要什么？</h3>
+<ul><li>在线编程器ISP（如AVR ISP <span class='wikiword'>MkII</span>）
+</li><li>6根导线
+</li><li>一个12针的公头插针
+</li><li>两个3针的公头插针
+</li></ul><p>AVR Studio软件(从Atmel<a class='urllink' href='http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2725' rel='nofollow'>免费下载</a>)
 </p>
-<p class='vspace'></p><h3>How do I make the cable?</h3>
-<p>You need to connect 6 pins on the Arduino Mini to six pins on the ISP. The six pins are called MISO, MOSI, SCK, RESET, Power and Ground. Three of them correspond to digital I/O pins, numbered 11 - 13. The other three are the Reset, +5V and Ground pins you have probably already been using. (Note that you want to use the +5V pin, not the +9V pin. This is used to supply power to the ISP.)
+<p class='vspace'></p><h3>连接线怎么做？</h3>
+<p>需要将Arduino Mini的6个管脚与ISP相连。6个管脚分别是MISO、MOSI、SCK、RESET、POWER和GROUND。其中三个管脚是数字IO口，编号为11-13；其余三个是Reset、+5V和接地脚。这些管脚可能都用过了（注意，应该使用+5V的脚，而不是+9V。这是为ISP供电）。
 </p>
 <p class='vspace'></p><pre>    <img src='../uploads/Hacking/image002.jpg' alt='' title='' />
 </pre>
-<p class='vspace'></p><p>These pins on the Arduino have to be connected to the corresponding pins on the 6-pin connector coming from the ISP, shown below.
+<p class='vspace'></p><p>Arduino上的这些管脚将与ISP上的6个脚一一对应连接，如下图：
 </p>
 <p class='vspace'></p><pre>   <img src='../uploads/Hacking/image004.jpg' alt='' title='' />
 </pre>
-<p class='vspace'></p><p>Note that this is the view from the <em>back</em> of the connector. If you hold the connector by the ribbon, with the red stripe uppermost, and the connector facing <em>away</em> from you, this is what you will see.
+<p class='vspace'></p><p>注意该图是ISP的后视图。当手持ISP的带子，将红线置于最高处，面向ISP时所见的视图即此图。
 </p>
-<p class='vspace'></p><p>A simple way to make the connecting cable is to start with 6 pieces of wire, a piece of male header strip with 12 pins, and two pieces of header strip with 6 pins. Remove the 2nd through the 5th pins of the long strip using needle nose pliers. Remove the 9th through the 11th pins as well. Remove all the pins from the two smaller sections of male header.
+<p class='vspace'></p><p>最简单的连接线做法，是从6根导线、12针公头插针和2个6针的公头插针开始。使用尖嘴钳将长插针的2到5脚、9到11脚都拔掉，将两个短插针的所有脚都拔掉。
 </p>
-<p class='vspace'></p><p>Insert the wires corresponding to ground, reset and power (in that order) in the holes left by the 2nd through 5th pins. Insert the wires corresponding to SCK, MISO and MOSI (in that order) into the holes left by the 9th through 11th pins. Then, take the other ends of the wires, and put MISO, SCK, and RESET into piece, and Power, MOSI, and Ground into the other pieces. (Note that MOSI and Reset "swap sides", so to speak.) Trim the wires so they are all the same length.
-It is a good idea to use some hot glue to keep everything in place. It is easiest do this by plugging the two segments with 3 headers into the ISP cable (double-check they are correct!) and adding a drop of glue. (Don't glue the ISP cable itself.)
-You should have a cable that looks like this:
+<p class='vspace'></p><p>将导线插到2到5脚的接地、重启和电源（按顺序）洞中，也插到9到11脚的SCK、MISO和MOSI（按顺序）洞中。然后将导线的另外一端，按MISO、SCK、RESET合成一股，Power、MOSI、GROUND合成一股（注意MOSI和RESET交换分股）。把所有导线截齐。最好用热溶胶固定位置。将这两股与3针的公头插针连接好插入到ISP电缆上（仔细检查，确保连线完全正确），然后滴上胶水（别把ISP给粘上了）。做完的连接线如下图所示：
 </p>
 <p class='vspace'></p><pre>  <img src='../uploads/Hacking/image006.jpg' alt='' title='' />
 </pre>
-<p class='vspace'></p><p>Note that the pins on the ends are not connected to anything - I did this so that the header would be exact length of the Arduino Mini, making it easier to align.
-Note the order of the wires relative to the red strand on the programmer cable. When the red strand is on the top, and the cable is on the far side of the connector, the colors are white (MISO), green (SCK) and yellow (RESET). In the picture below, with the red strand on the bottom, and the ribbon cable on the near side, the cables are black (GND), blue (MOSI) and red (+5V):
+<p class='vspace'></p><p>注意此时末端的插针没有连接到任何东西上----这样做是为了与Arduino Mini齐长。注意编程器上红色导线与其它线的相对位置。当红线位置顶端，且连接线位于远离插口时，线的颜色分别是白色（MISO）、绿色（SCK）和黄色（RESET）。如下图所示，红线位置底部，且连接线靠近杜绑线时，线的颜色分别是黑色（GND）、蓝色（MOSI）和红色（+5V）。
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/image008.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>Mount your Arduino Mini on a breadboard, as shown (note that you will have to remove the LED on pin 13 during programming):
+<p class='vspace'></p><p>把Arduino Mini装到面包板上，如下图所示（编程时需要移除13脚的LED）：
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/image010.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>Line up the male header with 12 pins along the side of the Arduino Mini, so that it lines up with the pins. The Power, Reset and Ground wires should line up. (Note that the LED has been removed.) It should look like this:
+<p class='vspace'></p><p>将12针公头插针插到Arduino Mini一侧，使之与管脚排行对齐。POWRER、RESET和GROUND应该排一行（注意LED已经被移除了）。完成后应如下图所示：
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/image012.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>Here is a view from above:
+<p class='vspace'></p><p>这是顶视图：
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/image014.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>If you are using a USB adapter with your Arduino Mini, plug it into your computer now. If you are not, plug in whatever power source you are using. The Arduino must be powered for ISP to work.
+<p class='vspace'></p><p>如果Arduino Mini使用USB连接线，请将USB线插入电脑；若不使用USB，请将Arduino Mini连上电源。Arduino必须连上电源才能与ISP配合作用。
 </p>
-<p class='vspace'></p><p>Plug the USB cable from the ISP into your computer now. You should see two green <span class='wikiword'>LEDs</span> light up on the programmer. Note: you should not have anything plugged into pins 11-13 of the Arduino. This may interfere with the operation of the programmer.
+<p class='vspace'></p><p>将ISP的USB线插入电脑。此时编程器的两个绿色LED灯应该亮起来了。注意：此时Arduino的11-13脚上不应有任何器件，否则会影响编程器的操作。
 </p>
-<p class='vspace'></p><p>From this point on, the instructions are exactly the same as those for bootloading any Atmel 168 microcontroller. You can use <a class='wikilink' href='Bootloader.html'>the instructions elsewhere on this site</a>, or continue on.
+<p class='vspace'></p><p>之后的操作，就与Atmel 168单片机的操作完全一致了。你可以参考本站上<a class='wikilink' href='Bootloader.html'>其它文档</a>的指示，或者继续下面的教程。
 </p>
-<p class='vspace'></p><h3>How to load the bootloader using Arduino environment?</h3>
-<p>You can now bootload the Arduino using the Arduino environment. Open Arduino on your computer, set the type of board you are using (Arduino Mini), open the Burn Bootloader menu and choose your programmer. (In this example, AVRISP <span class='wikiword'>MkII</span>.)
+<p class='vspace'></p><h3>如何使用Arduino IDE来为Arduino装上引导程序？</h3>
+<p>现在可以使用Arduino IDE来安装引导程序了。打开电脑上的Arduino IDE，将板类型设置为你正在使用的类型（Arduino Mini），打开Burn Bootloader菜单并选择编程器（此例中为AVRISP MkII）。
 </p>
 <p class='vspace'></p><pre>   <img src='../uploads/Hacking/image016.jpg' alt='' title='' />
 </pre>
-<p class='vspace'></p><p>Unlike regular Arduino programming, you don't have to press the reset switch. The programmer resets the Arduino for you.
-This will install (or restore) the original Arduino bootloader. However, this is of little benefit, unless you are trying repair the bootloader, or your mini somehow came without one.
+<p class='vspace'></p><p>不同于常规的Arduino编程，此时无须按复位开关。编程器会自动复位Arduino。这将安装（或恢复）原始的Arduino引导程序。这一般不常用，除非你想修复引导程序，或者手中的Mini没有引导程序。
 </p>
-<p class='vspace'></p><h3>How to load the bootloader using <span class='wikiword'>AVRStudio</span>?</h3>
-<p>To install an alternative bootloader, you will need a piece of software called AVR Studio. Download it from <a class='urllink' href='http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2725' rel='nofollow'>here</a>. Unfortunately, AVR Studio only exists for the Windows environment. However, you can use the instructions for bootloading the Atmel168 on Mac OS/X.
+<p class='vspace'></p><h3>如何使用AVRStudio安装引导程序？</h3>
+<p>为安装其它引导程序，需要一款叫AVR Studio的程序。从<a class='urllink' href='http://www.atmel.com/dyn/products/tools_card.asp?tool_id=2725' rel='nofollow'>[此处下载]</a>。不幸的是，AVR Studio仅能在Windows系统中运行。不过按下面的说明在Mac OS/X上为Atmel 168安装引导程序。
 </p>
-<p class='vspace'></p><p>Run AVR Studio. Press cancel to skip the opening screen.
+<p class='vspace'></p><p>打开AVR Studio，按取消按钮跳过开始画面。
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/image018.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>Press the Con button. It is the tiny little button labeled "CON" that looks like a little chip. Then, select the type of ISP that you are using: in this example, AVR ISP Mk II.
+<p class='vspace'></p><p>点击继续按钮，这是一个很小的标着“CON”且看起来像个小芯片的按钮。接着选择ISP的类型，此例中是AVR ISP MkII：
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/image020.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>You will see the firmware upload dialog box, as shown below. Confirm that all the settings are as shown in the dialog. In the field "input HEX file", browse to the file you want to upload. This can be either:
+<p class='vspace'></p><p>此时可以看到固件上传的对话框，如下图。确认对话框中所有的设置参数，然后在“Input HEX file”的文件选择器中，浏览并找到将要下载的程序，可以是：
 </p>
-<p class='vspace'></p><ol><li>A new bootloader
-</li><li>A program of your own. The .hex file will be stored in the applet folder within your Arduino sketch's folder.
+<p class='vspace'></p><ol><li>一个新的引导程序
+</li><li>自己的程序。.hex文件保存在Arduino程序集的applet文件夹中。
 </li></ol><p class='vspace'></p><div><img src='../uploads/Hacking/image022.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>Press the "Program" button. You should see some activity in the status window. Press "Verify" if you want to confirm that everything is OK.
-Disconnect the ISP by removing its USB cable from the computer. If you want to play it safe, remove power from your Arduino. Disconnect the ISP header from your breadboard.
+<p class='vspace'></p><p>点击“Program”按钮。此时可见状态栏有变化。点击“Verify”以复核一切操作是否正确。将ISP的USB线拔下，断开ISP。为了确保安全，断掉Arduino的电源。断开ISP与面包板的连接。
 </p>
-<p class='vspace'></p><p>Your Arduino Mini is now bootloaded!
+<p class='vspace'></p><p>Arduino Mini的引导程序至此安装成功！
 </p>
 <p class='vspace'></p>
 </div>

@@ -6,6 +6,7 @@
 # name	url
 ###################################################################################
 	index.html
+/* Big Q
 	Guide/ArduinoBT.html
 	Guide/ArduinoEthernetShield.html
 	Guide/ArduinoLilyPad.html
@@ -22,21 +23,22 @@
 	Guide/Howto.html
 	Guide/Introduction.html
 	Guide/MacOSX.html
+BigQ */
 	Guide/Troubleshooting.html
 	Guide/UnoDriversWindowsXP.html
 	Guide/Windows.html
 	Hacking/Atmega168Hardware.html
-	Hacking/Bootloader.html
+ASSISS	Hacking/Bootloader.html
 	Hacking/Bootloader5ecd.html
-	Hacking/BuildProcess.html
+ASSISS	Hacking/BuildProcess.html
 	Hacking/DFUProgramming8U2.html
 	Hacking/HomePage.html
-	Hacking/LibraryTutorial.html
+ASSISS	Hacking/LibraryTutorial.html
 	Hacking/MidiWith8U2Firmware.html
-	Hacking/MiniBootloader.html
-	Hacking/NGAutoReset.html
+ASSISS	Hacking/MiniBootloader.html
+BigQ	Hacking/NGAutoReset.html
 	Hacking/OtherHardware.html
-	Hacking/ParallelProgrammer.html
+BigQ	Hacking/ParallelProgrammer.html
 	Hacking/PinMapping.html
 	Hacking/PinMapping168.html
 	Hacking/PinMapping1a4e.html
@@ -202,7 +204,7 @@
 	Reference/HighByte.html
 	Reference/HomePage.html
 	Reference/HomePage3fd6.html
-	Reference/If.html
+ASSISS	Reference/If.html
 	Reference/Include.html
 	Reference/Increment.html
 	Reference/IncrementCompound.html
@@ -373,20 +375,24 @@
 	Reference/WireWrite.html
 	Reference/Word.html
 	Reference/WordCast.html
-	Serial/Available.html
-	Serial/Begin.html
-	Serial/End.html
+
+/* Big Q  Claim
+
+	Serial/Available.html 	
+	Serial/Begin.html     	
+	Serial/End.html       	  
 	Serial/Flush.html
 	Serial/Peek.html
 	Serial/Print.html
 	Serial/Println.html
 	Serial/Read.html
 	Serial/Write.html
+*/
 	Site/AllRecentChanges.html
 	Tutorial/ADXL3xx.html
 	Tutorial/AnalogInOutSerial.html
 	Tutorial/AnalogInput.html
-	Tutorial/AnalogInputPins.html
+NNN	Tutorial/AnalogInputPins.html
 	Tutorial/AnalogReadSerial.html
 	Tutorial/AnalogWriteMega.html
 	Tutorial/ArduinoISP.html
@@ -413,7 +419,7 @@
 	Tutorial/Debounce.html
 	Tutorial/DhcpAddressPrinter.html
 	Tutorial/DhcpChatServer.html
-	Tutorial/DigitalPins.html
+NNN	Tutorial/DigitalPins.html
 	Tutorial/DigitalPotentiometer.html
 	Tutorial/DigitalReadSerial.html
 	Tutorial/Dimmer.html
@@ -426,11 +432,11 @@ GCCFeli	Tutorial/EEPROMClear.html
 	Tutorial/Fade.html
 	Tutorial/Fading.html
 	Tutorial/Files.html
-	Tutorial/ForLoop.html
-	Tutorial/Foundations.html
+ASSISS	Tutorial/ForLoop.html
+NNN	Tutorial/Foundations.html
 	Tutorial/Graph.html
 	Tutorial/HomePage.html
-	Tutorial/IfStatement.html
+ASSISS	Tutorial/IfStatement.html
 	Tutorial/Knob.html
 	Tutorial/Knock.html
 	Tutorial/LEDColorMixerWith3Potentiometers.html
@@ -448,7 +454,7 @@ GCCFeli	Tutorial/EEPROMClear.html
 	Tutorial/Loop.html
 	Tutorial/MasterReader.html
 	Tutorial/MasterWriter.html
-	Tutorial/Memory.html
+NNN	Tutorial/Memory.html
 	Tutorial/Memsic2125.html
 	Tutorial/Midi.html
 	Tutorial/MotorKnob.html
@@ -459,7 +465,7 @@ GCCFeli	Tutorial/EEPROMClear.html
 	Tutorial/PachubeClientString.html
 	Tutorial/PhysicalPixel.html
 	Tutorial/Ping.html
-	Tutorial/PWM.html
+NNN	Tutorial/PWM.html
 	Tutorial/Qt401.html
 	Tutorial/RCtime.html
 	Tutorial/ReadWrite.html
@@ -475,7 +481,7 @@ GCCFeli	Tutorial/EEPROMClear.html
 	Tutorial/ShftOut22.html
 	Tutorial/ShftOut23.html
 	Tutorial/ShiftOut.html
-	Tutorial/Sketch.html
+NNN	Tutorial/Sketch.html
 	Tutorial/Smoothing.html
 	Tutorial/SoftwareSerial.html
 	Tutorial/SoftwareSerialExample.html
@@ -508,7 +514,7 @@ GCCFeli	Tutorial/EEPROMClear.html
 	Tutorial/TwoSwitchesOnePin.html
 	Tutorial/UdpNtpClient.html
 	Tutorial/UDPSendReceiveString.html
-	Tutorial/Variables.html
+NNN	Tutorial/Variables.html
 	Tutorial/VirtualColorMixer.html
 	Tutorial/WebClient.html
 	Tutorial/WebServer.html

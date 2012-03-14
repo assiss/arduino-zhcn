@@ -132,66 +132,73 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Arduino Build Process</h2>
-<h3>Overview</h3>
-<p>A number of things have to happen for your Arduino code to get onto the Arduino board.  First, the Arduino environment performs some small transformations to make sure that the code is correct C or C++ (two common programming languages).  It then gets passed to a compiler (avr-gcc), which turns the human readable code into machine readable instructions (or object files).  Then, your code gets combined with (linked against), the standard Arduino libraries that provide basic functions like digitalWrite() or Serial.print().  The result is a single Intel hex file, which contains the specific bytes that need to be written to the program memory of the chip on the Arduino board.  This file is then uploaded to the board: transmitted over the USB or serial connection via the bootloader already on the chip or with external programming hardware.
+<p class='vspace'></p><h2>Arduino构建过程</h2>
+<h3>总述</h3>
+<p>为了生成可在Arduino板子上运行的程序，需要经过以下几个步骤：
+<ul>
+    <li>1. Arduino IDE对代码进行转换，确保生成正确的C/C++代码（两种常用的编程语言）。
+    <li>2. 通过编译器（avr-gcc）将上一步生成的可读代码，编译成机器能识别的指令（或称之为目标文件）。
+    <li>3. 通过链接器，将上一步产生的目标文件与标准Arduino库文件（提供基础函数，如digitalWrite()或Serial.print()）共同链接，生成一个Intel Hex文件，该文件中的指定内容将写入到Arduino板上的可编程内存中。
+    <li>4. 将上一步产生的HEX文件上传至Arduino板：可以使用USB或串口，通过板上已有的bootloader传输到Arduino板，也可以通过其它编程器直接烧写。
+</ul>
+
 </p>
-<p class='vspace'></p><h3>Multi-file sketches</h3>
-<p>A sketch can contain multiple files (tabs).  To manage them, click on the right-facing arrow just above the scroll bar near the top of the environment.  Tabs have one of four extensions: no extension, .c, .cpp, or .h (if you provide any other extension, the period will be converted to an underscore).  When your sketch is compiled, all tabs with no extension are concatenated together to form the "main sketch file".  Tabs with .c or .cpp extensions are compiled separately.  To use tabs with a .h extension, you need to #include it (using "double quotes" not &lt;angle brackets&gt;).  
+<p class='vspace'></p><h3>多文件程序</h3>
+<p>一个Arduino程序可以包含多个文件（IDE中的多个标签页，一个标签页代表一个文件）。单击IDE顶部滚动条的右向箭头即可管理各文件。文件标签页的扩展名有4种类型：无扩展名、.c、.cpp或.h（若是其它扩展名，将被转换为下划线）。程序编译完后，所有无扩展名的文件标签页将被合并在一起，生成“主程序文件”。.c或.cpp扩展名的文件将被单独编译。为了打开.h标签页，必须#include该文件（使用双引号""而非尖括号&lt; &gt;）。
 </p>
-<p class='vspace'></p><h3>Transformations to the main sketch file</h3>
-<p>The Arduino environment performs a few transformations to your main sketch file (the concatenation of all the tabs in the sketch without extensions) before passing it to the avr-gcc compiler.  
+<p class='vspace'></p><h3>主程序文件的处理</h3>
+<p>在传给avr-gcc编译器之前，Arduino IDE将对主程序文件（IDE中所有无扩展名的标签页合并结果）进行转换操作：
 </p>
-<p class='vspace'></p><p>First, #include "<span class='wikiword'>WProgram</span>.h" is added to the top of your sketch.  This header file (found in &lt;ARDUINO&gt;/hardware/cores/&lt;CORE&gt;/) includes all the defintions needed for the standard Arduino core.
+<p class='vspace'></p><p>1. 在主程序文件的头部，加入#include "WProgram.h"（0023版本）或#include "Arduino.h"（1.0版本）。该头文件（位于&lt;ARDUINO&gt;/hardware/cores/&lt;CORE&gt;/）包含Arduino标准核心库所需的所有声明。
 </p>
-<p class='vspace'></p><p>Next, the environment searches for function definitions within your main sketch file and creates declarations (prototypes) for them.  These are inserted after any comments or pre-processor statements (#includes or #defines), but before any other statements (including type declarations).  This means that if you want to use a custom type as a function argument, you should declare it within a separate header file.  Also, this generation isn't perfect: it won't create prototypes for functions that have default argument values, or which are declared within a namespace or class. 
+<p class='vspace'></p><p>2. IDE将搜索主程序文件中出现的所有函数定义，为它们创建声明（原型）。这些声明将被插在最前面的的注释、预处理语句（#include或#define）之后，其它语句之前（包括类型定义）。若在函数中使用了自定义类型，则需要将该类型的定义单独放入一个头文件中。当然，这个处理并不完善：含有默认参数值的函数，定义在名字空间或类里的函数，均不会产生正确的声明原型。
 </p>
-<p class='vspace'></p><p>Finally, the contents of the current target's main.cxx file are appended to the bottom of your sketch.  
+<p class='vspace'></p><p>3. 当前目标板的main.cxx文件中的所有内容，附加在主程序文件之后。
 </p>
-<p class='vspace'></p><h3>Targets</h3>
-<p>The Arduino environment supports multiple target boards with different chips (currently, only <span class='wikiword'>AVRs</span>), CPU speeds, or bootloaders.  These are defined in a board <a class='wikilink' href='Preferences.html'>preferences file</a>.  Relevant variables include:
+<p class='vspace'></p><h3>目标板</h3>
+<p>Arduino IDE支持多种目标板与多种芯片（目前仅AVR系列）、CPU频率、bootloader。这些都在板<a class='wikilink' href='Preferences.html'>配置文件</a>中定义，相关参数包括：
 </p>
-<p class='vspace'></p><p>&lt;BOARD&gt;.name: the name to display in the Boards menu
+<p class='vspace'></p><p>&lt;BOARD&gt;.name: 显示在Boards菜单里的名称
 </p>
-<p class='vspace'></p><p>&lt;BOARD&gt;.build.mcu: the microcontroller on the board (normally "atmega8" or "atmega168").
+<p class='vspace'></p><p>&lt;BOARD&gt;.build.mcu: 板上的单片机（常用"atmega8"或"atmega168"）
 </p>
-<p class='vspace'></p><p>&lt;BOARD&gt;.f_cpu: the clock speed at which the microcontroller operates (normally "16000000L", or, for an <span class='wikiword'>ATmega168</span> running on its internal clock, "8000000L").
+<p class='vspace'></p><p>&lt;BOARD&gt;.f_cpu: 单片机的时钟频率（常用"16000000L"或ATmega168使用内部时钟时的"8000000L"）
 </p>
-<p class='vspace'></p><p>&lt;BOARD&gt;.core: which sub-directory of the hardware/cores/ directory to link sketches against (normally "arduino").
+<p class='vspace'></p><p>&lt;BOARD&gt;.core: hardware/cores/目录里的子目录名称，用于链接时选择对应的核心库（常用"arduino"）
 </p>
-<p class='vspace'></p><p>Also useful is this setting in the main preferences.txt file:
+<p class='vspace'></p><p>另外，在preferences.txt中的一项设定也是很有用的：
 </p>
-<p class='vspace'></p><p>build.verbose: whether or not to print debugging messages while building a sketch (e.g. "false").  If true, will print the complete command line of each external command executed as part of the build process.
+<p class='vspace'></p><p>构建程序时，是否打印调试信息（如"false"）。若为true，则打印构建过程中调用的所有命令的完整信息。
 </p>
-<p class='vspace'></p><p><em>Note:</em> that in Arduino 0004 and later, build.extension is <strong>unused</strong> - the main sketch file is always treated as a .cpp file.
+<p class='vspace'></p><p><em>注：</em>Arduino 0004及之后的版本，build.extension<strong>不再使用</strong> -- 主程序文件将永远作为.cpp文件处理。
 </p>
-<p class='vspace'></p><h3>Build process</h3>
-<p>Sketches are compiled by avr-gcc.
+<p class='vspace'></p><h3>构建过程</h3>
+<p>使用avr-gcc来编译程序文件。
 </p>
-<p class='vspace'></p><p>The include path includes the sketch's directory, the target directory (&lt;ARDUINO&gt;/hardware/core/&lt;CORE&gt;/) and the avr include directory (&lt;ARDUINO&gt;/hardware/tools/avr/avr/include/), as well as any library directories (in &lt;ARDUINO&gt;/hardware/libraries/) which contain a header file which is included by the main sketch file.
+<p class='vspace'></p><p>include路径包括程序文件所在目录、目标板目录（&lt;ARDUINO&gt;/hardware/cores/&lt;CORE&gt;）和avr的include目录(&lt;ARDUINO&gt;/hardware/tools/avr/avr/include/），以及主程序文件引用的头文件所在的函数库目录（位于&lt;ARDUINO&gt;/hardware/libraries）。
 </p>
-<p class='vspace'></p><p>When you verify a sketch, it is built in a temporary directory in the system temp directory (e.g. /tmp on the Mac).  When you upload it, it is built in the applet/ subdirectory of the sketch's directory (which you can access with the "Show Sketch Folder" item in the "Sketch" menu).
+<p class='vspace'></p><p>当verify一个程序文件时，将在系统临时目录（如Mac里的/tmp）中进行构建。当上传时，将在程序文件所在目录（可通过Sketch &gt; Show Sketch Folder菜单进行访问）的applet/子目录中构建。
 </p>
-<p class='vspace'></p><p>The .c and .cpp files of the target are compiled and output with .o extensions to this directory, as is the main sketch file and any other .c or .cpp files in the sketch and any .c or .cpp files in any libraries which are #included in the sketch.
+<p class='vspace'></p><p>目标板核心的.c与.cpp文件将在同级目录下被编译生成.o文件，主程序文件、程序其它.c和.cpp文件及#include包含的函数库中的.c或.cpp文件同样处理。
 </p>
-<p class='vspace'></p><p>These .o files are then linked together into a static library and the main sketch file is linked against this library.  Only the parts of the library needed for your sketch are included in the final .hex file, reducing the size of most sketches.
+<p class='vspace'></p><p>这些.o文件将最终生成一个静态库，主程序文件与之链接。只有主程序中使用到的库代码才会被写入到最终的.hex文件中，这样就减少了绝大多数程序的大小。
 </p>
-<p class='vspace'></p><p>The .hex file is the final output of the compilation which is then uploaded to the board.  During a "Verify" the .hex file is written to /tmp (on Mac and Linux) or \Documents and Settings\&lt;USER&gt;\Local Settings\Temp (on Windows).  During upload, it's written to the applet sub-directory of the sketch directory (which you can open with the "Show Sketch Folder" item in the Sketch menu).
+<p class='vspace'></p><p>.hex文件是编译的最终文件，然后被上传到Arduino板。点击"Verify"按钮，.hex文件会在/tmp（Mac和Linux系统）或\Documents and Settings\&lt;USER&gt;\Local Settings\Temp（Windows系统）目录中生成；点击"upload"按钮，该文件在程序目录（通过Sketch &gt; Show Sketch Folder菜单访问）的applet子目录中生成。
 </p>
-<p class='vspace'></p><h3>Upload process</h3>
-<p>Sketches are uploaded by avrdude.
+<p class='vspace'></p><h3>上传过程</h3>
+<p>生成的程序通过avrdude上传。
 </p>
-<p class='vspace'></p><p>The upload process is also controlled by variables in the boards and main preferences files.  Those in the boards file include:
+<p class='vspace'></p><p>上传过程也受板配置和主配置文件中的参数影响，板配置包括：
 </p>
-<p class='vspace'></p><p>&lt;BOARD&gt;.upload.protocol: the protocol that avrdude should use to talk to the board (typically "stk500").
+<p class='vspace'></p><p>&lt;BOARD&gt;.upload.protocol: avrdude与Arduino板的通信协议（通常是"stk500"）
 </p>
-<p class='vspace'></p><p>&lt;BOARD&gt;.upload.speed: the speed (baud rate) avrdude should use when uploading sketches (typically "19200").
+<p class='vspace'></p><p>&lt;BOARD&gt;.upload.speed: avrdude上传程序时使用的速度（波特率）（通常是"19200"）
 </p>
-<p class='vspace'></p><p>&lt;BOARD&gt;.upload.maximum_size: the maximum size for a sketch on the board (dependent on the chip and the size of the bootloader).
+<p class='vspace'></p><p>&lt;BOARD&gt;.upload.maximum_size: Arduino板的最大程序大小（与芯片大小及bootloader大小有关）
 </p>
-<p class='vspace'></p><p>And in the main preferences file:
+<p class='vspace'></p><p>主配置中影响的参数：
 </p>
-<p class='vspace'></p><p>upload.verbose: whether or not to dump debugging messages while upload a sketch to a board (defaults to "false").
+<p class='vspace'></p><p>upload.verbose: 上传程序到板上时，是否显示调试信息（默认"false"）。
 </p>
 </div>
 

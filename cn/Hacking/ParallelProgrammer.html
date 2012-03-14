@@ -132,62 +132,61 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Parallel Port Programmer</h2>
-<p>Instructions for building a parallel port programmer for the Arduino board (or any other Atmega8 chip).  Allows you to program the board on Windows without any additional equipment.  Cheap and fun.  (Please note, however, that this doesn't allow for communication between the computer and programs running on the board.  You'll need a serial cable for that.)
+<p>本文介绍如何给Arduino（或者任意一个Atmega8芯片）一个做并口编程器，只利用这个既便宜又有趣的并口编程器，就可以将固件烧录进板子上。不过如果想要板子和电脑通信，你还是需要一个串口接头
 </p>
-<p class='vspace'></p><div><img src='../uploads/Hacking/programmer_schematic.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p><em>Rear view of connector.</em>
+<p class="vspace"></p><div><img src="../uploads/Hacking/programmer_schematic.jpg" alt="" title=""></div>
+<p class="vspace"></p><p><em>接头的后视图.</em>
 </p>
-<p class='vspace'></p><h3>Equipment</h3>
-<p>Tools:
-</p><ul><li>Soldering iron
-</li><li>Hot glue gun (optional)
-</li></ul><p class='vspace'></p><p>You'll need (parts):
-</p><ul><li>(2x) 470 ohm resistor (yellow-purple-brown)
-</li><li>(1x) 220 ohm resistor (red-red-brown)
-</li><li>(1x) parallel port cable or parallel-to-serial adapter
-</li><li>(2x) three wire cables with female connectors on one end, unattached wires on the other
-</li></ul><p class='vspace'></p><div><img src='../uploads/Hacking/programmer_parts.jpg' alt='' title='' /></div>
-<p class='vspace'></p><h3>Instructions</h3>
-<p>Remove any existing wires from the parallel connector.
+<p class="vspace"></p><h3>制作过程中需要的东西：</h3>
+<p>工具:
+</p><ul><li>电烙铁
+</li><li>热风枪（可选）
+</li></ul><p class="vspace"></p><p>需要的元器件:
+</p><ul><li>(2x) 470欧姆电阻（黄-紫-褐）
+</li><li>(1x) 220欧姆电阻（红-红-褐）
+</li><li>(1x) 并口接头或者并口转串口接头
+</li><li>(2x) 三口的杜邦线
+</li></ul><p class="vspace"></p><div><img src="../uploads/Hacking/programmer_parts.jpg" alt="" title=""></div>
+<p class="vspace"></p><h3>Instructions</h3>
+<p>先把并口接头上的线都焊掉（如果是新买的接头，跳过这一步）
 </p>
-<p class='vspace'></p><p>Solder 470 ohm resistors to pins 1 and 2 of the parallel connector.
+<p class="vspace"></p><p>分别给并口接头的1脚和2脚焊各焊接一个470欧姆的电阻。
 </p>
-<p class='vspace'></p><div><img src='../uploads/Hacking/programmer_one_resistor.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p><em>Parallel connector with a 470 ohm resistor soldered to pin 1.</em>
+<p class="vspace"></p><div><img src="../uploads/Hacking/programmer_one_resistor.jpg" alt="" title=""></div>
+<p class="vspace"></p><p><em>焊了一个470欧电阻在1脚的并口接头。</em>
 </p>
-<p class='vspace'></p><p>Solder a 220 ohm resistor to pin 11 of the connector.
+<p class="vspace"></p><p>再将一个220欧的电阻焊到接头的11脚。
 </p>
-<p class='vspace'></p><p>Solder, in order, the three wires of one of the cables to the resistor on pin 11 (which goes to pin 18 on the Atmega8), to the resistor on pin 1 (which goes to pin 19 on the Atmega8), and directly to pin 16 (which goes to the reset, pin 1).
+<p class="vspace"></p><p>Solder, in order, the three wires of one of the cables to the resistor on pin 11 (which goes to pin 18 on the Atmega8), to the resistor on pin 1 (which goes to pin 19 on the Atmega8), and directly to pin 16 (which goes to the reset, pin 1).
 </p>
-<p class='vspace'></p><div><img src='../uploads/Hacking/programmer_with_cable.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p><em>Parallel connector with two of the three wires of a cable soldered to pins 11 and 1, respectively.</em>
+<p class="vspace"></p><div><img src="../uploads/Hacking/programmer_with_cable.jpg" alt="" title=""></div>
+<p class="vspace"></p><p><em>Parallel connector with two of the three wires of a cable soldered to pins 11 and 1, respectively.</em>
 </p>
-<p class='vspace'></p><p>Solder the middle wire of the second cable to the resistor on pin 2 (which goes to pin 17 on the Atmega8), and one of the other wires to pin 18 (which goes to ground).  (The third wire is not used and may be cut short).
+<p class="vspace"></p><p>Solder the middle wire of the second cable to the resistor on pin 2 (which goes to pin 17 on the Atmega8), and one of the other wires to pin 18 (which goes to ground).  (The third wire is not used and may be cut short).
 </p>
-<p class='vspace'></p><div><img src='../uploads/Hacking/programmer_with_cables.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p><em>Parallel connector with both cables soldered in place.</em>
+<p class="vspace"></p><div><img src="../uploads/Hacking/programmer_with_cable.jpg" alt="" title=""></div>
+<p class="vspace"></p><p><em>Parallel connector with both cables soldered in place.</em>
 </p>
-<p class='vspace'></p><p>Connect the ends of the two cables so that, when viewed from the connector end, the unused wire is to the upper left and the wire to pin 11 is to the upper right (this is considered pin 1 of the connector and should be matched with the pin 1 indicated on the Arduino board).
+<p class="vspace"></p><p>Connect the ends of the two cables so that, when viewed from the connector end, the unused wire is to the upper left and the wire to pin 11 is to the upper right (this is considered pin 1 of the connector and should be matched with the pin 1 indicated on the Arduino board).
 </p>
-<p class='vspace'></p><p>Hot glue the wires inside the case of the parallel-to-serial adapater, making sure that any uninsulated wires are kept apart.  Or, if not using an adapter, wrap the exposed wires with electrical tape to keep them from touching.
+<p class="vspace"></p><p>Hot glue the wires inside the case of the parallel-to-serial adapater, making sure that any uninsulated wires are kept apart.  Or, if not using an adapter, wrap the exposed wires with electrical tape to keep them from touching.
 </p>
-<p class='vspace'></p><div><img src='../uploads/Hacking/programmer_in_adapter.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>Once the glue dries, reclose the case of the parallel-to-serial adapter.
+<p class="vspace"></p><div><img src="../uploads/Hacking/programmer_in_adapter.jpg" alt="" title=""></div>
+<p class="vspace"></p><p>Once the glue dries, reclose the case of the parallel-to-serial adapter.
 </p>
-<p class='vspace'></p><div><img src='../uploads/Hacking/parallel_programmer.jpg' alt='' title='' /></div>
-<p class='vspace'></p><h3>Software</h3>
-<p>You'll need to download <a class='urllink' href='http://web.mit.edu/6.115/www/miscfiles/giveio.zip' rel='nofollow'>giveio</a> from <a class='urllink' href='http://web.mit.edu/6.115/www/pic.shtml' rel='nofollow'>MIT's Microcomputer Project Laboratory</a> (thanks Jim!) and run the enclosed ginstall.bat file.
+<p class="vspace"></p><div><img src="../uploads/Hacking/parallel_programmer.jpg" alt="" title=""></div>
+<p class="vspace"></p><h3>Software</h3>
+<p>You'll need to download <a class="urllink" href="http://web.mit.edu/6.115/www/miscfiles/giveio.zip" rel="nofollow">giveio</a> from <a class="urllink" href="http://web.mit.edu/6.115/www/pic.shtml" rel="nofollow">MIT's Microcomputer Project Laboratory</a> (thanks Jim!) and run the enclosed ginstall.bat file.
 </p>
-<p class='vspace'></p><p>See the <a class='wikilink' href='Bootloader.html'>bootloader page</a> for details on using your new parallel port programmer to burn the bootloader onto the Arduino board.
+<p class="vspace"></p><p>See the <a class="wikilink" href="http://arduino.cc/en/Hacking/Bootloader">bootloader page</a> for details on using your new parallel port programmer to burn the bootloader onto the Arduino board.
 </p>
-<p class='vspace'></p><p>Or, if you're programming using uisp directly, you can use a command line like:
+<p class="vspace"></p><p>Or, if you're programming using uisp directly, you can use a command line like:
 </p>
-<p class='vspace'></p><p>uisp -dprog=dapa -dpart=<span class='wikiword'>ATmega8</span> if=prog.hex -dlpt=0x378 --erase --upload
+<p class="vspace"></p><p>uisp -dprog=dapa -dpart=<span class="wikiword">ATmega8</span> if=prog.hex -dlpt=0x378 --erase --upload
 </p>
-<p class='vspace'></p><p>@author: <em>David A. Mellis</em> IDII (with thanks to Erez Kikin-Gil for building one too and to Massimo Banzi for the request and the instructions)
+<p class="vspace"></p><p>@author: <em>David A. Mellis</em> IDII (with thanks to Erez Kikin-Gil for building one too and to Massimo Banzi for the request and the instructions)
 </p>
-<p class='vspace'></p><p>@revised by: <em>Marcos Yarza</em> K3
+<p class="vspace"></p><p>@revised by: <em>Marcos Yarza</em> K3
 </p>
 </div>
 

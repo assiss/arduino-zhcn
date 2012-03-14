@@ -188,18 +188,18 @@ function toggle(obj) {
 <p class='vspace'></p><p><em>Examples &gt; Communication</em>
 </p>
 <p class='vspace'></p><h3><span class='wikiword'>MultiSerialMega</span></h3>
-<p>Sometimes, one serial port just isn't enough! When trying to communicate with multiple serial enabled devices, while also sending info back to the main serial window, a few extra RX/TX ports can be a welcomed thing. This example makes use of one of Arduino Mega's 3 auxiliary serial ports, routing any incoming data read on that connection straight to the main TX line, and, in turn, to the main serial window for you to view. 
+<p>有时候，一个串口根本不够用，当你试图和多个串口设备进行通信时，你需要有一个串口数据监视窗口来回显你发送的数据，就需要额外的串口了。这个例子演示如何用Arduino Mega的三个串口来路由一些数据。其实就是一个串口读进来，再通过一个串口发出去。这里是一个串口读进来，再发给串口监视窗口。 
 </p>
-<p class='vspace'></p><div  class='BOM' >
-<h3>Hardware Required</h3>
-<ul><li>(1) Arduino Mega Board
-</li><li>(1) serial enabled device  (a Xbee Radio, Bluetooth module, or RFID reader, or another Arduino, for instance).
-</li></ul><p class='vspace'></p></div>
-<p class='vspace'></p><h3>Circuit</h3>
-<div  class='circuit' >
-<p class='vspace'></p><p>After checking the data sheet of whatever serial enabled device you choose to use for this example, make sure that it is both properly wired and powered. Connect the RX pin and TX pins of your device to the TX and RX pins of your Mega, as shown in the schematic below. 
+<p class="vspace"></p><div class="BOM">
+<h3>硬件需求</h3>
+<ul><li>(1) Arduino Mega板
+</li><li>(1) 带串口的设备  (比如 Xbee Radio, Bluetooth 模块,  RFID 识别器, 或者另一块Arduino).
+</li></ul><p class="vspace"></p></div>
+<p class="vspace"></p><h3>电路</h3>
+<div class="circuit">
+<p class="vspace"></p><p>研究过你在本例中使用的带串口的设备的相关文档后，保证接线和供电都正确。如下图所示，讲设备中的Tx连接至Mega的Rx，设备中的Rx连接至Mega的Tx。
 </p>
-<p class='vspace'></p><p>Make sure that your Mega is connected to your computer, via USB, to enable serial communication. 
+<p class="vspace"></p><p>再确认一下Mega的USB线是不是已经插进了你的电脑的USB口，开启了串口通信程序。
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/MEGA_bb.png' rel='nofollow'><img height='300px' src='../uploads/Tutorial/MEGA_bb.png' alt='' title='' /></a></div>
 <p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
