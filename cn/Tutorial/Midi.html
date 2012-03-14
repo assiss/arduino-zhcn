@@ -187,37 +187,40 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p><em>Examples &gt; Communication</em>
 </p>
-<p class='vspace'></p><h3>MIDI Note Player</h3>
-<p>This tutorial shows how to play MIDI notes from an Arduino.
+<p class="vspace"></p><h3>MIDI Note Player</h3>
+<p>本教程展示如何用Arduino来播放MIDI音符。
 </p>
-<p class='vspace'></p><p><a class='urllink' href='http://en.wikipedia.org/wiki/MIDI' rel='nofollow'>MIDI</a>, the Musical Instrument Digital Interface, is a useful protocol for controlling synthesizers, sequencers, and other musical devices. MIDI devices are generally grouped in to two broad classes: controllers (i.e. devices that generate MIDI signals based on human actions) and synthesizers (including samplers, sequencers, and so forth). The latter take MIDI data in and make sound, light, or some other effect.
+<p class="vspace"></p><p><a class="urllink" href="http://en.wikipedia.org/wiki/MIDI" rel="nofollow">MIDI</a>, the Musical Instrument Digital Interface, 是一个非常有用的协议，能够用来控制 合成，时序，和其他音乐设备。 MIDI设备一般分为两大类：控制器（即基于人类活动产生的MIDI信号的设备）和合成器（包括采样器，音序器，等等）。后者接收MIDI数据，能够产生使声，光，或是其他一些效果。
 </p>
-<p class='vspace'></p><p>MIDI is a serial protocol that operates at 31,250 bits per second. The Arduino's built-in serial port (all of them on the Mega as well) can send data at that rate.  
+<p class="vspace"></p><p>MIDI是一个串行协议，波特率为31250 bps 。Arduino自带的串口（包括MEGA），都可以发送此波特率的数据。 
 </p>
-<p class='vspace'></p><p>MIDI bytes are divided into two types: <strong>command bytes</strong> and <strong>data bytes</strong>. Command bytes are always 128 or greater, or 0x80 to 0xFF in hexadecimal.  Data bytes are always less than 127, or 0x00 to 0x7F in hex. Commands include things such as note on, note off, pitch bend, and so forth.  Data bytes include things like the pitch of the note to play, the velocity, or loudness of the note, and amount of pitch bend, and so forth.  For more details, see the MIDI specification, or one of the many <a class='urllink' href='http://hinton-instruments.co.uk/reference/midi/protocol/index.htm' rel='nofollow'>MIDI Protocol Guides</a> on the Web.
+<p class="vspace"></p><p>MIDI流分为两种类型：命令字节和数据字节。命令字节一般是128或更大的数，16进制中表示为 0x80到0xFF。数据字节一般小于127，16进制中为0x00
+到0x7F。命令字节包括诸如note on，note off，pitch bend等。数据流包括音符的音高，速度，响度和 amount of picht bend等等。如果需要了解详细的信息，请参阅MIDI规范<a class="urllink" href="http://hinton-instruments.co.uk/reference/midi/protocol/index.htm" rel="nofollow">MIDI Protocol Guides</a> 。
 </p>
-<p class='vspace'></p><p>MIDI data is usually notated in hexadecimal because MIDI banks and instruments are grouped in groups of 16.   
+<p class="vspace"></p><p>由于MIDIbank和设备以16为基数分组，所以MIDI数据一般表示为16进制。   
 </p>
-<p class='vspace'></p><p>For more see this <a class='urllink' href='http://www.tigoe.net/pcomp/code/communication/midi' rel='nofollow'>introduction to MIDI</a> or this <a class='urllink' href='http://itp.nyu.edu/physcomp/Labs/MIDIOutput' rel='nofollow'>example</a>.
+<p class="vspace"></p><p>了解更多请看这里 <a class="urllink" href="http://www.tigoe.net/pcomp/code/communication/midi" rel="nofollow">MIDI介绍</a> 或者这个 <a class="urllink" href="http://itp.nyu.edu/physcomp/Labs/MIDIOutput" rel="nofollow">示例</a>.
 </p>
-<p class='vspace'></p><p><strong>Hardware Required</strong>
-</p><ul><li>Arduino Board
-</li><li>(1) MIDI jack
-</li><li>(1) 220 ohm resistor 
-</li><li>hook-up wire
-</li><li>MIDI enabled device <em>(optional, for testing)</em>
-</li></ul><p class='vspace'></p><h3>Circuit</h3>
-<p>All MIDI connectors are female, by definition of the MIDI spec. Here's how to wire the connector to the Arduino:
+<p class="vspace"></p><p><strong>硬件需求</strong>
+</p><ul><li>Arduino 板
+</li><li>(1) MIDI 接口
+</li><li>(1) 220 欧姆电阻 
+</li><li>连接线
+</li><li>MIDI设备  <em>(可选, 测试用)</em>
+</li></ul><p class="vspace"></p><h3>Circuit</h3>
+<p>MIDI的规范规定所有的MIDI连接器都是母头，下面讲解如何将MIDI连接器和Arduino连接起来
 </p>
-<p class='vspace'></p><ul><li>Arduino digital pin 1 connected to MIDI jack pin 5
-</li><li>MIDI jack pin 2 connected to ground
-</li><li>MIDI jack pin 4 connected to +5V through 220-ohm resistor
-</li></ul><p class='vspace'></p><p>click the image to enlarge
+<p class="vspace"></p><ul><li>Arduino 的digital pin 1 连接到 MIDI 接口的 pin 5
+</li><li>MIDI 接口的 pin 2 连接到地GND。
+</li><li>MIDI 接口的 pin 4 串联一个220欧姆的电阻后连接至+5V。
+</li></ul><p class="vspace"></p><p>点击图片即可看到大图
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/MIDI_bb.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/MIDI_bb.png' alt='' title='' /></a></div>
-<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+<p class="vspace"></p><p><span style="font-size:83%">图片是用软件 <a class="urllink" href="http://www.fritzing.org/" rel="nofollow">Fritzing</a>画的. 需要看到更多的电路图例子，点这里<a class="urllink" href="http://fritzing.org/projects/" rel="nofollow">Fritzing project page</a> </span>
 </p>
-<p class='vspace'></p><p><strong>Schematic</strong>
+<p class="vspace"></p><p><strong>原理图</strong>
+</p>
+<p class="vspace"></p><p>点击图片即可得到大图
 </p>
 <p class='vspace'></p><p>click the image to enlarge
 </p>

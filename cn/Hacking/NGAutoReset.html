@@ -132,22 +132,22 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='../Tutorial/HomePage.html'>Examples</a> | <a class='wikilink' href='../Tutorial/Foundations.html'>Foundations</a> | <a class='wikilink' href='HomePage.html'>Hacking</a> | <a class='wikilink' href='../Tutorial/Links.html'>Links</a>
 </p>
-<p class='vspace'></p><h2>Upgrading an Arduino NG to Auto-Reset</h2>
-<p>If you have an Arduino NG and you're envious of all the seconds saved by those Diecimila owners who don't have to press the reset button anymore, this page is for you. You can upgrade an Arduino NG to take advantage of the auto-reset functionality in Arduino 0009 and beyond with just a 0.1uF (100 nano-farad) capacitor and a soldering iron.
+<p class='vspace'></p><h2>如何将Arduino NG升级成自动复位</h2>
+<p>假如你手上有块Arduino NG （mini Pro如果没接DTR线，也发现这个问题），你肯定非常羡慕别人拥有一块Diecimila（或者比较新的arduino硬件版本），他们不必按下复位按钮后开始数秒，下面将教会你，只需要0.01uF的电容和一个烙铁，就让你的Arduino NG拥有Arduino009（包括以后版本）的自动复位功能。
 </p>
-<p class='vspace'></p><p>First, unplug your board from power and heat up your soldering iron.  
+<p class='vspace'></p><p>首先，拔下电源板，加热烙铁
 </p>
-<p class='vspace'></p><p>Near the <span class='wikiword'>ATmega168</span> chip on the NG, there are four unused solder pads, as shown below.  Solder a 0.1 uF capacitor across the bottom (top???) two pads:
+<p class='vspace'></p><p>在Arduino NG板子上的ATmega168 芯片旁边有四个没有焊东西的焊盘，如下图所示，用0.01uF的电容将下面的两个焊盘连接。
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/ng-autoreset.png' alt='' title='' /></div>
-<p class='vspace'></p><p>Here's the board shown with the capacitor installed:
+<p class='vspace'></p><p>下图所示的是一块焊好的板子
 </p>
 <p class='vspace'></p><div><img src='../uploads/Hacking/ng-autoreset2.png' alt='' title='' /></div>
-<p class='vspace'></p><p>That's it. Now plug the board back into your computer and upload a new program, but don't hit the reset button.  It should upload with no problems.
+<p class='vspace'></p><p>这样就行了，把板子接上电脑试一下吧，烧录一个新固件，不再需要按复位键了。祝你成功！
 </p>
-<p class='vspace'></p><p>NOTE: Tymm Twillman notes that OSX triggers the RTS on serial port opening while Windows doesn't. So Windows machines may not respond to this fix. If you find this doesn't work for you, try soldering the cap to the upper two pads instead.
+<p class='vspace'></p><p>NOTE: Tymm Twillman 指出，OSX中串口打开会触发TRS，但是windows貌似不是这样，所以如果Windows下，对本文操作有可能无效。如果无效的话，请尝试短接上面两个焊盘的方法代替本文方法。
 </p>
-<p class='vspace'></p><p>You may want to burn the Diecimila bootloader onto your chip as well, to eliminate the delay that happens between the end of upload and the beginning of your program.
+<p class='vspace'></p><p>你也可以烧录Diecimila的bootloader到你的芯片上，消除之间上传的结束和你的程序开始执行之间的延迟。
 </p>
 <p class='vspace'></p>
 </div>

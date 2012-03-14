@@ -132,37 +132,37 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><em>Tom Igoe</em>
 </p>
-<p class='vspace'></p><p>Here's a pictorial view of a standalone Arduino system on a breadboard.  This version basically duplicates the Arduino serial model, with a slight change.  You can see from the schematic that a few components have been removed, and a new one has been added.  The 7404N hex inverter replaces the RX and TX transistor assemblies on the serial board. It's just a convenient way to invert the serial signal from a the programming computer to the <span class='wikiword'>ATMega8</span>.
+<p class="vspace"></p><p>如何在面包板上搭建一个独立的Arduino系统，如下面的原理图所示，基本跟Arduino串口模块类似，只是有一点点变化。仔细查看原理图，你会发现少了一部分一些器件，多了一个新的器件。这里用了一个简便的方法来实现上位机电脑和<span class="wikiword">ATmega8</span>的通信：用非门芯片7404N来代替TTL转232的串口芯片。 
 </p>
-<p class='vspace'></p><p>You'll need a chart to know the Arduino pin numbers of the <span class='wikiword'>ATmega8</span> pins.  <a class='wikilink' href='../Hacking/PinMapping1a4e.html'>Here's one</a>.
+<p class="vspace"></p><p>这里有一个<span class="wikiword">ATmega8</span>的Arduino管脚图供参考.  <a class="wikilink" href="http://arduino.cc/en/Main/PinMapping">点这里</a>.
 </p>
 <p class='vspace'></p><div  style='text-align: center;'><img src='../uploads/Main/standalone-schematic.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p><span style='font-size:83%'><em>note: programming header not included in schematic</em></span>
+<p class="vspace"></p><p><span style="font-size:83%"><em>请注意：烧写器的接头并没有在原理图中标明。</em></span>
 </p>
-<p class='vspace'></p><p>NOTE: there are 3 mistakes in the schematic: pin 1 and 2 of the 7404 (<span class='wikiword'>IC1</span>) must be swapped / S1 (the reset switch) is connected between GND and pin 1 of <span class='wikiword'>IC2</span> (the atmega8) / pin 5 of X1 (serial connector) is  connected to ground.
+<p class="vspace"></p><p>另外，请注意: 原理图中有三个错误: 第一：7404N的1、2脚要互换一下；第二：S1（复位按钮）分别连接GND和IC2（Atmega8）的1脚；第三：串口DB9接头X1的5脚要接地。
 </p>
-<p class='vspace'></p><p>Here's a <a class='wikilink' href='StandalonePartList.html'>part list</a> for this board.
+<p class="vspace"></p><p>这里是这块板子的 <a class="wikilink" href="http://arduino.cc/en/Main/StandalonePartList">原件清单</a> 。
 </p>
-<p class='vspace'></p><p>You will need an Atmel programmer to put the bootloader on your microcontroller, initially. In the board pictured below, space is left above the microcontroller to attach the programming cable.  
+<p class="vspace"></p><p>最开始需要一个Atmel编程器来把bootloader烧写到单片机中，下面的图中In the board pictured below, space is left above the microcontroller to attach the programming cable.  
 </p>
 <p class='vspace'></p><div  style='text-align: center;'><img src='../uploads/Main/standalone-header-space.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>I made a programming header connector to connect to an AVRISP programmer by soldering right-angle header pins to straight header pins. The cable attaches fasing to the right of the board.
+<p class="vspace"></p><p>我用两个弯针加一个双排指针做了一个牛角座，用来连接AVRISP接头，如下图所示
 </p>
 <p class='vspace'></p><div  style='text-align: center;'><img src='../uploads/Main/programmer-header.jpg' alt='' title='' />   <img src='../uploads/Main/programmer-cable.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>To program the bootloader, you'll need the bootloader files.  In Arduino-0001, bootloading is not built into the interface, so you'll need to do a little extra work.  
+<p class="vspace"></p><p>要烧写bootloader，你需要bootloader文件， In Arduino-0001, 接口中没有bootloading的实现，所以我们做一些额外的工作。
 </p>
 <p class='vspace'></p><p><a class='wikilink' href='../Hacking/Bootloader5ecd.html'>Bootloader</a>
 </p>
-<p class='vspace'></p><p>Once the chip is bootloaded, you're ready to connect it to the Arduino software. To simplify the board, I removed the programming header and connecting wires and added a reset button in the space above the microcontroller. Here's the resulting board.  This is accurate to the schematic, except for the  220-ohm resistor on the LED.
+<p class="vspace"></p><p>一旦芯片上搞定bootloader，你就可以用Arduino IDE来给它编程了，为了简化板子，去掉了烧写接头，在片子上部空间添加了复位按钮，形成了最终的这个样子，几乎和原理图一致，只是少了个连接LED的220欧姆的电阻。 
 </p>
 <p class='vspace'></p><div  style='text-align: center;'><img src='../uploads/Main/standalone-w-serial.jpg' alt='' title='' />   </div>
-<p class='vspace'></p><p>The serial connector's connection to ground is hidden under the connector itself in the photo above, so here's the same photo without the connector, to reveal the wires:
+<p class="vspace"></p><p>上面的图中，DB9串口接头的接地线被接头挡住看不到；下面的图中，DB9　接头取下来后，就可以看到上图中被遮挡的线。
 </p>
 <p class='vspace'></p><div  style='text-align: center;'><img src='../uploads/Main/standalone-no-serial.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>The serial connector is soldered to some straight headers so it can fit into the board like so:
+<p class="vspace"></p><p>如下图所示，焊一些弯针在DB9的接头上，就能将DB9串口接头方便的插在面包板上，这是个小技巧。
 </p>
 <p class='vspace'></p><div  style='text-align: center;'><img src='../uploads/Main/ser-connector-back.jpg' alt='' title='' /></div>
-<p class='vspace'></p><p>Connect a serial cable to your computer, a 9-15V DC power supply to the board, and you're ready to program.
+<p class="vspace"></p><p>将DB9的串口接头连接至电脑，找个9-15V的直流电源给板子供电，你就可以开始你的单片机编程之旅了。
 </p>
 <p class='vspace'></p>
 </div>
