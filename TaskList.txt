@@ -28,14 +28,14 @@ BigQ */
 	Guide/UnoDriversWindowsXP.html
 	Guide/Windows.html
 	Hacking/Atmega168Hardware.html
-	Hacking/Bootloader.html
+ASSISS	Hacking/Bootloader.html
 	Hacking/Bootloader5ecd.html
-	Hacking/BuildProcess.html
+ASSISS	Hacking/BuildProcess.html
 	Hacking/DFUProgramming8U2.html
 	Hacking/HomePage.html
 ASSISS	Hacking/LibraryTutorial.html
 	Hacking/MidiWith8U2Firmware.html
-	Hacking/MiniBootloader.html
+ASSISS	Hacking/MiniBootloader.html
 BigQ	Hacking/NGAutoReset.html
 	Hacking/OtherHardware.html
 BigQ	Hacking/ParallelProgrammer.html
@@ -436,7 +436,7 @@ ASSISS	Tutorial/ForLoop.html
 NNN	Tutorial/Foundations.html
 	Tutorial/Graph.html
 	Tutorial/HomePage.html
-	Tutorial/IfStatement.html
+ASSISS	Tutorial/IfStatement.html
 	Tutorial/Knob.html
 	Tutorial/Knock.html
 	Tutorial/LEDColorMixerWith3Potentiometers.html
