@@ -164,7 +164,7 @@ BigQ	Hacking/ParallelProgrammer.html
 	Reference/EEPROM.html
 	Reference/EEPROMRead.html
 	Reference/EEPROMWrite.html
-	Reference/Else.html
+ASSISS	Reference/Else.html
 	Reference/Ethernet.html
 	Reference/EthernetBegin.html
 	Reference/EthernetClient.html
@@ -197,7 +197,7 @@ BigQ	Hacking/ParallelProgrammer.html
 	Reference/Firmata.html
 	Reference/Float.html
 	Reference/FloatCast.html
-	Reference/For.html
+ASSISS	Reference/For.html
 	Reference/Fpconstants.html
 	Reference/FunctionDeclaration.html
 	Reference/Goto.html

@@ -132,28 +132,28 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
-<p class='vspace'></p><h2>for statements</h2>
-<h4>Desciption</h4>
-<p>The <strong>for</strong> statement is used to repeat a block of statements enclosed in curly braces. An increment counter is usually used to increment and terminate the loop. The <strong>for</strong> statement is useful for any repetitive operation, and is often used in combination with arrays to operate on collections of data/pins.
+<p class='vspace'></p><h2>for语句</h2>
+<h4>简述</h4>
+<p><strong>for</strong>语句用于循环执行大括号内的所有语句。通常使用步进计数来进行循环的执行和退出。<strong>for</strong>语句通常用于重复操作，且常与数组结合使用来操作数据集合或引脚集合。
 </p>
-<p class='vspace'></p><p>There are three parts to the <strong>for</strong> loop header:
+<p class='vspace'></p><p><strong>for</strong>语句头由三部分组成：
 </p>
-<p class='vspace'></p><p><code><strong>for</strong> (<strong>initialization</strong>;<strong> condition</strong>;<strong>  increment</strong>) {</code>
+<p class='vspace'></p><p><code><strong>for</strong> (<strong>初始化表达式</strong>;<strong>条件表达式</strong>;<strong> 步进表达式</strong>) {</code>
 </p>
-<p class='vspace'></p><p><code> //statement(s);</code>
+<p class='vspace'></p><p><code> //执行语句块;</code>
 </p>
 <p class='vspace'></p><p><code>}</code>
 </p><div><img height='220px' src='../uploads/Reference/ForLoopIllustrated.png' alt='' title='' /></div>
-<p class='vspace'></p><p>The <strong>initialization</strong> happens first and exactly once.  Each time through the loop, the <strong>condition</strong> is tested; if it's true, the statement block, and the <strong>increment</strong> is executed, then the <strong>condition</strong> is tested again.  When the <strong>condition</strong> becomes false, the loop ends.
+<p class='vspace'></p><p><strong>初始化表达式</strong>首先执行，且只执行一次。每次进入循环之前，<strong>条件表达式</strong>将被求值，若值为真，则执行语句块和步进表达式被顺序执行，然后继续求值并检测，直到值为假时退出循环。
 </p>
-<p class='vspace'></p><h4>Example</h4>
+<p class='vspace'></p><h4>样例</h4>
 <pre>
-// Dim an LED using a PWM pin
-int PWMpin = 10; // LED in series with 470 ohm resistor on pin 10
+// 使用PWM引脚实现LED渐亮
+int PWMpin = 10; // LED接470欧姆电阻后连上10脚
 
 void setup()
 {
-  // no setup needed
+  // 无须setup
 }
 
 void loop()
@@ -165,36 +165,36 @@ void loop()
 }
 
 </pre>
-<p class='vspace'></p><h4>Coding Tips</h4>
-<p>The C <strong>for</strong> loop is much more flexible than <strong>for</strong> loops found in some other computer languages, including BASIC. Any or all of the three header elements may be omitted, although the semicolons are required. Also the statements for initialization, condition, and increment can be any valid C statements with unrelated variables, and use any C datatypes including floats. These types of unusual <strong>for</strong> statements may provide solutions to some rare programming problems. 
+<p class='vspace'></p><h4>编程提示</h4>
+<p>C语言的<strong>for</strong>循环语句比一些编程语言（如BASIC）的<strong>for</strong>语句更灵活。除了两个分号，循环头的三个部分都可以省略，或者可以是任何有效的C语言表达式、使用任意类型的变量（包括float），哪怕它与循环根本无关。灵活使用for的各种形式，可以帮助解决某些少见的实际问题。
 </p>
-<p class='vspace'></p><p>For example, using a multiplication in the increment line will generate a logarithmic progression:<br />
+<p class='vspace'></p><p>例如，在步进表达式中使用乘法产生一个等比数列：<br />
 </p><pre>for(int x = 2; x &lt; 100; x = x * 1.5){
 println(x);
 }
 </pre>
-<p class='vspace'></p><p>Generates: 2,3,4,6,9,13,19,28,42,63,94
+<p class='vspace'></p><p>生成： 2,3,4,6,9,13,19,28,42,63,94
 </p>
-<p class='vspace'></p><p>Another example, fade an LED up and down with one <strong>for</strong> loop:
+<p class='vspace'></p><p>另一个例子，使用一个<strong>for</strong>语句渐亮和渐暗LED：
 </p>
 <p class='vspace'></p><pre>void loop()
 {
    int x = 1;
    for (int i = 0; i &gt; -1; i = i + x){
       analogWrite(PWMpin, i);
-      if (i == 255) x = -1;             // switch direction at peak
+      if (i == 255) x = -1;             // 在递增最大值时切换至递减
       delay(10);
    } 
 }
 </pre>
-<p class='vspace'></p><h4>See also</h4>
+<p class='vspace'></p><h4>参见</h4>
 <ul><li><a class='wikilink' href='While.html'>while</a>
 </li></ul><p><a class='wikilink' href='HomePage.html'>Reference Home</a>
 </p>
-<p class='vspace'></p><p><em>Corrections, suggestions, and new documentation should be posted to the <a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>Forum</a>.</em>
+<p class='vspace'></p><p><em>更正、建议及新的文档应投递至<a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>论坛</a>。</em>
 </p>
-<p class='vspace'></p><p>The text of the Arduino reference is licensed under a
-<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the reference are released into the public domain.
+<p class='vspace'></p><p>Arduino手册的文本受
+<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>协议保护，手册中的例子代码则贡献给公共领域。
 </p>
 </div>
 

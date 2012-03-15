@@ -133,46 +133,46 @@ function toggle(obj) {
 <p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
 <p class='vspace'></p><h2>if / else</h2>
-<p><strong>if/else</strong> allows greater control over the flow of code than the basic <strong>if</strong> statement, by allowing multiple tests to be grouped together. For example, an analog input could be tested and one action taken if the input was less than 500, and another action taken if the input was 500 or greater. The code would look like this:
+<p><strong>if/else</strong>是比<strong>if</strong>更为高级的流程控制语句，它可以进行多次条件测试。比如，检测模拟输入的值，当它小于500时该执行哪些操作，大于或等于500时执行另外的操作。代码如下：
 </p>
 <p class='vspace'></p><pre>if (pinFiveInput &lt; 500)
 {
-  // action A
+  // 执行A操作
 }
 else
 {
-  // action B
+  // 执行B操作
 }
 </pre>
-<p class='vspace'></p><p><strong>else</strong> can proceed another <strong>if</strong> test, so that multiple, mutually exclusive tests can be run at the same time. 
+<p class='vspace'></p><p><strong>else</strong>可以进行额外的<strong>if</strong>检测，所以多个互斥的条件可以同时进行检测。
 </p>
-<p class='vspace'></p><p>Each test will proceed to the next one until a true test is encountered. When a true test is found, its associated block of code is run, and the program then skips to the line following the entire if/else construction. If no test proves to be true, the default <strong>else</strong> block is executed, if one is present, and sets the default behavior. 
+<p class='vspace'></p><p>测试将一个一个进行下去，直到某个测试结果为真，此时该测试相关的执行语句块将被运行，然后程序就跳过剩下的检测，直接执行到if/else的下一条语句。当所有检测都为假时，若存在else语句块，将执行默认的<strong>else</strong>语句块。
 </p>
-<p class='vspace'></p><p>Note that an <strong>else if</strong> block may be used with or without a terminating <strong>else</strong> block and vice versa. An unlimited number of such <strong>else if</strong> branches is allowed.
+<p class='vspace'></p><p>注意<strong>else if</strong>语句块可以没有<strong>else</strong>语句块。<strong>else if</strong>分支语句的数量无限制。
 </p>
 <p class='vspace'></p><pre>if (pinFiveInput &lt; 500)
 {
-  // do Thing A
+  // 执行A操作
 }
 else if (pinFiveInput &gt;= 1000)
 {
-  // do Thing B
+  // 执行B操作
 }
 else
 {
-  // do Thing C
+  // 执行C操作
 }
 
-</pre><p>Another way to express branching, mutually exclusive tests, is with the <a class='wikilink' href='SwitchCase.html'>switch case</a> statement.
+</pre><p>另外一种进行多种条件分支判断的语句是<a class='wikilink' href='SwitchCase.html'>switch case</a>语句。
 </p>
-<p class='vspace'></p><h4>See also:</h4>
+<p class='vspace'></p><h4>参见：</h4>
 <p><a class='wikilink' href='SwitchCase.html'>switch case</a>
 <a class='wikilink' href='HomePage.html'>Reference Home</a>
 </p>
-<p class='vspace'></p><p><em>Corrections, suggestions, and new documentation should be posted to the <a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>Forum</a>.</em>
+<p class='vspace'></p><p><em>更正、建议及新的文档应投递至<a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>论坛</a>。</em>
 </p>
-<p class='vspace'></p><p>The text of the Arduino reference is licensed under a
-<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the reference are released into the public domain.
+<p class='vspace'></p><p>Arduino手册的文本受
+<a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>协议保护，手册中的例子代码则贡献给公共领域。
 </p>
 </div>
 
