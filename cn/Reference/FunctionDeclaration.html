@@ -132,23 +132,24 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
-<p class='vspace'></p><h2>Functions</h2>
-<p>Segmenting code into functions allows a programmer to create modular pieces of code that perform a defined task and then return to the area of code from which the function was "called". The typical case for creating a function is when one needs to perform the same action multiple times in a program.
+<p class='vspace'></p><h2>函数</h2>
+<p>把代码分段写入函数使程序员能编写模块化的代码，函数能执行一个特定的任务，然后返回代码中调用它的地方。创建函数的典型情况是当程序中需要多次进行相动的动作时。
 </p>
-<p class='vspace'></p><p>For programmers accustomed to using BASIC, functions in Arduino provide (and extend) the utility of using subroutines (GOSUB in BASIC).
+<p class='vspace'></p><p>对于习惯用 BASIC 的程序员，Arduino 中函数的作用与子程序(BASIC 中的 GOSUB)相同。
 </p>
-<p class='vspace'></p><p>Standardizing code fragments into functions has several advantages:
+<p class='vspace'></p><p>
+把代码段写成函数有许多好处:
 </p>
-<p class='vspace'></p><ul><li>Functions help the programmer stay organized. Often this helps to conceptualize the program.
-<p class='vspace'></p></li><li>Functions codify one action in one place so that the function only has to be thought out and debugged once.
-<p class='vspace'></p></li><li>This also reduces chances for errors in modification, if the code needs to be changed.
-<p class='vspace'></p></li><li>Functions make the whole sketch smaller and more compact because sections of code are reused many times.
-<p class='vspace'></p></li><li>They make it easier to reuse code in other programs by making it more modular, and as a nice side effect, using functions also often makes the code more readable.
-</li></ul><p class='vspace'></p><p>There are two required functions in an Arduino sketch, setup() and loop(). Other functions must be created outside the brackets of those two functions. As an example, we will create a simple function to multiply two numbers. 
+<p class='vspace'></p><ul><li>函数可以使程序显得井井有条。通常，这有助于概念化程序。
+<p class='vspace'></p></li><li>函数使一组动作代码只需要出现一次，所以一个函数也只需要编写和调试一次。
+<p class='vspace'></p></li><li>这也同时减少了修改代码时产生错误的可能。
+<p class='vspace'></p></li><li>函数使整个程序变得更小更紧凑，因为部分代码被重用了多次。
+<p class='vspace'></p></li><li>模块化的函数命名代码更方便重复使用，同时，使用函数可以使提高代码的可读性。
+</li></ul><p class='vspace'></p><p>在 Arduino 程序中有2个必需的函数：setup() 和 loop()。其它函数必需创建在这两个函数的括号之外。下例中我们创建了一个函数，把两个数相乘。
 </p>
-<p class='vspace'></p><h4>Example</h4>
+<p class='vspace'></p><h4>例子</h4>
 <div><img src='../uploads/Reference/FuncAnatomy.png' alt='' title='' /></div>
-<p class='vspace'></p><p>To "call" our simple multiply function, we pass it parameters of the datatype that it is expecting:
+<p class='vspace'></p><p>要调用这个简单的函数，需要传送参数给它，并且数据类型也要符合要求：
 </p>
 <p class='vspace'></p><pre>
 void loop{
@@ -159,9 +160,9 @@ int k;
 k = myMultiplyFunction(i, j); // k now contains 6
 }
 
-</pre><p>Our function needs to be <em>declared</em> outside any other function, so "myMultiplyFunction()" can go either above or below the "loop()" function. 
+</pre><p>函数需要在其他函数之外<em>declared</em>, 所以 "myMultiplyFunction()" 可以放在 "loop()" 函数之前或之后。
 </p>
-<p class='vspace'></p><p>The entire sketch would then look like this:
+<p class='vspace'></p><p>整个程序看起来就象这样:
 </p><pre>void setup(){
   Serial.begin(9600);
 }
@@ -182,8 +183,8 @@ int myMultiplyFunction(int x, int y){
   return result;
 }
 </pre>
-<p class='vspace'></p><h4>Another example </h4>
-<p>This function will read a sensor five times with analogRead() and calculate the average of five readings. It then scales the data to 8 bits (0-255), and inverts it, returning the inverted result.
+<p class='vspace'></p><h4>另一个例子 </h4>
+<p>这个函数用 analogRead() 重复五次读取一个传感器并计算平均值，再把数据调整为8位(0-255)并反转，最后返回反转后的值。
 </p>
 <p class='vspace'></p><pre>int ReadSens_and_Condition(){
   int i;
@@ -199,7 +200,7 @@ int myMultiplyFunction(int x, int y){
   return sval;
 }
 </pre>
-<p class='vspace'></p><p>To call our function we just assign it to a variable.
+<p class='vspace'></p><p>要调用这个函数，只需要把它赋给一个变量：
 </p>
 <p class='vspace'></p><pre>int sens;
 
@@ -208,7 +209,7 @@ sens = ReadSens_and_Condition();
 </pre>
 <p class='vspace'></p><p><a class='wikilink' href='HomePage.html'>Reference Home</a>
 </p>
-<p class='vspace'></p><p><em>Corrections, suggestions, and new documentation should be posted to the <a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>Forum</a>.</em>
+<p class='vspace'></p><p><em>勘误、提议和新的文档可以张贴到 <a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>论坛</a>.</em>
 </p>
 <p class='vspace'></p><p>The text of the Arduino reference is licensed under a
 <a class='urllink' href='http://creativecommons.org/licenses/by-sa/3.0/' rel='nofollow'>Creative Commons Attribution-ShareAlike 3.0 License</a>.  Code samples in the reference are released into the public domain.
