@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -185,36 +185,36 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><p><em>Examples &gt; Analog I/O</em>
+<p class='vspace'></p><p><em>示例 &gt; 模拟 I/O</em>
 </p>
-<p class='vspace'></p><h3>Fading</h3>
-<p>Demonstrates the use of the <a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite()</a> function in fading an LED off and on. <span class='wikiword'>AnalogWrite</span> uses <a class='wikilink' href='PWM.html'>pulse width modulation (PWM)</a>, turning a digital pin on and off very quickly, to create a fading effect.
+<p class='vspace'></p><h3>渐变</h3>
+<p>通过让 LED 渐变亮度，演示 <a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite()</a> 函数的使用。 <span class='wikiword'>AnalogWrite</span> 使用 <a class='wikilink' href='PWM.html'>脉冲宽度调制 (PWM)</a>，让一个数字引脚迅速开关来实现渐变效果。
 </p>
-<p class='vspace'></p><h3>Hardware Required</h3>
-<ul><li>Arduino board
-</li><li>Breadboard
-</li><li>a LED
-</li><li>a 220 ohm resistor
-</li></ul><p class='vspace'></p><h3>Circuit</h3>
-<p>Connect the <strong>anode</strong> (the longer, positive leg) of your LED to digital output pin 9 on your Arduino through a 220-ohm resistor. Connect the <strong>cathode</strong> (the shorter, negative leg) directly to ground. 
+<p class='vspace'></p><h3>硬件需求</h3>
+<ul><li>Arduino 开发板
+</li><li>面包板
+</li><li>一只 LED
+</li><li>一只 220 欧姆电阻
+</li></ul><p class='vspace'></p><h3>电路</h3>
+<p>将 LED 的 <strong>阳极</strong> (长管脚)，通过一只 220 欧姆电阻与 Arduino 的数字输出 9 连接。将 LED 的 <strong>阴极</strong> (短管脚) 接地。 
 </p>
-<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大</span>
 </p><div><a class='urllink' href='../uploads/Tutorial/simplefade_bb.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/simplefade_bb.png' alt='' title='' /></a></div>
-<p class='vspace'></p><h3>Schematic</h3>
-<p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><h3>原理图</h3>
+<p><span style='font-size:83%'>点击图片放大</span>
 </p><div><a class='urllink' href='../uploads/Tutorial/simplefade_pin9_schem.png' rel='nofollow'><img width='300px' src='../uploads/Tutorial/simplefade_pin9_schem.png' alt='' title='' /></a></div>
-<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+<p class='vspace'></p><p><span style='font-size:83%'>图片绘制采用 <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. 更多的电路示例，请参考 <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing 项目页面</a> </span>
 </p>
-<p class='vspace'></p><h3>Code</h3>
-<p>After declaring pin 9 to be your <code>ledPin</code>, there is nothing to do in the <code>setup()</code> function of your code. 
+<p class='vspace'></p><h3>代码</h3>
+<p><code>setup()</code> 把管脚 9 定义为 LED 输出管脚。
 </p>
-<p class='vspace'></p><p>The <code>analogWrite()</code> function that you will be using in the main loop of your code requires two arguments: One telling the function which pin to write to, and one indicating what <a class='wikilink' href='PWM.html'>PWM</a> value to write. 
+<p class='vspace'></p><p>在主循环中使用到的 <code>analogWrite()</code> 函数需要两个参数：一个表示你要往哪个管脚输出，另一个表示输出的 <a class='wikilink' href='PWM.html'>PWM</a> 值。 
 </p>
-<p class='vspace'></p><p>In order to fade your LED off and on, gradually increase your PWM value from 0 (all the way off) to 255 (all the way on), and then back to 0 once again to complete the cycle.  In the sketch below, the PWM value is set using a variable called <code>brightness</code>.  Each time through the loop, it increases by the value of the variable <code>fadeAmount</code>. 
+<p class='vspace'></p><p>为了让 LED 渐变亮度，我们逐渐增加 PWM 值，从 0（完全关闭）一直到 255（完全点亮），然后再逐渐变为 0，完成一个循环。在下面的程序中，PWM 值由一个叫做 <code>brightness</code> 的变量确定。每次循环执行的时候，它的值的变化由变量 <code>fadeAmount</code> 决定。 
 </p>
-<p class='vspace'></p><p>If <code>brightness</code> is at either extreme of its value (either 0 or 255), then <code>fadeAmount</code> is changed to its negative. In other words, if <code>fadeAmount</code> is 5, then it is set to -5. If it's 55, then it's set to 5. The next time through the loop, this change causes <code>brightness</code> to change direction as well.
+<p class='vspace'></p><p>如果 <code>brightness</code> 达到极值（0 或 255），那么 <code>fadeAmount</code> 就应该变为它的相反数。换句话说，如果 <code>fadeAmount</code> 是 5，那么它应该被设为 -5。 如果它是 -5，那么应该被设为 5。在下一次循环执行的时候，这个改变会导致 <code>brightness</code> 向另一个方向变化。
 </p>
-<p class='vspace'></p><p><code>analogWrite()</code> can change the PWM value very fast, so the delay at the end of the sketch controls the speed of the fade.  Try changing the value of the delay and see how it changes the program.
+<p class='vspace'></p><p>由于 <code>analogWrite()</code> 能以非常快的速度改变 PWM 值，所以我们在程序的末尾用一个延时来控制渐变的速度。试试改变延时的大小，看看它对程序有什么影响。
 </p>
 <p class='vspace'></p><div  class='code'>
 <p class='vspace'></p><p>
@@ -222,32 +222,32 @@ function toggle(obj) {
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
 &nbsp;Fade<br />
 &nbsp;<br />
-&nbsp;This example shows how to fade an LED on pin 9<br />
-&nbsp;using the analogWrite() function.<br />
+&nbsp;这个示例演示了怎样使用 analogWrite() 函数<br />
+&nbsp;来控制管脚 9 上的 LED 灯渐变亮度<br />
 &nbsp;<br />
-&nbsp;This example code is in the public domain.<br />
+&nbsp;此示例代码完全公开<br />
 &nbsp;<br />
 &nbsp;*/</span><br />
-<span class="kw1">int</span> brightness <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// how bright the LED is</span><br />
-<span class="kw1">int</span> fadeAmount <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// how many points to fade the LED by</span><br />
+<span class="kw1">int</span> brightness <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// LED 的亮度</span><br />
+<span class="kw1">int</span> fadeAmount <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// 每次改变的 LED 亮度</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span> <br />
-&nbsp; <span class="co1">// declare pin 9 to be an output:</span><br />
+&nbsp; <span class="co1">// 将管脚 9 用作输出</span><br />
 &nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span><span class="nu0">9</span><span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 <span class="br0">&#125;</span> <br />
 <br />
 <span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span> <br />
-&nbsp; <span class="co1">// set the brightness of pin 9:</span><br />
+&nbsp; <span class="co1">// 通过管脚 9，设置 LED 的亮度</span><br />
 &nbsp; <span class="kw1">analogWrite</span><span class="br0">&#40;</span><span class="nu0">9</span><span class="sy0">,</span> brightness<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
 <br />
-&nbsp; <span class="co1">// change the brightness for next time through the loop:</span><br />
+&nbsp; <span class="co1">// 为下一次循环执行设置新的亮度</span><br />
 &nbsp; brightness <span class="sy0">=</span> brightness <span class="sy0">+</span> fadeAmount<span class="sy0">;</span><br />
 <br />
-&nbsp; <span class="co1">// reverse the direction of the fading at the ends of the fade: </span><br />
+&nbsp; <span class="co1">// 在渐变结束的时候，改变渐变的方向 </span><br />
 &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>brightness <span class="sy0">==</span> <span class="nu0">0</span> <span class="sy0">||</span> brightness <span class="sy0">==</span> <span class="nu0">255</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
 &nbsp; &nbsp; fadeAmount <span class="sy0">=</span> <span class="sy0">-</span>fadeAmount <span class="sy0">;</span> <br />
 &nbsp; <span class="br0">&#125;</span> &nbsp; &nbsp; <br />
-&nbsp; <span class="co1">// wait for 30 milliseconds to see the dimming effect &nbsp; &nbsp;</span><br />
+&nbsp; <span class="co1">// 等待 30 毫秒</span><br />
 &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 <span class="br0">&#125;</span></div></div>
   <div class='sourceblocklink'><a href='Fadef687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
@@ -255,18 +255,18 @@ function toggle(obj) {
 
 </p>
 <p class='vspace'></p></div>
-<h3>See Also</h3>
+<h3>请参阅</h3>
 <ul><li><a class='wikilink' href='../Reference/Setup.html'>setup</a>()
 </li><li><a class='wikilink' href='../Reference/Loop.html'>loop</a>()
 </li><li><a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite</a>() 
 </li><li><a class='wikilink' href='../Reference/Int.html'>int</a>
 </li><li><a class='wikilink' href='../Reference/For.html'>for</a>
 </li><li><a class='wikilink' href='PWM.html'>PWM</a>
-<p class='vspace'></p></li><li><a class='wikilink' href='BareMinimum.html'>BareMinimum</a>: The bare minimum of code needed to start an Arduino sketch.
-</li><li><a class='wikilink' href='Blink.html'>Blink</a>: Turn an LED on and off.
-</li><li><a class='wikilink' href='DigitalReadSerial.html'>DigitalReadSerial</a>: Read a switch, print the state out to the Arduino Serial Monitor.
-</li><li><a class='wikilink' href='AnalogReadSerial.html'>AnalogReadSerial</a>: Read a potentiometer, print it's state out to the Arduino Serial Monitor.
-</li><li><a class='selflink' href='Fade.html'>Fade</a>: Demonstrates the use of analog output to fade an LED.
+<p class='vspace'></p></li><li><a class='wikilink' href='BareMinimum.html'>BareMinimum</a>: 让 Arduino 工作的最小代码。
+</li><li><a class='wikilink' href='Blink.html'>Blink</a>: LED 点亮与熄灭。
+</li><li><a class='wikilink' href='DigitalReadSerial.html'>DigitalReadSerial</a>: 读入一个开关量，并将状态打印到 Arduino 串口监视器上。
+</li><li><a class='wikilink' href='AnalogReadSerial.html'>AnalogReadSerial</a>: 读入电位计输出，并将状态打印到 Arduino 串口监视器上。
+</li><li><a class='selflink' href='Fade.html'>Fade</a>: 演示怎样使用模拟输出控制 LED 亮度渐变。
 </li></ul>
 </div>
 
