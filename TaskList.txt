@@ -6,24 +6,22 @@
 # name	url
 ###################################################################################
 	index.html
-/* Big Q
-	Guide/ArduinoBT.html
-	Guide/ArduinoEthernetShield.html
-	Guide/ArduinoLilyPad.html
-	Guide/ArduinoMini.html
-	Guide/ArduinoNano.html
-	Guide/ArduinoPro.html
-	Guide/ArduinoProMini.html
-	Guide/ArduinoWirelessShield.html
-	Guide/ArduinoWirelessShieldS2.html
-	Guide/ArduinoXbeeShield.html
-	Guide/Environment.html
-	Guide/Environment5078.html
-	Guide/HomePage.html
-	Guide/Howto.html
-	Guide/Introduction.html
-	Guide/MacOSX.html
-BigQ */
+BigQ	Guide/ArduinoBT.html
+BigQ	Guide/ArduinoEthernetShield.html
+BigQ	Guide/ArduinoLilyPad.html
+BigQ	Guide/ArduinoMini.html
+BigQ	Guide/ArduinoNano.html
+BigQ	Guide/ArduinoPro.html
+BigQ	Guide/ArduinoProMini.html
+BigQ	Guide/ArduinoWirelessShield.html
+BigQ	Guide/ArduinoWirelessShieldS2.html
+BigQ	Guide/ArduinoXbeeShield.html
+BigQ	Guide/Environment.html
+BigQ	Guide/Environment5078.html
+BigQ	Guide/HomePage.html
+BigQ	Guide/Howto.html
+BigQ	Guide/Introduction.html
+BigQ	Guide/MacOSX.html
 	Guide/Troubleshooting.html
 	Guide/UnoDriversWindowsXP.html
 	Guide/Windows.html
@@ -375,19 +373,15 @@ ASSISS	Reference/If.html
 	Reference/WireWrite.html
 	Reference/Word.html
 	Reference/WordCast.html
-
-/* Big Q  Claim
-
-	Serial/Available.html 	
-	Serial/Begin.html     	
-	Serial/End.html       	  
-	Serial/Flush.html
-	Serial/Peek.html
-	Serial/Print.html
-	Serial/Println.html
-	Serial/Read.html
-	Serial/Write.html
-*/
+BigQ	Serial/Available.html 	
+BigQ	Serial/Begin.html     	
+BigQ	Serial/End.html       	  
+BigQ	Serial/Flush.html
+BigQ	Serial/Peek.html
+BigQ	Serial/Print.html
+BigQ	Serial/Println.html
+BigQ	Serial/Read.html
+BigQ	Serial/Write.html
 	Site/AllRecentChanges.html
 	Tutorial/ADXL3xx.html
 	Tutorial/AnalogInOutSerial.html
