@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -185,33 +185,33 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><p><em>Examples &gt; EEPROM Library</em>
+<p class='vspace'></p><p><em>示例 &gt; EEPROM 库</em>
 </p>
-<p class='vspace'></p><h3>EEPROM Clear</h3>
-<p>The microcontroller on the Arduino board has 512 bytes of <a class='urllink' href='http://en.wikipedia.org/wiki/EEPROM' rel='nofollow'>EEPROM:</a> memory whose values are kept when the board is turned off (like a tiny hard drive). This example illustrates how to set of all of those bytes to 0, initializing them to hold new information, using the <a class='wikilink' href='../Reference/EEPROMWrite.html'><strong>EEPROM.write()</strong></a> function.
+<p class='vspace'></p><h3>EEPROM 清零</h3>
+<p>Auduino 开发板上的微控制器有 512 字节的 <a class='urllink' href='http://en.wikipedia.org/wiki/EEPROM' rel='nofollow'>EEPROM</a> 存储，就像一个微型硬盘一样，可在电源关闭时保存数据。 这个例子演示了怎样使用 <a class='wikilink' href='../Reference/EEPROMWrite.html'><strong>EEPROM.write()</strong></a> 函数把所有字节清零，也就是对 EEPROM 进行初始化，以便保存新的信息。
 </p>
 <p class='vspace'></p><div  class='BOM' >
-<h3>Hardware Required</h3>
-<ul><li>Arduino Board  
+<h3>硬件需求</h3>
+<ul><li>Arduino 开发板
 </li></ul></div>
-<p class='vspace'></p><h3>Circuit</h3>
+<p class='vspace'></p><h3>电路</h3>
 <div  class='circuit' >
-<p>There is no circuit for this example. 
+<p>这个例子没有电路。
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/Arduino_bb.png' rel='nofollow'><img height='250px' src='../uploads/Tutorial/Arduino_bb.png' alt='' title='' /></a></div>
-<p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+<p><span style='font-size:83%'>图片绘制采用 <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. 更多的电路示例，请参考 <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing 项目页面</a> </span>
 </p>
 <p class='vspace'></p></div>
-<p class='vspace'></p><h3>Code</h3>
-<p>The code below uses a <code>for()</code> loop in cycling through all 512 bytes of EEPROM memory, and in setting them each to 0. Because this needs to happen only once, the bulk of this code takes place in the <code>setup()</code> function when the sketch starts.
+<p class='vspace'></p><h3>代码</h3>
+<p>下面的代码使用一个 <code>for()</code> 循环遍历 EEPROM 中的所有 512 个字节，并把它们置为 0。因为这个过程只需要执行一次，所以代码放在了 <code>setup()</code> 中，当程序启动时执行。
 </p>
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock1'>
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
-&nbsp;* EEPROM Clear<br />
+&nbsp;* EEPROM 清零<br />
 &nbsp;*<br />
-&nbsp;* Sets all of the bytes of the EEPROM to 0.<br />
-&nbsp;* This example code is in the public domain.<br />
+&nbsp;* 将 EEPROM 的所有字节清零。<br />
+&nbsp;* 此示例代码完全公开<br />
 <br />
 &nbsp;*/</span><br />
 <br />
@@ -219,11 +219,11 @@ function toggle(obj) {
 <br />
 <span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
 <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// write a 0 to all 512 bytes of the EEPROM</span><br />
+&nbsp; <span class="co1">// 将 EEPROM 中的所有 512 字节置 0</span><br />
 &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="nu0">512</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">&#41;</span><br />
 &nbsp; &nbsp; EEPROM.<span class="kw1">write</span><span class="br0">&#40;</span>i<span class="sy0">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; &nbsp; <br />
-&nbsp; <span class="co1">// turn the LED on when we're done</span><br />
+&nbsp; <span class="co1">// 完成后点亮 LED</span><br />
 &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span><span class="nu0">13</span><span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 <span class="br0">&#125;</span><br />
 <br />
@@ -237,9 +237,9 @@ function toggle(obj) {
 <p class='vspace'></p><h3>See also</h3>
 <ul><li><a class='wikilink' href='../Reference/For.html'><code>for()</code></a>
 </li><li><a class='wikilink' href='../Reference/EEPROMWrite.html'><code>EEPROM.write()</code></a>
-<p class='vspace'></p></li><li><a class='wikilink' href='EEPROMRead.html'>EEPROM Read example</a>
-</li><li><a class='wikilink' href='EEPROMWrite.html'>EEPROM Write example</a>
-</li><li><a class='wikilink' href='../Reference/EEPROM.html'>EEPROM library reference</a>
+<p class='vspace'></p></li><li><a class='wikilink' href='EEPROMRead.html'>EEPROM 读取示例</a>
+</li><li><a class='wikilink' href='EEPROMWrite.html'>EEPROM 写入示例</a>
+</li><li><a class='wikilink' href='../Reference/EEPROM.html'>EEPROM 库参考</a>
 </li></ul><p class='vspace'></p>
 </div>
 
