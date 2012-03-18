@@ -94,8 +94,8 @@ BigQ	Hacking/ParallelProgrammer.html
 	Main/Software264b.html
 	Main/Software60ee.html
 	Main/Softwaread68.html
-	Main/Standalone.html
-	Main/StandaloneAssembly.html
+NNN	Main/Standalone.html
+???	Main/StandaloneAssembly.html
 	Main/StandalonePartList.html
 	Main/USBAssembly.html
 	Main/USBAssembly2.html
@@ -197,7 +197,7 @@ ASSISS	Reference/Else.html
 	Reference/FloatCast.html
 ASSISS	Reference/For.html
 	Reference/Fpconstants.html
-	Reference/FunctionDeclaration.html
+NNN	Reference/FunctionDeclaration.html
 	Reference/Goto.html
 	Reference/HighByte.html
 	Reference/HomePage.html
