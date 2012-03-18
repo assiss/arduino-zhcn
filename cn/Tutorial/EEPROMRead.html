@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -185,37 +185,37 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><p><em>ʾ�� &gt; EEPROM ��</em>
+<p class='vspace'></p><p><em>示例 &gt; EEPROM 库</em>
 </p>
-<p class='vspace'></p><h3>EEPROM ��ȡ</h3>
-<p>Auduino �������ϵ�΢�������� 512 �ֽڵ� <a class='urllink' href='http://en.wikipedia.org/wiki/EEPROM' rel='nofollow'>EEPROM</a> �洢������һ��΢��Ӳ��һ�������ڵ�Դ�ر�ʱ�������ݡ� 
+<p class='vspace'></p><h3>EEPROM 读取</h3>
+<p>Auduino 开发板上的微控制器有 512 字节的 <a class='urllink' href='http://en.wikipedia.org/wiki/EEPROM' rel='nofollow'>EEPROM</a> 存储，就像一个微型硬盘一样，可在电源关闭时保存数据。 
 </p>
-<p class='vspace'></p><p>���������ʾ������ʹ�� <a class='wikilink' href='../Reference/EEPROMRead.html'><strong>EEPROM.read()</strong></a> �������� EEPROM ��ÿ���ֽڵ�ֵ���������Ǵ�ӡ�����ڴ����ϡ�</p>
+<p class='vspace'></p><p>这个例子演示了怎样使用 <a class='wikilink' href='../Reference/EEPROMRead.html'><strong>EEPROM.read()</strong></a> 函数读出 EEPROM 中每个字节的值，并把它们打印到串口窗口上。</p>
 <p class='vspace'></p><div  class='BOM' >
-<h3>Ӳ������</h3>
-<ul><li>Arduino ������
+<h3>硬件需求</h3>
+<ul><li>Arduino 开发板
 </li></ul></div>
-<p class='vspace'></p><h3>��·</h3>
+<p class='vspace'></p><h3>电路</h3>
 <div  class='circuit' >
-<p>�������û�е�·��
+<p>这个例子没有电路。
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/Arduino_bb.png' rel='nofollow'><img height='250px' src='../uploads/Tutorial/Arduino_bb.png' alt='' title='' /></a></div>
-<p><span style='font-size:83%'>ͼƬ���Ʋ��� <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. ����ĵ�·ʾ������ο� <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing ��Ŀҳ��</a> </span>&nbsp;</p>
+<p><span style='font-size:83%'>图片绘制采用 <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. 更多的电路示例，请参考 <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing 项目页面</a> </span>&nbsp;</p>
 <p class='vspace'></p></div>
-<p class='vspace'></p><h3>����</h3>
+<p class='vspace'></p><h3>代码</h3>
 <p>
 <div class='sourceblock ' id='sourceblock1'>
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
-&nbsp;* EEPROM ��ȡ<br />
+&nbsp;* EEPROM 读取<br />
 &nbsp;*<br />
-&nbsp;* ��ȡ EEPROM �������ֽڵ�ֵ<br />
-&nbsp;* �������Ǵ�ӡ��������ϡ�<br />
-&nbsp;* ��ʾ��������ȫ����<br />
+&nbsp;* 读取 EEPROM 中所有字节的值<br />
+&nbsp;* 并将它们打印到计算机上。<br />
+&nbsp;* 此示例代码完全公开<br />
 &nbsp;*/</span><br />
 <br />
 <span class="co2">#include &lt;EEPROM.h&gt;</span><br />
 <br />
-<span class="co1">// �� EEPROM �ĵ�һ���ֽڣ���ַ0����ʼ��ȡ</span><br />
+<span class="co1">// 从 EEPROM 的第一个字节（地址0）开始读取</span><br />
 <span class="kw1">int</span> address <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br />
 <span class="kw1">byte</span> value<span class="sy0">;</span><br />
 <br />
@@ -226,7 +226,7 @@ function toggle(obj) {
 <br />
 <span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
 <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// �� EEPROM �ĵ�ǰ��ַ��ȡһ���ֽ�</span><br />
+&nbsp; <span class="co1">// 从 EEPROM 的当前地址读取一个字节</span><br />
 &nbsp; value <span class="sy0">=</span> EEPROM.<span class="kw1">read</span><span class="br0">&#40;</span>address<span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>address<span class="br0">&#41;</span><span class="sy0">;</span><br />
@@ -234,11 +234,11 @@ function toggle(obj) {
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span>value<span class="sy0">,</span> <span class="kw2">DEC</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <br />
-&nbsp; <span class="co1">// ǰ���� EEPROM ����һ����ַ</span><br />
+&nbsp; <span class="co1">// 前进到 EEPROM 的下一个地址</span><br />
 &nbsp; address <span class="sy0">=</span> address <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span><br />
 &nbsp; <br />
-&nbsp; <span class="co1">// EEPROM ֻ�� 512 �ֽڣ���ַ�� 0 �� 511</span><br />
-&nbsp; <span class="co1">// ���������ַ���� 512��Ӧ�û��Ƶ� 0</span><br />
+&nbsp; <span class="co1">// EEPROM 只有 512 字节，地址从 0 到 511</span><br />
+&nbsp; <span class="co1">// 所以如果地址等于 512，应该环绕到 0</span><br />
 &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>address <span class="sy0">==</span> <span class="nu0">512</span><span class="br0">&#41;</span><br />
 &nbsp; &nbsp; address <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br />
 &nbsp; &nbsp; <br />
@@ -248,11 +248,11 @@ function toggle(obj) {
 </div>
 
 </p>
-<p class='vspace'></p><h3>�����</h3>
+<p class='vspace'></p><h3>请参阅</h3>
 <ul><li><a class='wikilink' href='../Reference/EEPROMRead.html'><code>EEPROM.read()</code></a>
 </li><li><a class='wikilink' href='../Reference/Serial.html'><code>serial.begin()</code></a>
 </li><li><a class='wikilink' href='../Reference/Serial.html'><code>serial.print()</code></a>
-<p class='vspace'></p></li><li><a class='wikilink' href='EEPROMClear.html'>EEPROM ����ʾ��</a></li><li><a class='wikilink' href='EEPROMWrite.html'>EEPROM д��ʾ��</a></li><li><a class='wikilink' href='../Reference/EEPROM.html'>EEPROM ��ο�</a>
+<p class='vspace'></p></li><li><a class='wikilink' href='EEPROMClear.html'>EEPROM 清零示例</a></li><li><a class='wikilink' href='EEPROMWrite.html'>EEPROM 写入示例</a></li><li><a class='wikilink' href='../Reference/EEPROM.html'>EEPROM 库参考</a>
 </li></ul><p class='vspace'></p>
 </div>
 
