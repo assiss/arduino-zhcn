@@ -420,18 +420,18 @@ NNN	Tutorial/AnalogInputPins.html
 	Tutorial/DhcpAddressPrinter.html
 	Tutorial/DhcpChatServer.html
 NNN	Tutorial/DigitalPins.html
-	Tutorial/DigitalPotentiometer.html
-	Tutorial/DigitalReadSerial.html
-	Tutorial/Dimmer.html
-	Tutorial/DMXMaster.html
-	Tutorial/DnsWebClient.html
-	Tutorial/DumpFile.html
+GCCFeli	Tutorial/DigitalPotentiometer.html
+GCCFeli	Tutorial/DigitalReadSerial.html
+GCCFeli	Tutorial/Dimmer.html
+GCCFeli	Tutorial/DMXMaster.html
+GCCFeli	Tutorial/DnsWebClient.html
+GCCFeli	Tutorial/DumpFile.html
 GCCFeli	Tutorial/EEPROMClear.html
-	Tutorial/EEPROMRead.html
-	Tutorial/EEPROMWrite.html
-	Tutorial/Fade.html
-	Tutorial/Fading.html
-	Tutorial/Files.html
+GCCFeli	Tutorial/EEPROMRead.html
+GCCFeli	Tutorial/EEPROMWrite.html
+GCCFeli	Tutorial/Fade.html
+GCCFeli	Tutorial/Fading.html
+GCCFeli	Tutorial/Files.html
 ASSISS	Tutorial/ForLoop.html
 NNN	Tutorial/Foundations.html
 	Tutorial/Graph.html
