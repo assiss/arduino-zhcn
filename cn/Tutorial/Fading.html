@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -185,65 +185,65 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><p><em>Examples &gt; Analog I/O</em>
+<p class='vspace'></p><p><em>示例 &gt; 模拟 I/O</em>
 </p>
-<p class='vspace'></p><h3>Fading</h3>
-<p>Demonstrates the use of analog output (<a class='wikilink' href='PWM.html'>Pulse Width Modulation (PWM)</a>) to fade an LED.  PWM is a technique for getting an analog-like behavior from a digital output by switching it off and on very fast.
+<p class='vspace'></p><h3>渐变</h3>
+<p>通过模拟输出 (<a class='wikilink' href='PWM.html'>脉冲宽度调制（PWM）</a>) 让 LED 的亮度渐变。 PWM 是一种利用数字输出的快速开关来达到模拟输出效果的技巧。
 </p>
-<p class='vspace'></p><h3>Circuit</h3>
-<p>An LED connected to digital output pin 9 through a 220-ohm resistor.
+<p class='vspace'></p><h3>电路</h3>
+<p>将一只 LED 通过 220 欧姆电阻和数字输出 9 连接。
 </p>
-<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大</span>
 </p><div><a class='urllink' href='../uploads/Tutorial/dimmer-circuit3.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/dimmer-circuit3.png' alt='' title='' /></a></div>
-<p class='vspace'></p><h3>Schematic</h3>
-<p><span style='font-size:83%'>click the image to enlarge</span>
-</p><div><a class='urllink' href='../uploads/Tutorial/fading_schem.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/fading_schem.png' alt='' title='' /></a></div>
-<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+<p class='vspace'></p><h3>原理图</h3>
+<p><span style='font-size:83%'>点击图片放大</span>
+</p><div><a class='urllink' href='../uploads/Tutorial/simplefade_pin9_schem.png' rel='nofollow'><img width='300px' src='../uploads/Tutorial/simplefade_pin9_schem.png' alt='' title='' /></a></div>
+<p class='vspace'></p><p><span style='font-size:83%'>图片绘制采用 <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. 更多的电路示例，请参考 <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing 项目页面</a> </span>
 </p>
-<p class='vspace'></p><h3>Code</h3>
+<p class='vspace'></p><h3>代码</h3>
 <div  class='code' >
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock1'>
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
-&nbsp;Fading<br />
+&nbsp;渐变<br />
 &nbsp;<br />
-&nbsp;This example shows how to fade an LED using the analogWrite() function.<br />
+&nbsp;这个示例演示了怎样使用 analogWrite() 函数来控制 LED 灯渐变亮度<br />
 &nbsp;<br />
-&nbsp;The circuit:<br />
-&nbsp;* LED attached from digital pin 9 to ground.<br />
+&nbsp;电路：<br />
+&nbsp;* LED 通过数字输出 9 接地。<br />
 &nbsp;<br />
-&nbsp;Created 1 Nov 2008<br />
+&nbsp;创建日期：1 Nov 2008<br />
 &nbsp;By David A. Mellis<br />
-&nbsp;modified 30 Aug 2011<br />
+&nbsp;修改日期： 30 Aug 2011<br />
 &nbsp;By Tom Igoe<br />
 &nbsp;<br />
 &nbsp;http://arduino.cc/en/Tutorial/Fading<br />
 &nbsp;<br />
-&nbsp;This example code is in the public domain.<br />
+&nbsp;此示例代码完全公开<br />
 &nbsp;<br />
 &nbsp;*/</span><br />
 <br />
 <br />
-<span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">9</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// LED connected to digital pin 9</span><br />
+<span class="kw1">int</span> ledPin <span class="sy0">=</span> <span class="nu0">9</span><span class="sy0">;</span> &nbsp; &nbsp;<span class="co1">// LED 连接到数字输出 9</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span> <br />
-&nbsp; <span class="co1">// nothing happens in setup </span><br />
+&nbsp; <span class="co1">// 不需要初始化 </span><br />
 <span class="br0">&#125;</span> <br />
 <br />
 <span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span> <br />
-&nbsp; <span class="co1">// fade in from min to max in increments of 5 points:</span><br />
+&nbsp; <span class="co1">// 从 min 到 max 逐渐变亮，每次增加 5 个单位：</span><br />
 &nbsp; <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">int</span> fadeValue <span class="sy0">=</span> <span class="nu0">0</span> <span class="sy0">;</span> fadeValue <span class="sy0">&lt;=</span> <span class="nu0">255</span><span class="sy0">;</span> fadeValue <span class="sy0">+=</span><span class="nu0">5</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <br />
-&nbsp; &nbsp; <span class="co1">// sets the value (range from 0 to 255):</span><br />
+&nbsp; &nbsp; <span class="co1">// 设置亮度（范围从 0 到 255）：</span><br />
 &nbsp; &nbsp; <span class="kw1">analogWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> fadeValue<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; <span class="co1">// wait for 30 milliseconds to see the dimming effect &nbsp; &nbsp;</span><br />
+&nbsp; &nbsp; <span class="co1">// 等待 30 毫秒以便观察效果</span><br />
 &nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 &nbsp; <span class="br0">&#125;</span> <br />
 <br />
-&nbsp; <span class="co1">// fade out from max to min in increments of 5 points:</span><br />
+&nbsp; <span class="co1">// 从 max 到 min 逐渐变暗，每次减少 5 个单位：</span><br />
 &nbsp; <span class="kw1">for</span><span class="br0">&#40;</span><span class="kw1">int</span> fadeValue <span class="sy0">=</span> <span class="nu0">255</span> <span class="sy0">;</span> fadeValue <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="sy0">;</span> fadeValue <span class="sy0">-=</span><span class="nu0">5</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <br />
-&nbsp; &nbsp; <span class="co1">// sets the value (range from 0 to 255):</span><br />
+&nbsp; &nbsp; <span class="co1">// 设置亮度（范围从 0 到 255）：</span><br />
 &nbsp; &nbsp; <span class="kw1">analogWrite</span><span class="br0">&#40;</span>ledPin<span class="sy0">,</span> fadeValue<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; <br />
-&nbsp; &nbsp; <span class="co1">// wait for 30 milliseconds to see the dimming effect &nbsp; &nbsp;</span><br />
+&nbsp; &nbsp; <span class="co1">// 等待 30 毫秒以便观察效果</span><br />
 &nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 &nbsp; <span class="br0">&#125;</span> <br />
 <span class="br0">&#125;</span></div></div>
@@ -256,10 +256,10 @@ function toggle(obj) {
 <ul><li><a class='wikilink' href='../Reference/For.html'>for</a>()
 </li><li><a class='wikilink' href='../Reference/AnalogWrite.html'>analogWrite</a>()
 </li><li><a class='wikilink' href='../Reference/Delay.html'>delay</a>()
-<p class='vspace'></p></li><li><a class='wikilink' href='AnalogReadSerial.html'>AnalogReadSerial</a> - read a potentiometer, print its state to the serial monitor
-</li><li><a class='wikilink' href='AnalogInOutSerial.html'>AnalogInOutSerial</a> - read an analog input, map its values, and then use that information to dim or brighten an LED. 
-</li><li><a class='wikilink' href='Fade.html'>Fade</a> - use an analog input to fade an LED
-</li><li><a class='wikilink' href='Calibration.html'>Calibration</a> - calibrating analog sensor readings
+<p class='vspace'></p></li><li><a class='wikilink' href='AnalogReadSerial.html'>AnalogReadSerial</a> - 读入电位计输出，并将状态打印到 Arduino 串口监视器上。
+</li><li><a class='wikilink' href='AnalogInOutSerial.html'>AnalogInOutSerial</a> - 读取模拟输入的值，然后用这个信息调整 LED 的亮度。
+</li><li><a class='wikilink' href='Fade.html'>Fade</a> - 利用模拟输入使 LED 亮度渐变
+</li><li><a class='wikilink' href='Calibration.html'>Calibration</a> - 测量模拟传感器的读数
 </li></ul>
 </div>
 
