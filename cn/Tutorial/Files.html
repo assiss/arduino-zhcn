@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -185,51 +185,51 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Learning</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Examples</a> | <a class='wikilink' href='Foundations.html'>Foundations</a> | <a class='wikilink' href='../Hacking/HomePage.html'>Hacking</a> | <a class='wikilink' href='Links.html'>Links</a>
 </p>
-<p class='vspace'></p><p><em>ʾ�� &gt; SD �ļ�</em>
+<p class='vspace'></p><p><em>示例 &gt; SD 文件</em>
 </p>
-<p class='vspace'></p><h3>ʹ�� SD ���� SD ���ϴ�����ɾ���ļ�</h3>
-<p>���ʾ��˵���������� SD ���ϴ�����ɾ���ļ�����<a class='wikilink' href='../Reference/SD.html'>�������</a>��ȡ SD ��ĸ�����Ϣ��
+<p class='vspace'></p><h3>使用 SD 库在 SD 卡上创建和删除文件</h3>
+<p>这个示例说明了怎样在 SD 卡上创建和删除文件。请<a class='wikilink' href='../Reference/SD.html'>点击这里</a>获取 SD 库的更多信息。
 </p>
 <p class='vspace'></p><div  class='BOM' >
-<h3>Ӳ������</h3>
-<ul><li>Arduino ������
-</li><li>��̫����չ�壨Ethernet Shield�������������� SD ��۵���չ��
-</li><li>�Ѹ�ʽ���� SD ��
+<h3>硬件需求</h3>
+<ul><li>Arduino 开发板
+</li><li>以太网扩展板（Ethernet Shield），或其他具有 SD 插槽的扩展板
+</li><li>已格式化的 SD 卡
 </li></ul><p class='vspace'></p></div>
-<p class='vspace'></p><h3>��·</h3>
+<p class='vspace'></p><h3>电路</h3>
 <div  class='circuit' >
 <div> <a class='urllink' href='../uploads/Tutorial/EthernetShield_bb.png' rel='nofollow'><img height='250px' src='../uploads/Tutorial/EthernetShield_bb.png' alt='' title='' /></a></div>
-<p class='vspace'></p><p><span style='font-size:83%'>ͼƬ���Ʋ��� <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. ����ĵ�·ʾ������ο� <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing ��Ŀҳ��</a> </span>
+<p class='vspace'></p><p><span style='font-size:83%'>图片绘制采用 <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. 更多的电路示例，请参考 <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing 项目页面</a> </span>
 </p>
-<p class='vspace'></p><p>����Ҫ��·������ Arduino ���������̫����չ�壨Ethernet Shield����ͨ�� USB �ߺ͵������ӡ�
+<p class='vspace'></p><p>不需要电路，但是 Arduino 必须插上以太网扩展板（Ethernet Shield）并通过 USB 线和电脑连接。
 </p></div> 
-<p class='vspace'></p><h3>����</h3>
-<p>����Ĵ��������ڴ��а��� SD ����۵�̫����չ�壨Ethernet Shield������ <code>setup()</code> �����У�<code>SD.begin()</code> ָ���ܽ� 4 Ϊ CS �ܽš�������ʹ�õĹܽű���Ǹ�������ʹ�õ���չ������ġ�
+<p class='vspace'></p><h3>代码</h3>
+<p>下面的代码适用于带有板载 SD 卡插槽的太网扩展板（Ethernet Shield）。在 <code>setup()</code> 函数中，<code>SD.begin()</code> 指定管脚 4 为 CS 管脚。程序中使用的管脚编号是根据你所使用的扩展板决定的。
 </p>
-<p class='vspace'></p><p>�� <code>setup()</code> �����У�ʹ�� <code>SD.open()</code> ��һ����Ϊ��example.txt�������ļ���<code>FILE_WRITE</code> ָ�����Ǽȿ��Զ��ļ�Ҳ����д�ļ������ļ�ĩβ��ʼ��д���������У������ڴ����ļ�֮��ʹ�� <code>myFile.close()</code> �����ر��ļ��� 
+<p class='vspace'></p><p>在 <code>setup()</code> 函数中，使用 <code>SD.open()</code> 打开一个名为“example.txt”的新文件。<code>FILE_WRITE</code> 指明我们既可以读文件也可以写文件，从文件末尾开始读写。在例子中，我们在创建文件之后使用 <code>myFile.close()</code> 立即关闭文件。 
 </p>
-<p class='vspace'></p><p>ʹ�� <code>SD.exists()</code> ����ļ�ȷʵ����֮��ʹ�� <code>SD.remove</code> �ӿ���ɾ���ļ���
+<p class='vspace'></p><p>使用 <code>SD.exists()</code> 检查文件确实存在之后，使用 <code>SD.remove</code> 从卡上删除文件。
 </p>
 <p class='vspace'></p><div  class='code' >
 <p>
 <div class='sourceblock ' id='sourceblock1'>
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
-&nbsp; SD �������ļ�����ʾ��<br />
+&nbsp; SD 卡基本文件操作示例<br />
 &nbsp;<br />
-&nbsp;���ʾ��˵���������� SD ���ϴ�����ɾ���ļ�<br />
-&nbsp;��·��<br />
-&nbsp;* SD �������·�ʽ���ӵ� SPI ����<br />
-&nbsp;** MOSI - �ܽ� 11<br />
-&nbsp;** MISO - �ܽ� 12<br />
-&nbsp;** CLK - �ܽ� 13<br />
-&nbsp;** CS - �ܽ� 4<br />
+&nbsp;这个示例说明了怎样在 SD 卡上创建和删除文件<br />
+&nbsp;电路：<br />
+&nbsp;* SD 卡按如下方式连接到 SPI 总线<br />
+&nbsp;** MOSI - 管脚 11<br />
+&nbsp;** MISO - 管脚 12<br />
+&nbsp;** CLK - 管脚 13<br />
+&nbsp;** CS - 管脚 4<br />
 &nbsp;<br />
-&nbsp;�������ڣ�Nov 2010<br />
+&nbsp;创建日期：Nov 2010<br />
 &nbsp;by David A. Mellis<br />
-&nbsp;�޸����ڣ�2 Dec 2010<br />
+&nbsp;修改日期：2 Dec 2010<br />
 &nbsp;by Tom Igoe<br />
 &nbsp;<br />
-&nbsp;��ʾ��������ȫ����<br />
+&nbsp;此示例代码完全公开<br />
 &nbsp; &nbsp; &nbsp;<br />
 &nbsp;*/</span><br />
 <span class="co2">#include &lt;SD.h&gt;</span><br />
@@ -240,10 +240,10 @@ File myFile<span class="sy0">;</span><br />
 <span class="br0">&#123;</span><br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">9600</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">print</span><span class="br0">&#40;</span><span class="st0">&quot;Initializing SD card...&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
-&nbsp; <span class="co1">// ����̫����չ�壨Ethernet Shield���ϣ�CS �ܽ��ǹܽ� 4����Ĭ�ϱ���Ϊ����ܽš�</span><br />
-&nbsp; <span class="co1">// ע�⣬�������������� CS �ܽţ�</span><br />
-&nbsp; <span class="co1">// Ӳ�� SS �ܽ�(����� Arduino ���������ǹܽ� 10���� Mega ���ǹܽ� 53�����뱻���������</span><br />
-&nbsp; <span class="co1">// ���� SD ���޷�������</span><br />
+&nbsp; <span class="co1">// 在以太网扩展板（Ethernet Shield）上，CS 管脚是管脚 4。它默认被设为输出管脚。</span><br />
+&nbsp; <span class="co1">// 注意，就算它并不用做 CS 管脚，</span><br />
+&nbsp; <span class="co1">// 硬件 SS 管脚(大多数 Arduino 开发板上是管脚 10，在 Mega 上是管脚 53）必须被留作输出，</span><br />
+&nbsp; <span class="co1">// 否则 SD 库无法工作。</span><br />
 &nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span><span class="nu0">10</span><span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 <br />
 &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>SD.<span class="kw1">begin</span><span class="br0">&#40;</span><span class="nu0">4</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
@@ -259,12 +259,12 @@ File myFile<span class="sy0">;</span><br />
 &nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;example.txt doesn't exist.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <span class="br0">&#125;</span><br />
 <br />
-&nbsp; <span class="co1">// �����ļ��������رգ�</span><br />
+&nbsp; <span class="co1">// 打开新文件并立即关闭：</span><br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;Creating example.txt...&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; myFile <span class="sy0">=</span> SD.<span class="me1">open</span><span class="br0">&#40;</span><span class="st0">&quot;example.txt&quot;</span><span class="sy0">,</span> FILE_WRITE<span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; myFile.<span class="me1">close</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 <br />
-&nbsp; <span class="co1">// ����ļ��Ƿ���ڣ�</span><br />
+&nbsp; <span class="co1">// 检查文件是否存在：</span><br />
 &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>SD.<span class="me1">exists</span><span class="br0">&#40;</span><span class="st0">&quot;example.txt&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
 &nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;example.txt exists.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <span class="br0">&#125;</span><br />
@@ -272,7 +272,7 @@ File myFile<span class="sy0">;</span><br />
 &nbsp; &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;example.txt doesn't exist.&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<br />
 &nbsp; <span class="br0">&#125;</span><br />
 <br />
-&nbsp; <span class="co1">// ɾ���ļ���</span><br />
+&nbsp; <span class="co1">// 删除文件：</span><br />
 &nbsp; <span class="kw1">Serial</span>.<span class="kw1">println</span><span class="br0">&#40;</span><span class="st0">&quot;Removing example.txt...&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; SD.<span class="me1">remove</span><span class="br0">&#40;</span><span class="st0">&quot;example.txt&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 <br />
@@ -286,13 +286,13 @@ File myFile<span class="sy0">;</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span><br />
 <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// ��ʼ�����֮��ʲôҲ��������</span><br />
+&nbsp; <span class="co1">// 初始化完成之后，什么也不用做。</span><br />
 <span class="br0">&#125;</span></div></div>
   <div class='sourceblocklink'><a href='Filesf687.html?action=sourceblock&amp;num=1' type='text/plain'>[Get Code]</a></div>
 </div>
 
 </p></div>
-<p class='vspace'></p><h3>�����</h3>
+<p class='vspace'></p><h3>请参阅</h3>
 <ul><li><a class='wikilink' href='../Reference/SD.html'>SD library</a>
 </li><li><a class='wikilink' href='../Reference/SDCardNotes.html'>Notes on using SD cards</a>
 </li><li><a class='wikilink' href='Datalogger.html'>Datalogger</a> 
