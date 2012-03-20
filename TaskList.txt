@@ -394,7 +394,7 @@ NNN	Tutorial/AnalogInputPins.html
 	Tutorial/ArduinoToBreadboard.html
 	Tutorial/Array.html
 	Tutorial/ASCIITable.html
-	Tutorial/BareMinimum.html
+GCCFeli	Tutorial/BareMinimum.html
 	Tutorial/BarGraph.html
 	Tutorial/BarometricPressureSensor.html
 	Tutorial/BarometricPressureWebServer.html
