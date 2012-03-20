@@ -130,32 +130,32 @@ function toggle(obj) {
 <div id="pagetext">
 <!--PageText-->
 <div id='wikitext'>
-<h2>Building an Arduino on a Breadboard</h2>
-<p class='vspace'></p><h2>Overview</h2>
-<p>This tutorial shows you how to build an Arduino compatible breadboard with an Atmel Atmega8/168/328 AVR microcontroller and FTDI <span class='wikiword'>FT232</span> breakout board from <a class='urllink' href='http://www.sparkfun.com/' rel='nofollow'>SparkFun</a>. You could also use the <a class='wikilink' href='MiniUSB.html'>Arduino USB Mini</a>.
+<h2>在面包板上搭一个 Arduino</h2>
+<p class='vspace'></p><h2>概述</h2>
+<p>这个教程为你展示如何用 Atmel Atmega8/168/328 的AVR单片机和 FTDI <span class='wikiword'>FT232</span> 接口板（来自 <a class='urllink' href='http://www.sparkfun.com/' rel='nofollow'>SparkFun</a>）建造一个 Arduino兼容面包板。或者用 <a class='wikilink' href='MiniUSB.html'>Arduino USB Mini</a> 代替 FT232。
 </p>
 <p class='vspace'></p><p>Originally created David A. Mellis<br />Updated from the <a class='urllink' href='http://itp.nyu.edu/physcomp/Tutorials/ArduinoBreadboard' rel='nofollow'>ITP version</a> by Carlyn Maw<br />Updated October 23, 2008 by Rory Nugent
 </p>
-<p class='vspace'></p><h3>Parts</h3>
-<p>To do this, you'll need:
+<p class='vspace'></p><h3>零件</h3>
+<p>要做这个，你需要:
 </p>
 <p class='vspace'></p><div><span class='lfloat' style='margin-top: 5px; margin-right: 25px; margin-bottom: 5px;'> <a class='urllink' href='../uploads/Main/arduinobb_parts.jpg' rel='nofollow'><img width='400px' src='../uploads/Main/arduinobb_parts.jpg' alt='the supplies' title='the supplies' /></a><br /><span style='font-size:83%'>The Supplies</span></span></div>
-<p class='vspace'></p><h4>Basic Parts for wiring up Arduino</h4>
-<ul><li>A breadboard
-</li><li>22 AWG wire
-</li><li>7805 Voltage regulator
-</li><li>2 <span class='wikiword'>LEDs</span>
-</li><li>2 220 Ohm resistors
-</li><li>1 10k Ohm  resistor
-</li><li>2 10 uF capacitors
-</li><li>16 <span class='wikiword'>MHz</span> clock crystal
-</li><li>2 22 pF capacitors
-</li><li>small momentary normally open ("off") button, i.e. Omron type <span class='wikiword'>B3F</span>
-</li></ul><p class='vspace'></p><h4>USB to Serial Communication Board</h4>
-<p>You will need a <span class='wikiword'>FT232</span> USB Breakout board from <a class='urllink' href='http://www.sparkfun.com/' rel='nofollow'>SparkFun</a>. 
+<p class='vspace'></p><h4>搭建 Arduino 需要的基本元件</h4>
+<ul><li>一块面包板
+</li><li>22 AWG 杜邦线
+</li><li>7805 稳压块
+</li><li>2个 <span class='wikiword'>LED</span>
+</li><li>2个 220 欧姆电阻
+</li><li>1个 10k 欧姆电阻
+</li><li>2个 10uF 电容
+</li><li>16 <span class='wikiword'>MHz</span> 晶振
+</li><li>2个 22pF电容
+</li><li>微动开关，例如 Omron <span class='wikiword'>B3F</span>
+</li></ul><p class='vspace'></p><h4>USB转串口通讯板</h4>
+<p>你会需要一块 <span class='wikiword'>FT232</span> USB 接口板（来自 <a class='urllink' href='http://www.sparkfun.com/' rel='nofollow'>SparkFun</a>）。
 </p>
-<p class='vspace'></p><p>There are two options available from them:
-</p><ul><li><span class='wikiword'>FT232RL</span> USB to Serial Breakout Board, SKU <a class='urllink' href='http://www.sparkfun.com/commerce/product_info.php?products_id=718' rel='nofollow'>BOB-0071</a>
+<p class='vspace'></p><p>可以任选以下之一:
+</p><ul><li><span class='wikiword'>FT232RL</span> USB to Serial 接口板, SKU <a class='urllink' href='http://www.sparkfun.com/commerce/product_info.php?products_id=718' rel='nofollow'>BOB-0071</a>
 </li><li>Arduino Serial USB Board, SKU <a class='urllink' href='http://www.sparkfun.com/commerce/product_info.php?products_id=8165' rel='nofollow'>DEV-08165</a>
 </li></ul><p class='vspace'></p><p>If you plan to use the top option and have not yet soldered headers to the breakout board, now would be a good time.
 </p>
