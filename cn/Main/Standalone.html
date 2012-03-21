@@ -142,7 +142,7 @@ function toggle(obj) {
 <p class='vspace'></p><div><span class='lfloat' style='margin-top: 5px; margin-right: 25px; margin-bottom: 5px;'> <a class='urllink' href='../uploads/Main/arduinobb_parts.jpg' rel='nofollow'><img width='400px' src='../uploads/Main/arduinobb_parts.jpg' alt='the supplies' title='the supplies' /></a><br /><span style='font-size:83%'>The Supplies</span></span></div>
 <p class='vspace'></p><h4>搭建 Arduino 需要的基本元件</h4>
 <ul><li>一块面包板
-</li><li>22 AWG 杜邦线
+</li><li>22 AWG 连接线
 </li><li>7805 稳压块
 </li><li>2个 <span class='wikiword'>LED</span>
 </li><li>2个 220 欧姆电阻
@@ -166,35 +166,35 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p><br clear='all' />
 </p>
-<p class='vspace'></p><h2>Adding circuitry for a power supply</h2>
-<p>If you've already worked with microcontrollers, it is likely that you already have a preferred way to wire up a power supply to your board, so go ahead and do it that way. In case you need some reminders,  here are some pictures of one way to go about it. (This version uses a 5V regulated power supply)
+<p class='vspace'></p><h2>连接电源电路</h2>
+<p>如果你用过单片机，那么你很可能已经知道怎么给板子连上供电线路，那么就直接干吧。如果你需要一些提示，下面的一系列图片就是方法之一。(这个版本用的是5V稳压电源)
 </p>
 <p class='vspace'></p><p><br clear='all' />
-</p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_02.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_02.jpg' alt='toppower' title='toppower' /></a><br /><span style='font-size:83%'>Top Power lines</span></span></div>
-<p>Add power and ground wires for where your voltage regulator will be.
+</p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_02.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_02.jpg' alt='toppower' title='toppower' /></a><br /><span style='font-size:83%'>顶部电源线</span></span></div>
+<p>接上稳压块的电源和地的连线。
 <br clear='all' />
 <br clear='all' />
-</p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_03.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_03.jpg' alt='bottompower' title='bottompower' /></a><br /><span style='font-size:83%'>Bottom Power lines</span></span></div>
-<p>Add power and ground wires at the bottom of your board connecting each rail.
+</p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_03.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_03.jpg' alt='bottompower' title='bottompower' /></a><br /><span style='font-size:83%'>底部电源线</span></span></div>
+<p>连接底部电源线使面包板两侧排孔连通。
 <br clear='all' />
 <br clear='all' />
-</p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_04.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_04.jpg' alt='7805' title='7805' /></a><br /><span style='font-size:83%'>Add the 7805 and decoupling capacitors </span></span></div>
-<p class='vspace'></p><p>Add the 7805 power regulator and the lines to power the board. The regulator is a TO-220 package where the Input  from the external power supply goes input on the left, ground is in the middle and the 5V output is on the right (when facing the front of the regulator). Add power OUT and ground wires that connect to the right  and left rails of the breadboard.
+</p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_04.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_04.jpg' alt='7805' title='7805' /></a><br /><span style='font-size:83%'>加入 7805 和退耦电容 </span></span></div>
+<p class='vspace'></p><p>加入 7805 稳压块和一些连线给面包板供电。稳压块是 TO-220 封装的，面对稳压块的正面，左边是外部电源输入脚，中间脚接地，右边引脚是5V输出。电源输出和地连接到面包板外侧的排孔。
 </p>
-<p class='vspace'></p><p>Also, add a 10uF capacitor between the IN of the regulator and the ground as well as a 10uF capacitor on the right rail between power and ground. The silver strip on the capacitor signifies the ground leg.
+<p class='vspace'></p><p>同时，在稳压块的输入与地、输出与地之间各跨接一个 10uF 的电容。电容外壳上白线标示的引脚接负极（地）。
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
 <p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_05.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_05.jpg' alt='PowerLED' title='PowerLED' /></a><br /><span style='font-size:83%'>LED</span></span></div>
-<p>Add an LED and a 220-ohm resistor on the left side of your board across from the voltage regulator. An LED attached to power like this is a great troubleshooting trick. You'll always know when your board is being powered as well as quickly know if your board is being shorted.
+<p>在稳压块的对面板子的左侧接一个 LED 和 220 欧的电阻。连接在电源上的 LED 可以方便的了解供电是否发生故障。
 <br clear='all' /> 
 </p>
-<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_05_supply.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_05_supply.jpg' alt='Power Supply Input' title='Power Supply Input' /></a><br /><span style='font-size:83%'>Power Supply Input</span></span></div>
-<p>The red and black wires to the left of the voltage regulator is where your power supply will be plugged in. The red wire is for the POWER and the black wire is for the GROUND. Be sure to only attach a power supply that is between 7-16V. Any lower and you won't get 5V out of your regulator. Any higher and your regulator may be damaged. A 9V battery, 9V DC power supply, or 12V DC power supply is suitable.
+<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_05_supply.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_05_supply.jpg' alt='Power Supply Input' title='Power Supply Input' /></a><br /><span style='font-size:83%'>电源输入</span></span></div>
+<p>稳压块左侧的红线和黑线是外部电源接入的地方。红线连接正极，黑线连负极（地）。注意接入的电源电压要在 7-16V 之间。过低的输入电压无法使稳压块输出 5V。过高的电压会损块稳压块。9V的电池、9V 直流电源或 12V 直流电源都是适用的。
 <br clear='all' /> 
 </p>
 <p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_06.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_06.jpg' alt='BlankCanvas' title='BlankCanvas' /></a><br /><span style='font-size:83%'>Blank Canvas</span></span></div>
-<p>Now that the power-basics are done you are ready to load on the chip!
+<p>现在基本电源电路已经完成，接下来该插上芯片了!
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
