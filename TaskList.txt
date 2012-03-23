@@ -107,7 +107,7 @@ NNN	Main/Standalone.html
 	Reference/Analog	Reference.html
 	Reference/AnalogWrite.html
 	Reference/Arithmetic.html
-	Reference/Array.html
+ASSISS	Reference/Array.html
 	Reference/ASCIIchart.html
 	Reference/Assignment.html
 	Reference/Atmega168Hardware.html
@@ -392,7 +392,7 @@ NNN	Tutorial/AnalogInputPins.html
 	Tutorial/ArduinoISP.html
 	Tutorial/ArduinoSoftwareRS232.html
 	Tutorial/ArduinoToBreadboard.html
-	Tutorial/Array.html
+ASSISS	Tutorial/Array.html
 	Tutorial/ASCIITable.html
 GCCFeli	Tutorial/BareMinimum.html
 	Tutorial/BarGraph.html
