@@ -187,52 +187,52 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p><em>Examples &gt; Control Structures</em>
 </p>
-<p class='vspace'></p><h3>Arrays</h3>
-<p>This variation on the <a class='wikilink' href='ForLoop.html'>For Loop</a> example shows how to use an <a class='wikilink' href='../Reference/Array.html'><strong>array</strong></a>.  An array is a variable with multiple parts.  If you think of a variable as a cup that holds values, you might think of an array as an ice cube tray. It's like a series of linked cups, all of which can hold the same maximum value.
+<p class='vspace'></p><h3>数组</h3>
+<p>本例是<a class='wikilink' href='ForLoop.html'>For循环</a>的另外一种用法，展示了如何何用<a class='wikilink' href='../Reference/Array.html'><strong>数组</strong></a>。数组是多个相同类型变量的集合。若把变量比作一个可以放东西的杯子，那么数组就可以认为是一个可以放多件物品的托盘，它像是把许多杯子串起来，每个杯子装同样多的物品。
 </p>
-<p class='vspace'></p><p>The <a class='wikilink' href='ForLoop.html'>For Loop</a> example shows you how to light up a series of <span class='wikiword'>LEDs</span> attached to pins 2 through 7 of the Arduino, with certain limitations (the pins have to be numbered contiguously, and the <span class='wikiword'>LEDs</span> have to be turned on in sequence).  
+<p class='vspace'></p><p><a class='wikilink' href='ForLoop.html'>For循环</a>例子展示了如何点亮连在2到7脚的诸多<span class='wikiword'>LED</span>，该例子有一定的限制条件（引脚必须是连号的，并且LED也必须被顺序点亮）。
 </p>
-<p class='vspace'></p><p>This example shows you how you can turn on a sequence of pins whose numbers are neither contiguous nor necessarily sequential.  To do this is, you can put the pin numbers in an <strong>array</strong> and then use <strong>for loops</strong> to iterate over the array.
+<p class='vspace'></p><p>下面的例子将告诉你怎么点亮一系列引脚上的LED，而这些引脚无须是顺序、连号的。为了达到这个目标，需要将引脚号放在数组里，然后使用for循环来遍历数组。
 </p>
-<p class='vspace'></p><p>This example makes use of 6 <span class='wikiword'>LEDs</span> connected to the pins 2 - 7 on the board using 220 Ohm resistors, just like in the For Loop. However, here the order of the <span class='wikiword'>LEDs</span> is determined by their order in the array, not by their physical order.
+<p class='vspace'></p><p>本例中依旧使用2-7脚来驱动LED，与for循环的例子一样，不过点亮的顺序将由数组中的值决定，而非物理顺序。
 </p>
-<p class='vspace'></p><p>This technique of putting the pins in an array is very handy. You don't have to have the pins sequential to one another, or even in the same order.  You can rearrange them however you want.
+<p class='vspace'></p><p>将引脚号放到数组里的操作完全是手动的，你可以随意更改它们的顺序。
 </p>
-<p class='vspace'></p><h3>Hardware Required</h3>
-<ul><li>Arduino Board
-</li><li>(6) 220 ohm resistors
-</li><li>(6) <span class='wikiword'>LEDs</span>
-</li><li>hook-up wire
-</li><li>breadboard
-</li></ul><p class='vspace'></p><h3>Circuit</h3>
-<p>Connect six LEDS, with 220 ohm resistors in series, to digital pins 2-7 on your Arduino.
+<p class='vspace'></p><h3>所需硬件</h3>
+<ul><li>Arduino板
+</li><li>(6) 220欧姆电阻
+</li><li>(6) <span class='wikiword'>LED</span>
+</li><li>连接导线
+</li><li>面包板
+</li></ul><p class='vspace'></p><h3>电路图</h3>
+<p>将6个LED连上220欧姆电阻后，连至Arduino上的2-7脚。
 </p>
-<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大浏览</span>
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/forLoop_bb.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/forLoop_bb.png' alt='' title='' /></a></div>
-<p class='vspace'></p><p><span style='font-size:83%'>image developed using <a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>. For more circuit examples, see the <a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing project page</a> </span>
+<p class='vspace'></p><p><span style='font-size:83%'>使用<a class='urllink' href='http://www.fritzing.org/' rel='nofollow'>Fritzing</a>设计此图。请前往<a class='urllink' href='http://fritzing.org/projects/' rel='nofollow'>Fritzing项目主页</a>寻找更多电路图样例。</span>
 </p>
-<p class='vspace'></p><p><strong>Schematic:</strong>
+<p class='vspace'></p><p><strong>示意图：</strong>
 </p>
-<p class='vspace'></p><p><span style='font-size:83%'>click the image to enlarge</span>
+<p class='vspace'></p><p><span style='font-size:83%'>点击图片放大浏览</span>
 </p>
 <p class='vspace'></p><div><a class='urllink' href='../uploads/Tutorial/forLoop2_schem.png' rel='nofollow'><img width='400px' src='../uploads/Tutorial/forLoop2_schem.png' alt='' title='' /></a></div>
-<p class='vspace'></p><h3>Code</h3>
+<p class='vspace'></p><h3>源代码</h3>
 <div  class='code' >
 <p class='vspace'></p><p>
 <div class='sourceblock ' id='sourceblock1'>
   <div class='sourceblocktext'><div class="arduino"><span class="coMULTI">/*<br />
-&nbsp; Arrays<br />
+&nbsp; 数组<br />
 &nbsp;<br />
-&nbsp;Demonstrates the use of &nbsp;an array to hold pin numbers<br />
-&nbsp;in order to iterate over the pins in a sequence. <br />
-&nbsp;Lights multiple LEDs in sequence, then in reverse.<br />
+&nbsp;演示如何使用 &nbsp;一个数组来保存引脚号<br />
+&nbsp;进而遍历该数组 <br />
+&nbsp;按数组保存的顺序点亮对应引脚上的LED，并反序<br />
 &nbsp;<br />
-&nbsp;Unlike the For Loop tutorial, where the pins have to be<br />
-&nbsp;contiguous, here the pins can be in any random order.<br />
+&nbsp;与for循环例子里引脚号必须连号不一样，<br />
+&nbsp;这里的引脚号可以随意排序<br />
 &nbsp;<br />
-&nbsp;The circuit:<br />
-&nbsp;* LEDs from pins 2 through 7 to ground<br />
+&nbsp;电路图：<br />
+&nbsp;* LED连到2-7脚后接GND<br />
 &nbsp;<br />
 &nbsp;created 2006<br />
 &nbsp;by David A. Mellis<br />
@@ -244,37 +244,37 @@ This example code is in the public domain.<br />
 &nbsp;http://arduino.cc/en/Tutorial/Array<br />
 &nbsp;*/</span><br />
 <br />
-<span class="kw1">int</span> timer <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// The higher the number, the slower the timing.</span><br />
+<span class="kw1">int</span> timer <span class="sy0">=</span> <span class="nu0">100</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// 数值越大，延时越慢</span><br />
 <span class="kw1">int</span> ledPins<span class="br0">&#91;</span><span class="br0">&#93;</span> <span class="sy0">=</span> <span class="br0">&#123;</span> <br />
-&nbsp; <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">6</span><span class="sy0">,</span> <span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">3</span> <span class="br0">&#125;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; <span class="co1">// an array of pin numbers to which LEDs are attached</span><br />
-<span class="kw1">int</span> pinCount <span class="sy0">=</span> <span class="nu0">6</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// the number of pins (i.e. the length of the array)</span><br />
+&nbsp; <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">7</span><span class="sy0">,</span> <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">6</span><span class="sy0">,</span> <span class="nu0">5</span><span class="sy0">,</span> <span class="nu0">3</span> <span class="br0">&#125;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; <span class="co1">//LED连接的引脚号数组</span><br />
+<span class="kw1">int</span> pinCount <span class="sy0">=</span> <span class="nu0">6</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">// 引脚数量（数组长度）</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">setup</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
 &nbsp; <span class="kw1">int</span> thisPin<span class="sy0">;</span><br />
-&nbsp; <span class="co1">// the array elements are numbered from 0 to (pinCount - 1).</span><br />
-&nbsp; <span class="co1">// use a for loop to initialize each pin as an output:</span><br />
+&nbsp; <span class="co1">// 数组下标从0到(pinCount - 1).</span><br />
+&nbsp; <span class="co1">// 使用for循环来把引脚初始化为OUTPUT</span><br />
 &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisPin <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> thisPin <span class="sy0">&lt;</span> pinCount<span class="sy0">;</span> thisPin<span class="sy0">++</span><span class="br0">&#41;</span> &nbsp;<span class="br0">&#123;</span><br />
 &nbsp; &nbsp; <span class="kw1">pinMode</span><span class="br0">&#40;</span>ledPins<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">OUTPUT</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp;<br />
 &nbsp; <span class="br0">&#125;</span><br />
 <span class="br0">&#125;</span><br />
 <br />
 <span class="kw1">void</span> <span class="kw3">loop</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
-&nbsp; <span class="co1">// loop from the lowest pin to the highest:</span><br />
+&nbsp; <span class="co1">// 从数组下标的最小值循环至最大值</span><br />
 &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisPin <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> thisPin <span class="sy0">&lt;</span> pinCount<span class="sy0">;</span> thisPin<span class="sy0">++</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <br />
-&nbsp; &nbsp; <span class="co1">// turn the pin on:</span><br />
+&nbsp; &nbsp; <span class="co1">// 引脚置为HIGH，点亮LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPins<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; <br />
 &nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span>timer<span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
-&nbsp; &nbsp; <span class="co1">// turn the pin off:</span><br />
+&nbsp; &nbsp; <span class="co1">// 引脚置为LOW，熄灭LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPins<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp; &nbsp;<br />
 <br />
 &nbsp; <span class="br0">&#125;</span><br />
 <br />
-&nbsp; <span class="co1">// loop from the highest pin to the lowest:</span><br />
+&nbsp; <span class="co1">// 从数组下标的最大值循环至最小值</span><br />
 &nbsp; <span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw1">int</span> thisPin <span class="sy0">=</span> pinCount <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span> thisPin <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="sy0">;</span> thisPin<span class="sy0">--</span><span class="br0">&#41;</span> <span class="br0">&#123;</span> <br />
-&nbsp; &nbsp; <span class="co1">// turn the pin on:</span><br />
+&nbsp; &nbsp; <span class="co1">// 点亮LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPins<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">HIGH</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; &nbsp; <span class="kw1">delay</span><span class="br0">&#40;</span>timer<span class="br0">&#41;</span><span class="sy0">;</span><br />
-&nbsp; &nbsp; <span class="co1">// turn the pin off:</span><br />
+&nbsp; &nbsp; <span class="co1">// 熄灭LED</span><br />
 &nbsp; &nbsp; <span class="kw1">digitalWrite</span><span class="br0">&#40;</span>ledPins<span class="br0">&#91;</span>thisPin<span class="br0">&#93;</span><span class="sy0">,</span> <span class="kw2">LOW</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
 &nbsp; <span class="br0">&#125;</span><br />
 <span class="br0">&#125;</span></div></div>
@@ -288,9 +288,9 @@ This example code is in the public domain.<br />
 </li><li><a class='wikilink' href='../Reference/DigitalWrite.html'>digitalWrite()</a>
 </li><li><a class='wikilink' href='../Reference/For.html'>for()</a>
 </li><li><a class='wikilink' href='../Reference/Delay.html'>delay()</a>
-<p class='vspace'></p></li><li><a class='wikilink' href='ForLoop.html'>For Loop</a> - Control multiple <span class='wikiword'>LEDs</span> with a For Loop.
-</li><li><a class='wikilink' href='WhileLoop.html'>While Loop</a> - Use a While Loop to calibrate a sensor while a button is being pressed.
-</li><li><a class='wikilink' href='SwitchCase.html'>Switch Case</a> - Choose between a number of discrete values in a manner that is the equivalent of using multiples If  statements. This example shows how to divide a sensor's range into a set of four bands and to take four different actions depending on which band the result is in.
+<p class='vspace'></p></li><li><a class='wikilink' href='ForLoop.html'>For Loop</a> - 在一个for循环里控制多个<span class='wikiword'>LED</span>。
+</li><li><a class='wikilink' href='WhileLoop.html'>While Loop</a> - 当按钮按下时，使用While循环校准传感器。
+</li><li><a class='wikilink' href='SwitchCase.html'>Switch Case</a> - 在多个离散值中选择执行，类似执行多个if语句。此例演示了如何把传感器的值分成四类，根据不同的类别执行对应的操作。
 </li></ul><p class='vspace'></p>
 </div>
 
