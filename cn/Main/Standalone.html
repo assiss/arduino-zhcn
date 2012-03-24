@@ -198,14 +198,14 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
-<p class='vspace'></p><h2><span class='wikiword'>ATMEGA8</span>/168/328 Basics</h2>
-<div><span class='frame lfloat'> <a class='urllink' href='../uploads/Hacking/Atmega168PinMap2.png' rel='nofollow'><img width='180px' src='../uploads/Hacking/Atmega168PinMap2.png' alt='Arduino Pinmap' title='Arduino Pinmap' /></a><br /><span style='font-size:83%'>Arduino Pin Map</span></span></div>
-<p class='vspace'></p><p>Before moving on, check out this image. It's a great resource for learning what each of the pins on your Atmega chip do in relation to the Arduino's functions. This will clarify a lot of confusion behind why you hook up certain pins the way you do. For even more detailed information, take a peek at the datasheet for the Atmega 168 (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/2545S.pdf' rel='nofollow'>short version</a>) (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/doc2545.pdf' rel='nofollow'>long version</a>). Here's the sheet for the atmega328 (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/8161S.pdf' rel='nofollow'>short version</a>) (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/doc8161.pdf' rel='nofollow'>long version</a>)
+<p class='vspace'></p><h2><span class='wikiword'>ATMEGA8</span>/168/328 基础知识</h2>
+<div><span class='frame lfloat'> <a class='urllink' href='../uploads/Hacking/Atmega168PinMap2.png' rel='nofollow'><img width='180px' src='../uploads/Hacking/Atmega168PinMap2.png' alt='Arduino Pinmap' title='Arduino Pinmap' /></a><br /><span style='font-size:83%'>Arduino 引脚定义</span></span></div>
+<p class='vspace'></p><p>在继续下一步之前，先来看看左图。从这个可以了解 Atmega 芯片每个引脚的功能，这些功能和 Arduino 的功能密切相关。 这能让你明白那些引脚为什么这样连接。详情可以参考datasheet: Atmega 168 (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/2545S.pdf' rel='nofollow'>简单版</a>) (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/doc2545.pdf' rel='nofollow'>详细版</a>). Here's the sheet for the atmega328 (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/8161S.pdf' rel='nofollow'>简单版</a>) (<a class='urllink' href='http://www.atmel.com/dyn/resources/prod_documents/doc8161.pdf' rel='nofollow'>详细版</a>)
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
-<p class='vspace'></p><div><span class='frame lfloat' style='margin-right: 25px;'> <a class='urllink' href='../uploads/Main/arduinobb_07.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_07.jpg' alt='AddingChipCircuitry' title='AddingChipCircuitry' /></a><br /><span style='font-size:83%'>Add supporting circuitry</span></span></div>
-<p class='vspace'></p><p>Start by connecting a 10k ohm pullup resistor to +5V from the RESET pin in order to prevent the chip from resetting itself during normal operation. The RESET pin reboots the chip when pulled down to ground. In later steps we will show you how to add a reset switch that takes advantage of this.
+<p class='vspace'></p><div><span class='frame lfloat' style='margin-right: 25px;'> <a class='urllink' href='../uploads/Main/arduinobb_07.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_07.jpg' alt='AddingChipCircuitry' title='AddingChipCircuitry' /></a><br /><span style='font-size:83%'>连接外围电路</span></span></div>
+<p class='vspace'></p><p>先给 RESET 引脚连上一个10k欧的上拉电阻(连到+5V)，防止芯片在正常操作时被复位。RESET引脚处于低电平时会执行重启芯片的操作。在接下来的步骤中会教你加入一个复位开关来改进它。
 </p>
 <p class='vspace'></p><ul><li><strong>Pin 7</strong> - Vcc - <em>Digital Supply Voltage</em>
 </li><li><strong>Pin 8</strong> - GND
@@ -214,13 +214,13 @@ function toggle(obj) {
 </li><li><strong>Pin 20</strong> - <span class='wikiword'>AVcc</span> - <em>Suppply voltage for the ADC converter. Needs to be connected to power if ADC isn't being used and to power via a low-pass filter if it is</em> (a low pass filter is a circuit that reduces noise from the power source. This example isn't using one)
 </li></ul><p class='vspace'></p><p><br clear='all' /> 
 </p>
-<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_08.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_08.jpg' alt='AddClock' title='AddClock' /></a><br /><span style='font-size:83%'>Add the Clock &amp; Caps</span></span></div>
-<p>Add a 16 <span class='wikiword'>MHz</span> external clock between pin 9 and 10, and add two 22 pF capacitors running to ground from each of those pins.
+<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_08.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_08.jpg' alt='AddClock' title='AddClock' /></a><br /><span style='font-size:83%'>连接晶振和电容</span></span></div>
+<p>在9和10脚之间接上一个 16 <span class='wikiword'>MHz</span> 的晶振，并在这2个引脚和地之间跨接上 2 个 22pF 的电容。
 </p>
 <p class='vspace'></p><p><br clear='all' />
 </p>
-<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_09.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_09.jpg' alt='AddReset' title='AddReset' /></a><br /><span style='font-size:83%'>Add a reset switch</span></span></div>
-<p>Add the small tactile switch so that you can reset the Arduino whenever we'd like and prepare the chip for uploading a new program. A quick momentary press of this switch will reset the chip when needed. Add the switch just above the top of the Atmega chip crossing the gap in the breadboard. Then, add a wire from the bottom left leg of the switch to the RESET pin of the Atmega chip and a wire from the top left leg of the switch to ground.
+<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_09.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_09.jpg' alt='AddReset' title='AddReset' /></a><br /><span style='font-size:83%'>连接复位开关</span></span></div>
+<p>加上一个微动开关，这样你就可以随时给 Arduino 复位和准备给芯片上传新的程序。短按一下开关就能使芯片复位。在紧贴 Atmega 芯片的上方插上微动开关，使芯片跨在面包版中间凹槽的两侧。然后用导线连接微动开关的左下脚和 Atmega 芯片的 RESET 引脚，再用一条导线把开关的左上角和地相连。
 </p>
 <p class='vspace'></p><p><br clear='all' />
 </p>
