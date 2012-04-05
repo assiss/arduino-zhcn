@@ -133,25 +133,25 @@ function toggle(obj) {
 <p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
 <p class='vspace'></p><h2>abs(x)</h2>
-<h4>Description</h4>
-<p>Computes the absolute value of a number.
+<h4>描述:</h4>
+<p>计算出一个数的绝对值.
 </p>
 <p class='vspace'></p><h4>Parameters</h4>
-<p>x: the number
+<p>x: 需要求绝对值的数
 </p>
-<p class='vspace'></p><h4>Returns</h4>
-<p><strong>x</strong>: if <strong>x</strong> is greater than or equal to 0.
+<p class='vspace'></p><h4>返回值</h4>
+<p><strong>x</strong>: 如果 <strong>x</strong> 大于或等于0.
 </p>
-<p class='vspace'></p><p><strong>-x</strong>: if <strong>x</strong> is less than 0.
+<p class='vspace'></p><p><strong>-x</strong>: 如果 <strong>x</strong> 小于0.
 </p>
-<p class='vspace'></p><h4>Warning</h4>
-<p>Because of the way the abs() function is implemented, avoid using other functions inside the brackets, it may lead to incorrect results.
+<p class='vspace'></p><h4>警告:</h4>
+<p>由于abs()函数的实现,不要在括号中加入其他的运算符和函数,有可能会造成一些错误的结果,如下面的例子:
 </p>
 <p class='vspace'></p><pre>
-abs(a++);   // avoid this - yields incorrect results
+abs(a++);   // 不要这样写 
 
-a++;          // use this instead -
-abs(a);       // keep other math outside the function
+a++;          // 要这样写
+abs(a);      
 
 </pre>
 <p class='vspace'></p><p><a class='wikilink' href='HomePage.html'>Reference Home</a>

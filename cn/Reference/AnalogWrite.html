@@ -134,43 +134,43 @@ function toggle(obj) {
 </p>
 <p class='vspace'></p><h2>analogWrite()</h2>
 <h4>Description</h4>
-<p>Writes an analog value (<a class='wikilink' href='../Tutorial/PWM.html'>PWM wave</a>) to a pin.  Can be used to light a LED at varying brightnesses or drive a motor at various speeds.  After a call to <strong>analogWrite()</strong>, the pin will generate a steady square wave of the specified duty cycle until the next call to <strong>analogWrite()</strong> (or a call to <strong>digitalRead()</strong> or <strong>digitalWrite()</strong> on the same pin).  The frequency of the PWM signal is approximately 490 Hz.
+<p>向针脚写入一个逻辑值 (<a class='wikilink' href='../Tutorial/PWM.html'>PWM wave</a>). 可以用来点亮LED灯,调整其亮度或者驱动一个电机,控制其转速. 调用<strong>analogWrite()</strong>函数后, 对应的针脚会输出一个稳定的,指定占空比的方波.(在这个针脚下一次调用<strong>analogWrite()</strong> ,或者调用<strong>digitalRead()</strong>或者 <strong>digitalWrite()</strong>,针脚的输出会改变为相应的函数执行), PWM信号的频率近乎于490Hz.
 </p>
-<p class='vspace'></p><p>On most Arduino boards (those with the <span class='wikiword'>ATmega168</span> or <span class='wikiword'>ATmega328</span>), this function works on pins 3, 5, 6, 9, 10, and 11.  On the Arduino Mega, it works on pins 2 through 13.  Older Arduino boards with an <span class='wikiword'>ATmega8</span> only support analogWrite() on pins 9, 10, and 11.  You do not need to call pinMode() to set the pin as an output before calling analogWrite().
+<p class='vspace'></p><p>在大多数的Arduino板上(MCU为 <span class='wikiword'>ATmega168</span> or <span class='wikiword'>ATmega328</span>), 函数起作用的针脚为  3, 5, 6, 9, 10, 和 11.  在 Arduino Mega板上, 起作用的针脚为 2 到 13.  老一点的Arduino 板,MCU是  <span class='wikiword'>ATmega8</span> 的,analogWrite()只支持针脚9, 10, and 11. 在执行analogWrite()之前,不需要调用pinMode()函数把针脚设置成输出模式.
 </p>
-<p class='vspace'></p><p>The <em>analogWrite</em> function has nothing whatsoever to do with the analog pins or the <em>analogRead</em> function. 
+<p class='vspace'></p><p> <em>analogWrite</em>函数和模拟量采集针脚, <em>analogRead</em> 函数毫无关系.
 </p>
-<p class='vspace'></p><h4>Syntax</h4>
+<p class='vspace'></p><h4>语法</h4>
 <p>analogWrite(pin, value)
 </p>
-<p class='vspace'></p><h4>Parameters</h4>
-<p>pin: the pin to write to.  
+<p class='vspace'></p><h4>参数</h4>
+<p>pin:需要操作的针脚.  
 </p>
-<p class='vspace'></p><p>value: the duty cycle: between 0 (always off) and 255 (always on).
+<p class='vspace'></p><p>value: 占空比: 从 0 (off) 到 255 (on).
 </p>
-<p class='vspace'></p><h4>Returns</h4>
-<p>nothing
+<p class='vspace'></p><h4>返回值</h4>
+<p>无返回值
 </p>
-<p class='vspace'></p><h4>Notes and Known Issues</h4>
-<p>The PWM outputs generated on pins 5 and 6 will have higher-than-expected duty cycles.  This is because of interactions with the millis() and delay() functions, which share the same internal timer used to generate those PWM outputs. This will be noticed mostly on low duty-cycle settings (e.g 0 - 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6.
+<p class='vspace'></p><h4>一些说明和已知的问题</h4>
+<p>针脚5和6上的PWM输出,占空比往往高于期望值.这是由于millis()和delay()函数的相互作用,会占用内部计时器,使内部计时器在处理PWM输出时分心.  This is because of interactions with the millis() and delay() functions, which share the same internal timer used to generate those PWM outputs.这种情况一般出现在低占空比设置时,(比如 0 - 10) ,还有些情况是占空比为0时,针脚5和6并没有关闭输出.
 </p>
-<p class='vspace'></p><h4>Example</h4>
-<p>Sets the output to the LED proportional to the value read from the potentiometer.
+<p class='vspace'></p><h4>例子</h4>
+<p>读取电位器的值,并按比例点亮LED.
 </p>
 <p class='vspace'></p><pre> 
-int ledPin = 9;      // LED connected to digital pin 9
-int analogPin = 3;   // potentiometer connected to analog pin 3
-int val = 0;         // variable to store the read value
+int ledPin = 9;      // LED 连接至针脚 9
+int analogPin = 3;   // 电位器连接至针脚3
+int val = 0;         // 定义一个变量存储读取的值
 
 void setup()
 {
-  pinMode(ledPin, OUTPUT);   // sets the pin as output
+  pinMode(ledPin, OUTPUT);   // 把针脚设置成输出
 }
 
 void loop()
 {
-  val = analogRead(analogPin);   // read the input pin
-  analogWrite(ledPin, val / 4);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  val = analogRead(analogPin);   // 读取输入
+  analogWrite(ledPin, val / 4);  // 模拟量值为 0 到 1023, analogWrite 输出量值范围是 0 到 255
 }
 
 </pre>
