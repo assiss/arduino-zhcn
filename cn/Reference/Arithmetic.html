@@ -132,13 +132,13 @@ function toggle(obj) {
 <div id='wikitext'>
 <p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
-<p class='vspace'></p><h2>Addition, Subtraction, Multiplication, &amp; Division</h2>
-<h4>Description</h4>
-<p>These operators return the sum, difference, product, or quotient (respectively) of the two operands.  The operation is conducted using the data type of the operands, so, for example, <code>9 / 4</code> gives <code>2</code> since 9 and 4 are ints.  This also means that the operation can overflow if the result is larger than that which can be stored in the data type (e.g. adding 1 to an <a class='wikilink' href='Int.html'>int</a> with the value 32,767 gives -32,768).  If the operands are of different types, the "larger" type is used for the calculation.
+<p class='vspace'></p><h2>加,减,乘,除</h2>
+<h4>描述</h4>
+<p>这些运算符返回两个操作数的和,差,乘积,商. 这些运算是根据操作数的数据类型来计算的,比如 9和4都是int类型,所以<code>9 / 4</code> 结果是 <code>2</code>.这也就代表如果运算结果比数据类型所能容纳的范围要大的话,就会出现溢出.(例如. 1加上一个整数 <a class='wikilink' href='Int.html'>int类型</a>  32,767 结果变成-32,768). 如果操作数是不同类型的,结果是"更大"的那种数据类型. 
 </p>
-<p class='vspace'></p><p>If one of the numbers (operands) are of the type <strong>float</strong> or of type <strong>double</strong>, floating point math will be used for the calculation.
+<p class='vspace'></p><p>如果操作数中的其中一个是 <strong>float</strong>类型或者<strong>double</strong>类型, 就变成了浮点数运算.
 </p>
-<p class='vspace'></p><h4>Examples</h4>
+<p class='vspace'></p><h4>例子</h4>
 <pre>
 y = y + 3;
 x = x - 7;
@@ -155,16 +155,16 @@ result = value1 / value2;
 
 </pre>
 <p class='vspace'></p><h4>Parameters:</h4>
-<p>value1: any variable or constant
+<p>value1: 任何常量或者变量
 </p>
-<p class='vspace'></p><p>value2: any variable or constant
+<p class='vspace'></p><p>value2: 任何常量或者变量
 </p>
-<p class='vspace'></p><h4>Programming Tips:</h4>
-<ul><li>Know that <a class='wikilink' href='IntegerConstants.html'>integer constants</a> default to <a class='wikilink' href='Int.html'>int</a>, so some constant calculations may overflow (e.g. 60 * 1000 will yield a negative result).
-<p class='vspace'></p></li><li>Choose variable sizes that are large enough to hold the largest results from your calculations
-<p class='vspace'></p></li><li>Know at what point your variable will "roll over" and also what happens in the other direction e.g. (0 - 1) OR (0 - - 32768)
-<p class='vspace'></p></li><li>For math that requires fractions, use float variables, but be aware of their drawbacks: large size, slow computation speeds
-<p class='vspace'></p></li><li>Use the cast operator e.g. (int)myFloat to convert one variable type to another on the fly.
+<p class='vspace'></p><h4>编程小提示:</h4>
+<ul><li><a class='wikilink' href='IntegerConstants.html'>整型常量</a>的默认值是int类型,所以一些整型常量(定义中)的计算会导致溢出.(比如: 60 * 1000 会得到一个负数结果.那么if(60*1000 > 0) ,if得到的是一个false值.
+<p class='vspace'></p></li><li>在选择变量的数据类型时,一定要保证变量类型的范围要足够大,以至于能容纳下你的运算结果.
+<p class='vspace'></p></li><li>要知道你的变量在哪个点会"翻身",两个方向上都得注意.如: (0 - 1) 或 (0 - - 32768)
+<p class='vspace'></p></li><li>一些数学上的分数处理,要用浮点数,但其缺点是:占用字节长度大,运算速度慢.
+<p class='vspace'></p></li><li>使用类型转换符,例如 (int)myFloat 将一个变量强制转换为int类型..
 </li></ul><p class='vspace'></p><p><a class='wikilink' href='HomePage.html'>Reference Home</a>
 </p>
 <p class='vspace'></p><p><em>Corrections, suggestions, and new documentation should be posted to the <a class='urllink' href='http://arduino.cc/forum/index.php/board,23.0.html' rel='nofollow'>Forum</a>.</em>

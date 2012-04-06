@@ -133,21 +133,21 @@ function toggle(obj) {
 <p><strong>Reference</strong> &nbsp;  <a class='wikilink' href='HomePage.html'>Language</a> | <a class='wikilink' href='Libraries.html'>Libraries</a> | <a class='wikilink' href='Comparison.html'>Comparison</a> | <a class='wikilink' href='Changes.html'>Changes</a>
 </p>
 <p class='vspace'></p><h1>loop()</h1>
-<p>After creating a setup() function, which initializes and sets the initial values, the loop() function does precisely what its name suggests, and loops consecutively, allowing your program to change and respond.  Use it to actively control the Arduino board.
+<p>在setup()函数中初始化和定义了变量之后,loop()函数,顾名思义,不停的循环，根据程序中的内容,根据一些反馈,响应改变执行情况。我们就用loop中的代码控制Arduino板。
 </p>
 <p class='vspace'></p><h3>Example</h3>
 <pre> 
 int buttonPin = 3;
 
-// setup initializes serial and the button pin
+// setup中初始化串口和按键针脚. 
 void setup()
 {
   beginSerial(9600);
   pinMode(buttonPin, INPUT);
 }
 
-// loop checks the button pin each time,
-// and will send serial if it is pressed
+// loop中每次都检查按钮,如果按钮被按下,就发送信息到串口
+
 void loop()
 {
   if (digitalRead(buttonPin) == HIGH)
