@@ -132,7 +132,7 @@ function toggle(obj) {
 <div id='wikitext'>
 <h2>在面包板上搭一个 Arduino</h2>
 <p class='vspace'></p><h2>概述</h2>
-<p>这个教程为你展示如何用 Atmel Atmega8/168/328 的AVR单片机和 FTDI <span class='wikiword'>FT232</span> 接口板（来自 <a class='urllink' href='http://www.sparkfun.com/' rel='nofollow'>SparkFun</a>）建造一个 Arduino兼容面包板。或者用 <a class='wikilink' href='MiniUSB.html'>Arduino USB Mini</a> 代替 FT232。
+<p>这个教程为你展示如何用 Atmel Atmega8/168/328 的AVR单片机和 FTDI <span class='wikiword'>FT232</span> 接口板（来自 <a class='urllink' href='http://www.sparkfun.com/' rel='nofollow'>SparkFun</a>）打造一个 Arduino兼容面包板。或者用 <a class='wikilink' href='MiniUSB.html'>Arduino USB Mini</a> 代替 FT232。
 </p>
 <p class='vspace'></p><p>Originally created David A. Mellis<br />Updated from the <a class='urllink' href='http://itp.nyu.edu/physcomp/Tutorials/ArduinoBreadboard' rel='nofollow'>ITP version</a> by Carlyn Maw<br />Updated October 23, 2008 by Rory Nugent
 </p>
@@ -232,71 +232,71 @@ function toggle(obj) {
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
 <p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_11.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_11.jpg' alt='LED' title='LED' /></a><br /><span style='font-size:83%'>Arduino 13 号引脚上的 LED</span></span></div>
-<p class='vspace'></p><p>最后，插上 LED。Finally, add the LED. The long leg or the cathode connects to the red wire and the short leg or the anode connects to the 220 ohm resistor going to ground.
+<p class='vspace'></p><p>最后，插上 LED。长脚即正极(译注：原文为负极，疑为笔误)接红色导线，短脚即负极(原文为正极)通过220Ω电阻接地。
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
 <p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_12.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_12.jpg' alt='Arduino-Ready!' title='Arduino-Ready!' /></a><br /><span style='font-size:83%'>Arduino-Ready!</span></span></div>
-<p class='vspace'></p><p>At this point if you had already programmed your chip somewhere else and didn't need this breadboard circuit to reprogram the chip, you could stop here. But part of the fun is in-circuit programming so keep going to really make a full USB-Arduino-circuit on a breadboard!
+<p class='vspace'></p><p>现在，如果你已经在别处为你的芯片烧写好了程序，而且不需要用这个面包板的电路来为芯片重新编程的话，你的工作可以到此为止了。但是接下来的在线编程电路也是乐趣之一，所以我们接着在面包板上构造一个完整的 USB-Arduion 电路。
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
 <p class='vspace'></p><h2>Arduino-Ready</h2>
-<div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_13.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_13.jpg' alt='Add USB' title='Add USB' /></a><br /><span style='font-size:83%'>Add <span class='wikiword'>FT232</span> USB to Serial Board</span></span></div>
-<p class='vspace'></p><p>Now we'll be adding the USB to Serial breakout board to our Arduino breadboard circuit. If you haven't added male headers to your breakout board, you will need to do it now.
+<div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_13.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_13.jpg' alt='Add USB' title='Add USB' /></a><br /><span style='font-size:83%'>加入 <span class='wikiword'>FT232</span> USB to Serial 接口板</span></span></div>
+<p class='vspace'></p><p>现在我们要在面包板电路上加入USB to Serial的接口板。如果你的接口板上没有插针，那现在就要先焊上它。
 </p>
-<p class='vspace'></p><p>Connect the VCCIO of the breakout board to power and the GND to ground. 
-</p>
-<p class='vspace'></p><p><br clear='all' /> 
-</p>
-<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_usbback.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_usbback.jpg' alt='USBBack' title='USBBack' /></a><br /><span style='font-size:83%'>The pinouts of the Sparkfun <span class='wikiword'>FT232</span> breakout</span></span></div>
-<p class='vspace'></p><p>Curious what all the pin outs are for the <span class='wikiword'>SparkFun</span> <span class='wikiword'>FT232</span> breakout board, just simply flip it over! In this situation we'll be using VCC (to supply 5V from the USB port to your board), GND, TXD, and RXD.
+<p class='vspace'></p><p>把接口板的 VCCIO 接到电源端，GND 接地。
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
-<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_14.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_14.jpg' alt='TXRX' title='TXRX' /></a><br /><span style='font-size:83%'>Connecting the TX and RX</span></span></div>
-<p>Now, it's time to get the USB to serial breakout board talking with your new Arduino setup. Connect the RX (pin 2) of your Atmega chip to the TX of the USB to serial board, and connect the TX (pin 3) of your Atmega chip to the RX of the USB to serial board. 
+<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_usbback.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_usbback.jpg' alt='USBBack' title='USBBack' /></a><br /><span style='font-size:83%'>Sparkfun <span class='wikiword'>FT232</span> 接口板的引脚</span></span></div>
+<p class='vspace'></p><p>想知道 <span class='wikiword'>SparkFun</span> <span class='wikiword'>FT232</span> 接口板所有引脚的功能？把它翻过来就行! 在这里我们会用到 VCC (从USB取得5V电源), GND, TXD 和 RXD。
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
-<p class='vspace'></p><p>And there you have it... ready to be plugged in, powered up and programmed!
+<p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_14.jpg' rel='nofollow'><img width='180px' src='../uploads/Main/arduinobb_14.jpg' alt='TXRX' title='TXRX' /></a><br /><span style='font-size:83%'>连接 TX 和 RX</span></span></div>
+<p>现在，需要让 USB to serial 接口板和 Arduino 通讯。把 Atmega 芯片的 RX (pin 2) 连到 USB to serial 接口板的 TX, Atmega 芯片的 TX (pin 3) 连到接口板的 RX。
 </p>
-<p class='vspace'></p><p>But wait, there's another step right? If you pulled your Atmega chip out of your Arduino, it has most likely been programed several times by yourself and so it definitely has been bootloaded, so you won't need to move any further in this tutorial.
+<p class='vspace'></p><p><br clear='all' /> 
 </p>
-<p class='vspace'></p><p>However, if you purchased some extra Atmega8 or Atmega168 chips from an online store they will have NOT been bootloaded with the Arduino bootloader (with the exception of <a class='urllink' href='http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=17&amp;products_id=56' rel='nofollow'>Adafruit Industries</a>). What does this mean? You won't be able to program your chips using the USB to serial breakout board and the Arduino software. So, in order to make your new chips useful for Arduino you MUST bootload them and MUST check out step 4.
+<p class='vspace'></p><p>搞定了... 就等着连接，上电编程了!
+</p>
+<p class='vspace'></p><p>等等, 还有一个步骤没做是吧? 如果你用的 Atmega 芯片是从 Arduion 板子上拔下来的，那么很可能你已经编程过几次，所以它肯定是已经烧录了bootlader, 这样你就不需要本教程的后续部分了。
+</p>
+<p class='vspace'></p><p>不过，如果你的 Atmega8 或 Atmega168 芯片是网购来的，它不会烧录了Arduino的bootlader(除非是从<a class='urllink' href='http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=17&amp;products_id=56' rel='nofollow'>Adafruit Industries</a>购买的)。这说明什么呢? 这样的芯片你无法用USB to serial接口板和Arduino软件来编程。所以，为了新的芯片能用于Arduino，我们需要烧录bootloader。
 </p>
 <p class='vspace'></p><p><br clear='all' />
 </p>
-<p class='vspace'></p><h2>Other Breadboard Options</h2>
-<p><a class='urllink' href='http://www.instructables.com/id/uDuino-Very-Low-Cost-Arduino-Compatible-Developme' rel='nofollow'>The uDuino Setup by Tymn Twillman</a><br />This configuration is similar to the one above but the trick is that the Atmega chip is bootloaded with the Arduino Lilypad bootloader. The Lilypad runs using the internal clock instead of an external clock and so removes the need for much of the supporting circuitry.
+<p class='vspace'></p><h2>其他的面包板产品</h2>
+<p><a class='urllink' href='http://www.instructables.com/id/uDuino-Very-Low-Cost-Arduino-Compatible-Developme' rel='nofollow'>The uDuino Setup by Tymn Twillman</a><br />构造和本例相似，但是它的Atmega芯片烧录了Arduion Lilypad的bootloader。Lilypad用内部时钟取代了外部时钟，因此简化了许多外围电路。
 </p>
-<p class='vspace'></p><p><a class='urllink' href='http://www.ladyada.net/make/boarduino/' rel='nofollow'>Boarduino by Ladyada</a><br />The Boarduino is a kit you purchase and assemble to create a nice, small breadboard compatible Arduino set up. All the common components are included on a small PCB so that the Boarduino can easily be added to a breadboard and even removed, in a snap.
+<p class='vspace'></p><p><a class='urllink' href='http://www.ladyada.net/make/boarduino/' rel='nofollow'>Boarduino by Ladyada</a><br />Boarduino可以用来在面包版上搭建一个小型的Arduino系统。所有的常用零件都已经包含在一块小PCB上，所以Boarduino很容易在面包板上插拔。
 </p>
 <p class='vspace'></p><p><br clear='all' /> 
 </p>
-<p class='vspace'></p><h2>Bootloading your chips <strong>OPTIONAL</strong></h2>
+<p class='vspace'></p><h2>给芯片烧录bootlader <strong>(可选)</strong></h2>
 <h4>Bootloading Options</h4>
-<p>There are two options for bootloading your chips. The first being quite easy and the other being a little more tricky. We will cover both.
+<p>烧录芯片有2种方法。第一种比较简单，另一种有点麻烦。下面对两者都会说明。
 </p>
-<p class='vspace'></p><ul><li>Bootloading your Atmega chip using a Arduino board and an AVR programmer
-</li><li>Bootloading your Atmega chip in your newly prepared breadboard with an AVR programmer
-</li></ul><p class='vspace'></p><p>There are also many different kinds of AVR programmers but two are most commonly used:
+<p class='vspace'></p><ul><li>利用Arduino和AVR编程器烧录
+</li><li>使用刚搭好的面包版和AVR编程器烧录
+</li></ul><p class='vspace'></p><p>有许多种不同的AVR编程器，最常见的是两种：
 </p>
 <p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_mk2.jpg' rel='nofollow'><img height='200px' src='../uploads/Main/arduinobb_mk2.jpg' alt='AVRISP mkII' title='AVRISP mkII' /></a><br /><span style='font-size:83%'>AVRISP mkII</span></span></div>
 <p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_tiny.jpg' rel='nofollow'><img height='200px' src='../uploads/Main/arduinobb_tiny.jpg' alt='USBtinyISp' title='USBtinyISp' /></a><br /><span style='font-size:83%'><span class='wikiword'>USBtinyISP</span></span></span></div>
 <p class='vspace'></p><p><br clear='all' />
 </p>
-<p class='vspace'></p><p>The AVRISP mkII can be purchased from Digikey (Part # <a class='urllink' href='http://search.digikey.com/scripts/DkSearch/dksus.dll?Detail?name=ATAVRISP2-ND' rel='nofollow'>ATAVRISP2-ND</a>) while the <span class='wikiword'>USBtinyISP</span> must be assembled and can be found at <a class='urllink' href='http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=16&amp;products_id=46' rel='nofollow'>Adafruit Industries</a>.
+<p class='vspace'></p><p>AVRISP mkII可以从Digikey (Part # <a class='urllink' href='http://search.digikey.com/scripts/DkSearch/dksus.dll?Detail?name=ATAVRISP2-ND' rel='nofollow'>ATAVRISP2-ND</a>)买到，<span class='wikiword'>USBtinyISP</span>需要自行组装，可以从<a class='urllink' href='http://www.adafruit.com/index.php?main_page=product_info&amp;cPath=16&amp;products_id=46' rel='nofollow'>Adafruit Industries</a>找到。
 </p>
-<p class='vspace'></p><h4>Using an Arduino board</h4>
+<p class='vspace'></p><h4>利用Arduino烧录</h4>
 <div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_bootload1.jpg' rel='nofollow'><img width='250px' src='../uploads/Main/arduinobb_bootload1.jpg' alt='ArduinoBootload' title='ArduinoBootload' /></a><br /><span style='font-size:83%'>Bootloading on an Arduino board</span></span></div>
-<p class='vspace'></p><p>Place your Atmega chip into the Arduino board with the divot of the chip facing outward. Set the jumper to an external power supply and connect a 12V power brick (your board needs to be externally powered when using the AVR ISP mkII but is not needed with the <span class='wikiword'>AVRtinyISP</span>) . Then, attach the 6-pin female plug of your AVR programmer to the 6 male header ICSP pins with the plastic nub of the ribbon cable head facing inward.
+<p class='vspace'></p><p>把你的Atmega芯片插到Arduino板上，把跳线设置为外接电源，并接上一个12V的电源(用AVR ISP mkII时必需使用外接电源，但<span class='wikiword'>AVRtinyISP</span>不需要)。然后用6-pin的排线连接AVR编程器和Arduion上的ICSP接头。
 </p>
-<p class='vspace'></p><p>NOTE: The AVR ISP mkII turns its LED green when they've been hooked up correctly and are ready for programming. The LED turns red if it is hooked up wrong.
+<p class='vspace'></p><p>注意: 当AVR ISP mkII连接正确时，绿色LED会亮起。如果红色LED点亮说明连接错误。
 </p>
 <p class='vspace'></p><p><br clear='all' />
 </p>
-<p class='vspace'></p><h4>Using your breadboard</h4>
+<p class='vspace'></p><h4>使用面包板烧录</h4>
 <p class='vspace'></p><div><span class='frame lfloat'> <a class='urllink' href='../uploads/Main/arduinobb_avradapter.jpg' rel='nofollow'><img width='250px' src='../uploads/Main/arduinobb_avradapter.jpg' alt='AVRAdapter' title='AVRAdapter' /></a><br /><span style='font-size:83%'>AVR Programming Adapter</span></span></div>
 <p class='vspace'></p><p>When bootloading an Atmega chip on a breadboard, the AVR programming adapter (SKU <a class='urllink' href='http://www.sparkfun.com/commerce/product_info.php?products_id=8508' rel='nofollow'>BOB-08508</a>) from Sparkfun is incredibly handy. This adapter breaks out the 6 pins from the programmer to 6 inline pins for easy attachment to the breadboard. All the pins are also labeled making it very easy to connect it up to your chip.
 </p>
